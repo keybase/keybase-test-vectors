@@ -2,21 +2,6 @@ package testvectors
 
 const ChainTests = `
 {
-  "error_types": [
-    "BAD_LINK_FORMAT",
-    "NONEXISTENT_KID",
-    "VERIFY_FAILED",
-    "REVERSE_SIG_VERIFY_FAILED",
-    "KID_MISMATCH",
-    "FINGERPRINT_MISMATCH",
-    "CTIME_MISMATCH",
-    "INVALID_SIBKEY",
-    "EXPIRED_SIBKEY",
-    "WRONG_UID",
-    "WRONG_USERNAME",
-    "WRONG_SEQNO",
-    "WRONG_PREV"
-  ],
   "tests": {
     "test_ralph_sig_chain": {
       "_comment": "Ralph is a test user I created by hand on my local server. I fetched his sigs and keys from the API, and then massaged them into our input format. This test is mainly to make sure that the generated chains we're using in other tests bear some relationship to reality.  - Jack",
@@ -117,6 +102,33 @@ const ChainTests = `
     "test_error_bad_seqno": {
       "input": "bad_seqno_chain.json",
       "err_type": "WRONG_SEQNO"
+    },
+
+    "test_empty_sigchain": {
+      "input": "empty_chain.json",
+      "len": 0,
+      "sibkeys": 1,
+      "subkeys": 0,
+      "eldest": "ralph"
+    },
+
+    "test_error_empty_sigchain_bad_key_userid": {
+      "input": "empty_chain.json",
+      "eldest": "steve",
+      "err_type": "KEY_OWNERSHIP"
+    },
+
+    "test_error_empty_sigchain_nonexistent_pgp": {
+      "input": "empty_chain.json",
+      "eldest": "nonexistent",
+      "err_type": "NONEXISTENT_KID"
+    },
+
+    "test_error_empty_sigchain_eldest_key_is_nacl": {
+      "_comment": "NaCl keys don't have any internal userid info, so they can't stand alone as an eldest key without having signed some links.",
+      "input": "empty_chain.json",
+      "eldest": "naclkey",
+      "err_type": "KEY_OWNERSHIP"
     }
   }
 }
@@ -982,11 +994,14 @@ var ChainTestInputs = map[string]string{
     "chain": [],
     "keys": [
         "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWkQEEALmSERRK4+fbTg5C28GOXxpiI/IfQZDFmJfWzNKNW6CrX1uj4o8G\nu3292bU5meCRCJstd09LFaELOASbknUOiXFQcnuzpY7J9Ou8uqxKcOYxi4xWjXih\nK8KQfL4khBIpB+7B0tp16qalqbd1+V2wIAJzmNdkY+cFGeXZE45gr+i3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVedaRAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQUGs4lh8OKGN+TgQAhTSvOZV+8me6UuIc\ntBJTsZzAkzWsP3QpdSZ6zUyZ40yA5WMZMpnQb+6kd3xzo/tkm9imTK2xLtoCj52d\n3QZRN3BOqweetaiWng6sgIkMZc8EaQp68bPeVhtcAYU0Y/I9Jcim6d2nSXQcwuph\na3RWghsf37A9CfXlbZl36PvQ2ko=\n=qGhY\n-----END PGP PUBLIC KEY BLOCK-----\n",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWyQEEAMUSBo5Q/X3et/ExeX6UHvsH9Wv5IoaEmMqdT7zSxaphcFS+vo5E\n63QQrokfIUKZeMDmWjI65SNVNhpWng5mhrkz/bRql0pdikhwXnALLVnwT+0J/Spl\nyWiQKVfZ6pqz2anto56/rlhLui7oTLnG7q2CttIaAp1aaMzaHwMH4iW1ABEBAAG0\nBXN0ZXZliLkEEwEIACMFAlV51skCGwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIX\ngAAKCRA0feCGaTASHtOGA/4u7MAY2z3UzVKzH4XxYknep4hD+75HH6TY1fCUHBcS\nAfVptSna59alV37JJtsBQhmNowyIqvNeUSl3VcN2oOBvJwxGyPhoh6Roxj+4phhO\nPGH9dzzaZVQVSYMBMU8Wuf9OsEM/2k7Wo2oes9XLiNVBqYNwvk6Q2BupT77FyzDI\ntg==\n=zpuJ\n-----END PGP PUBLIC KEY BLOCK-----\n"
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWyQEEAMUSBo5Q/X3et/ExeX6UHvsH9Wv5IoaEmMqdT7zSxaphcFS+vo5E\n63QQrokfIUKZeMDmWjI65SNVNhpWng5mhrkz/bRql0pdikhwXnALLVnwT+0J/Spl\nyWiQKVfZ6pqz2anto56/rlhLui7oTLnG7q2CttIaAp1aaMzaHwMH4iW1ABEBAAG0\nBXN0ZXZliLkEEwEIACMFAlV51skCGwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIX\ngAAKCRA0feCGaTASHtOGA/4u7MAY2z3UzVKzH4XxYknep4hD+75HH6TY1fCUHBcS\nAfVptSna59alV37JJtsBQhmNowyIqvNeUSl3VcN2oOBvJwxGyPhoh6Roxj+4phhO\nPGH9dzzaZVQVSYMBMU8Wuf9OsEM/2k7Wo2oes9XLiNVBqYNwvk6Q2BupT77FyzDI\ntg==\n=zpuJ\n-----END PGP PUBLIC KEY BLOCK-----\n",
+        "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
     ],
     "label_kids": {
         "ralph": "0101de638c5bee00e1b473b5f3fa7065e55cde33e88d230a2cd253da5d78a1c5a8910a",
-        "steve": "0101d17f13d98d9a21e3fcc2ba30ef38fe1ca0e805950839f7ecfb8b77ad5d128e4f0a"
+        "steve": "0101d17f13d98d9a21e3fcc2ba30ef38fe1ca0e805950839f7ecfb8b77ad5d128e4f0a",
+        "nonexistent": "0101deadbeef0000000000000000000000000000000000000000000000000000000000",
+        "naclkey": "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
     }
 }
 `,

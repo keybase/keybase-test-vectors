@@ -1,19 +1,4 @@
 {
-  "error_types": [
-    "BAD_LINK_FORMAT",
-    "NONEXISTENT_KID",
-    "VERIFY_FAILED",
-    "REVERSE_SIG_VERIFY_FAILED",
-    "KID_MISMATCH",
-    "FINGERPRINT_MISMATCH",
-    "CTIME_MISMATCH",
-    "INVALID_SIBKEY",
-    "EXPIRED_SIBKEY",
-    "WRONG_UID",
-    "WRONG_USERNAME",
-    "WRONG_SEQNO",
-    "WRONG_PREV"
-  ],
   "tests": {
     "test_ralph_sig_chain": {
       "_comment": "Ralph is a test user I created by hand on my local server. I fetched his sigs and keys from the API, and then massaged them into our input format. This test is mainly to make sure that the generated chains we're using in other tests bear some relationship to reality.  - Jack",
@@ -114,6 +99,33 @@
     "test_error_bad_seqno": {
       "input": "bad_seqno_chain.json",
       "err_type": "WRONG_SEQNO"
+    },
+
+    "test_empty_sigchain": {
+      "input": "empty_chain.json",
+      "len": 0,
+      "sibkeys": 1,
+      "subkeys": 0,
+      "eldest": "ralph"
+    },
+
+    "test_error_empty_sigchain_bad_key_userid": {
+      "input": "empty_chain.json",
+      "eldest": "steve",
+      "err_type": "KEY_OWNERSHIP"
+    },
+
+    "test_error_empty_sigchain_nonexistent_pgp": {
+      "input": "empty_chain.json",
+      "eldest": "nonexistent",
+      "err_type": "NONEXISTENT_KID"
+    },
+
+    "test_error_empty_sigchain_eldest_key_is_nacl": {
+      "_comment": "NaCl keys don't have any internal userid info, so they can't stand alone as an eldest key without having signed some links.",
+      "input": "empty_chain.json",
+      "eldest": "naclkey",
+      "err_type": "KEY_OWNERSHIP"
     }
   }
 }
