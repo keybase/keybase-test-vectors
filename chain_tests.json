@@ -17,8 +17,6 @@
   "tests": {
     "test_ralph_sig_chain": {
       "_comment": "Ralph is a test user I created by hand on my local server. I fetched his sigs and keys from the API, and then massaged them into our input format. This test is mainly to make sure that the generated chains we're using in other tests bear some relationship to reality.  - Jack",
-      "_comment2": "The eldest key for this test is not the first in the list, it's the 2nd (index 1).",
-      "_comment3": "TODO: Use labels instead of indices.",
       "input": "ralph_chain.json",
       "len": 5,
       "sibkeys": 3,
