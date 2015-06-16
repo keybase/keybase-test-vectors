@@ -126,6 +126,27 @@
       "input": "empty_chain.json",
       "eldest": "naclkey",
       "err_type": "KEY_OWNERSHIP"
+    },
+
+    "test_jack_chain": {
+      "_comment": "Just a sanity check with my own sigchain",
+      "input": "jack_chain.json",
+      "len": 29,
+      "sibkeys": 1,
+      "subkeys": 0
+    },
+
+    "test_error_missing_first_link": {
+      "_comment": "We need to make sure the server can't drop links off the front. This would be a risk if we assumed that, for example, they belonged to a previous eldest key.",
+      "input": "jack_chain_missing_first_link.json",
+      "err_type": "WRONG_SEQNO"
+    },
+
+    "test_error_substitute_first_link": {
+      "_comment": "Here the first link has been substituted for one signed by a different eldest key. We should notice the payload hash mismatch.",
+      "input": "jack_chain_substitute_first_link.json",
+      "eldest": "real_eldest",
+      "err_type": "WRONG_PREV"
     }
   }
 }
