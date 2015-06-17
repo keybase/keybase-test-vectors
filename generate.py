@@ -30,6 +30,14 @@ if not go_dir.is_dir():
     go_dir.mkdir()
 go_file = go_dir / "testvectors.go"
 
+
+def make_go_string_literal(string_contents):
+    # Go does not allow escaping backticks in a backtick-delimited string. So
+    # we need to terminate the string, insert a backtick in double quotes, and
+    # then reopen the string.
+    escaped = string_contents.replace('`', '`+"`"+`')
+    return '`' + escaped + '`'
+
 with go_file.open("w") as f:
     f.write("package testvectors\n")
     f.write("\n")
@@ -41,6 +49,6 @@ with go_file.open("w") as f:
     f.write("var ChainTestInputs = map[string]string{\n")
     for chain_file in chain_files:
         with chain_file.open() as chain_f:
-            f.write('\t"{}": `{}`,\n'.format(
-                chain_file.name, chain_f.read()))
+            f.write('\t"{}": {},\n'.format(
+                chain_file.name, make_go_string_literal(chain_f.read())))
     f.write("}\n")
