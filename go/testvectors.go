@@ -157,6 +157,14 @@ const ChainTests = `
       "input": "ralph_chain.json",
       "eldest": "first_eldest",
       "err_type": "NOT_LATEST_SUBCHAIN"
+    },
+
+    "test_ralph_with_new_eldest_key": {
+      "input": "ralph_chain.json",
+      "eldest": "new_eldest",
+      "len": 0,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
@@ -3706,11 +3714,13 @@ var ChainTestInputs = map[string]string{
     "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
     "012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a",
     "0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a",
-    "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a"
+    "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a",
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYGTSQEEAOHnED1wHyg3+Jm2x6K1jG1t48v6/xUt/mui7C63VKqvwHTDk3TM\nUzV7oN7Qvek2YoXClQIUMPBvJs+nie5mohCTpHEZJr7tCwTlvPIf+4qJqQAtMr5z\n8ubnxHNsIPKg8w0R5HanM2qy2Tz+kxR4lmP/nBFNJTwRvIPDglHAh6a3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVgZNJAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQ1XTwnazAlYOQQQP/aWmXflNWXMqiTwHW\nQj5J3YC3zFr312yt6sgR3IrYBLdp1aSHmk0DbfI/U2JaRzrr5Epv3efSCkK9R7vQ\nRvXxE9InsRK28PZvx+bmjuZAGD0abfPj/Ex9MiVq52veNqYzMN20o2EACdoTE9/5\ndkTKiRUGbPIolbpqjCGW6LPBJ6i4jQRVgZNJAQQAvaCnEIQ9LfPt0qECCU+9Nrz8\nNLC1XreQQ7Mm31vcSOkbypEhil1eK5+TkP84UTBkdMzQvX77r+BqRrqT4k2oXZD2\nw+KjDV48Lzb2qmRd+kezTK7jLKNwqcEvMyJMhi8wyU8HD95KM9is1TdFr045JlIY\nzThgskx1jXHfnteWq7sAEQEAAYifBBgBCAAJBQJVgZNJAhsMAAoJENV08J2swJWD\nf0oEAML7lg1p/m6auEY/WH13hRUndb2JLvnqMxpd4dwh5xQzyFLSMBKG2xnUO4P8\n9zliTnelXHQVzJVzv0k0JHzc1027aJO+YAPjT5RTd+QwuoA90DBhDzNC9GQBn3kl\n0q45q+rHj3/1XWXKjJNUKasAlKK7F+fJoLVHBTmQUoNt9ZT+\n=jMe5\n-----END PGP PUBLIC KEY BLOCK-----"
   ],
   "label_kids": {
     "first_eldest": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
-    "second_eldest": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a"
+    "second_eldest": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
+    "new_eldest": "01014d569e80644c482092be218bc9faee07f068219c317233d2f8823f742a519dca0a"
   }
 }
 `,

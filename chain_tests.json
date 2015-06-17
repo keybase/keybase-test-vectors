@@ -154,6 +154,14 @@
       "input": "ralph_chain.json",
       "eldest": "first_eldest",
       "err_type": "NOT_LATEST_SUBCHAIN"
+    },
+
+    "test_ralph_with_new_eldest_key": {
+      "input": "ralph_chain.json",
+      "eldest": "new_eldest",
+      "len": 0,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
