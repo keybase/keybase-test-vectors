@@ -147,6 +147,13 @@
       "input": "jack_chain_substitute_first_link.json",
       "eldest": "real_eldest",
       "err_type": "WRONG_PREV"
+    },
+
+    "test_error_later_subchain": {
+      "_comment": "The current eldest key should always correspond to the latest subchain.",
+      "input": "ralph_chain.json",
+      "eldest": "first_eldest",
+      "err_type": "NOT_LATEST_SUBCHAIN"
     }
   }
 }
