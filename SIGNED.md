@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQEcBAABCAAGBQJVfx5RAAoJEHGHa2itSC0yAqwH/iVlhumiL44NaXFnA0obvf5R
-wwDuviC+yXdhL13WVU/klIjUE8VrbegP212DujsTi1XGeWt199Z56BqMY2lGfOki
-Akb8a2QrsdteG/w8PrsNFwrYHhfRoXcujhfpLiMbDERAkU8Zy0f3pdQR724sXkVb
-uD9lcPmbTQbCVLO6MOqeE7kB78TcautyOX5QCIYdltiC91N/YlYTGFui11EX5zb6
-zOpLtTq30ODJWYFkcEQ5WeRE6lxJbTIHKwxpuUANR6lEhGJJy/y8bobFRUhIR7HM
-tYnifCFIWqlFS9+atnA0v01Rbi1JDC1aWOUiZ1Z9/aYkRra9H4N8WKxxk4Zfe6w=
-=qBkG
+iQEcBAABCAAGBQJVgZ+1AAoJEHGHa2itSC0y2XoIAMOL0QNws/4myqK56q4JKIbx
+2dewO1mT8mRPO4B6gsQ4nq6Y7Z+CMWpDvqFIC9gBceH6iKK1IOiU+uswxTyHmwTX
+YZpXdbf5Lm8xmz/dlOkigK95fS2Mr6q5naK114n5jUWwCMSlpl9Faw6JNE6P1mv3
+f5N6DqfzQdq5GfSiu1xE0I+WuVkwOwptRbyGVfUCyGySfnOWfpHHxUBUfVe55DBk
+QaCcRjg/ew2hOvzzTva77TZvch5N9VWmGAQAob1A9SAZrnLWqTabd3bUwXsSR7Ds
+wx0apLlJ8G9MaGOgt3LRba6HDCRLAapJW1S14y++ibU+mqJttQexKv2pmky1Kc0=
+=Jrzg
 -----END PGP SIGNATURE-----
 
 ```
@@ -23,7 +23,7 @@ tYnifCFIWqlFS9+atnA0v01Rbi1JDC1aWOUiZ1Z9/aYkRra9H4N8WKxxk4Zfe6w=
 ```
 size    exec  file                                          contents                                                        
               ./                                                                                                            
-4979            chain_tests.json                            af684d7573c6996bfd853b4feb170d107db81d376714baffdb3ad64043b8e961
+6202            chain_tests.json                            4c46413927448ca60dba392e236b01177fa2d123bb2cc045fccd91df9912e12b
                 chains/                                                                                                     
 6051              bad_prev_chain.json                       53f930afd490f739b57d1de35bfb18c0e3dc9e4163a1eb898fce8bdcc98f6842
 6051              bad_reverse_signature_chain.json          06940369198a81f6f89bc86dcfd21261b54d397d0ce1cb53b8ec36c522b16ed1
@@ -44,20 +44,23 @@ size    exec  file                                          contents
 541                 signed_with_revoked_key_chain.cson      62d9b4bcef4c86ebd64419e844d4c848be9f469b55ee78abb3a4beb8cab96ac9
 160                 simple_chain.cson                       fc5d18080e832797349566cdf512fa46d28ede8d291d85f855fd9c9eafbdcf8a
 285                 two_link_chain_for_manual_hacking.cson  8659c7b477321c83f3102f03afd1b480099016ff7ce4216f13636b563c41eda7
+173515            jack_chain.json                           509e95fc94e879214ead59039cdeea21f2e52b6826bf0739db48c7862e9605a8
+170443            jack_chain_missing_first_link.json        c107107129b9013c0974ca7f83732c905557635df2da8e31ff2a0fbe36b8a395
+168376            jack_chain_substitute_first_link.json     ec3d87af3c5c39ead8215fb23fad34647a76dccdd9ae0394acc91fc984979f28
 6051              mismatched_ctime_chain.json               47e9d2aa2dc77dd8827fb3109581131ec5b853ff5024b282ac2215c73c0af680
 8244              mismatched_fingerprint_chain.json         d49b5b9b19b84b287d7d3baadca941acf102e553acb13dfbc046ac53841f8c21
 8280              mismatched_kid_chain.json                 8b238dd8ddf942341a3b1f213f2b0052e1e519a73e37ff3590e06fdbe11bce11
 7375              missing_kid_chain.json                    a5959e4f56b209c9d8071b924115747a31c5e5091b5b4c06d5d694bbf1af591a
 7391              missing_reverse_kid_chain.json            cf5eb200d78afd221e11674581a574d82225286aff15f9d5f8739554c564bc04
-42114             ralph_chain.json                          41b15ea69282b53c4b7cbd40ba2e8c18f49a62a40cf2c90cf154dfcc91107308
+43316             ralph_chain.json                          c4da3be30f814464b94d27b19fc51be5907a702094b55c540903dc4f9f1d9fd8
 12536             signed_with_revoked_key_chain.json        55ac1ea124f7e9bb2473035be106b1718e288527a3583fd711c726185a047051
 1607              simple_chain.json                         138d7ac6ba3dff9d210e90101156cc399de6d070eb742eecf10ee2cc9e32b890
-1259    x       generate.py                                 be80746bd359bca56f1c846b029254c4e2e814c5e8a8b01d4aa32b51daf27349
+1600    x       generate.py                                 c779ea5e69a2af581c42fb288b10dd2810c93326cf68d6bcedc19efe44c3f595
                 go/                                                                                                         
-184267            testvectors.go                            56a0c7b5aff404cf9197667459e4893be4ee86d8ced95555f6eba22f1a26f444
+699805            testvectors.go                            9a43ccbc406879d001f2c6360f5851e4f18dc7f418cd4c9f4894c9e9b1a37ff8
                 js/                                                                                                         
-1829              main.js                                   ee848bb8c4120283ab0577446a4c8c0155f8297ec95fc38f48104ebf574e2f6d
-322             package.json                                73c4ba55f6eb30f17e15bde23ac8945b3148c3cef19abf14a0218ebf6dc546d6
+2166              main.js                                   7968e06b237e4c26bf7e5fdb7a3de1b68b3cc0bfda17079b0974930becebbeea
+322             package.json                                7b41b4a2db606766aecf11c92e67f10909e9e2869f0885b171d89c943b3d0e89
 ```
 
 #### Ignore
