@@ -21,3 +21,4 @@ exports.chain_test_inputs['jack_chain_missing_first_link.json'] = require('../ch
 exports.chain_test_inputs['jack_chain_substitute_first_link.json'] = require('../chains/jack_chain_substitute_first_link.json');
 exports.chain_test_inputs['ralph_chain.json'] = require('../chains/ralph_chain.json');
 exports.chain_test_inputs['melvin_chain.json'] = require('../chains/melvin_chain.json');
+exports.chain_test_inputs['nonexistent_subkey_chain.json'] = require('../chains/nonexistent_subkey_chain.json');

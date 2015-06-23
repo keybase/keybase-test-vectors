@@ -170,6 +170,11 @@
       "len": 1,
       "sibkeys": 1,
       "subkeys": 0
+    },
+
+    "test_error_ralph_with_missing_subkey": {
+      "input": "nonexistent_subkey_chain.json",
+      "err_type": "NONEXISTENT_KID"
     }
   }
 }
