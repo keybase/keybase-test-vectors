@@ -165,6 +165,14 @@ const ChainTests = `
       "len": 0,
       "sibkeys": 1,
       "subkeys": 0
+    },
+
+    "test_melvin_with_expiring_pgp_key": {
+      "_comment": "Right now this just exercises some of the code that recognizes the expiration time. Eventually we should add tests that make sure the etime is really enforced.",
+      "input": "melvin_chain.json",
+      "len": 1,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
@@ -813,10 +821,41 @@ var ChainTestInputs = map[string]string{
     }
 }
 `,
-	"jack_chain_missing_first_link.json": `{
+	"jack_chain.json": `{
     "username": "oconnor663",
     "uid": "41b1f75fb55046d370608425a3208100",
     "chain": [
+        {
+            "seqno": 1,
+            "payload_hash": "b421b35b23fc5da8a69fab3978ff34689fcaaf0048fc8af822aa32b5121c8193",
+            "sig_id": "e43b8971ff4bdc1beb57fecc15c1b3455997d1c6ea5596e14f25bdf4d5ad47580f",
+            "sig_id_short": "5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9",
+            "kid": "01013e053626ad23686e872fa75b64a5b803125970b5ca7a7b7d98c39ca7825b81a20a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowGbwMvMwMFY2J6dsdZD14jx9IGPSQwh0yOXVisl5adUKllVKyXnZKbmlYBYeYm5\nqUpWStmplUmJxal6mfkKefkpqXpZxQpQNTpKZalFxZn5eUBVBnrmesZKtTog5SDN\naZl56alFBUWZILOUTC0SjUxMU4xTLJKMTJMNTdPMklON09LSzA0tzM2SzCwSU0ws\njFKMjYBGZuQXl6DYqgQ2Mz4zBSgKVu9kZuHoAlTvAlZfCpYwMUwyTDM3TUsyNTUw\nMUsxNjcwM7AwMTJNNDYysDA0MAApLE4tgnopPzk/Ly+/yMwM7GKgeFlmciqSl0vK\nM0tKUovwaSqpLAAJlqcmxUP1xydl5qUAfY0cLIZAlcklmSD9hiaGlkYGpgZGljpK\nqRUFmUWp8ZkgFabmZhYGQKCjVFCUWqZklVeakwNyU2FePlAWaFFiOtCe4sz0vMSS\n0qJUpdpORhkWBkYOBjZWJlDMMXBxCsDic9kVDobOWXPTXnulBP/5+WXyw94r/dXi\nayb80JuTNUfjzJXohNsN04zSOku9Xv77VyD46tHWzPqi+xe25ESJmS+d6JHZvOh+\n/KHTETHKb/1FKlborXgV9cO6bL3k3mXef9a93/Djg76cYFmxF2P5gcmXxK+IvjjF\nu7IhjvdNvMTbMP5V+qqKF9KdFjo093V/6VGeUKP8TvnFpv6sgIoXVv3HcvzermQ2\n+d/0dhrDj86Y3o8FB2ae5uu5dNv0zifxzjdX0yMzjy51Of36cnF8pMwj3zQrQyPP\nqPmlvcFzJrZlXeiZbda+sEV4Z6pFD9dKg8IPFT18nSE7TjPyde1rfbHydFjQPL3p\n736G/OYocJgxqw8A\n=bgPh\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"client\":{\"name\":\"keybase.io node.js client\",\"version\":\"0.7.3\"},\"key\":{\"fingerprint\":\"58a245d3d8b25c15f6ce3fff71876b68ad482d32\",\"host\":\"keybase.io\",\"key_id\":\"71876B68AD482D32\",\"uid\":\"41b1f75fb55046d370608425a3208100\",\"username\":\"oconnor663\"},\"service\":{\"name\":\"twitter\",\"username\":\"oconnor663\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1419205029,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}",
+            "sig_type": 2,
+            "ctime": 1419205029,
+            "etime": 1576885029,
+            "rtime": null,
+            "sig_status": 0,
+            "prev": null,
+            "proof_id": "756a07b444d2f1044a162210",
+            "proof_type": 2,
+            "proof_text_check": "Verifying myself: I am oconnor663 on Keybase.io. 5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9 /",
+            "proof_text_full": "Verifying myself: I am oconnor663 on Keybase.io. 5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9 / https://keybase.io/oconnor663/sigs/5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9\n",
+            "check_data_json": "{\"name\":\"twitter\",\"username\":\"oconnor663\"}",
+            "remote_id": "546811878073061377",
+            "api_url": "https://twitter.com/oconnor663/status/546811878073061377",
+            "human_url": "https://twitter.com/oconnor663/status/546811878073061377",
+            "proof_state": 1,
+            "proof_status": 1,
+            "retry_count": 337,
+            "hard_fail_count": 0,
+            "last_check": 1434439958,
+            "last_success": 1434439958,
+            "version": 2,
+            "fingerprint": "58a245d3d8b25c15f6ce3fff71876b68ad482d32"
+        },
         {
             "seqno": 2,
             "payload_hash": "382e1d68b4b81c6643483a74715ac0964e291fb2b52c4e9fa6c73d304ab9108f",
@@ -1691,41 +1730,10 @@ var ChainTestInputs = map[string]string{
     ]
 }
 `,
-	"jack_chain.json": `{
+	"jack_chain_missing_first_link.json": `{
     "username": "oconnor663",
     "uid": "41b1f75fb55046d370608425a3208100",
     "chain": [
-        {
-            "seqno": 1,
-            "payload_hash": "b421b35b23fc5da8a69fab3978ff34689fcaaf0048fc8af822aa32b5121c8193",
-            "sig_id": "e43b8971ff4bdc1beb57fecc15c1b3455997d1c6ea5596e14f25bdf4d5ad47580f",
-            "sig_id_short": "5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9",
-            "kid": "01013e053626ad23686e872fa75b64a5b803125970b5ca7a7b7d98c39ca7825b81a20a",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowGbwMvMwMFY2J6dsdZD14jx9IGPSQwh0yOXVisl5adUKllVKyXnZKbmlYBYeYm5\nqUpWStmplUmJxal6mfkKefkpqXpZxQpQNTpKZalFxZn5eUBVBnrmesZKtTog5SDN\naZl56alFBUWZILOUTC0SjUxMU4xTLJKMTJMNTdPMklON09LSzA0tzM2SzCwSU0ws\njFKMjYBGZuQXl6DYqgQ2Mz4zBSgKVu9kZuHoAlTvAlZfCpYwMUwyTDM3TUsyNTUw\nMUsxNjcwM7AwMTJNNDYysDA0MAApLE4tgnopPzk/Ly+/yMwM7GKgeFlmciqSl0vK\nM0tKUovwaSqpLAAJlqcmxUP1xydl5qUAfY0cLIZAlcklmSD9hiaGlkYGpgZGljpK\nqRUFmUWp8ZkgFabmZhYGQKCjVFCUWqZklVeakwNyU2FePlAWaFFiOtCe4sz0vMSS\n0qJUpdpORhkWBkYOBjZWJlDMMXBxCsDic9kVDobOWXPTXnulBP/5+WXyw94r/dXi\nayb80JuTNUfjzJXohNsN04zSOku9Xv77VyD46tHWzPqi+xe25ESJmS+d6JHZvOh+\n/KHTETHKb/1FKlborXgV9cO6bL3k3mXef9a93/Djg76cYFmxF2P5gcmXxK+IvjjF\nu7IhjvdNvMTbMP5V+qqKF9KdFjo093V/6VGeUKP8TvnFpv6sgIoXVv3HcvzermQ2\n+d/0dhrDj86Y3o8FB2ae5uu5dNv0zifxzjdX0yMzjy51Of36cnF8pMwj3zQrQyPP\nqPmlvcFzJrZlXeiZbda+sEV4Z6pFD9dKg8IPFT18nSE7TjPyde1rfbHydFjQPL3p\n736G/OYocJgxqw8A\n=bgPh\n-----END PGP MESSAGE-----",
-            "payload_json": "{\"body\":{\"client\":{\"name\":\"keybase.io node.js client\",\"version\":\"0.7.3\"},\"key\":{\"fingerprint\":\"58a245d3d8b25c15f6ce3fff71876b68ad482d32\",\"host\":\"keybase.io\",\"key_id\":\"71876B68AD482D32\",\"uid\":\"41b1f75fb55046d370608425a3208100\",\"username\":\"oconnor663\"},\"service\":{\"name\":\"twitter\",\"username\":\"oconnor663\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1419205029,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}",
-            "sig_type": 2,
-            "ctime": 1419205029,
-            "etime": 1576885029,
-            "rtime": null,
-            "sig_status": 0,
-            "prev": null,
-            "proof_id": "756a07b444d2f1044a162210",
-            "proof_type": 2,
-            "proof_text_check": "Verifying myself: I am oconnor663 on Keybase.io. 5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9 /",
-            "proof_text_full": "Verifying myself: I am oconnor663 on Keybase.io. 5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9 / https://keybase.io/oconnor663/sigs/5DuJcf9L3BvrV_7MFcGzRVmX0cbqVZbhTyW9\n",
-            "check_data_json": "{\"name\":\"twitter\",\"username\":\"oconnor663\"}",
-            "remote_id": "546811878073061377",
-            "api_url": "https://twitter.com/oconnor663/status/546811878073061377",
-            "human_url": "https://twitter.com/oconnor663/status/546811878073061377",
-            "proof_state": 1,
-            "proof_status": 1,
-            "retry_count": 337,
-            "hard_fail_count": 0,
-            "last_check": 1434439958,
-            "last_success": 1434439958,
-            "version": 2,
-            "fingerprint": "58a245d3d8b25c15f6ce3fff71876b68ad482d32"
-        },
         {
             "seqno": 2,
             "payload_hash": "382e1d68b4b81c6643483a74715ac0964e291fb2b52c4e9fa6c73d304ab9108f",
@@ -3722,6 +3730,47 @@ var ChainTestInputs = map[string]string{
     "second_eldest": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
     "new_eldest": "01014d569e80644c482092be218bc9faee07f068219c317233d2f8823f742a519dca0a"
   }
+}
+`,
+	"melvin_chain.json": `{
+  "username": "melvin",
+  "uid": "08e486faf56b304cf08915984f92b619",
+  "chain": [
+    {
+      "seqno": 1,
+      "payload_hash": "a00d01fc45ce203b2c4349b36b65a0d76339e6a7839f606a047ae2445714865b",
+      "sig_id": "98edf54d8bbbf69e79174ae25e92efbba3ed6c22d0f193ad5f29a195d81c63980f",
+      "sig_id_short": "mO31TYu79p55F0riXpLvu6PtbCLQ8ZOtXymh",
+      "kid": "0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtUU1oE0EUTlJbsFKUHpTqoTgeDLrqzM7s7GwQhVKoHrReBAuWdWZ3Nh2TbuJu\nklpCGvEHqvVQ8aIgpejNg4dCEDEU6alQUAShxYNQaLwLgnhocbbizbm8ed/fg/fm\n+7pSmfTTu+vH7PZMIb32YVWkrj5smXUgSv40yNVBQe6WQIV5GZUjFVZADgTCYZwi\nnzqOL6CNqU8Cwi3mYGb6tomxLTxbUgEMMFGKE4eOETyWp1VJY7pxla/R/+gLuwRE\nEHHhQEawQJRghhghlGKuv9IyfUmwyZjDTCEpM1mAbQ9BS/o24R6HPhQSUch1XPVv\nHJOE0YAHFhUYEi+AzEGWw0jgmIIiJxHGMgr5pNTqSVmsqRA0DFCZLifAlBSupmvK\nk65Qoa93oR01GcWqFIIc0kqvohIvItiCjCGbGEDeLqtIuipRWDZlUD8DlCNZA7mw\nWiwaIJa3wpJm9SCe13NilQ95pRpJ0OidfbEnlc6kerozyT1SvXsP/LvS/ZWuHetg\n89HJlz1ns8vNVffx0uCa/JH91CrfFO9fb/rLv44PDRndp5pz9vyXe1NLW8/bAxe/\nGqN9pDV4/bMLDh/5mT2x0DiXnru0b/zO6MjsxscR91DwZnzrVf+ZzoW3l9e/Fxdv\n7O//faXdmbn27tliffjJ8M63zbHthbHzD1asowOdPw==\n=/ACy\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"fb98a61d699db0736d4f4a589382d72337bc7e6b\",\"host\":\"keybase.io\",\"key_id\":\"9382d72337bc7e6b\",\"kid\":\"0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a\",\"uid\":\"08e486faf56b304cf08915984f92b619\",\"username\":\"melvin\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1435088174,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
+      "sig_type": 1,
+      "ctime": 1435088174,
+      "etime": 1592768174,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": null,
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "proof_text_full": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": "fb98a61d699db0736d4f4a589382d72337bc7e6b"
+    }
+  ],
+  "keys": [
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYm1EwEEAPynyMcyNok+alsFd9GYM6femohjRckCeFv5IU4nJ/th3S7Iwp0+\nTVi5jl5TGhJHTqo6S09J/tovDUXzPFTNlSfR7iY0ijNvr+5Yunwg/Gr962pJsbHH\nYDfAuSLyOgX7+YfM4bVJbma4knxEcxvWlQDUuZv5ZqMj+n2eqdJ+JTwdABEBAAG0\nBk1lbHZpboi/BBMBAgApBQJVibUTAhsDBQkHhM4ABwsJCAcDAgEGFQgCCQoLBBYC\nAwECHgECF4AACgkQk4LXIze8fms4zgP+NvVnQvYpXHlVk3Igmg3uMW+c7EMsvhSW\nnl45Hpd2ExV5QZuJPzB2qPS8T+GsQs7q2uiQpcK6JxU/79QmHuer0o63syHr6Uvh\nqmNiH02A59iAXlM+29gGpuSC0Wxck4E/qxcQcje+8w++vguqF6DboOdOanRU7VMA\n91DwSuUFz8q4jQRVibUTAQQA557twd/jg2cuF3N7MbpEf6qA0j4qDrNz/N2FJtOg\nB/Save4ovTP7ISySXjJu94aSsh4ePQt9io7SwZ2rbxHrqhKa8S80pm4Rp7Nyn8be\n6Exn9hllEAEmBmxeK85mVKt2XDpx8mo7pBes2Ia4BsjtVOzlBg3zWXDvsxNGzLkZ\nV00AEQEAAYilBBgBAgAPBQJVibUTAhsMBQkHhM4AAAoJEJOC1yM3vH5rk6UEALwv\nfcT9BQp9k7wX8gtFXMcaGpKJkKHDC71pe4Q9BmXQ4ZjGqPyIwaTEeE2uWCLeayfX\niU5W60iZJiCRxTj2C7hJdUTfrljDvLQvzfHC7Ryz/jOg+O0BCy2kbk+5ZAee7sfB\nYBF+ZLMK932igqwRVVJHOZvw0jczmp2dJzQ4F+pR\n=7zUs\n-----END PGP PUBLIC KEY BLOCK-----"
+  ]
 }
 `,
 }
