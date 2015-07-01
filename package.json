@@ -1,6 +1,6 @@
 {
   "name": "keybase-test-vectors",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "test data shared between different Keybase implementations",
   "main": "js/main.js",
   "repository": {
