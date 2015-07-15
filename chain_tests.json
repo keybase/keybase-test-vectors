@@ -169,6 +169,14 @@
     "test_error_ralph_with_missing_subkey": {
       "input": "nonexistent_subkey_chain.json",
       "err_type": "NONEXISTENT_KID"
+    },
+
+    "test_helen_chain": {
+      "_comment": "A copy of t_helen's sigchain (also available as a permanent test user). Tests PGP keys with changing subkeys. She signed up with a PGP key, added a bitcoin address, and then changed that address, for a total of 3 sigchain links (but the first bitcoin link is revoked, so the final len is 2). In between each one she deleted the signing subkey that was used before and added a new one. So the only way to validate this sigchain is to do proper PGP key merging on all the bundles that the server returns. Note that the order of the key bundles given is intentionally rearranged, to make it less likely that the Go client will spuriously pass this test by only checking the last link against the last key.",
+      "input": "t_helen_chain.json",
+      "len": 2,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }

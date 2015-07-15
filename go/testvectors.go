@@ -172,6 +172,14 @@ const ChainTests = `
     "test_error_ralph_with_missing_subkey": {
       "input": "nonexistent_subkey_chain.json",
       "err_type": "NONEXISTENT_KID"
+    },
+
+    "test_helen_chain": {
+      "_comment": "A copy of t_helen's sigchain (also available as a permanent test user). Tests PGP keys with changing subkeys. She signed up with a PGP key, added a bitcoin address, and then changed that address, for a total of 3 sigchain links (but the first bitcoin link is revoked, so the final len is 2). In between each one she deleted the signing subkey that was used before and added a new one. So the only way to validate this sigchain is to do proper PGP key merging on all the bundles that the server returns. Note that the order of the key bundles given is intentionally rearranged, to make it less likely that the Go client will spuriously pass this test by only checking the last link against the last key.",
+      "input": "t_helen_chain.json",
+      "len": 2,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
@@ -3469,6 +3477,86 @@ var ChainTestInputs = map[string]string{
   }
 }
 `,
+	"melvin_chain.json": `{
+  "username": "melvin",
+  "uid": "08e486faf56b304cf08915984f92b619",
+  "chain": [
+    {
+      "seqno": 1,
+      "payload_hash": "a00d01fc45ce203b2c4349b36b65a0d76339e6a7839f606a047ae2445714865b",
+      "sig_id": "98edf54d8bbbf69e79174ae25e92efbba3ed6c22d0f193ad5f29a195d81c63980f",
+      "sig_id_short": "mO31TYu79p55F0riXpLvu6PtbCLQ8ZOtXymh",
+      "kid": "0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtUU1oE0EUTlJbsFKUHpTqoTgeDLrqzM7s7GwQhVKoHrReBAuWdWZ3Nh2TbuJu\nklpCGvEHqvVQ8aIgpejNg4dCEDEU6alQUAShxYNQaLwLgnhocbbizbm8ed/fg/fm\n+7pSmfTTu+vH7PZMIb32YVWkrj5smXUgSv40yNVBQe6WQIV5GZUjFVZADgTCYZwi\nnzqOL6CNqU8Cwi3mYGb6tomxLTxbUgEMMFGKE4eOETyWp1VJY7pxla/R/+gLuwRE\nEHHhQEawQJRghhghlGKuv9IyfUmwyZjDTCEpM1mAbQ9BS/o24R6HPhQSUch1XPVv\nHJOE0YAHFhUYEi+AzEGWw0jgmIIiJxHGMgr5pNTqSVmsqRA0DFCZLifAlBSupmvK\nk65Qoa93oR01GcWqFIIc0kqvohIvItiCjCGbGEDeLqtIuipRWDZlUD8DlCNZA7mw\nWiwaIJa3wpJm9SCe13NilQ95pRpJ0OidfbEnlc6kerozyT1SvXsP/LvS/ZWuHetg\n89HJlz1ns8vNVffx0uCa/JH91CrfFO9fb/rLv44PDRndp5pz9vyXe1NLW8/bAxe/\nGqN9pDV4/bMLDh/5mT2x0DiXnru0b/zO6MjsxscR91DwZnzrVf+ZzoW3l9e/Fxdv\n7O//faXdmbn27tliffjJ8M63zbHthbHzD1asowOdPw==\n=/ACy\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"fb98a61d699db0736d4f4a589382d72337bc7e6b\",\"host\":\"keybase.io\",\"key_id\":\"9382d72337bc7e6b\",\"kid\":\"0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a\",\"uid\":\"08e486faf56b304cf08915984f92b619\",\"username\":\"melvin\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1435088174,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
+      "sig_type": 1,
+      "ctime": 1435088174,
+      "etime": 1592768174,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": null,
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "proof_text_full": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": "fb98a61d699db0736d4f4a589382d72337bc7e6b"
+    }
+  ],
+  "keys": [
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYm1EwEEAPynyMcyNok+alsFd9GYM6femohjRckCeFv5IU4nJ/th3S7Iwp0+\nTVi5jl5TGhJHTqo6S09J/tovDUXzPFTNlSfR7iY0ijNvr+5Yunwg/Gr962pJsbHH\nYDfAuSLyOgX7+YfM4bVJbma4knxEcxvWlQDUuZv5ZqMj+n2eqdJ+JTwdABEBAAG0\nBk1lbHZpboi/BBMBAgApBQJVibUTAhsDBQkHhM4ABwsJCAcDAgEGFQgCCQoLBBYC\nAwECHgECF4AACgkQk4LXIze8fms4zgP+NvVnQvYpXHlVk3Igmg3uMW+c7EMsvhSW\nnl45Hpd2ExV5QZuJPzB2qPS8T+GsQs7q2uiQpcK6JxU/79QmHuer0o63syHr6Uvh\nqmNiH02A59iAXlM+29gGpuSC0Wxck4E/qxcQcje+8w++vguqF6DboOdOanRU7VMA\n91DwSuUFz8q4jQRVibUTAQQA557twd/jg2cuF3N7MbpEf6qA0j4qDrNz/N2FJtOg\nB/Save4ovTP7ISySXjJu94aSsh4ePQt9io7SwZ2rbxHrqhKa8S80pm4Rp7Nyn8be\n6Exn9hllEAEmBmxeK85mVKt2XDpx8mo7pBes2Ia4BsjtVOzlBg3zWXDvsxNGzLkZ\nV00AEQEAAYilBBgBAgAPBQJVibUTAhsMBQkHhM4AAAoJEJOC1yM3vH5rk6UEALwv\nfcT9BQp9k7wX8gtFXMcaGpKJkKHDC71pe4Q9BmXQ4ZjGqPyIwaTEeE2uWCLeayfX\niU5W60iZJiCRxTj2C7hJdUTfrljDvLQvzfHC7Ryz/jOg+O0BCy2kbk+5ZAee7sfB\nYBF+ZLMK932igqwRVVJHOZvw0jczmp2dJzQ4F+pR\n=7zUs\n-----END PGP PUBLIC KEY BLOCK-----"
+  ]
+}
+`,
+	"nonexistent_subkey_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyakGGaFdDQpMpW0GuYDIxls3tgVRHwtOgq71fwfPBCUKp3BheWxvYWTFASt7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGM5YTkwNjE5YTE1ZDBkMGE0Y2E1NmQwNmI5ODBjOGM2NWIzN2I2MDU1MTFmMGI0ZTgyYWVmNTdmMDdjZjA0MjUwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDM1MDk1NzQxLCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6bnVsbCwic2VxX3R5cGUiOjEsInNlcW5vIjoxLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCj9Ka+PuO9jiy9SAB5inJjKHkB4oq00QExNDIG1u1TW42CPC1VUk+v/A6zAnUVon+Vp+EYSmwC+Izr8+xg49QCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf",
+            "sig_id": "29cba60382bc5c81244acf8cc40cbe2ff14cf35f7b471fb16a5ccf42d15694ef0f",
+            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1435095741,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
+            "ctime": 1435095741
+        },
+        {
+            "seqno": 2,
+            "prev": "57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf",
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyakGGaFdDQpMpW0GuYDIxls3tgVRHwtOgq71fwfPBCUKp3BheWxvYWTFAoJ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzlhOTA2MTlhMTVkMGQwYTRjYTU2ZDA2Yjk4MGM4YzY1YjM3YjYwNTUxMWYwYjRlODJhZWY1N2YwN2NmMDQyNTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzlhOTA2MTlhMTVkMGQwYTRjYTU2ZDA2Yjk4MGM4YzY1YjM3YjYwNTUxMWYwYjRlODJhZWY1N2YwN2NmMDQyNTBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInN1YmtleSI6eyJraWQiOiIwMTIxMWIyM2ZlZmM3Yzg5NTFlMzQzNTgwMTJlZWNkYTNmNzg5YjkyNTAwYTc0OWMzMTg0NzI1YWEwYTU2MmU0OWY2NjBhIiwicGFyZW50X2tpZCI6IjAxMjBjOWE5MDYxOWExNWQwZDBhNGNhNTZkMDZiOTgwYzhjNjViMzdiNjA1NTExZjBiNGU4MmFlZjU3ZjA3Y2YwNDI1MGEiLCJyZXZlcnNlX3NpZyI6bnVsbH0sInR5cGUiOiJzdWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzUwOTU3NDEsImV4cGlyZV9pbiI6MzE0NDk2MDAwLCJwcmV2IjoiNTdlM2QzNzU3MjYyZTRiMDY5MmM2YzFjY2MwYTU3NDQzYWEzMTRhZjhlYzdmN2QyMTc2MGEwMjQxNDg5NTFjZiIsInNlcV90eXBlIjoxLCJzZXFubyI6MiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDopHjQ1+pUxyQ65K9Z4c77uhVWhF21+UmHqJqV+1E/nMX822yTus5QqAPgfZPC4lc7vBsmdcV7rWsrXrN6qC8JqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
+            "payload_hash": "df9bc2d737831dd3c5ea6e8f0e66a33ced4371e76afbe6dec3dba2c28e65f3a1",
+            "sig_id": "fc147293e3f476c1e37038bf90dc49233d3b51ff31479abbab3c286fdea954900f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"host\":\"keybase.io\",\"kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"subkey\":{\"kid\":\"01211b23fefc7c8951e34358012eecda3f789b92500a749c3184725aa0a562e49f660a\",\"parent_kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"reverse_sig\":null},\"type\":\"subkey\",\"version\":1},\"ctime\":1435095741,\"expire_in\":314496000,\"prev\":\"57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
+            "ctime": 1435095741
+        }
+    ],
+    "_comment": "DELETED A SUBKEY KID HERE",
+    "keys": [
+        "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32",
+    "label_kids": {
+        "e": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
+        "s": "01211b23fefc7c8951e34358012eecda3f789b92500a749c3184725aa0a562e49f660a"
+    },
+    "label_sigs": {
+        "e": "29cba60382bc5c81244acf8cc40cbe2ff14cf35f7b471fb16a5ccf42d15694ef0f",
+        "s": "fc147293e3f476c1e37038bf90dc49233d3b51ff31479abbab3c286fdea954900f"
+    }
+}
+`,
 	"ralph_chain.json": `{
   "username": "ralph",
   "uid": "bf65266d0d8df3ad5d1b367f578e6819",
@@ -3700,84 +3788,110 @@ var ChainTestInputs = map[string]string{
   }
 }
 `,
-	"melvin_chain.json": `{
-  "username": "melvin",
-  "uid": "08e486faf56b304cf08915984f92b619",
-  "chain": [
-    {
-      "seqno": 1,
-      "payload_hash": "a00d01fc45ce203b2c4349b36b65a0d76339e6a7839f606a047ae2445714865b",
-      "sig_id": "98edf54d8bbbf69e79174ae25e92efbba3ed6c22d0f193ad5f29a195d81c63980f",
-      "sig_id_short": "mO31TYu79p55F0riXpLvu6PtbCLQ8ZOtXymh",
-      "kid": "0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a",
-      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtUU1oE0EUTlJbsFKUHpTqoTgeDLrqzM7s7GwQhVKoHrReBAuWdWZ3Nh2TbuJu\nklpCGvEHqvVQ8aIgpejNg4dCEDEU6alQUAShxYNQaLwLgnhocbbizbm8ed/fg/fm\n+7pSmfTTu+vH7PZMIb32YVWkrj5smXUgSv40yNVBQe6WQIV5GZUjFVZADgTCYZwi\nnzqOL6CNqU8Cwi3mYGb6tomxLTxbUgEMMFGKE4eOETyWp1VJY7pxla/R/+gLuwRE\nEHHhQEawQJRghhghlGKuv9IyfUmwyZjDTCEpM1mAbQ9BS/o24R6HPhQSUch1XPVv\nHJOE0YAHFhUYEi+AzEGWw0jgmIIiJxHGMgr5pNTqSVmsqRA0DFCZLifAlBSupmvK\nk65Qoa93oR01GcWqFIIc0kqvohIvItiCjCGbGEDeLqtIuipRWDZlUD8DlCNZA7mw\nWiwaIJa3wpJm9SCe13NilQ95pRpJ0OidfbEnlc6kerozyT1SvXsP/LvS/ZWuHetg\n89HJlz1ns8vNVffx0uCa/JH91CrfFO9fb/rLv44PDRndp5pz9vyXe1NLW8/bAxe/\nGqN9pDV4/bMLDh/5mT2x0DiXnru0b/zO6MjsxscR91DwZnzrVf+ZzoW3l9e/Fxdv\n7O//faXdmbn27tliffjJ8M63zbHthbHzD1asowOdPw==\n=/ACy\n-----END PGP MESSAGE-----",
-      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"fb98a61d699db0736d4f4a589382d72337bc7e6b\",\"host\":\"keybase.io\",\"key_id\":\"9382d72337bc7e6b\",\"kid\":\"0101ab90843b164381844663a438e52de43288982be6828f37c105ed74aca0d0be160a\",\"uid\":\"08e486faf56b304cf08915984f92b619\",\"username\":\"melvin\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1435088174,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
-      "sig_type": 1,
-      "ctime": 1435088174,
-      "etime": 1592768174,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": null,
-      "proof_id": null,
-      "proof_type": null,
-      "proof_text_check": null,
-      "proof_text_full": null,
-      "check_data_json": null,
-      "remote_id": null,
-      "api_url": null,
-      "human_url": null,
-      "proof_state": null,
-      "proof_status": null,
-      "retry_count": null,
-      "hard_fail_count": null,
-      "last_check": null,
-      "last_success": null,
-      "version": null,
-      "fingerprint": "fb98a61d699db0736d4f4a589382d72337bc7e6b"
-    }
-  ],
-  "keys": [
-    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYm1EwEEAPynyMcyNok+alsFd9GYM6femohjRckCeFv5IU4nJ/th3S7Iwp0+\nTVi5jl5TGhJHTqo6S09J/tovDUXzPFTNlSfR7iY0ijNvr+5Yunwg/Gr962pJsbHH\nYDfAuSLyOgX7+YfM4bVJbma4knxEcxvWlQDUuZv5ZqMj+n2eqdJ+JTwdABEBAAG0\nBk1lbHZpboi/BBMBAgApBQJVibUTAhsDBQkHhM4ABwsJCAcDAgEGFQgCCQoLBBYC\nAwECHgECF4AACgkQk4LXIze8fms4zgP+NvVnQvYpXHlVk3Igmg3uMW+c7EMsvhSW\nnl45Hpd2ExV5QZuJPzB2qPS8T+GsQs7q2uiQpcK6JxU/79QmHuer0o63syHr6Uvh\nqmNiH02A59iAXlM+29gGpuSC0Wxck4E/qxcQcje+8w++vguqF6DboOdOanRU7VMA\n91DwSuUFz8q4jQRVibUTAQQA557twd/jg2cuF3N7MbpEf6qA0j4qDrNz/N2FJtOg\nB/Save4ovTP7ISySXjJu94aSsh4ePQt9io7SwZ2rbxHrqhKa8S80pm4Rp7Nyn8be\n6Exn9hllEAEmBmxeK85mVKt2XDpx8mo7pBes2Ia4BsjtVOzlBg3zWXDvsxNGzLkZ\nV00AEQEAAYilBBgBAgAPBQJVibUTAhsMBQkHhM4AAAoJEJOC1yM3vH5rk6UEALwv\nfcT9BQp9k7wX8gtFXMcaGpKJkKHDC71pe4Q9BmXQ4ZjGqPyIwaTEeE2uWCLeayfX\niU5W60iZJiCRxTj2C7hJdUTfrljDvLQvzfHC7Ryz/jOg+O0BCy2kbk+5ZAee7sfB\nYBF+ZLMK932igqwRVVJHOZvw0jczmp2dJzQ4F+pR\n=7zUs\n-----END PGP PUBLIC KEY BLOCK-----"
-  ]
-}
-`,
-	"nonexistent_subkey_chain.json": `{
+	"t_helen_chain.json": `{
+    "username": "t_helen",
+    "uid": "9cbca30c38afba6ab02d76b206515919",
     "chain": [
         {
             "seqno": 1,
+            "payload_hash": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
+            "sig_id": "d020f47d51011e8fe3ca042ca6639ca56acb6b53f53c8f8db25da308fd10c2b50f",
+            "sig_id_short": "0CD0fVEBHo_jygQspmOcpWrLa1P1PI-Nsl2j",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkT2IE0EUxzc5FbzzMIhgo80UV63H7OfsBGxECwtFg9HOOLPzNjck2Y27+TCG\nq0QuKnjiB4Kx8QMFEcNdYyNyeuKhuVII2AhqdYXXWHiF4GzAzmmG+b/f//8e825O\nT2jZzPvFXVu/HotmZrjykWvFp1fPdhGPRAflu6gC4yuQYRnieizDBsojUwjBPSEC\nE7DtkcAOuAU+8WyPWS4w3xOWzYASpKO5KEkdKoazBGZlpDT1KEmh1P/wlXEBG9hw\nXYqBYyF8x7F9bivMJDYl3KIe4wF1hSEsoUYJgoAyw/AYdjjBghocHIopZiquOY6j\nPveZhX3LYwFnLuPYFMTlJnYdw6EGTcEE4pDVQNGN0hxUIUTzOmp06qnSBl5S9Zb0\nocRlKNRnKEsL4kRGIcobivQbMjUbtuVSQmzP1hFcrMsYSjIlHOJ6WB0d1WNooXzY\nrFZ1lMCFMFJV1YiVVZ9ElkPWaMaA5id7D7Zpmay2Y3s2XYg2uTP3b023fk/8yV0b\nnDq+fyEKlk7cr15fSFZXDyc1rXDo9sbe9ubDIvl2uX/n3KV3vBPM3rtxxfzxoV7p\ntzePjAp3148uvdz4ZMaj0Zl9W93M1HftTX9wfuX5yQNrvc8ztWPF4W59Gs+sL69N\nLdK3X15TeLJn8OInOZhbPv2sV7S+PnpVGKK/\n=ZlOG\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1436977484,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
+            "sig_type": 1,
+            "ctime": 1436977484,
+            "etime": 1594657484,
+            "rtime": null,
+            "sig_status": 0,
             "prev": null,
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyakGGaFdDQpMpW0GuYDIxls3tgVRHwtOgq71fwfPBCUKp3BheWxvYWTFASt7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGM5YTkwNjE5YTE1ZDBkMGE0Y2E1NmQwNmI5ODBjOGM2NWIzN2I2MDU1MTFmMGI0ZTgyYWVmNTdmMDdjZjA0MjUwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDM1MDk1NzQxLCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6bnVsbCwic2VxX3R5cGUiOjEsInNlcW5vIjoxLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCj9Ka+PuO9jiy9SAB5inJjKHkB4oq00QExNDIG1u1TW42CPC1VUk+v/A6zAnUVon+Vp+EYSmwC+Izr8+xg49QCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-            "payload_hash": "57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf",
-            "sig_id": "29cba60382bc5c81244acf8cc40cbe2ff14cf35f7b471fb16a5ccf42d15694ef0f",
-            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1435095741,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
-            "ctime": 1435095741
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
         },
         {
             "seqno": 2,
-            "prev": "57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf",
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyakGGaFdDQpMpW0GuYDIxls3tgVRHwtOgq71fwfPBCUKp3BheWxvYWTFAoJ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzlhOTA2MTlhMTVkMGQwYTRjYTU2ZDA2Yjk4MGM4YzY1YjM3YjYwNTUxMWYwYjRlODJhZWY1N2YwN2NmMDQyNTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzlhOTA2MTlhMTVkMGQwYTRjYTU2ZDA2Yjk4MGM4YzY1YjM3YjYwNTUxMWYwYjRlODJhZWY1N2YwN2NmMDQyNTBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInN1YmtleSI6eyJraWQiOiIwMTIxMWIyM2ZlZmM3Yzg5NTFlMzQzNTgwMTJlZWNkYTNmNzg5YjkyNTAwYTc0OWMzMTg0NzI1YWEwYTU2MmU0OWY2NjBhIiwicGFyZW50X2tpZCI6IjAxMjBjOWE5MDYxOWExNWQwZDBhNGNhNTZkMDZiOTgwYzhjNjViMzdiNjA1NTExZjBiNGU4MmFlZjU3ZjA3Y2YwNDI1MGEiLCJyZXZlcnNlX3NpZyI6bnVsbH0sInR5cGUiOiJzdWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzUwOTU3NDEsImV4cGlyZV9pbiI6MzE0NDk2MDAwLCJwcmV2IjoiNTdlM2QzNzU3MjYyZTRiMDY5MmM2YzFjY2MwYTU3NDQzYWEzMTRhZjhlYzdmN2QyMTc2MGEwMjQxNDg5NTFjZiIsInNlcV90eXBlIjoxLCJzZXFubyI6MiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDopHjQ1+pUxyQ65K9Z4c77uhVWhF21+UmHqJqV+1E/nMX822yTus5QqAPgfZPC4lc7vBsmdcV7rWsrXrN6qC8JqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
-            "payload_hash": "df9bc2d737831dd3c5ea6e8f0e66a33ced4371e76afbe6dec3dba2c28e65f3a1",
-            "sig_id": "fc147293e3f476c1e37038bf90dc49233d3b51ff31479abbab3c286fdea954900f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"host\":\"keybase.io\",\"kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"subkey\":{\"kid\":\"01211b23fefc7c8951e34358012eecda3f789b92500a749c3184725aa0a562e49f660a\",\"parent_kid\":\"0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a\",\"reverse_sig\":null},\"type\":\"subkey\",\"version\":1},\"ctime\":1435095741,\"expire_in\":314496000,\"prev\":\"57e3d3757262e4b0692c6c1ccc0a57443aa314af8ec7f7d21760a024148951cf\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
-            "ctime": 1435095741
+            "payload_hash": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
+            "sig_id": "4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f",
+            "sig_id_short": "TmJRxUGl13kSoCNwxwfTmtOBkzMOQ_RQfUXD",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkt9LFUEUx/derUgNCsuiHqQJiuhmMzu7OzM36AcR9MOMlLgkwWVmZ1Yndfc6\nu4oXE3pLMikIIsEgAnsvK3roJfAtkpCIyP4Box5LjIjmXuolmsdzvucz3+/h3N7U\n4ORzLcXeK89udh/OvV4RzsVHN/aPA5HIKiiOg9BUK1kSjhij4rBe4VIalaagCPAZ\nRjNUqpzsJfhE19CFUa1CE1d1ycTD3f2lrs4qKICsWlFWK3QWJjoGEwUwoOqcSMd9\nylSMjjPbd6WUgkoZuQp6lEReJLAKCfUox4HiIZXY44oRS+xP0tqExQieqg6dgDqz\nrKWt/kc/UG9ABFEQMKgElDL0fS8UnpW5xGNEYEa5iFggkcTSWomiiHGEKIe+IFAy\nJJTPIIPc4kbqOBaKkGMYYsojwQMuoCtJIFwY+MhniNWEqTIxH6qlz8r9alDV0//Z\nxz97LYBRZVKdxKCIrCjMdG0OeThghAQ+LgA1VtFGlXVN4ZOAQvsKoGLUqKUpa9pD\nKHIDn3qKWvPcZrPJCLIFGBECUYSgjBDyBGSE2/ycioBT6ULlYvt/qobjBBS3udYi\n77PMVPfFPBsxCkw0Tc42Orm8s35dvnYdTtPGzX9P5uithl8d2cvy8heWbd3Z2dL2\nEOtPTcuLL2aPrB64PDg1eX9foXktm5nDrbsnro59e9Las+fc246FpeufS/zS1OLP\n+Wmz8vHrMdAMnjf+SN7fyz9d2/F4w+ntpx58bzt78G7Se779+Exudm/JaVm4tvpq\nbiicbzz0IY7fLL27syvnbGlun/4N\n=CoBU\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977653,\"expire_in\":157680000,\"prev\":\"ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23\",\"seqno\":2,\"tag\":\"signature\"}\n",
+            "sig_type": 6,
+            "ctime": 1436977653,
+            "etime": 1594657653,
+            "rtime": 1436977851,
+            "sig_status": 1,
+            "prev": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
+        },
+        {
+            "seqno": 3,
+            "payload_hash": "123134c84cd9e592cb7f9ead0b24a29252ce22789a718007ea865612eba88e9e",
+            "sig_id": "bef80a641d1c020b2cb4dab82074fbd4ef7f7c9c0182163aac807ada77cb3a3b0f",
+            "sig_id_short": "vvgKZB0cAgsstNq4IHT71O9_fJwBghY6rIB6",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkk1IVUEYhq+ahmI/0M+uoCkI6pIzZ86cOXMJRAOjqxglIRUh86uHW+fee87x\n0kUMWgSlJRn0RxG2MEQQzEUU1sIWUWRRm2gTgRDkKoqgjVRzL9QimtXwzfs9vN87\n3+U1danamifzN+93mK/NNS+XRerIvZH5ISDyqgwyQ0BG5UKSl4NRpENZrXClIh3H\nIAMQzZaP7iuFmLZbdZc4pjoPRb24t1v00qyMS21ZkAZJuaCtVgSJzAchGE6DnK5y\nTBD266gQBWFi3x2llPCVMo6Grk+NawTWkvquz7GnufQVdrlm1BIH8nGlw2IEj/We\nIA+qzL5A2ep/9LnqA0QQeR6DWkClJCGuFK6VOdRlVGDmc2GYp5DCyloxxjCOkM8h\nERQqhoQmDDLILW6wimNSSI6hxD43gntcQEdRTzjQI4gwxCrCWEchP1WZPukb0Cd1\ndfpIl/I5XQkgDvqtZxvkceBqzyFIEhdxoihlyOHQwRRKCqnCjCvsI4YxhtrFxiW2\n6BKJNWLI3pBPoAEnhv9m/c+fpUFJR3GQD0EGWZFMgoon5GKPURswSgN9uhBEus9+\nT6aICPV8aE8aFKxXizOQEukZJhhUEFOfYkglsZ2O5zuEupwx5XhU+FAjn7kOFNBI\nwmglcAOxtAZiXQzzIIOtRd5vkXb0kCeDkQbDTedvr0rV1KYa6msrm5dqalz/Zx0n\nZutWmlu354p7z4z5yYFLP+bPjuCDGzeh6WT36xfr3jY8y35eurBCJ161j7asbpk7\nfG3pzY0di+ON7+62BV2Ppkd7aA/ZumXzzJeR7xuK29Y23gqXL6786p5pvfL4Kl+o\n79j1YfbBzinvTvBz/+K3yYXU0tOHn+auf2xfHi++P9c5OfV8zPwG\n=bVAb\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"17JyYCvn37BodyLbZdKQrW3WNbW7JcsvAJ\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"revoke\":{\"sig_ids\":[\"4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f\"]},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977841,\"expire_in\":157680000,\"prev\":\"f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c\",\"seqno\":3,\"tag\":\"signature\"}\n",
+            "sig_type": 6,
+            "ctime": 1436977841,
+            "etime": 1594657841,
+            "rtime": null,
+            "sig_status": 0,
+            "prev": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
         }
     ],
-    "_comment": "DELETED A SUBKEY KID HERE",
+    "_comment": "NOTE: I've reordered these keys so that the last one here is the middle one used to sign. This is intentionally to trip up the Go client, which likes to only verify the last signature (and therefore by default used the last key and spuriously passed this test).",
     "keys": [
-        "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32",
-    "label_kids": {
-        "e": "0120c9a90619a15d0d0a4ca56d06b980c8c65b37b605511f0b4e82aef57f07cf04250a",
-        "s": "01211b23fefc7c8951e34358012eecda3f789b92500a749c3184725aa0a562e49f660a"
-    },
-    "label_sigs": {
-        "e": "29cba60382bc5c81244acf8cc40cbe2ff14cf35f7b471fb16a5ccf42d15694ef0f",
-        "s": "fc147293e3f476c1e37038bf90dc49233d3b51ff31479abbab3c286fdea954900f"
-    }
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiaUBBAC4rsIlUx2wFOpLUX2RA4M57NFtRs5IadU0k3JdMq2sUqcVqBoY\nM3Fb+aI+kidTc2ViwO3EJ/dHJ04GH99gL0JdPLq4gIHZ6cbLDJn6IcJWjHXp3M5O\nIlkJ4bUwJ+GQPEqwqSzbMU2B5bNmZIJed+L1Lcg4RCyyRT9QKDPNNRR2MwARAQAB\niQE9BBgBAgAJBQJVpomlAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiaUACgkQ\nDDpaarWMUjvhCAP+KrnFTQqnSJOcyMY2GvNjeJxWIKfQLuBOUP9JNTxQW92gOgZy\nUbf4pPZShYduMW3vNQKOsuYI27UbwF9+SWPadhU1/1KDOcAc2I6gcJKKNUKjXIBs\ny2FViVgjfTQeAdWhXv+giSrGOB+spiLZKMFK/e8Ws5trUSmk9sruR94l6rl7WQP/\ndcDx57sJPXaMDV9WcL2lkZ8qGnNv0sn2Hkn3LBlOLcNldLZ46xtQhPWC/2J+ZLrd\nqOxdH77rboQRkCRIGU74xtFcIrFWE71lFNh2rGp3LTOUO8Dxl4lOna3DICjyQZtF\n/7wtrrTFtHqvJKFoUrBeZ3VYPok9J4Nkwie44o3ySic=\n=Z+fb\n-----END PGP PUBLIC KEY BLOCK-----",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmioMBBAC4ll4aBxfFepR/vfXs1TVaeDBi5wWKJNYrmfHAwXOZIFgrIPNx\n9ikGXZaiUBsekRDqcxmlsIMtZJWdpmIk180Tvm0evTQ7jCi8glltcS8OSCpFv9uW\nx8phrv6eY+U0AkTTpzPZqeO/IIywpbu3JTPsZxODETbo0l9/TpwV2+w6OwARAQAB\niQE9BBgBAgAJBQJVpoqDAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmioMACgkQ\nvbuZsUZm8QwQCwP/ehPkqLCLJtMMLXEzIk0vFyEA8HJqaHmTTpmoWH2Z71x7usgN\n5/11FBqAcSL8lbk+5rwtTGs9mogkt6Gdm5TG+kypkOgTxq1cTqWn0MoM4rr2czv7\nfuyYFkCP6tiqhIPBBp8g4/jWfhbPFzY4q9IqhZENVM3Ljq0GLtqcZGTH8YFe1QP7\nBEz3aMPXH+TnGYKSDJ+PinhunEN5WEa2/sPqPmuBEjsB4NC3fQXt7UC5JOMSNMAz\nN53BOmdExycT2CjEDj+pyhNViBEWTHuCf/MkKcmItDdcUDSvAQ9H2wlFEbUJwmbU\nDJqF9Foqo3P7k7YVxGf6g2vVNAjyqs3xsdh7ch88GNo=\n=JxSo\n-----END PGP PUBLIC KEY BLOCK-----",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiQ0BBADGbDlbbQsqG0rR9CiOYTXnQH7gXbPW8JQGc+n27N05NO7k8b8U\nMhYXg7aDR89AvVHyL8UIL/+1c7aAU3xcsu/yBfwsAuDOjlZnB5K+IWEGxuFAS1I2\nPxhehRkct9aLh7lz26MPcaPV8Jn1GgsC9ZVc4IoUE5S+Rx28IxbSWb9XrQARAQAB\niQE9BBgBAgAJBQJVpokNAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiQ0ACgkQ\nxI8M+fSjZHW2SwQAk35hPHEoeJdoTEWN0fiJjcGocASsOtcuYl7SRIvqQ8xiFxUv\nlIFAiAua3Tu85Bf7vvUkfjbMQHUru1jfrGdVHWRS445hDpGo2JIOOG53MPbNMVTW\nhk6T/GdYH7tyEoSU3EpUPn3I6+9ThI9RF2UHNWk245PE5IbP2QOSRqI4OGey5gP/\nVBkq/7vweVO05MwaCeWGUJtutSi/BEarWjXJGvRHsF5ynxPw8I74NMN3eNWF3GJ9\nREKidCZaJiMUFuhnM0q0hs0JQLutyPJdPdk0Q+Lwp74GH8XAd3+9cHGjQsoKKv9I\nIgxzqpptFCn9YShewNGexOtRJBuiiNQNmGUFapkHPpM=\n=YNYZ\n-----END PGP PUBLIC KEY BLOCK-----"
+    ]
 }
 `,
 }
