@@ -177,6 +177,16 @@
       "len": 2,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_pgp_subkey_after_revoke": {
+      "_comment": "The eldest link is signed with a PGP key with an extra signing subkey, then a pgp_update link is used to update the key to a version where that subkey has been revoked. Then, another pgp_update link appears which tries to revert to the original version of the key, but is signed by the revoked subkey.",
+      "input": "old_pgp_key.json",
+      "err_type": "VERIFY_FAILED"
+    },
+    "test_pgp_bad_full_hash": {
+      "_comment": "The eldest link is signed with a PGP key and includes a full_hash which doesn't match the key",
+      "input": "bad_full_hash.json",
+      "err_type": "NO_KEY_WITH_THIS_HASH"
     }
   }
 }
