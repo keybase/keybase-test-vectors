@@ -187,6 +187,10 @@
       "_comment": "The eldest link is signed with a PGP key and includes a full_hash which doesn't match the key",
       "input": "bad_full_hash.json",
       "err_type": "NO_KEY_WITH_THIS_HASH"
+    },
+    "test_pnelsen_sigchain": {
+      "_comment": "pnelsen was one of several users affected by the 15 Sep 2015 white-space stripping bug on the server",
+      "input": "pnelsen_chain.json"
     }
   }
 }

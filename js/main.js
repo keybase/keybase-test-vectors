@@ -20,6 +20,7 @@ exports.chain_test_inputs['missing_kid_chain.json'] = require('../chains/missing
 exports.chain_test_inputs['missing_reverse_kid_chain.json'] = require('../chains/missing_reverse_kid_chain.json');
 exports.chain_test_inputs['nonexistent_subkey_chain.json'] = require('../chains/nonexistent_subkey_chain.json');
 exports.chain_test_inputs['old_pgp_key.json'] = require('../chains/old_pgp_key.json');
+exports.chain_test_inputs['pnelsen_chain.json'] = require('../chains/pnelsen_chain.json');
 exports.chain_test_inputs['ralph_chain.json'] = require('../chains/ralph_chain.json');
 exports.chain_test_inputs['signed_with_revoked_key_chain.json'] = require('../chains/signed_with_revoked_key_chain.json');
 exports.chain_test_inputs['simple_chain.json'] = require('../chains/simple_chain.json');
