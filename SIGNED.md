@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQEcBAABAgAGBQJVlENbAAoJEHGHa2itSC0yvIoH/i4LxAxJe/I/NwNh5lk58iA9
-THQABMLTGiPCP04Q0kVSfpCdg7XoR9xiK5FZZae76DqlXs+KSNIVGPSH8+gEKaon
-gttZG1HqrJZkP6Z521+unBf91YCo3s2157uEOWI7fbzl0sRN8az2ooS5pDEMIGnK
-4Wlk9AVqtyXVmF2tPb8tKIppU6fY2IC/6YRRu30er1EZRy0sZNmCJ3O5MSDGWB7e
-iQGH86wxhwVLJCqBpRBTr8n0VjlJeOuYb7cfhYrG21iPeyPdc9Yhii0H8I25UA+P
-E/rZkH41gm5yaF+ONW9KHyabvt12TXneg3TdgUgx1cnjm1kzcAOvCSt8WV878mw=
-=dyHY
+iQEcBAABAgAGBQJWAG8YAAoJEHGHa2itSC0ykJIIAJuFIKFgndV3OIodah54LrKS
+huJA0J0lUjeCdYcdDwabnb4WFe/FlAltQpjBxLyB3CE20pjO2etBp4P4hQmkP3vU
+BsrO3zxPlkJkdFCB9VUZGHUoB2V9eU748cko972L4P3WdOdgrFVz29gXet3eEVHO
+qc2dsdYM/QShouKCOf1U1QGyiwz5HJ7I5VitvVmgR1WQih/bOvcvnJ300keQeV3t
+VWRvuCBMy4v2yUZ8/Jg/L+g4afNo1KDoCJXQqGMJFEmATxMcUpgJXF9GuyXdvS+A
+B1Fp2GAkR9s8Pce81zPbCDNna1rUMoGKnq6viAcki1fZyTY/Yvb8EtO44DjUEa0=
+=aWOf
 -----END PGP SIGNATURE-----
 
 ```
@@ -23,8 +23,9 @@ E/rZkH41gm5yaF+ONW9KHyabvt12TXneg3TdgUgx1cnjm1kzcAOvCSt8WV878mw=
 ```
 size    exec  file                                          contents                                                        
               ./                                                                                                            
-6208            chain_tests.json                            ad7466a7ab6390bb4ae1290b2648f685a5e6accdfdd608d5a3317dbe53c1a79f
+7981            chain_tests.json                            c1c5e8b8455c3cfd6d6ad20a374fe3de1b623e51817c03cbced39844cb477bb9
                 chains/                                                                                                     
+5233              bad_full_hash.json                        009d2eee93ec4d164c10f5b2653383b36efcb0fd7e70cdae2bd08a3b8123f1bd
 6051              bad_prev_chain.json                       53f930afd490f739b57d1de35bfb18c0e3dc9e4163a1eb898fce8bdcc98f6842
 6051              bad_reverse_signature_chain.json          06940369198a81f6f89bc86dcfd21261b54d397d0ce1cb53b8ec36c522b16ed1
 6051              bad_seqno_chain.json                      a411e254fdf9af78d5de5dd8036fb649ce7756fa930edd42a36110c0ab863826
@@ -41,6 +42,7 @@ size    exec  file                                          contents
 191                 bad_username_chain.cson                 0c265be0f1673b86ab7d47a73dac5741b534c4f2412e40fb07c63d24d849896a
 2571                example_revokes_chain.cson              1fa7bd01611ffd4e84b6ab6ec551711b136c14dd0a08a55922821fe1044fdf56
 302                 expired_key_chain.cson                  1cb759331e75f16e1057882fa15f114d86184b61e1bb84eb340a47308f6ce057
+17817               old_pgp_key.cson                        1287e9d4f2f1d7638be1579c99508d5c81f557a9c29668d7668f22bb038e0e37
 541                 signed_with_revoked_key_chain.cson      62d9b4bcef4c86ebd64419e844d4c848be9f469b55ee78abb3a4beb8cab96ac9
 160                 simple_chain.cson                       fc5d18080e832797349566cdf512fa46d28ede8d291d85f855fd9c9eafbdcf8a
 285                 two_link_chain_for_manual_hacking.cson  8659c7b477321c83f3102f03afd1b480099016ff7ce4216f13636b563c41eda7
@@ -53,15 +55,18 @@ size    exec  file                                          contents
 7375              missing_kid_chain.json                    a5959e4f56b209c9d8071b924115747a31c5e5091b5b4c06d5d694bbf1af591a
 7391              missing_reverse_kid_chain.json            cf5eb200d78afd221e11674581a574d82225286aff15f9d5f8739554c564bc04
 4342              nonexistent_subkey_chain.json             9078ed901fdbd9210b6838daad2c09d3e80aab6ee5ab920a4154d184bb89cac1
+13737             old_pgp_key.json                          3f67ff989ba5983462aec2bd99f9a285646d01c99d2bbb044e6f10157268db4f
+132365            pnelsen_chain.json                        09c922136598fc93d9d3a43ad748c5b5d1f0a6ca1449cd5362d48114157b6ea5
 43316             ralph_chain.json                          c4da3be30f814464b94d27b19fc51be5907a702094b55c540903dc4f9f1d9fd8
 12536             signed_with_revoked_key_chain.json        55ac1ea124f7e9bb2473035be106b1718e288527a3583fd711c726185a047051
 1607              simple_chain.json                         138d7ac6ba3dff9d210e90101156cc399de6d070eb742eecf10ee2cc9e32b890
-1600    x       generate.py                                 c779ea5e69a2af581c42fb288b10dd2810c93326cf68d6bcedc19efe44c3f595
+13710             t_helen_chain.json                        bdc6fb57c1fde665f22f9ac4c084f7954b4e951a2d81c7dbb6b11db36915c995
+1603    x       generate.py                                 2d79ebe783d2af9f153a49ac8b75cdc7143c50644bb86ec50866f0d439790b35
                 go/                                                                                                         
-701473            testvectors.go                            f6ba1e1ab3b068ca3e1a8e4aa82f06dce840d42f1c2399619f9d9dfabab62206
+868613            testvectors.go                            15caadd914e7649a92a8c4d2c396fa193fd98e05123b982f3a848eccb1cd49c7
                 js/                                                                                                         
-2259              main.js                                   60ccf9d8ea4eb70abc124a02ffc209cf5c326414ad06050a6ef9c5424cad6531
-322             package.json                                c9f00e30900ddc742451d1b319a6530b6e7f72d9b9821c1bebb9008279d9af3d
+2619              main.js                                   ee37d74adafebbb7092592d1cabc72a1290a982916a17c5e44c16dcb34928a03
+322             package.json                                2a199ff81415399ffcb7ebf947d7080ddedd9d51637285ee2f4f5b68802c05b8
 ```
 
 #### Ignore
