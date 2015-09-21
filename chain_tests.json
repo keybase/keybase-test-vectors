@@ -190,7 +190,10 @@
     },
     "test_pnelsen_sigchain": {
       "_comment": "pnelsen was one of several users affected by the 15 Sep 2015 white-space stripping bug on the server",
-      "input": "pnelsen_chain.json"
+      "input": "pnelsen_chain.json",
+      "len": 21,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }

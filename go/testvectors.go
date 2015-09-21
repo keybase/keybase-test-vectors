@@ -193,40 +193,16 @@ const ChainTests = `
     },
     "test_pnelsen_sigchain": {
       "_comment": "pnelsen was one of several users affected by the 15 Sep 2015 white-space stripping bug on the server",
-      "input": "pnelsen_chain.json"
-    },
-
+      "input": "pnelsen_chain.json",
+      "len": 21,
+      "sibkeys": 1,
+      "subkeys": 0
+    }
   }
 }
 `
 
 var ChainTestInputs = map[string]string{
-	"bad_full_hash.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.44\nComment: https://keybase.io/crypto\n\nyMHlAnicbZFdSBRRGIbXskxjo4Qs88L2hES0yPzPzupNISQRCJJppa5nZs6ugzo7\nOzMriq1EWUFSaWq5ZBn4lyWSEf0QiWteuRj+hBYUohC2ZYFYUFHS2Y3uOjfnfO/7\nfs8H5xuzrrckxeVdsw7w7JGmuPDIkt9SEFnLqgOiV64FzjpQgWKXW1E9SNd0RTWB\nE7CQp0URsYQgEpJAiTIlQRHSLMeLDp6kHZCnIEtzDLADt7+y0lUOjXLc5vZ6Rahj\nsdxrRDGYLUIDZSperOHCpchY/Q+kImYQJEHyNJQhhY9EQcSSPMFJjOAWSZJ384KI\nCJpHLJQExs2LlOTgBMbBUxSDOAIKIhZJAmKcP4ZzCDJDy6KbFSBHS4JIQ5JzUCyL\nEOTdLClEgwbSVViFcFrzaC6/JkMTuUxkmEgHATswa7WohyplLOF8NdINxasCJ4lN\nyVSinSTDkLTgoGnSDlCNpujIpeAEjXWBIwjCDjQdVQOnij/KDgzkc/2lkrFC9cZe\nJvTgOYbiUaHp1xEIjI4Ux1vikiwbN6yL7suSlLj13xZThhN+J+96/HxL5O6lve/1\nuUehkX5PxteHt2pmX84Fe3yR8e3XCbCzs2BifPBHSfHPhtbQvsBkbtnhC6GB1QOd\nyeXhHO3K4HzHu9fWuvb46ZnktuVIWyl579WNm5k9yyVpQdvVvqppX0bg7AqVveR7\nuvdzo407OvRsreVB6OSMlLrkD9frXXRaWkJTd2//wcSpFwuLjR+maj/2NXe0n4N7\nPpWhyRZC7aU6LxLbSrNP5x/P/1VovT25eKer7HtIuG/aihoKx77szlvLH229XJHj\nSjnTdWxT0LZgbi4+cehtpv4muDp8Kj1smaW7pcT6UO4Embpj/8qQFkhvLvp2fng+\n60nKH6ETE6k=\n=8ZaC\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "9d6cea32a5cc0a0d9cfb9a58d60f0c1a9720e748dcd83901afb32e9de9c8b03c",
-            "sig_id": "3530b961e15781b6e833f8e9bae1e857a9b52b3aeb1a3c34e83a0e4e91b5d29f0f",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"5a73bbe509b0c92bd2caba3567b87138a72a5364\",\"full_hash\":\"foobar\",\"host\":\"keybase.io\",\"key_id\":\"67b87138a72a5364\",\"kid\":\"010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a\",\"uid\":\"89d43dbf59a63c9b3a168255eea7f519\",\"username\":\"pgp_update_tester\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1441398331,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a",
-            "ctime": 1441398331
-        }
-    ],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1\n\n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\nnQ==\n=olf1\n-----END PGP PUBLIC KEY BLOCK-----"
-    ],
-    "uid": "89d43dbf59a63c9b3a168255eea7f519",
-    "username": "pgp_update_tester",
-    "label_kids": {
-        "start": "010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a"
-    },
-    "label_sigs": {
-        "undefined": "3530b961e15781b6e833f8e9bae1e857a9b52b3aeb1a3c34e83a0e4e91b5d29f0f"
-    }
-}
-`,
 	"bad_prev_chain.json": `{
     "chain": [
         {
@@ -389,24 +365,6 @@ var ChainTestInputs = map[string]string{
     ],
     "uid": "74c38cf7ceb947f5632045d8ca5d4819",
     "username": "max32"
-}
-`,
-	"empty_chain.json": `{
-    "_comment": "The 'ralph' key has ralph@keybase.io signed into it. The 'steve' key does not. This is for testing key ownership when the sigchain in empty.",
-    "username": "ralph",
-    "uid": "bf65266d0d8df3ad5d1b367f578e6819",
-    "chain": [],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWkQEEALmSERRK4+fbTg5C28GOXxpiI/IfQZDFmJfWzNKNW6CrX1uj4o8G\nu3292bU5meCRCJstd09LFaELOASbknUOiXFQcnuzpY7J9Ou8uqxKcOYxi4xWjXih\nK8KQfL4khBIpB+7B0tp16qalqbd1+V2wIAJzmNdkY+cFGeXZE45gr+i3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVedaRAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQUGs4lh8OKGN+TgQAhTSvOZV+8me6UuIc\ntBJTsZzAkzWsP3QpdSZ6zUyZ40yA5WMZMpnQb+6kd3xzo/tkm9imTK2xLtoCj52d\n3QZRN3BOqweetaiWng6sgIkMZc8EaQp68bPeVhtcAYU0Y/I9Jcim6d2nSXQcwuph\na3RWghsf37A9CfXlbZl36PvQ2ko=\n=qGhY\n-----END PGP PUBLIC KEY BLOCK-----\n",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWyQEEAMUSBo5Q/X3et/ExeX6UHvsH9Wv5IoaEmMqdT7zSxaphcFS+vo5E\n63QQrokfIUKZeMDmWjI65SNVNhpWng5mhrkz/bRql0pdikhwXnALLVnwT+0J/Spl\nyWiQKVfZ6pqz2anto56/rlhLui7oTLnG7q2CttIaAp1aaMzaHwMH4iW1ABEBAAG0\nBXN0ZXZliLkEEwEIACMFAlV51skCGwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIX\ngAAKCRA0feCGaTASHtOGA/4u7MAY2z3UzVKzH4XxYknep4hD+75HH6TY1fCUHBcS\nAfVptSna59alV37JJtsBQhmNowyIqvNeUSl3VcN2oOBvJwxGyPhoh6Roxj+4phhO\nPGH9dzzaZVQVSYMBMU8Wuf9OsEM/2k7Wo2oes9XLiNVBqYNwvk6Q2BupT77FyzDI\ntg==\n=zpuJ\n-----END PGP PUBLIC KEY BLOCK-----\n",
-        "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
-    ],
-    "label_kids": {
-        "ralph": "0101de638c5bee00e1b473b5f3fa7065e55cde33e88d230a2cd253da5d78a1c5a8910a",
-        "steve": "0101d17f13d98d9a21e3fcc2ba30ef38fe1ca0e805950839f7ecfb8b77ad5d128e4f0a",
-        "nonexistent": "0101deadbeef0000000000000000000000000000000000000000000000000000000000",
-        "naclkey": "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
-    }
 }
 `,
 	"example_revokes_chain.json": `{
@@ -626,6 +584,234 @@ var ChainTestInputs = map[string]string{
     ],
     "uid": "74c38cf7ceb947f5632045d8ca5d4819",
     "username": "max32"
+}
+`,
+	"mismatched_fingerprint_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDvAnicbZG7axVBFMY3RoVcEQIRCSIkTL3I7Dzu7lzbFEljJ4KELPM4cx1ys7vZ\n3bskXPInWJgqpBC1SGFlbyPGB6KIiL2CGFDsRAULdXaDnVPMnO+c33wzh/Pk7HTQ\nm7u/vHDm/blP+1MvHz0dB1fTmzMTpHKzjQYTtA7dYV02hLIoXVajAbJYqEhThmWM\nrd+UtIrQPnBBCafCJoJwIjVBIbqRV+0Nb6NkBZdc7nNepM747H/49a6Ao4gaE2uq\niSSaMaIg0sJwAoqbGCjTShCB+8YyoRRlJAL/DR9LIfrWYgwmxtLbjTu7mGmaaBtr\nUILFlvcpwYybREtuWBKJFqygzOQGeHpDblGCdkJUbxethpEB30SIGigrl2doEPmi\nrl1LR4yStomEhQi2CldC6loCH68QFSU0aJCNR6MQVbCZHptGncjyLqrl0D9TuWEm\n63EJaOfx2slgrhecPnWiHUbQm5n9N6Lf94I/zR3Y273VvLq9+uvD5Ojaef79+dc3\n+dri4rfNg8vvmo9TweefR4cLP97OPpwvXj9gq8/SlbsrF64sHV4vvlyky/DiL4nZ\npE0=\n=S2XN\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81",
+            "sig_id": "a486871a4705c9d1690125cd6ba2f6bd4ec74b129a466ad0dc0b78b0dd0bf3630f",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f09b1c340a70f0a7bafb236e5932539f89252ac2\",\"host\":\"keybase.io\",\"key_id\":\"5932539f89252ac2\",\"kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432325384,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a",
+            "ctime": 1432325384
+        },
+        {
+            "seqno": 2,
+            "prev": "2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQeAnicrZU7jNxEGMcvvEQORUIJRSo43O7ldjx+n3TFetdr7+7t6/Zpa8XJ9oz3\nZh9jr1+73iiK0lGQghZBD2noKRGpUlGlTMGjQUJQIKVB4N0EpUFUTOOZ+b75+6fP\n/n/z3Y3XDw5vPTI+eOfZez99du3JYy45GFw+PLzLOD7KmNO7zBzvH3iBcBRfzgli\nThnAshxCksu50IYuz0MHs66CBIgdAUmY411HgQoQkccrjsPxkMXAlvK5rSii5wGA\nkQRs5pjxCJ3iMAgJjXNZhG3kYJzH/3vkB6/8aHcih3PsCJ8QP9/LF5d7PEHhoMAp\nnqxAAdou3MX+X+5kLyfxLie7nuRiR+ElTxA5CHgBya4tIF5mlV1ihENqL3GevbQ3\nHGTuHTMRcV4W9RWVk2NxtsxhmUcOBwRWcnjPyWE9qHDAFt2cESIJCjwQPcS6HOR5\nWeJYx8OIhza7pwpxisMIX0Zkmsve2Q1V02uto47eOWpqvV5J1/a7EzrME4lPT48a\nLyp41A4w3aWl8AScsGBCy/5yiWl8enQVx0F0Wiy+qnXRDbMg9id0QrNmdVyixA2t\nRtHeXKjVpsvVUwN0a2TeI16/bDS0ZR9vk21rbAzNUaOXEVPXRwXPWEbJRTKhkpIp\n5fXCiEqrWqGUbKJhKYrPS8ONJtZ66kqqqiYczoOu5skV2gcztLDazWJnmXqe4lEi\nT2gsoqVfcMjaLAw3CepYBamTtlLHAHgcxWmr3NcqMeBsTWqoYB1LlVV8EQeaBIg9\naGLBnVA7nFcrQ7PWbJLInelTMoSNcZXMui1Dw7be5Ls1cxBAPWbNlWwJPVSmw0Ab\nymPa2xh1S5jQZneVVcLBlpSNorRp2uwaDbkLYzprCOv2RUFLN+p8IG1M1ySCvKir\nlVZQpl5S5NrtYFz2owldKDat+qC3MuV+ZdHX+gsftTPdWk2j8LyUog1bQSwbuZkm\nng/P54KeBF7jqr1O6qabS+gTCgSyuKDTvlkBfp8OSSlr81W9rmqFgin0ylq/Mt8a\nAShtbWtQHwlkNKqOhCHXO49sZTwrORPqdJVQzjqd6moeyvOqCsl6LvVICqzZVCub\ny0CfXnBquKyPLGE81oB0ZVpqMpiWrvhgZoGcoa/Wa0tH3/hRjbgNPeityKKvN4hq\njXF50NVHs9Z5go3maLREVlMvrJep5WRdWDF91R60pxPKtkBgnXtdn9PrVttrwUUG\nYC1rbzeFMN5WV3Sx5SOxSWm00YxMKYwsEo0NThQTRyW8l/+T6CrtKIIrYVGW0Jrv\nCMWkE86K5mws5pM0c7zWgi/2LWXrjQzOM4VuYatIYlJwlpLA4tmEBt3Uc/KPprqp\n312fnU3omR5H8YTu3aO1Kv/iqJ2z4yzYOf2lwY+Z9IXLmFM2D7ox2fUBludg3p54\nmT9m8CYgIb4ku4yXve2YCXIb5yLQwwAIyIZYFKHEOq6gAN7FkONtoIjABayMRZsH\nsod4jFlo26wLOIdjkSu7SGbz10d4dfkCid0vqM+cwpzSnu4hp9SOkxAz97796I2D\nW4cHb7352q71Hxxef/efC+H79w/+un/2FH86+OLt7f0r/5OvnuBHH5YePBVu/Hnz\n9h3m698W22sHzx88rv0SPr+5aT7Mvrx+6/ZJ138G//jm589Lv/7w9PcfP/4bjE0M\nZg==\n=4X5j\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "dffbf787f044211a12ac4f601ff477c351675634e8a6d6fc8aba468b7ced26f0",
+            "sig_id": "deed996f790f6b4441a4dcd06f610e281a7c782111368c5da66806ade383347d0f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"fingerprint\":\"deadbeef00000000000000000000000000000000\",\"host\":\"keybase.io\",\"key_id\":\"5932539f89252ac2\",\"kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113bdd73a83e84db30517b4fb3ddf2930a6c52e2d725406fd1c32448731bfed42a10a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFXAnicrZK/axRBFMc3JvH0QIikSifTCHKEmTezuzNXHVYWKSyiYGGW+fHmsuRu\\n79y9CwlHsAqI+AuxsVAstLAVxE6ISBq7FBY2VkpQEf8DnT0jdlZOM/Pmvff9fni8\\nt6dmo+biwY+VxudPZ+7PvNvbH0eXstvNCTEDt03aE7KB0wt7DqtRtpE70iaUMe5c\\narkFDVYIMMiscjGgiV2KXFijQNHEeaGM4QIYUp2Gt1Yq8Z5SdCnVpEV8XnSxHJZ5\\nMQqyDrUziCH/7xMa1wdV3RHgjK5wOR+EvxBkU7xYcYi58lJBDNpCnfu/3OOpXCos\\nl9anFo0SqY8TDlTETlodOyGZqgsrLAvdx1Dd11scyE6LVLk5GupfKhOwuJYcpXCG\\n05ilRngTYD0oTnViAyO4FGJBE++Y5SCETDkzHp0AzaZUJW5iWWFW5V3SLsa9XjAb\\nbQ9r8yPPFqkr8kFB2iwk7Siv0ZjgECYmpGgR3BrmJWZ5XXE07hYZBuUgAh4pjZ0G\\nTBJImbGxosIicKGpSqilTGKiBZXeCUQGWjNLueHMWWmdZMG+wmvZbyQ2DYoBaUOg\\n1N0pZLfQo3GJZOfN2ly02IyOzx+rtzFqnlz4s6MnnsxEHy9+WZisXH366ubBi4fn\\ndhvP95c7e687dw4P5/uPrj/YjX6uPrvybfNl4/TZ9zfWH3fY5Q+z976u+bm751ej\\npQvfb+EvBcvoQw==\\n=Gtst\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432325484,\"expire_in\":10000000,\"prev\":\"2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a",
+            "ctime": 1432325484
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVV+NCBMFK4EEACIDAwSxdoYt7Gw2ZhzqSD7gxAANbFbNJFDslJ0hqd6blexK\nu9a2iSGdnWI7zz8o0IJj+mv+Vbf9IYJ4QWnDMIK8JHPP60BfqIkrjcSZn45LY8q9\nkkQlXP88yFjIrAqxca7GWJrNBW1heDMywpIEExMKABoFAlVfjQgCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRBZMlOfiSUqwmTwAYCzAH6p3Y1AhHLupXtmfoLn2LpbIDCf\nbgTRUwKDYTrM9/Si2w2mDwDUde893GQ8TXgBfROubbwMm7mko9kVG08/+Dgsq297\n+681BmBRwCWt7pJLTAfNG0cCrvSs12DePfHXYs5WBFVfjQgSCCqGSM49AwEHAgME\n+3JxQRgAllBCy62bYqxbi3ABKdvFtay8GhNDasLD9qZLdAebWJmHbuM1FebN4V8+\nXuBqNhDePGCE0vT1F8Sr5gMBCgnChwQYEwoADwUCVV+NCAUJDwmcAAIbDAAKCRBZ\nMlOfiSUqwjyeAYD6kut9MSuZozqQOfOS80WCqJe+mrf8ifCp1FvndALhnfo9F9qZ\nVja22hB3wWvxkOoBgLXVrYq6cmbRrmbqRSZ+4XpyoCNFQer6wsa6fvyTdMhcyBUi\nlTYjwzKKOxFopfemv85SBFVfjQgTCCqGSM49AwEHAgMECIKXe20+/fgR1Sv3iCGo\nGGH1tCUkdBsTy9ooXhtw52HA1ua0D94Uij2fOinADT5nRfSA601HUVLtIbl9kie2\nbMLAJwQYEwoADwUCVV+NCAUJDwmcAAIbIgBqCRBZMlOfiSUqwl8gBBkTCgAGBQJV\nX40IAAoJEKpIHwvfFOWaqoUBANYAO2WFA+1ykf52R2zDZWjktVd+bs8VlVVGU6ek\n8EV/AQDmKu+utOxSyXMRIe6sHCnMS7TcKHF1tpCuBv0dahwWOYqcAYD2Q2ntJ/W0\nI+rjw2T8uHbDIpMVERfg48E/YV2c2nJMAl6EPSbCZoCWs/PuXZfOQp0Bf0HqVZ3L\nBm/NhmTS3jvcpiFzJ/oM/RJf0mxVIV3ECTTvCF6nKaXCCTnKe3seNADTVA==\n=gaPN\n-----END PGP PUBLIC KEY BLOCK-----\n",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVV+NCRMFK4EEACIDAwRX2ASuVhbQWsemulbD6U1PRTZV/tAUb7P4IeRzklSs\ntWk9coRRpepboFjTWiAZjOz/rpVLd+DgUfEcUt8yH7jb3K8meEbiVGZLgeBL6hPY\nXpm73qI1saVTCA31AXSdJZnNBW1heDMywpIEExMKABoFAlVfjQkCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRCd/xzIsqmWA2Q6AYC5ayGbUfWSOhd9OiS83Dtf+91Ege7z\nECVUym9+RHIUS7mQaOV8lQu0zhugvsqlmTwBf2eQMX+xvMtM5YdDI33lZLqibTJS\nx36yabMk+l1C3jdNQOKYL2iJU3dJMjlaTiWE8M5WBFVfjQkSCCqGSM49AwEHAgME\nyz7k0POd3bNOpuz4Jc2djhmtgIlyCHaeUgfAnrP7QqlC8Q8WzzmBFz+od1EM5tEQ\nRB07+YGPFL1Kbq/DO8OJAgMBCgnChwQYEwoADwUCVV+NCQUJDwmcAAIbDAAKCRCd\n/xzIsqmWAzVQAYC33nryFGGQnMSRQjqm3K9xe/l8/Zz+UjWBBviEh96ccsngJGLw\nKadsWyYuOuos2y4BgO1ChHwRNiSGXrpe1bBD1HJCvPxOhqQvNaqyjK7BYdPW6HhR\nnzGp0HlAnNLb7lj2/c5SBFVfjQkTCCqGSM49AwEHAgMEMVlURn6Qe9pHS2I5pFII\nLru49zxqsoOws8+oz6ojqWxJUZeb1lEHrcb1kvNpTL0gs/TAQMJY+LFwU7E/PeEc\nO8LAJwQYEwoADwUCVV+NCQUJDwmcAAIbIgBqCRCd/xzIsqmWA18gBBkTCgAGBQJV\nX40JAAoJENLwTAfm5SCSIh8BAM7UnJtmN0gMpEfx2Z7BS0CjKm+dGkuMz4mCW9U2\nsrDHAP4ukoSjPtSs//isCS+474UOfRu6MGubTWB4qFTSzOl9Aj8SAX9q07KDj3Vn\neSOQEaqzB8WFDK/Ye2+Vz7WUgzXpGt5ZE+D8buy92f2pN1bgfnL9s2UBf3IrS3pC\nrqgRPXzqJSbJk8Pg3PRtEF19LLII2QMsWaIypTOtGtNyR/mNmQTgqnzikw==\n=euv7\n-----END PGP PUBLIC KEY BLOCK-----\n"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32"
+}
+`,
+	"mismatched_kid_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDzAnicbZG/axRBFMdXTYQcCJIUYulAmrDovJ3ZmdkDBcEqlSBWCR7z8xxy2T13\n946LRxrBJhaCKHZ2goKFnWghIRoQhKCdWPoHSBAr8cTZDXZOM/P9vs/7Pob3/tSJ\nqLN0dmdl58PB5d1jH3f3R9F1M340RaowW6g7RRu2vZzP+7Yclj6vUReRTEgADkwb\nJYAZcFoYh9PEcDBOOCZERiEFFKObRdV0hBglK3veF8ELoudNcP/Db7QFDEAowVkm\nWaozxbFzWhPlpEsxYGlkwhkmMhFGc0gsKCO1YKAoU6CNTZmkDMsQN2rjONVEaMe1\nVRnlLmUkwTQ1QsvUUAFZA1a2zOWmDfSmnJAEbceo3ho22g6MDZ+I0diWlS9y1IVQ\n1LVvaKAkYZQT4DGyk6Evbc83BD46MRqWdoy6+WgwiFFlb/WOQqEVedG+atkPYyrf\nz2U9Ki3a3rsxFy11opPzx5tlRJ2F0/9WdFdHs8X+2qs3c7+ffn229unOjxfn5s88\nXP7y9sq9Wf5y9fG7B4fRnwuX9hbu82+/ru5f/Hl7Oll/ffj9M3++fO3J4mx15YCs\n/wUBuaVy\n=jTqg\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76",
+            "sig_id": "d92e49fb62ac5009f53989807cc82113fc5a806a8b717097f0ca8be8822553840f",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"398a11716cdb816d1fc8df052d71df8f68894151\",\"host\":\"keybase.io\",\"key_id\":\"2d71df8f68894151\",\"kid\":\"011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432647317,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a",
+            "ctime": 1432647317
+        },
+        {
+            "seqno": 2,
+            "prev": "fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQ2AnicpVVLiOREAJ31iyuCuHpYT2Mf3XGTSiqpZGTB/mZ60p/pTv9tHJJUJZ3u\ndOXb+fSy6E1YFBXBFU+CiwcvK3jZi7CIiih49ORlj4JHr6LpmZW97M26FFX16uXx\nkvfy/XOP7128dPnmqzd/+rV878IvP/CbvSFOPrleMjyclw6vl1bkbCIuJlF8unJw\n6bDEAsBDnpVlXRRM2UCsZZkmb1i6JbCA1bHOIZHldU7CJgIcAQbWTUkEBhQNYGIi\niDoUWb10ULIcapPQDx0aF7S8LOkAICCa2JCAiIFlSthiBQ4jgC3JEiVJhkAAxcWF\nF+1uFOIMPSJXHa/YKxanZ/IegT/XjYmODUIs9n+Ngm5zRoegyUumhUxiyBBZgshz\nLBSwZOoChhKQd8CIhFRfkwK91jOeK904KEWO8cDUh25ignSe42S2MKBwjLU4CbAm\nhJgQicMcx/OmgCAwBGLwQBQ41oDAQsjgrMIlxJ+7GZKEhBE5jRy7oH1tNyp1pdnZ\nP1FO9tt1TSsr9bPdOR0VQMejh/vquYP7XZ/QHSzhrrJXATunVW+9JjQ+3F/EsR8d\nMsxDrxkzzP3Ym9M5zduNaZk6ZjhTkQ76FaU9SuquPGtMB7DB5nJ+tN3SaOg0PBW7\nxGXXBIs5MTZCjPBKGXXmtBDoq2O2rqbrJtXKHtey+71RUx2vbco1nOZivBqaRNhk\nbUPTp/qsOznpGinaipusCtylPqekGjGtyRWIyLQ7CSGZxZaUhWwWLVmmF7DZ2OYH\n6qQvB2UjBjhfNqJm2W0oUdw/MnUtzuZ02Rb6CsuvlFYtW6ycSqAdqd10tbJPJora\nU8bVXtKt5LBdlx372PMFtue6iZS3eobqjhercuGWeSwEbAU6dSQ4NZrVaTYcao6r\nTCrNBsdwQeIrdthdVxdWPon9lsNMhyhjREZKZdrxj+dUCBb50PDtzqzbr7JeCgEU\n0i0YeEq8aJhhNWyOV5Nl13DVanwc+DkBg2CSe5avKnX9OFXnVGuvYN2eTNtkVhu2\ne4NeQJcr78hNR80eVWqtZt33tWEaa4NgqUYdRVWTXpg0u/piUjOWpDGntaEhd5PU\ni6Ab9DEMh+VE8/rJqtP3Us3ut+RQPU7XU6bFtlGYjWDHDzwq5APNGGhmZQTnVI/1\nVdcuD2ez0JcbSyVotcZqLrjDuh8chWnVh0e+WAYdRh+p/nCZjUaLZCtU7I2zEIP6\nUJtTn7jt5mDTUHrblt2arjtQcDXIR9nJkXBliddLc7S1GORtvSsCOlmpXcb1CIMk\nO2eMFqsP5nSRYprEJ6G7RWS8TE2eAcIVk5/I8jpxmKOUE7qN1FJxhjYDeWIhylhD\nJh7LEkGyi7vFV03pjKMuL9SmvIZw89qcXgvrNWVOz9JT79QekahdsuPc3yX9QcAP\nSsl5ykqHoDg0Y2fXAwDynAiLLKODEsl8JySnzg7xoFwOSn4R44LEMpAuSEQoakwv\nOhMAiYcylItmgZCXDANLAkJEkpAsECwBUwZQtrDOFyVb9C4Si8dHJDg9lwTOFtQr\nHXKFSt0+E2kXb2sTktKN7956Yu/Sxb2nnnxsV/17F595/r8fwv1be//El9MPnz3w\nPrj957feK9Jjb37duf2p+nH88vv3P7rzXv70nQt7P/99943fX/greOnLFy8tfvzi\nt9z9fPL6Z2/fu7X/zTt3v3r3j38BlbAMxw==\n=U60b\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "b0c1a6a4f8af46483e1c249ef49a727c991d601537cee9e799d414357f1edddf",
+            "sig_id": "3edc748f9de94269229d930ca1090c78caf3ade6148bfd1571290eb6c05284860f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a\",\"fingerprint\":\"398a11716cdb816d1fc8df052d71df8f68894151\",\"host\":\"keybase.io\",\"key_id\":\"2d71df8f68894151\",\"kid\":\"deadbeef00000000000000000000000000000000000000000000000000000000000000\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113de7a32290a1112e0f2810c44dee82d2233c5741b5eb316520b41f77b2fd1f7360a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFYAnicrZK7a1RBGMVvEl9ZFYT4F0y9yHzznsUiFoKdlel0med6yebu5t7dkGVN\\nEGIpKW0EKwmInSAo2LgRQVIKWmgn2FiIhWkUce5uxMbSaYaZOXPObw7z6uxC1lja\\neCs/LX+47eYOXr4eZtf8xr0xsj0/Qq0xWg3TKXR9qAbt1dyjFsIAlFGstRHcaStx\\njM5RG03kGLDxhkiBqSHKOwkkgPXGKQGWCQvOBy4ME9igJop50Qllv8yLQbKlWhkA\\nCcJ5q0B4iE75iDnxEnxUUSilGXBIF2/2qvpGgrOmChfyXtpLi/YU7x/6/8w9nNpJ\\n5qhyUbpgNZORC0ow4145wz1ToGthFcrCrIWkXjOblKCtJqpye1TqXyofpKGEaJwK\\nSMk4EgXYMeZDUMQTQqnjkoHlwVIQnGDLIEppSUwtSTqjKsNGKKvQrvIOahXDbjeF\\nDUb9Ovwos4lqRd4rUAvSoRvkNRowSgRL9rKJwmY/L0M7rxV4Npqon5yTSbTScBV4\\natakOgAUZZrp9FjGqLLWKy5lUEpqHrwCp4Hp6A1N/aVKpUjxVVhvz5Bguih6qEUS\\npelMITuFGQzLgLYmN45lS43sxPH5+jdmjcVzf/7ozo+57PkKO/loe/78gy/bL0aT\\nhwdnvtPrlz7eWjwc3/15+c3X99mvi/Hw25OFwfKdx7uT9Xf7n/fU/tW98e79ldOn\\nnnZ2nl35DY3S7dI=\\n=rEDG\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432647417,\"expire_in\":10000000,\"prev\":\"fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a",
+            "ctime": 1432647417
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWR2lRMFK4EEACIDAwTHLrzQ9a9ejgFgBkMeCo3GZxk+st5RQT7ogWdd/ReZ\nx+a0RSzVQoJ1YWxMOH1gXe2g3Ez89shdUwdRhAIqiHu+3Dpju9gLULaggupPHTcH\nDubfmoXLs9XZlWdfwnebobDNBW1heDMywpIEExMKABoFAlVkdpUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRAtcd+PaIlBUYbrAYDbujynJ196wGcCxBatpJkEvWfl33HT\n7h7LflVFH7gRpVBWy2qJxhwpMJXySlhKFfcBf06AZbOg3B5UaNh7e+xp6J/8Ey6j\nN1zYxdnrDFqjIyPQO1nLLkQx9vDVT6iMwuki+s5WBFVkdpUSCCqGSM49AwEHAgME\nuJXDKpNHbnnKFnjHZYBo7/j945n6YC/w0uEmEspqY1pAGhDBr83onBBiTJrDMM88\nrzA2voGwkdsFTlFDtps2BQMBCgnChwQYEwoADwUCVWR2lQUJDwmcAAIbDAAKCRAt\ncd+PaIlBUYC5AXsFr9Q8NeRhUqhu5QQ1q2ZRHc6noVTCYx5rljmHACiqFfM6MjFy\nGjfXfnm1HSe3cfUBgOSj+1sDKahuZg/F0NC4fPSNFdlDKbP2awmCX8fxBOePN+zm\nZgfA+9Fn3PINLiUkqM5SBFVkdpUTCCqGSM49AwEHAgMEkVmgczonctdljbaeqhVK\n24Y0PWoqn5inr6/kIG2jez1UW1Io8F4Nyc7NZl+UPHE1+hKht2Y0438Jg89cE9aY\noMLAJwQYEwoADwUCVWR2lQUJDwmcAAIbIgBqCRAtcd+PaIlBUV8gBBkTCgAGBQJV\nZHaVAAoJEBmKKorIzkHAcm8A/3rb4Kbt4BHk93U4AaNukEZWS+kPqKGJGEJBHsas\ni1IeAP4qFQIvPcUFgCBwM0aOvQoIKY3u0XqlfPAmY6YJo/mf/w9BAYD0afRCV6U3\nCPUZshdS5jO5/3Y23QoSfI2ibq6UWgAmKXo7rgLwsSJpFIriCIN9vrwBfjneWxQ9\nOb/HHvXW0jBP3qMZhfLQdQPM+FYBYIpoES8UNblYyNkPXVXyojuNn0pKHg==\n=4ZY+\n-----END PGP PUBLIC KEY BLOCK-----\n",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWR2lRMFK4EEACIDAwQNQ19PK1/SLtX48z0hz3dPFw7m8wgGQHKZtr9+cSSh\n93/8rC/WzmAwwA42iswhS/n0QCIe00JsKvku5MoU1wtJa0klQfKOpf2JMgx56Ei8\nWoEfWkVQBYjbZo2TwHzwIUjNBW1heDMywpIEExMKABoFAlVkdpUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRD6HZfQ/y2R/RY+AX0VG+yecb/FPERfFpID8PgDwisbDYYV\nu9n7rxWXweO4r/XLo8KQR9FmTwlNgua5oX4Bf3do5Lro6gTWsqDvxcYo/6BDCC6s\nU0GlFSYX9lo+mJNY5Fhj5BM/YEFznEMVrmEFAc5WBFVkdpUSCCqGSM49AwEHAgME\nICRjm0O9+5c5ylqcWEhpK42kJOvN2WzMsuAXPve8YXwXZWoI4mBKWlhpnxMD2i2U\nNDj9FgbsOWxAYTwBNl8/wQMBCgnChwQYEwoADwUCVWR2lQUJDwmcAAIbDAAKCRD6\nHZfQ/y2R/QaIAYCEzFPDc3EWSjl3cudokf4K4/dd9nODpNqB/PaGex2tQv4jaetr\nRf/HcTCqICyuBUQBfAvDoRiShMCUqIg+/Uj279VbdDw5ncGpMF8qeM8CxyTartVL\nwTPEsN3DC9puTb59/s5SBFVkdpUTCCqGSM49AwEHAgMEzpgc1Zzf4tsT3K8Fp6ld\n6drFm6y/vnUDbRW1OiHgn3xHPYjOHtb5SKPTg7Hcaa9JinnJcGVwPpkRYm7ixRVE\nFMLAJwQYEwoADwUCVWR2lQUJDwmcAAIbIgBqCRD6HZfQ/y2R/V8gBBkTCgAGBQJV\nZHaVAAoJEHbTN+NA24BjqYkA+gNxwnl8x2yCNjHtKT7vhLBZYvL+qXyUYpOVWjaH\nbe6yAP0QZNQTWZxt5ArLWBpjE7PrwjG7Nu2ljvGA7Z0K7CBpj1w3AYDP9Cuq7xnQ\nG4PL8NfiRvgyvaHiUFYuRQA2z97u3zdBsZzN53dj85Q8s7i5niUfSdMBgL5Fu0H8\nJGBMySeMF03CLsEOS9saWXVqTqY/kcc09A91bhQ0shxPBbpXZgHisQEIZA==\n=h1vu\n-----END PGP PUBLIC KEY BLOCK-----\n"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32"
+}
+`,
+	"missing_kid_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMD3AnicbVG/SxxBGF01CjmIBI4UtgMhCJsws7O7M7uNiIUQCSGQNCF4zM58ew6e\nu+fu3qmIlWCVJuA/IEKaQIrYpMkPJAkRhSvENNpYaGGjpSBiZlfS5WPgm/e9N+8x\nfD/uDVi1er33aPfB2f7vvt3vPzvWK7U2sYyiVC2hcBnNQtVinTQha2c6KVCIVOzG\nipHYA0yxkswNvJgTRxDsE8kw9SXnhsXIRjNpXr4wNpHI4YlOzcyAhlZm+h/9bEVg\nQmiEAYQUWAQKRIyF9CNg4GHGmOIBMB74Jp3ziDhY+R6JCI+oIlx5rlTmYGHsOpUd\ncyXlMmYSosBlsedTB7ue4lJ4yuUkKIU5ZImYA6OeE4vUQSs2KpbaJYaWAvMJG3Uh\ny3WaoJAYUha6VBOXOiacUmwjWGzrDBq6VODbslE7gy4Kk06rZaMc5hu3pqQCSVrd\nCtE0MbluJqLoZIBWtqfvWPWaNTTYXy7Dqt29/29FWwt9Vu/l2/drf76NfhnfOnm9\n0Qpf1I9XNz+PPR7onY5fjUx+sm4mrw/ere5tXv768PThxZF4NrEz1X84vHO+3fv6\ncf3g+Zu/KrimzA==\n=9oxM\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67",
+            "sig_id": "3d80007ad5e64c9367fe566b03c1918bff04d522537787d7385fdc4bed274a740f",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"df4fd71f5e030dc7495f812a1061c7036c881f50\",\"host\":\"keybase.io\",\"key_id\":\"1061c7036c881f50\",\"kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432651330,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
+            "ctime": 1432651330
+        },
+        {
+            "seqno": 2,
+            "prev": "a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQmAnicrVXPq+NEHH+76oIrorAsiAd5xIOHPreZ/JxURZo27Ut/JOmP9LUl7CPJ\nzLRpm0mapH3teyze9iYK6lFBlD0J4tWjrigsugcP3vwDPHjXBTHtW9nLHh1Cwsx8\nvp/55Aufz9x/8ZmD6zduPHzjwc0/fv3pyoMfiqsDG92tXDBehLZM6YKZ4/0HLxBO\ns9N5gJgSwwLAeyzGru+yroKwS1jXlzwsY5GVZRlBBctQkViehdADHIskEXgAejwC\nEImCj/KHdZkjhgR0gpM4CWiW0yIiECQDIuK8EvmyoIgEAs4FrAR8meUlH8J8l80L\np1G6q8jFeW6KbwVRvpZPTvfynoL/n3Wv9nSy4PPQJ7KPPUWQiSjxHCuICPquiAQI\nlB0wxQl1Q5yjQ3fDc8ydIyYNvMdNfaKKk0SMZdHDPIKQ5xUZChwBvIgwkmRPFjgB\nQUJ4EctE4DzPZbEn5ScCUYKeh1x3ryrBa5yk+DQNJjntm7uhanXdOLTq1mFb6/XK\ndW2/6tBBDgwiWjpsXnbw0Iwx3cHW3C32FmAdWonCENOsdDjNsjgtFYtPel30k22c\nRQ516LZdOynTwE/GDcPddDb1NqJgMEa23gmkqs2PvJrY58aqRSZqECXDFl2I7YmM\n6ADQ8TxrOVRC9tquHWvetozVUSEYTOsw6BFVXwWxvpiBQQa3rBANZ4LbmZv9omUp\nZB6Sc65dn5s8mTv0DLPxat3nfJMshALpi81l0R9qBufVSJewICv3M1VrW4M+GG1n\n/FJnz/R0MyubumFIqaY51Gts2UhTJ/G4P2z2AtRLt2cgHnfkpj1ZhLOWZdSwb6LZ\n5swDdjtoVdtxI+wi0DfTahVIXYfqFbWOl0hoRnoI1HIaDMxRz0XAatsbaCwFN9AD\nWrUHtM0f+z24UgMeW8V+MRyu3Xhh+Q5tY67ih2o/iZqdWV1frY/HddwUG9xkkjTL\n6flkOcFhd1Bnh5E18CgiSq84qHWa5YqdtpsQOHQk0R4te5Vp2V8vBie+v1Sqo3LD\nFoyuO4HHTUkLNGCMpRFYLrXYnSZ1tSN26bKmWNN2Ixk4dCladWIUzqebuGYFYofC\nbnVQ8I36qm6QzWZTzVkaFWU6r/rNtYEkV9XPN9tOOB13E007O3PoZhQaCHZ7ZiUJ\nRiAzmh1FtZtQ0dR50V4Yq8Vouk1aM97tJmsNs8mqKo8621YWTYOZFXG2QxthOk1h\ny2Y3rU4htmoduPANMUQmUu2Roit41bBmvtiex1DY9mRiFq1I0SSl0IgLRUue5hrG\nWOZdrm8WfHlYgGuvJom+tOyThqz4J+uthIayIaf8mmOVoneiwH5ZNs6VIrG6qxEh\nFYcqq+35DBVWyGSrDn3HjwLRoXvnaEb1KW7auTrbxjuXPzb3EbO+dBhTAvmmnwW7\nDADCzuj5mz1i8CYOEnwa7BDs5Thi4tzCOYmrYEWAWORFXhaAl4cJm/8CJ+ap5kGO\nEwgROQQRBlKemJATPFnM4awsIKQoeWDkx6d4eXopCewnNGJKXK7SnexFTqibrRLM\n3Pnu9rMHN64fXHvu6i72D64///J/l8E988rBn5//mIHvP7390kc3H/7y4Tfv/nzR\ne+WD1y/mtX/+voY+1l+7cvD+l5y5uKff/eToEf7ts6+4L+4/0vDbb7337QtXfz/6\n6+tX/wU94wjD\n=mdjZ\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "a6eb21956740c5d06a82248710b0243ed7f4a9d83a0ab0ad345971cb0532d3f6",
+            "sig_id": "03a631ece380553b7a422c0d53ff9492a0a036594580304fbbea14af928761c10f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"fingerprint\":\"df4fd71f5e030dc7495f812a1061c7036c881f50\",\"host\":\"keybase.io\",\"key_id\":\"1061c7036c881f50\",\"kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113265ee75be3d883397842f135ded67b7424d8ff35e7f42bba0eb67f51568bbdaa0a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFWAnicrZJNaxQxGMdn1VZdUIQi6DU3YbF5T2ZBPfgBiorXLnl5Mg7dnV1nZktL\\n6dUvUFHEbyAeBY+iVhG8iSfBIuipIlj1Vt8y04oXj4aQkOT/PP9fkmfz2MGkO3fk\\nwe0puvT2cOfl4+fT5Kq/cXEN2bFfRf01tATtBEMPVT1Yyj3qI0wIsxjAOINN6sEE\\nbJy0oEBgpZTXKSidSsyw1pZQ7KUglmjLPNFecOdjxwb1UMiLDMpJmRd1TOsDD16R\\nICBGeqd4KoIm1BAsiVOYSad1PMUx8Nq4aiIinDUVnM3HcS8uBi3eP/T/mXvaplPc\\nMe2CcmBTroKQjGIuvHZGeK5J2ggrKAszgqgemRVG0XoPVbndf9S/VFQKACUsMK81\\nY6nSnAbChAcvlVWccq9DYAJU4NRag8HK6EiE1NZ6Y1qqEpahrGBQ5RnqF9PhMJrV\\nq5PGfN+zhxpFPi5Qn8RDV+cNGuGNfxxxD8HKJC9hkDcKvNd6aBIzxyQmhZRrEEww\\nxYmNd8RSOCriY1tNKQ9BUK89EBk/UlNulYhyrLj3aRrvEe0ruD7YQyLtohijPo2U\\nJmshs8LU0xLQ+pPFQ8lcN5mdOdBUY9I9euJPjc5Mkp84yS7fO/Po9E69+Jp+/P7h\\nxZe73a2TO+c7X+8vbF65c6qTfJ79cWvy6dX7N7s3v209/bW98TA7Nz9/fPRuYffC\\n9uyzjd+udO0D\\n=coi5\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432651430,\"expire_in\":10000000,\"prev\":\"a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
+            "ctime": 1432651430
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWSGQxMFK4EEACIDAwTUgD4K0SSmhOHwgdWN2M8LT0NVQWSwgIYd0jeH1fM5\nJsE/Dsuem9GQwHLGwUILIINMzOPHbPscjOC7Rf3+8uAHiTDj00ejRgDoJpCKIXjH\nEM9MMxofqG0eDvEldTWKZibNBW1heDMywpIEExMKABoFAlVkhkMCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRB0waG+wsm+NVgWAYC5Q86W0VFs6IGqOgD2HIBAhShCo0Bp\nOivlkcK4iO7xFfYfbXusj74byp13ct8Qzk8Bf2VY8vJF6eha8dfcngiCZsEOAGVE\n3abIgE/YOERD/xm1sfzYs50QHNSj+LBU7pBqLs5WBFVkhkMSCCqGSM49AwEHAgME\naomMzHfI91CQZmMq3mYYh1szK9lBxoK8jYMHa0iVxCKd3mcTtvRxMBEak6XSo2U2\ni8i6iv25vyTO1yfJPcmBOwMBCgnChwQYEwoADwUCVWSGQwUJDwmcAAIbDAAKCRB0\nwaG+wsm+NXxRAYDlZo+z7gpcXFyILtxBbhBKz0qqueRVBfkCP8y4ANJJSjH6MnC2\nEcLwj6BNX8yq3TEBewf4GinIZHMXWj8hOH8KKtyidPLhR5WPCgPe3SYP0lZzFYgO\nb1YYrIVicghxSB6UTM5SBFVkhkMTCCqGSM49AwEHAgMEZ5qBf/Nw3XSK0OSz23Kz\nslf6ixA7xs+TNE72MwuzoVDGypTHTF5tz9Oz1/oDH8eCzZHLDHtF3gtgyyTv+864\nvMLAJwQYEwoADwUCVWSGQwUJDwmcAAIbIgBqCRB0waG+wsm+NV8gBBkTCgAGBQJV\nZIZDAAoJEAi0l3UiUd0H8R4BALO/bP6Ir0dBdzHMjsRitZ5cf1gNlTOsALhfTaRm\nCigeAQD2/vmEl6C7TA1hlSuvGgp7Z7UPgUgJizoYJGu2NpAwgqEQAYCtFBHE8FmQ\nKpbovcWv783nqAiwsVRQPgefcE7tZsneUgBa5pT3tFmsPBH0229y8IoBgPcPRToY\nLELCkzhNSfsxY6UI7Qlp57lFIjnxrDIrz5kYrVRmNeLIrbZK+56xv6x3rQ==\n=vv7t\n-----END PGP PUBLIC KEY BLOCK-----\n"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32",
+    "label_kids": {
+        "e": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
+        "sib1": "0113265ee75be3d883397842f135ded67b7424d8ff35e7f42bba0eb67f51568bbdaa0a"
+    },
+    "label_sigs": {
+        "e": "3d80007ad5e64c9367fe566b03c1918bff04d522537787d7385fdc4bed274a740f",
+        "sib1": "03a631ece380553b7a422c0d53ff9492a0a036594580304fbbea14af928761c10f"
+    }
+}
+`,
+	"missing_reverse_kid_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDuAnicZZE9b9RAEIYdEpA4gUBKl3LLw0T7Ya/XJ9EGpUIKBAoUjvXO2GxyZzu2\nL+RDJ2jCD6BAAgoafgM1IEJzQkhItEgUdHRIIAoU1o6omGbn3XnmnV3Nu/PzXm/x\n0+cLo9/9w/m52eujibcOj1YOSFLAHhkckC3sjtTmGVZlZfOGDEgSc4PSgBJcSaV4\nClzHFGRCNY3RQKQlTQE48cm9om47nE2ia1y2hbtzYmih9fmf3+oKlDHBqJIQIYRR\niCmgjFDEjINOGRcyUCHFgIuAGa4ppG44UJkI7R4VBzyEQFHt7CadXRQYoUwaGUzi\nIEpDKTgNQlBGtyCLW7DGKtdjdPRY7wpOpj5p9spW4wjQfcInO1jVtsjJgLmiaWxL\ns0BwGTIhhE9wt7QVDm1L0JPwSVnhDhnkk9HIJzVuD09MWSfyossanbkxtc1y3Uwq\nJNO3dxa8xZ535vSpdhle7+zFfys63JjzPq78Wt3cKM9dW7t16eXS7M+Hy9P9pQfk\nuP/02c2r+vmad3x7/cqXH1k1vv7maHN2/9X7hezFk/705/ev/Yc3Ht9d/vYXEwyi\nWA==\n=H6Xl\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1",
+            "sig_id": "ea8a3358e12cdaa444d211fa71ffc4b421040244fd5b72ea2b387d722c11d8170f",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"b92ce6cd83286882fd2a90d6b0a09ecd7a60fdd2\",\"host\":\"keybase.io\",\"key_id\":\"b0a09ecd7a60fdd2\",\"kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432651333,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
+            "ctime": 1432651333
+        },
+        {
+            "seqno": 2,
+            "prev": "00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQyAnicrZU7jONEGMf3OEDiJB7SFVBQrIKugOxtPDN+Bh1S4jhONnFeTjaJL2Jl\nz8NxnDiJ7ThOTidEARIlFRUFFSUdBSUCIUGBhEQHNRJPUVBwDTi7h665kilszfj/\nff7Np/l/88Wz149u3Pzu++fnf7/2zvVr33z5+uZoQN6t3ss5S7LLFe/lfHr5onNC\no/jC90iumOMAQICTRSJRIkgCZYSKEkUKgMRmACKRlwWO8hDxAEObI4wjIuFEB9mY\nyAoPBcLLnJ07yTEvcGm4Cr0gztI6CsRUzCQIyqIsQ0agrWShDmdzCsVEskWOEQKz\nwOkyOkRkcI4d0VNvma1lk4tLvMfo/2fuzWU6icdIxkzC1FF4iQkighwvEBnbByFQ\nDsKIhoG9oJl6YacI5u6f5CLPeVjUR1RUoUBCPHUY4QUAOYlIDCkytHmKAWYCoNQW\nOIHjFYlS3gGiQ3kO2BBKLCuRJFxShTShYUQvIs/N0t4+jLKm11vHHb1zbGimWdK1\ny9VJcJ4JvWVQPG5cVfC4vaLBQZbAU+4UcJNAXS4WNIiLx9M4XkXFQuFRrQs43K3i\n5SSYBDujSkqBh0OrLtmgV64aJGGGtskbqjvWtf1svHaMdl4gaTTtDdRKXXNtVaBW\ne8iGptCQJoEoQcmflvv5tTsoq4grAXfj+jUtneFyh9fc5Xo4H6penY/TVmqMdwM5\n3VqJVMBI2LcbBTQJJH9n+xAbTHKSPpvLfAybsdzya2upE06bIzcdmSNv0GxXhK3m\nlGxStnZ1Hah6r22spktjErizeqMklmCj0tS3XUefWvZq6XmCb6R7c1ftcpoKNMWq\nLPzFpttwBv50fEZJrRrNC4vUVBeTgPQCtG60NLlqBo1uoeT07Hg2X9vLLpm1ulyp\nU14mih3aGtVxOCqJkjyU9Fpfp51Cz9l3sl3gs33bVBWzxqe1Oef352Ubm+5wFUvD\nruUMt9uwsTXT2bmJLAs3m8P6fLSJV6E42y73lmbVM4aS7o9XW9vQqn7DwWaHtcrG\nwAzXjfrO4GemQUF3sBgLrZ0Odw03PR/PR1Fjtx3kzwnnifok8PhNCnV1PkoZW8e+\nF5vNpGr3W/zaYEJlYPv8WVgdsV49nOE9l0RCc6g6a34oYma0zOl8ErQXhicrYqmk\nipbMqedeydWZrpZdZhnlulBe4W3VdALfiLpJz4or42ZVnlpYWnDTqFbuKpOA29g9\nLnBqfgupleV47ofDURXhuS8Df5/nidLvLvbYLid7Q6Ro7FGn3xtWZFnOj0Yz1upM\nggQBmO026ESgVWNKKiciwfsWSgpWrSI02UoU8x0Ew1Z/pMhkCPJWgpypjGddQdnU\nKlF2Js/arJIWEiRMnUKBr81WzbXVvXNnEtw5H/HZwb90kdaqPMZZB4fHu9XB8Q+N\nfpJLrtyWK4LsI469Qz8APIKikD3RSY6mKy+kF95BwV2Nk9wqs/OhO3BAVABSMJYI\nIpAHDiacgDLfSwQzwAARMUAMUibIwGE8B3nIs6yPZGEOJSD7fUTXF1dI4HISLHNF\nmFHa7iWkG9jxJqS5+5+/+eTRzRtHTz/1xOEKOLrxzAv/XQz3xkf/0LsPHrxU/eRH\n9+PbP9984/db5T86qvnq6U+/fPbrtPJX8aNrRx/231t89Vz8weju2688/dYPL37a\nvf0+2nx98tufL4vfPtje+heUNA3B\n=okGo\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "525de3a305ed703e4419add54649cedd083464f3b76f296c0bd9c7ca2bff3bb9",
+            "sig_id": "eca9bd4e3be4d3be48501d5be8bc01efdbad86b51c9887a11279c44a9eb7de4b0f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"fingerprint\":\"b92ce6cd83286882fd2a90d6b0a09ecd7a60fdd2\",\"host\":\"keybase.io\",\"key_id\":\"b0a09ecd7a60fdd2\",\"kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113e9e1734ebfd451207d7f3982a4ec1cf51eea5050497ee4b16be401a227fa90750a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFdAnicrZI7a1RBFMdvfMEu+MCgYGEzjYqbMO+5dxshRUCDIEgaC5eZOWfWS5K7\\n6727khBT+qgUBC30A1gugkHExjcBP4EgoqWlWCiI4txNxMYyU8xwZv7/c35zOK/3\\n7kyak2cMf7bvTfl84t2Lt8NkHq7PrhLXgxXSXiULOD5wEbAadBZyIG1CGROMphoM\\ngjIKA6A2KDLGwQbGhZapoii5kMxzSyFQ0EC1E9ZDmkmuQKbUkhYJedHFsl/mxSCm\\ndRn3qKNE8FSnKQ/AbRatjlqaoQdjNQ0APBov9araEeGcrXA678W7GHTGeP/RbzP3\\ncJzOSC9SH4xHl0kTlBacSgWpt7WQZbWwwrKwSxjVS3ZZcLLWIlXutpr6jwozZEZI\\ndAGkYpwaMEFkKbcSPfNBMUSrqKIyM4jSMe1QUmY5NyG2yKgxVYlXsKywU+Vd0i6G\\ni4ux2GClXxffqtkitSLvFaTN4qMf5DUak4JrFXfRIrjcz0vs5LWCbq4W6cfMNShl\\nOmMi896AAC6Z80CViAgGfGCBgfZMBI5BpcwFSbnkMsQvRZtDYLF8hZc7m0hsHBQ9\\n0uaR0nbHkN3CDoYlkrWXF3clk81kz+4d9TQmzcaBvzM6e3YiebTRWD888+XXjfNP\\nv312jSMnPs1NHf9x8v6dczN3v/ZHD5Lfp66+P32rNTX98dW1+Zv3bh8cjQ59uHDs\\n6JOfDx/v35hb//4HjpLqZQ==\\n=VX4o\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432651433,\"expire_in\":10000000,\"prev\":\"00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
+            "ctime": 1432651433
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWSGRRMFK4EEACIDAwTGPp5WCEi30jKYsqP+DUV1NWMxi53YT9axzEbrEyU/\n7UdKsWZPZJnOsYpjCr8+VXqIHY56kO1oiR0HqpnoJhsRZ1imNqHq4L4d/QMhyNGs\nICqaFQJsSShlwQwvUffq0urNBW1heDMywpIEExMKABoFAlVkhkUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRCwoJ7NemD90gI7AX9zOItdXE2tVZuNus0+HvqcVI4cvlXD\nqt/0HTIly/mDP8tgNcPSpgOuzPVCQy+dnYMBfiGFbDQnwge9Cea0tHHIbY8qAOax\niX6yRDuMPaqhbleIKaKU1hJBrtDMLz6pnHLtn85WBFVkhkUSCCqGSM49AwEHAgME\nHZOEO11yQS3sZtB43vEHD9YbSHpvhOtgArJl4/dQB5Jr4DFrmBAA5WPlUbF8EBgc\nJ7oD6qVGETtJDX1R78qo0QMBCgnChwQYEwoADwUCVWSGRQUJDwmcAAIbDAAKCRCw\noJ7NemD90tS0AX9gy15Vv10RalrRSHhjcT/BW6r6MGHy/Z+w33tUAND7EUDBwXvc\n4u4i/+bTOJY6TcYBf2fN+q2Zcajt91IJiqd/4su/SwcpJb9mcHJpc4M1wXen6rFn\nmHVVB47WTJpk+ORFcc5SBFVkhkUTCCqGSM49AwEHAgMEBHRJTnd1BZp6x9KrE1p1\nPJ4McaYM8lu1JysuL+BJdV/yw98XnKBIv8nhnBikJgntcj1jAcWyixuQJvbreZn+\nD8LAJwQYEwoADwUCVWSGRQUJDwmcAAIbIgBqCRCwoJ7NemD90l8gBBkTCgAGBQJV\nZIZFAAoJENLVD2z5KoUDfcsBAKpn+wqezR1uPhU2aG1YRgwTlSr2Qkf/n1Ob8gss\nkCilAP4+zmdLJgv017cEYrMAxozL/zTFhCRns+BBMLnJCaRNDov4AX93/JS4CYca\naw7nB4SNhxHaMgyV6jhsXmO1psuC8uAVqtkQPuo3hf6ttcftfxbnv9gBgNJwoYyk\nkEStMA8gnT4841eHX2JMzuZ9kfqYcKuf+rqkSgX+wyMnuU4rKtKWHc+mZg==\n=pMMp\n-----END PGP PUBLIC KEY BLOCK-----\n"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32",
+    "label_kids": {
+        "e": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
+        "sib1": "0113e9e1734ebfd451207d7f3982a4ec1cf51eea5050497ee4b16be401a227fa90750a"
+    },
+    "label_sigs": {
+        "e": "ea8a3358e12cdaa444d211fa71ffc4b421040244fd5b72ea2b387d722c11d8170f",
+        "sib1": "eca9bd4e3be4d3be48501d5be8bc01efdbad86b51c9887a11279c44a9eb7de4b0f"
+    }
+}
+`,
+	"signed_with_revoked_key_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFASp7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMDM2NDEzNWRjMDI0ZjYyNTVkNzQ4ZGM4ZWUwMzRlNTQ1NTMwYjBjZDk2N2UwNjhlMmZmMDNjZGMxNTgyZmM3MDYwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ1NzYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjpudWxsLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAaH1Gcdn5h66O/2llNDAaZKGzZAEQBuXgTN9JuxAa8hV2up2yn144/aRucaRx3lE/fYVDJsgy6lg/fJI4c+i6CahzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
+            "payload_hash": "9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088",
+            "sig_id": "53e8e98d74d1bb3ab2710a2ce955e6dfc111c400478d7f4dd18a359cdd79350f0f",
+            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432145763,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
+            "ctime": 1432145763
+        },
+        {
+            "seqno": 2,
+            "prev": "9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088",
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFBfl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJoWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdlSGtJaFIxWGtUdEE1TGVlSWMvT1BLY3g0eEFGSlFudjduVzRscDZuWDAwS3AzQmhlV3h2WVdURkFpdDdJbUp2WkhraU9uc2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpYUc5emRDSTZJbXRsZVdKaGMyVXVhVzhpTENKcmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpZFdsa0lqb2lOelJqTXpoalpqZGpaV0k1TkRkbU5UWXpNakEwTldRNFkyRTFaRFE0TVRraUxDSjFjMlZ5Ym1GdFpTSTZJbTFoZURNeUluMHNJbk5wWW10bGVTSTZleUpyYVdRaU9pSXdNVEl3TnpnM09UQTRPRFV4WkRVM09URXpZalF3WlRSaU56bGxNakZqWm1ObE0yTmhOek14WlRNeE1EQTFNalV3T1dWbVpXVTNOV0k0T1RZNVpXRTNOV1kwWkRCaElpd2ljbVYyWlhKelpWOXphV2NpT201MWJHeDlMQ0owZVhCbElqb2ljMmxpYTJWNUlpd2lkbVZ5YzJsdmJpSTZNWDBzSW1OMGFXMWxJam94TkRNeU1UUTFPRFl6TENKbGVIQnBjbVZmYVc0aU9qRXdNREF3TURBd0xDSndjbVYySWpvaU9XRmhNemsxWmprd1l6ZGpOR05qTkRKaE9XVXpPVE0wWkRkaU9EaGtPRFV6TVRoak4yRTRaalJpWlRjeVpHVm1NekZpTTJWa09XVXhaakZsT0RBNE9DSXNJbk5sY1Y5MGVYQmxJam94TENKelpYRnVieUk2TWl3aWRHRm5Jam9pYzJsbmJtRjBkWEpsSW4yamMybG54RURpc2tKVmNVc042bkM4YzdCbmdLR05aYU1XL0duMWlhZTBhMFdMSFJ2bnlQYkxKcUoxYUEzSnF6ZDVLY3NqVGFFSzMvSktqQkZ3NDUzOHRDK3QwT0VQcUhOcFoxOTBlWEJsSUtOMFlXZk5BZ0tuZG1WeWMybHZiZ0U9In0sInR5cGUiOiJzaWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDU4NjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiI5YWEzOTVmOTBjN2M0Y2M0MmE5ZTM5MzRkN2I4OGQ4NTMxOGM3YThmNGJlNzJkZWYzMWIzZWQ5ZTFmMWU4MDg4Iiwic2VxX3R5cGUiOjEsInNlcW5vIjoyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCGlvk5VtnWDNGcSe2rq1u00pf9m8w/yLdiq/0A/d6MYhtgWrtny6hiGamcrPT1bS6e9P7XDreP7m3Vtd82Kuguoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc",
+            "sig_id": "ecdbdc174a75a79fb175b9c4729765eaf0d03d1b9d910f244f90293b6f96e8b40f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgeHkIhR1XkTtA5LeeIc/OPKcx4xAFJQnv7nW4lp6nX00Kp3BheWxvYWTFAit7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ1ODYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjoiOWFhMzk1ZjkwYzdjNGNjNDJhOWUzOTM0ZDdiODhkODUzMThjN2E4ZjRiZTcyZGVmMzFiM2VkOWUxZjFlODA4OCIsInNlcV90eXBlIjoxLCJzZXFubyI6MiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDiskJVcUsN6nC8c7BngKGNZaMW/Gn1iae0a0WLHRvnyPbLJqJ1aA3Jqzd5KcsjTaEK3/JKjBFw4538tC+t0OEPqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432145863,\"expire_in\":10000000,\"prev\":\"9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
+            "ctime": 1432145863
+        },
+        {
+            "seqno": 3,
+            "prev": "d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc",
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFAhh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInJldm9rZSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIn0sInR5cGUiOiJyZXZva2UiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDU5NjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiJkODQ1MjExYjJiYTIxZTg3MTQxZDUxNTUzYzQzZWNjMzcwMWZiZjM3MjAzZDYzZTViODJlZGU0YzBmYTAyM2JjIiwic2VxX3R5cGUiOjEsInNlcW5vIjozLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQIN1Yd5VY6JwixVs2xEJhQ0cz7PqHm00OCbuNFamehp6RfMzDkFK9L8YfUwkKoRQ89czbCeDw4my5vT/n4eutgyoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741",
+            "sig_id": "384d5b0d6ce5497364589b4fc3c907c0dc26b264aeb523b2212367cb96b170920f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\"},\"type\":\"revoke\",\"version\":1},\"ctime\":1432145963,\"expire_in\":10000000,\"prev\":\"d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc\",\"seq_type\":1,\"seqno\":3,\"tag\":\"signature\"}",
+            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
+            "ctime": 1432145963
+        },
+        {
+            "seqno": 4,
+            "prev": "3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741",
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgeHkIhR1XkTtA5LeeIc/OPKcx4xAFJQnv7nW4lp6nX00Kp3BheWxvYWTFBfl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwN2E5M2FiMzUwMDNmNDgyNjJkZDU1OTNiZDAxYmU1M2QzYWNkYTBjMDlkYjVkYWM2MTg3YzZjNmUxZDYwYjllMDBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJoWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdlcE9yTlFBL1NDWXQxVms3MEJ2bFBUck5vTUNkdGRyR0dIeHNiaDFndWVBS3AzQmhlV3h2WVdURkFpdDdJbUp2WkhraU9uc2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpYUc5emRDSTZJbXRsZVdKaGMyVXVhVzhpTENKcmFXUWlPaUl3TVRJd056ZzNPVEE0T0RVeFpEVTNPVEV6WWpRd1pUUmlOemxsTWpGalptTmxNMk5oTnpNeFpUTXhNREExTWpVd09XVm1aV1UzTldJNE9UWTVaV0UzTldZMFpEQmhJaXdpZFdsa0lqb2lOelJqTXpoalpqZGpaV0k1TkRkbU5UWXpNakEwTldRNFkyRTFaRFE0TVRraUxDSjFjMlZ5Ym1GdFpTSTZJbTFoZURNeUluMHNJbk5wWW10bGVTSTZleUpyYVdRaU9pSXdNVEl3TjJFNU0yRmlNelV3TURObU5EZ3lOakprWkRVMU9UTmlaREF4WW1VMU0yUXpZV05rWVRCak1EbGtZalZrWVdNMk1UZzNZelpqTm1VeFpEWXdZamxsTURCaElpd2ljbVYyWlhKelpWOXphV2NpT201MWJHeDlMQ0owZVhCbElqb2ljMmxpYTJWNUlpd2lkbVZ5YzJsdmJpSTZNWDBzSW1OMGFXMWxJam94TkRNeU1UUTJNRFl6TENKbGVIQnBjbVZmYVc0aU9qRXdNREF3TURBd0xDSndjbVYySWpvaU0yWmtOakJpTkdJeU16RTNNall4WWpZM09HSTVNbUl5TTJSbVl6UTJaVE5rTXpZNVlqaGtPVFJoTnpsaU5XSXpaR0ptWXpJMU9ERmtaVFpoTmpjME1TSXNJbk5sY1Y5MGVYQmxJam94TENKelpYRnVieUk2TkN3aWRHRm5Jam9pYzJsbmJtRjBkWEpsSW4yamMybG54RURKTU42a1lCQTlvd1ZJS1dSZSs5czJPdGkwTkt0VHpqcnNkSWVmdmZiM3Q5MlBHRnptMEE1RDR0OTczTXNHVHFjZ3VJem9hak52eXNPVXc1b0FPVFFQcUhOcFoxOTBlWEJsSUtOMFlXZk5BZ0tuZG1WeWMybHZiZ0U9In0sInR5cGUiOiJzaWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDYwNjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiIzZmQ2MGI0YjIzMTcyNjFiNjc4YjkyYjIzZGZjNDZlM2QzNjliOGQ5NGE3OWI1YjNkYmZjMjU4MWRlNmE2NzQxIiwic2VxX3R5cGUiOjEsInNlcW5vIjo0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQDKHVTNDoxJs1UIrMI4CNhFzFdXtmbWe9F09gk2Rq5TbpMzSWGCCY1VKbHyzuSxEtX9rhBOcGkD8+O5Ktf809Ayoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "ff34e6ffa732ada20e3e2413f82fddb835f4c981c9acf43033da7ff8275333f5",
+            "sig_id": "7eb99ec28f5cea7163e1e3dc05fae2690c7d040fd6b99a70ebe2266786e637500f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"01207a93ab35003f48262dd5593bd01be53d3acda0c09db5dac6187c6c6e1d60b9e00a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgepOrNQA/SCYt1Vk70BvlPTrNoMCdtdrGGHxsbh1gueAKp3BheWxvYWTFAit7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwN2E5M2FiMzUwMDNmNDgyNjJkZDU1OTNiZDAxYmU1M2QzYWNkYTBjMDlkYjVkYWM2MTg3YzZjNmUxZDYwYjllMDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ2MDYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjoiM2ZkNjBiNGIyMzE3MjYxYjY3OGI5MmIyM2RmYzQ2ZTNkMzY5YjhkOTRhNzliNWIzZGJmYzI1ODFkZTZhNjc0MSIsInNlcV90eXBlIjoxLCJzZXFubyI6NCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDJMN6kYBA9owVIKWRe+9s2Oti0NKtTzjrsdIefvfb3t92PGFzm0A5D4t973MsGTqcguIzoajNvysOUw5oAOTQPqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432146063,\"expire_in\":10000000,\"prev\":\"3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741\",\"seq_type\":1,\"seqno\":4,\"tag\":\"signature\"}",
+            "kid": "0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a",
+            "ctime": 1432146063
+        }
+    ],
+    "keys": [
+        "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
+        "0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a",
+        "01207a93ab35003f48262dd5593bd01be53d3acda0c09db5dac6187c6c6e1d60b9e00a"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32"
+}
+`,
+	"simple_chain.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggg05gbQjjIO9nT6AnnoCfDEbP8W+/Qc9K/tIlLm+hrgKp3BheWxvYWTFASp7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMDgyMGQzOTgxYjQyMzhjODNiZDlkM2U4MDllN2EwMjdjMzExYjNmYzViZWZkMDczZDJiZmI0ODk0YjliZTg2YjgwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMxOTc5MjE0LCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjpudWxsLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RABjZFgXiUCNQR16g+RRL4xUtp+O2DI72+1gbMwoUJVlMxHGcXItlBFSFjfWGtOxU7//fYS0aVEH02q17IUCOXBqhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
+            "payload_hash": "223e25fd456ea18cc39b608bac8b5f35302d240d5f95e6e42e5a85b1136ac5e7",
+            "sig_id": "f0a633afc45db7d611a0e484e2db45800e87033f7c4bc1f62577bc1eba156f060f",
+            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1431979214,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a",
+            "ctime": 1431979214
+        }
+    ],
+    "keys": [
+        "0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32"
+}
+`,
+	"empty_chain.json": `{
+    "_comment": "The 'ralph' key has ralph@keybase.io signed into it. The 'steve' key does not. This is for testing key ownership when the sigchain in empty.",
+    "username": "ralph",
+    "uid": "bf65266d0d8df3ad5d1b367f578e6819",
+    "chain": [],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWkQEEALmSERRK4+fbTg5C28GOXxpiI/IfQZDFmJfWzNKNW6CrX1uj4o8G\nu3292bU5meCRCJstd09LFaELOASbknUOiXFQcnuzpY7J9Ou8uqxKcOYxi4xWjXih\nK8KQfL4khBIpB+7B0tp16qalqbd1+V2wIAJzmNdkY+cFGeXZE45gr+i3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVedaRAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQUGs4lh8OKGN+TgQAhTSvOZV+8me6UuIc\ntBJTsZzAkzWsP3QpdSZ6zUyZ40yA5WMZMpnQb+6kd3xzo/tkm9imTK2xLtoCj52d\n3QZRN3BOqweetaiWng6sgIkMZc8EaQp68bPeVhtcAYU0Y/I9Jcim6d2nSXQcwuph\na3RWghsf37A9CfXlbZl36PvQ2ko=\n=qGhY\n-----END PGP PUBLIC KEY BLOCK-----\n",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVXnWyQEEAMUSBo5Q/X3et/ExeX6UHvsH9Wv5IoaEmMqdT7zSxaphcFS+vo5E\n63QQrokfIUKZeMDmWjI65SNVNhpWng5mhrkz/bRql0pdikhwXnALLVnwT+0J/Spl\nyWiQKVfZ6pqz2anto56/rlhLui7oTLnG7q2CttIaAp1aaMzaHwMH4iW1ABEBAAG0\nBXN0ZXZliLkEEwEIACMFAlV51skCGwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIX\ngAAKCRA0feCGaTASHtOGA/4u7MAY2z3UzVKzH4XxYknep4hD+75HH6TY1fCUHBcS\nAfVptSna59alV37JJtsBQhmNowyIqvNeUSl3VcN2oOBvJwxGyPhoh6Roxj+4phhO\nPGH9dzzaZVQVSYMBMU8Wuf9OsEM/2k7Wo2oes9XLiNVBqYNwvk6Q2BupT77FyzDI\ntg==\n=zpuJ\n-----END PGP PUBLIC KEY BLOCK-----\n",
+        "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
+    ],
+    "label_kids": {
+        "ralph": "0101de638c5bee00e1b473b5f3fa7065e55cde33e88d230a2cd253da5d78a1c5a8910a",
+        "steve": "0101d17f13d98d9a21e3fcc2ba30ef38fe1ca0e805950839f7ecfb8b77ad5d128e4f0a",
+        "nonexistent": "0101deadbeef0000000000000000000000000000000000000000000000000000000000",
+        "naclkey": "0120a4dabfb39e2bc635eadc861b72d9f9512dfe4261562822433d261718235d5b6f0a"
+    }
 }
 `,
 	"jack_chain.json": `{
@@ -3349,144 +3535,6 @@ var ChainTestInputs = map[string]string{
   ]
 }
 `,
-	"mismatched_fingerprint_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDvAnicbZG7axVBFMY3RoVcEQIRCSIkTL3I7Dzu7lzbFEljJ4KELPM4cx1ys7vZ\n3bskXPInWJgqpBC1SGFlbyPGB6KIiL2CGFDsRAULdXaDnVPMnO+c33wzh/Pk7HTQ\nm7u/vHDm/blP+1MvHz0dB1fTmzMTpHKzjQYTtA7dYV02hLIoXVajAbJYqEhThmWM\nrd+UtIrQPnBBCafCJoJwIjVBIbqRV+0Nb6NkBZdc7nNepM747H/49a6Ao4gaE2uq\niSSaMaIg0sJwAoqbGCjTShCB+8YyoRRlJAL/DR9LIfrWYgwmxtLbjTu7mGmaaBtr\nUILFlvcpwYybREtuWBKJFqygzOQGeHpDblGCdkJUbxethpEB30SIGigrl2doEPmi\nrl1LR4yStomEhQi2CldC6loCH68QFSU0aJCNR6MQVbCZHptGncjyLqrl0D9TuWEm\n63EJaOfx2slgrhecPnWiHUbQm5n9N6Lf94I/zR3Y273VvLq9+uvD5Ojaef79+dc3\n+dri4rfNg8vvmo9TweefR4cLP97OPpwvXj9gq8/SlbsrF64sHV4vvlyky/DiL4nZ\npE0=\n=S2XN\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81",
-            "sig_id": "a486871a4705c9d1690125cd6ba2f6bd4ec74b129a466ad0dc0b78b0dd0bf3630f",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f09b1c340a70f0a7bafb236e5932539f89252ac2\",\"host\":\"keybase.io\",\"key_id\":\"5932539f89252ac2\",\"kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432325384,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a",
-            "ctime": 1432325384
-        },
-        {
-            "seqno": 2,
-            "prev": "2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQeAnicrZU7jNxEGMcvvEQORUIJRSo43O7ldjx+n3TFetdr7+7t6/Zpa8XJ9oz3\nZh9jr1+73iiK0lGQghZBD2noKRGpUlGlTMGjQUJQIKVB4N0EpUFUTOOZ+b75+6fP\n/n/z3Y3XDw5vPTI+eOfZez99du3JYy45GFw+PLzLOD7KmNO7zBzvH3iBcBRfzgli\nThnAshxCksu50IYuz0MHs66CBIgdAUmY411HgQoQkccrjsPxkMXAlvK5rSii5wGA\nkQRs5pjxCJ3iMAgJjXNZhG3kYJzH/3vkB6/8aHcih3PsCJ8QP9/LF5d7PEHhoMAp\nnqxAAdou3MX+X+5kLyfxLie7nuRiR+ElTxA5CHgBya4tIF5mlV1ihENqL3GevbQ3\nHGTuHTMRcV4W9RWVk2NxtsxhmUcOBwRWcnjPyWE9qHDAFt2cESIJCjwQPcS6HOR5\nWeJYx8OIhza7pwpxisMIX0Zkmsve2Q1V02uto47eOWpqvV5J1/a7EzrME4lPT48a\nLyp41A4w3aWl8AScsGBCy/5yiWl8enQVx0F0Wiy+qnXRDbMg9id0QrNmdVyixA2t\nRtHeXKjVpsvVUwN0a2TeI16/bDS0ZR9vk21rbAzNUaOXEVPXRwXPWEbJRTKhkpIp\n5fXCiEqrWqGUbKJhKYrPS8ONJtZ66kqqqiYczoOu5skV2gcztLDazWJnmXqe4lEi\nT2gsoqVfcMjaLAw3CepYBamTtlLHAHgcxWmr3NcqMeBsTWqoYB1LlVV8EQeaBIg9\naGLBnVA7nFcrQ7PWbJLInelTMoSNcZXMui1Dw7be5Ls1cxBAPWbNlWwJPVSmw0Ab\nymPa2xh1S5jQZneVVcLBlpSNorRp2uwaDbkLYzprCOv2RUFLN+p8IG1M1ySCvKir\nlVZQpl5S5NrtYFz2owldKDat+qC3MuV+ZdHX+gsftTPdWk2j8LyUog1bQSwbuZkm\nng/P54KeBF7jqr1O6qabS+gTCgSyuKDTvlkBfp8OSSlr81W9rmqFgin0ylq/Mt8a\nAShtbWtQHwlkNKqOhCHXO49sZTwrORPqdJVQzjqd6moeyvOqCsl6LvVICqzZVCub\ny0CfXnBquKyPLGE81oB0ZVpqMpiWrvhgZoGcoa/Wa0tH3/hRjbgNPeityKKvN4hq\njXF50NVHs9Z5go3maLREVlMvrJep5WRdWDF91R60pxPKtkBgnXtdn9PrVttrwUUG\nYC1rbzeFMN5WV3Sx5SOxSWm00YxMKYwsEo0NThQTRyW8l/+T6CrtKIIrYVGW0Jrv\nCMWkE86K5mws5pM0c7zWgi/2LWXrjQzOM4VuYatIYlJwlpLA4tmEBt3Uc/KPprqp\n312fnU3omR5H8YTu3aO1Kv/iqJ2z4yzYOf2lwY+Z9IXLmFM2D7ox2fUBludg3p54\nmT9m8CYgIb4ku4yXve2YCXIb5yLQwwAIyIZYFKHEOq6gAN7FkONtoIjABayMRZsH\nsod4jFlo26wLOIdjkSu7SGbz10d4dfkCid0vqM+cwpzSnu4hp9SOkxAz97796I2D\nW4cHb7352q71Hxxef/efC+H79w/+un/2FH86+OLt7f0r/5OvnuBHH5YePBVu/Hnz\n9h3m698W22sHzx88rv0SPr+5aT7Mvrx+6/ZJ138G//jm589Lv/7w9PcfP/4bjE0M\nZg==\n=4X5j\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "dffbf787f044211a12ac4f601ff477c351675634e8a6d6fc8aba468b7ced26f0",
-            "sig_id": "deed996f790f6b4441a4dcd06f610e281a7c782111368c5da66806ade383347d0f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"fingerprint\":\"deadbeef00000000000000000000000000000000\",\"host\":\"keybase.io\",\"key_id\":\"5932539f89252ac2\",\"kid\":\"0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113bdd73a83e84db30517b4fb3ddf2930a6c52e2d725406fd1c32448731bfed42a10a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFXAnicrZK/axRBFMc3JvH0QIikSifTCHKEmTezuzNXHVYWKSyiYGGW+fHmsuRu\\n79y9CwlHsAqI+AuxsVAstLAVxE6ISBq7FBY2VkpQEf8DnT0jdlZOM/Pmvff9fni8\\nt6dmo+biwY+VxudPZ+7PvNvbH0eXstvNCTEDt03aE7KB0wt7DqtRtpE70iaUMe5c\\narkFDVYIMMiscjGgiV2KXFijQNHEeaGM4QIYUp2Gt1Yq8Z5SdCnVpEV8XnSxHJZ5\\nMQqyDrUziCH/7xMa1wdV3RHgjK5wOR+EvxBkU7xYcYi58lJBDNpCnfu/3OOpXCos\\nl9anFo0SqY8TDlTETlodOyGZqgsrLAvdx1Dd11scyE6LVLk5GupfKhOwuJYcpXCG\\n05ilRngTYD0oTnViAyO4FGJBE++Y5SCETDkzHp0AzaZUJW5iWWFW5V3SLsa9XjAb\\nbQ9r8yPPFqkr8kFB2iwk7Siv0ZjgECYmpGgR3BrmJWZ5XXE07hYZBuUgAh4pjZ0G\\nTBJImbGxosIicKGpSqilTGKiBZXeCUQGWjNLueHMWWmdZMG+wmvZbyQ2DYoBaUOg\\n1N0pZLfQo3GJZOfN2ly02IyOzx+rtzFqnlz4s6MnnsxEHy9+WZisXH366ubBi4fn\\ndhvP95c7e687dw4P5/uPrj/YjX6uPrvybfNl4/TZ9zfWH3fY5Q+z976u+bm751ej\\npQvfb+EvBcvoQw==\\n=Gtst\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432325484,\"expire_in\":10000000,\"prev\":\"2fe005da2e66271bc5904ce234a0960c018e6a408fd4ee12aa1c03b31dc8cd81\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "0113dd7c3c2a2c442be1c9d52eb5d7e34cb92906df49bb3421e0a749ba996ff00ed70a",
-            "ctime": 1432325484
-        }
-    ],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVV+NCBMFK4EEACIDAwSxdoYt7Gw2ZhzqSD7gxAANbFbNJFDslJ0hqd6blexK\nu9a2iSGdnWI7zz8o0IJj+mv+Vbf9IYJ4QWnDMIK8JHPP60BfqIkrjcSZn45LY8q9\nkkQlXP88yFjIrAqxca7GWJrNBW1heDMywpIEExMKABoFAlVfjQgCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRBZMlOfiSUqwmTwAYCzAH6p3Y1AhHLupXtmfoLn2LpbIDCf\nbgTRUwKDYTrM9/Si2w2mDwDUde893GQ8TXgBfROubbwMm7mko9kVG08/+Dgsq297\n+681BmBRwCWt7pJLTAfNG0cCrvSs12DePfHXYs5WBFVfjQgSCCqGSM49AwEHAgME\n+3JxQRgAllBCy62bYqxbi3ABKdvFtay8GhNDasLD9qZLdAebWJmHbuM1FebN4V8+\nXuBqNhDePGCE0vT1F8Sr5gMBCgnChwQYEwoADwUCVV+NCAUJDwmcAAIbDAAKCRBZ\nMlOfiSUqwjyeAYD6kut9MSuZozqQOfOS80WCqJe+mrf8ifCp1FvndALhnfo9F9qZ\nVja22hB3wWvxkOoBgLXVrYq6cmbRrmbqRSZ+4XpyoCNFQer6wsa6fvyTdMhcyBUi\nlTYjwzKKOxFopfemv85SBFVfjQgTCCqGSM49AwEHAgMECIKXe20+/fgR1Sv3iCGo\nGGH1tCUkdBsTy9ooXhtw52HA1ua0D94Uij2fOinADT5nRfSA601HUVLtIbl9kie2\nbMLAJwQYEwoADwUCVV+NCAUJDwmcAAIbIgBqCRBZMlOfiSUqwl8gBBkTCgAGBQJV\nX40IAAoJEKpIHwvfFOWaqoUBANYAO2WFA+1ykf52R2zDZWjktVd+bs8VlVVGU6ek\n8EV/AQDmKu+utOxSyXMRIe6sHCnMS7TcKHF1tpCuBv0dahwWOYqcAYD2Q2ntJ/W0\nI+rjw2T8uHbDIpMVERfg48E/YV2c2nJMAl6EPSbCZoCWs/PuXZfOQp0Bf0HqVZ3L\nBm/NhmTS3jvcpiFzJ/oM/RJf0mxVIV3ECTTvCF6nKaXCCTnKe3seNADTVA==\n=gaPN\n-----END PGP PUBLIC KEY BLOCK-----\n",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVV+NCRMFK4EEACIDAwRX2ASuVhbQWsemulbD6U1PRTZV/tAUb7P4IeRzklSs\ntWk9coRRpepboFjTWiAZjOz/rpVLd+DgUfEcUt8yH7jb3K8meEbiVGZLgeBL6hPY\nXpm73qI1saVTCA31AXSdJZnNBW1heDMywpIEExMKABoFAlVfjQkCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRCd/xzIsqmWA2Q6AYC5ayGbUfWSOhd9OiS83Dtf+91Ege7z\nECVUym9+RHIUS7mQaOV8lQu0zhugvsqlmTwBf2eQMX+xvMtM5YdDI33lZLqibTJS\nx36yabMk+l1C3jdNQOKYL2iJU3dJMjlaTiWE8M5WBFVfjQkSCCqGSM49AwEHAgME\nyz7k0POd3bNOpuz4Jc2djhmtgIlyCHaeUgfAnrP7QqlC8Q8WzzmBFz+od1EM5tEQ\nRB07+YGPFL1Kbq/DO8OJAgMBCgnChwQYEwoADwUCVV+NCQUJDwmcAAIbDAAKCRCd\n/xzIsqmWAzVQAYC33nryFGGQnMSRQjqm3K9xe/l8/Zz+UjWBBviEh96ccsngJGLw\nKadsWyYuOuos2y4BgO1ChHwRNiSGXrpe1bBD1HJCvPxOhqQvNaqyjK7BYdPW6HhR\nnzGp0HlAnNLb7lj2/c5SBFVfjQkTCCqGSM49AwEHAgMEMVlURn6Qe9pHS2I5pFII\nLru49zxqsoOws8+oz6ojqWxJUZeb1lEHrcb1kvNpTL0gs/TAQMJY+LFwU7E/PeEc\nO8LAJwQYEwoADwUCVV+NCQUJDwmcAAIbIgBqCRCd/xzIsqmWA18gBBkTCgAGBQJV\nX40JAAoJENLwTAfm5SCSIh8BAM7UnJtmN0gMpEfx2Z7BS0CjKm+dGkuMz4mCW9U2\nsrDHAP4ukoSjPtSs//isCS+474UOfRu6MGubTWB4qFTSzOl9Aj8SAX9q07KDj3Vn\neSOQEaqzB8WFDK/Ye2+Vz7WUgzXpGt5ZE+D8buy92f2pN1bgfnL9s2UBf3IrS3pC\nrqgRPXzqJSbJk8Pg3PRtEF19LLII2QMsWaIypTOtGtNyR/mNmQTgqnzikw==\n=euv7\n-----END PGP PUBLIC KEY BLOCK-----\n"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32"
-}
-`,
-	"mismatched_kid_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDzAnicbZG/axRBFMdXTYQcCJIUYulAmrDovJ3ZmdkDBcEqlSBWCR7z8xxy2T13\n946LRxrBJhaCKHZ2goKFnWghIRoQhKCdWPoHSBAr8cTZDXZOM/P9vs/7Pob3/tSJ\nqLN0dmdl58PB5d1jH3f3R9F1M340RaowW6g7RRu2vZzP+7Yclj6vUReRTEgADkwb\nJYAZcFoYh9PEcDBOOCZERiEFFKObRdV0hBglK3veF8ELoudNcP/Db7QFDEAowVkm\nWaozxbFzWhPlpEsxYGlkwhkmMhFGc0gsKCO1YKAoU6CNTZmkDMsQN2rjONVEaMe1\nVRnlLmUkwTQ1QsvUUAFZA1a2zOWmDfSmnJAEbceo3ho22g6MDZ+I0diWlS9y1IVQ\n1LVvaKAkYZQT4DGyk6Evbc83BD46MRqWdoy6+WgwiFFlb/WOQqEVedG+atkPYyrf\nz2U9Ki3a3rsxFy11opPzx5tlRJ2F0/9WdFdHs8X+2qs3c7+ffn229unOjxfn5s88\nXP7y9sq9Wf5y9fG7B4fRnwuX9hbu82+/ru5f/Hl7Oll/ffj9M3++fO3J4mx15YCs\n/wUBuaVy\n=jTqg\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76",
-            "sig_id": "d92e49fb62ac5009f53989807cc82113fc5a806a8b717097f0ca8be8822553840f",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"398a11716cdb816d1fc8df052d71df8f68894151\",\"host\":\"keybase.io\",\"key_id\":\"2d71df8f68894151\",\"kid\":\"011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432647317,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a",
-            "ctime": 1432647317
-        },
-        {
-            "seqno": 2,
-            "prev": "fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQ2AnicpVVLiOREAJ31iyuCuHpYT2Mf3XGTSiqpZGTB/mZ60p/pTv9tHJJUJZ3u\ndOXb+fSy6E1YFBXBFU+CiwcvK3jZi7CIiih49ORlj4JHr6LpmZW97M26FFX16uXx\nkvfy/XOP7128dPnmqzd/+rV878IvP/CbvSFOPrleMjyclw6vl1bkbCIuJlF8unJw\n6bDEAsBDnpVlXRRM2UCsZZkmb1i6JbCA1bHOIZHldU7CJgIcAQbWTUkEBhQNYGIi\niDoUWb10ULIcapPQDx0aF7S8LOkAICCa2JCAiIFlSthiBQ4jgC3JEiVJhkAAxcWF\nF+1uFOIMPSJXHa/YKxanZ/IegT/XjYmODUIs9n+Ngm5zRoegyUumhUxiyBBZgshz\nLBSwZOoChhKQd8CIhFRfkwK91jOeK904KEWO8cDUh25ignSe42S2MKBwjLU4CbAm\nhJgQicMcx/OmgCAwBGLwQBQ41oDAQsjgrMIlxJ+7GZKEhBE5jRy7oH1tNyp1pdnZ\nP1FO9tt1TSsr9bPdOR0VQMejh/vquYP7XZ/QHSzhrrJXATunVW+9JjQ+3F/EsR8d\nMsxDrxkzzP3Ym9M5zduNaZk6ZjhTkQ76FaU9SuquPGtMB7DB5nJ+tN3SaOg0PBW7\nxGXXBIs5MTZCjPBKGXXmtBDoq2O2rqbrJtXKHtey+71RUx2vbco1nOZivBqaRNhk\nbUPTp/qsOznpGinaipusCtylPqekGjGtyRWIyLQ7CSGZxZaUhWwWLVmmF7DZ2OYH\n6qQvB2UjBjhfNqJm2W0oUdw/MnUtzuZ02Rb6CsuvlFYtW6ycSqAdqd10tbJPJora\nU8bVXtKt5LBdlx372PMFtue6iZS3eobqjhercuGWeSwEbAU6dSQ4NZrVaTYcao6r\nTCrNBsdwQeIrdthdVxdWPon9lsNMhyhjREZKZdrxj+dUCBb50PDtzqzbr7JeCgEU\n0i0YeEq8aJhhNWyOV5Nl13DVanwc+DkBg2CSe5avKnX9OFXnVGuvYN2eTNtkVhu2\ne4NeQJcr78hNR80eVWqtZt33tWEaa4NgqUYdRVWTXpg0u/piUjOWpDGntaEhd5PU\ni6Ab9DEMh+VE8/rJqtP3Us3ut+RQPU7XU6bFtlGYjWDHDzwq5APNGGhmZQTnVI/1\nVdcuD2ez0JcbSyVotcZqLrjDuh8chWnVh0e+WAYdRh+p/nCZjUaLZCtU7I2zEIP6\nUJtTn7jt5mDTUHrblt2arjtQcDXIR9nJkXBliddLc7S1GORtvSsCOlmpXcb1CIMk\nO2eMFqsP5nSRYprEJ6G7RWS8TE2eAcIVk5/I8jpxmKOUE7qN1FJxhjYDeWIhylhD\nJh7LEkGyi7vFV03pjKMuL9SmvIZw89qcXgvrNWVOz9JT79QekahdsuPc3yX9QcAP\nSsl5ykqHoDg0Y2fXAwDynAiLLKODEsl8JySnzg7xoFwOSn4R44LEMpAuSEQoakwv\nOhMAiYcylItmgZCXDANLAkJEkpAsECwBUwZQtrDOFyVb9C4Si8dHJDg9lwTOFtQr\nHXKFSt0+E2kXb2sTktKN7956Yu/Sxb2nnnxsV/17F595/r8fwv1be//El9MPnz3w\nPrj957feK9Jjb37duf2p+nH88vv3P7rzXv70nQt7P/99943fX/greOnLFy8tfvzi\nt9z9fPL6Z2/fu7X/zTt3v3r3j38BlbAMxw==\n=U60b\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "b0c1a6a4f8af46483e1c249ef49a727c991d601537cee9e799d414357f1edddf",
-            "sig_id": "3edc748f9de94269229d930ca1090c78caf3ade6148bfd1571290eb6c05284860f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a\",\"fingerprint\":\"398a11716cdb816d1fc8df052d71df8f68894151\",\"host\":\"keybase.io\",\"key_id\":\"2d71df8f68894151\",\"kid\":\"deadbeef00000000000000000000000000000000000000000000000000000000000000\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113de7a32290a1112e0f2810c44dee82d2233c5741b5eb316520b41f77b2fd1f7360a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFYAnicrZK7a1RBGMVvEl9ZFYT4F0y9yHzznsUiFoKdlel0med6yebu5t7dkGVN\\nEGIpKW0EKwmInSAo2LgRQVIKWmgn2FiIhWkUce5uxMbSaYaZOXPObw7z6uxC1lja\\neCs/LX+47eYOXr4eZtf8xr0xsj0/Qq0xWg3TKXR9qAbt1dyjFsIAlFGstRHcaStx\\njM5RG03kGLDxhkiBqSHKOwkkgPXGKQGWCQvOBy4ME9igJop50Qllv8yLQbKlWhkA\\nCcJ5q0B4iE75iDnxEnxUUSilGXBIF2/2qvpGgrOmChfyXtpLi/YU7x/6/8w9nNpJ\\n5qhyUbpgNZORC0ow4145wz1ToGthFcrCrIWkXjOblKCtJqpye1TqXyofpKGEaJwK\\nSMk4EgXYMeZDUMQTQqnjkoHlwVIQnGDLIEppSUwtSTqjKsNGKKvQrvIOahXDbjeF\\nDUb9Ovwos4lqRd4rUAvSoRvkNRowSgRL9rKJwmY/L0M7rxV4Npqon5yTSbTScBV4\\natakOgAUZZrp9FjGqLLWKy5lUEpqHrwCp4Hp6A1N/aVKpUjxVVhvz5Bguih6qEUS\\npelMITuFGQzLgLYmN45lS43sxPH5+jdmjcVzf/7ozo+57PkKO/loe/78gy/bL0aT\\nhwdnvtPrlz7eWjwc3/15+c3X99mvi/Hw25OFwfKdx7uT9Xf7n/fU/tW98e79ldOn\\nnnZ2nl35DY3S7dI=\\n=rEDG\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432647417,\"expire_in\":10000000,\"prev\":\"fb7a58e58f6acde118349495d44438bbd8577e88795ed81c9149fda3b4628d76\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "011343099a65c9b70ffcc3bfaf5010ada27603a28dc712e1bdac861b46b1cde56a460a",
-            "ctime": 1432647417
-        }
-    ],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWR2lRMFK4EEACIDAwTHLrzQ9a9ejgFgBkMeCo3GZxk+st5RQT7ogWdd/ReZ\nx+a0RSzVQoJ1YWxMOH1gXe2g3Ez89shdUwdRhAIqiHu+3Dpju9gLULaggupPHTcH\nDubfmoXLs9XZlWdfwnebobDNBW1heDMywpIEExMKABoFAlVkdpUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRAtcd+PaIlBUYbrAYDbujynJ196wGcCxBatpJkEvWfl33HT\n7h7LflVFH7gRpVBWy2qJxhwpMJXySlhKFfcBf06AZbOg3B5UaNh7e+xp6J/8Ey6j\nN1zYxdnrDFqjIyPQO1nLLkQx9vDVT6iMwuki+s5WBFVkdpUSCCqGSM49AwEHAgME\nuJXDKpNHbnnKFnjHZYBo7/j945n6YC/w0uEmEspqY1pAGhDBr83onBBiTJrDMM88\nrzA2voGwkdsFTlFDtps2BQMBCgnChwQYEwoADwUCVWR2lQUJDwmcAAIbDAAKCRAt\ncd+PaIlBUYC5AXsFr9Q8NeRhUqhu5QQ1q2ZRHc6noVTCYx5rljmHACiqFfM6MjFy\nGjfXfnm1HSe3cfUBgOSj+1sDKahuZg/F0NC4fPSNFdlDKbP2awmCX8fxBOePN+zm\nZgfA+9Fn3PINLiUkqM5SBFVkdpUTCCqGSM49AwEHAgMEkVmgczonctdljbaeqhVK\n24Y0PWoqn5inr6/kIG2jez1UW1Io8F4Nyc7NZl+UPHE1+hKht2Y0438Jg89cE9aY\noMLAJwQYEwoADwUCVWR2lQUJDwmcAAIbIgBqCRAtcd+PaIlBUV8gBBkTCgAGBQJV\nZHaVAAoJEBmKKorIzkHAcm8A/3rb4Kbt4BHk93U4AaNukEZWS+kPqKGJGEJBHsas\ni1IeAP4qFQIvPcUFgCBwM0aOvQoIKY3u0XqlfPAmY6YJo/mf/w9BAYD0afRCV6U3\nCPUZshdS5jO5/3Y23QoSfI2ibq6UWgAmKXo7rgLwsSJpFIriCIN9vrwBfjneWxQ9\nOb/HHvXW0jBP3qMZhfLQdQPM+FYBYIpoES8UNblYyNkPXVXyojuNn0pKHg==\n=4ZY+\n-----END PGP PUBLIC KEY BLOCK-----\n",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWR2lRMFK4EEACIDAwQNQ19PK1/SLtX48z0hz3dPFw7m8wgGQHKZtr9+cSSh\n93/8rC/WzmAwwA42iswhS/n0QCIe00JsKvku5MoU1wtJa0klQfKOpf2JMgx56Ei8\nWoEfWkVQBYjbZo2TwHzwIUjNBW1heDMywpIEExMKABoFAlVkdpUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRD6HZfQ/y2R/RY+AX0VG+yecb/FPERfFpID8PgDwisbDYYV\nu9n7rxWXweO4r/XLo8KQR9FmTwlNgua5oX4Bf3do5Lro6gTWsqDvxcYo/6BDCC6s\nU0GlFSYX9lo+mJNY5Fhj5BM/YEFznEMVrmEFAc5WBFVkdpUSCCqGSM49AwEHAgME\nICRjm0O9+5c5ylqcWEhpK42kJOvN2WzMsuAXPve8YXwXZWoI4mBKWlhpnxMD2i2U\nNDj9FgbsOWxAYTwBNl8/wQMBCgnChwQYEwoADwUCVWR2lQUJDwmcAAIbDAAKCRD6\nHZfQ/y2R/QaIAYCEzFPDc3EWSjl3cudokf4K4/dd9nODpNqB/PaGex2tQv4jaetr\nRf/HcTCqICyuBUQBfAvDoRiShMCUqIg+/Uj279VbdDw5ncGpMF8qeM8CxyTartVL\nwTPEsN3DC9puTb59/s5SBFVkdpUTCCqGSM49AwEHAgMEzpgc1Zzf4tsT3K8Fp6ld\n6drFm6y/vnUDbRW1OiHgn3xHPYjOHtb5SKPTg7Hcaa9JinnJcGVwPpkRYm7ixRVE\nFMLAJwQYEwoADwUCVWR2lQUJDwmcAAIbIgBqCRD6HZfQ/y2R/V8gBBkTCgAGBQJV\nZHaVAAoJEHbTN+NA24BjqYkA+gNxwnl8x2yCNjHtKT7vhLBZYvL+qXyUYpOVWjaH\nbe6yAP0QZNQTWZxt5ArLWBpjE7PrwjG7Nu2ljvGA7Z0K7CBpj1w3AYDP9Cuq7xnQ\nG4PL8NfiRvgyvaHiUFYuRQA2z97u3zdBsZzN53dj85Q8s7i5niUfSdMBgL5Fu0H8\nJGBMySeMF03CLsEOS9saWXVqTqY/kcc09A91bhQ0shxPBbpXZgHisQEIZA==\n=h1vu\n-----END PGP PUBLIC KEY BLOCK-----\n"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32"
-}
-`,
-	"missing_kid_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMD3AnicbVG/SxxBGF01CjmIBI4UtgMhCJsws7O7M7uNiIUQCSGQNCF4zM58ew6e\nu+fu3qmIlWCVJuA/IEKaQIrYpMkPJAkRhSvENNpYaGGjpSBiZlfS5WPgm/e9N+8x\nfD/uDVi1er33aPfB2f7vvt3vPzvWK7U2sYyiVC2hcBnNQtVinTQha2c6KVCIVOzG\nipHYA0yxkswNvJgTRxDsE8kw9SXnhsXIRjNpXr4wNpHI4YlOzcyAhlZm+h/9bEVg\nQmiEAYQUWAQKRIyF9CNg4GHGmOIBMB74Jp3ziDhY+R6JCI+oIlx5rlTmYGHsOpUd\ncyXlMmYSosBlsedTB7ue4lJ4yuUkKIU5ZImYA6OeE4vUQSs2KpbaJYaWAvMJG3Uh\ny3WaoJAYUha6VBOXOiacUmwjWGzrDBq6VODbslE7gy4Kk06rZaMc5hu3pqQCSVrd\nCtE0MbluJqLoZIBWtqfvWPWaNTTYXy7Dqt29/29FWwt9Vu/l2/drf76NfhnfOnm9\n0Qpf1I9XNz+PPR7onY5fjUx+sm4mrw/ere5tXv768PThxZF4NrEz1X84vHO+3fv6\ncf3g+Zu/KrimzA==\n=9oxM\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67",
-            "sig_id": "3d80007ad5e64c9367fe566b03c1918bff04d522537787d7385fdc4bed274a740f",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"df4fd71f5e030dc7495f812a1061c7036c881f50\",\"host\":\"keybase.io\",\"key_id\":\"1061c7036c881f50\",\"kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432651330,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
-            "ctime": 1432651330
-        },
-        {
-            "seqno": 2,
-            "prev": "a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQmAnicrVXPq+NEHH+76oIrorAsiAd5xIOHPreZ/JxURZo27Ut/JOmP9LUl7CPJ\nzLRpm0mapH3teyze9iYK6lFBlD0J4tWjrigsugcP3vwDPHjXBTHtW9nLHh1Cwsx8\nvp/55Aufz9x/8ZmD6zduPHzjwc0/fv3pyoMfiqsDG92tXDBehLZM6YKZ4/0HLxBO\ns9N5gJgSwwLAeyzGru+yroKwS1jXlzwsY5GVZRlBBctQkViehdADHIskEXgAejwC\nEImCj/KHdZkjhgR0gpM4CWiW0yIiECQDIuK8EvmyoIgEAs4FrAR8meUlH8J8l80L\np1G6q8jFeW6KbwVRvpZPTvfynoL/n3Wv9nSy4PPQJ7KPPUWQiSjxHCuICPquiAQI\nlB0wxQl1Q5yjQ3fDc8ydIyYNvMdNfaKKk0SMZdHDPIKQ5xUZChwBvIgwkmRPFjgB\nQUJ4EctE4DzPZbEn5ScCUYKeh1x3ryrBa5yk+DQNJjntm7uhanXdOLTq1mFb6/XK\ndW2/6tBBDgwiWjpsXnbw0Iwx3cHW3C32FmAdWonCENOsdDjNsjgtFYtPel30k22c\nRQ516LZdOynTwE/GDcPddDb1NqJgMEa23gmkqs2PvJrY58aqRSZqECXDFl2I7YmM\n6ADQ8TxrOVRC9tquHWvetozVUSEYTOsw6BFVXwWxvpiBQQa3rBANZ4LbmZv9omUp\nZB6Sc65dn5s8mTv0DLPxat3nfJMshALpi81l0R9qBufVSJewICv3M1VrW4M+GG1n\n/FJnz/R0MyubumFIqaY51Gts2UhTJ/G4P2z2AtRLt2cgHnfkpj1ZhLOWZdSwb6LZ\n5swDdjtoVdtxI+wi0DfTahVIXYfqFbWOl0hoRnoI1HIaDMxRz0XAatsbaCwFN9AD\nWrUHtM0f+z24UgMeW8V+MRyu3Xhh+Q5tY67ih2o/iZqdWV1frY/HddwUG9xkkjTL\n6flkOcFhd1Bnh5E18CgiSq84qHWa5YqdtpsQOHQk0R4te5Vp2V8vBie+v1Sqo3LD\nFoyuO4HHTUkLNGCMpRFYLrXYnSZ1tSN26bKmWNN2Ixk4dCladWIUzqebuGYFYofC\nbnVQ8I36qm6QzWZTzVkaFWU6r/rNtYEkV9XPN9tOOB13E007O3PoZhQaCHZ7ZiUJ\nRiAzmh1FtZtQ0dR50V4Yq8Vouk1aM97tJmsNs8mqKo8621YWTYOZFXG2QxthOk1h\ny2Y3rU4htmoduPANMUQmUu2Roit41bBmvtiex1DY9mRiFq1I0SSl0IgLRUue5hrG\nWOZdrm8WfHlYgGuvJom+tOyThqz4J+uthIayIaf8mmOVoneiwH5ZNs6VIrG6qxEh\nFYcqq+35DBVWyGSrDn3HjwLRoXvnaEb1KW7auTrbxjuXPzb3EbO+dBhTAvmmnwW7\nDADCzuj5mz1i8CYOEnwa7BDs5Thi4tzCOYmrYEWAWORFXhaAl4cJm/8CJ+ap5kGO\nEwgROQQRBlKemJATPFnM4awsIKQoeWDkx6d4eXopCewnNGJKXK7SnexFTqibrRLM\n3Pnu9rMHN64fXHvu6i72D64///J/l8E988rBn5//mIHvP7390kc3H/7y4Tfv/nzR\ne+WD1y/mtX/+voY+1l+7cvD+l5y5uKff/eToEf7ts6+4L+4/0vDbb7337QtXfz/6\n6+tX/wU94wjD\n=mdjZ\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "a6eb21956740c5d06a82248710b0243ed7f4a9d83a0ab0ad345971cb0532d3f6",
-            "sig_id": "03a631ece380553b7a422c0d53ff9492a0a036594580304fbbea14af928761c10f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"fingerprint\":\"df4fd71f5e030dc7495f812a1061c7036c881f50\",\"host\":\"keybase.io\",\"key_id\":\"1061c7036c881f50\",\"kid\":\"0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113265ee75be3d883397842f135ded67b7424d8ff35e7f42bba0eb67f51568bbdaa0a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFWAnicrZJNaxQxGMdn1VZdUIQi6DU3YbF5T2ZBPfgBiorXLnl5Mg7dnV1nZktL\\n6dUvUFHEbyAeBY+iVhG8iSfBIuipIlj1Vt8y04oXj4aQkOT/PP9fkmfz2MGkO3fk\\nwe0puvT2cOfl4+fT5Kq/cXEN2bFfRf01tATtBEMPVT1Yyj3qI0wIsxjAOINN6sEE\\nbJy0oEBgpZTXKSidSsyw1pZQ7KUglmjLPNFecOdjxwb1UMiLDMpJmRd1TOsDD16R\\nICBGeqd4KoIm1BAsiVOYSad1PMUx8Nq4aiIinDUVnM3HcS8uBi3eP/T/mXvaplPc\\nMe2CcmBTroKQjGIuvHZGeK5J2ggrKAszgqgemRVG0XoPVbndf9S/VFQKACUsMK81\\nY6nSnAbChAcvlVWccq9DYAJU4NRag8HK6EiE1NZ6Y1qqEpahrGBQ5RnqF9PhMJrV\\nq5PGfN+zhxpFPi5Qn8RDV+cNGuGNfxxxD8HKJC9hkDcKvNd6aBIzxyQmhZRrEEww\\nxYmNd8RSOCriY1tNKQ9BUK89EBk/UlNulYhyrLj3aRrvEe0ruD7YQyLtohijPo2U\\nJmshs8LU0xLQ+pPFQ8lcN5mdOdBUY9I9euJPjc5Mkp84yS7fO/Po9E69+Jp+/P7h\\nxZe73a2TO+c7X+8vbF65c6qTfJ79cWvy6dX7N7s3v209/bW98TA7Nz9/fPRuYffC\\n9uyzjd+udO0D\\n=coi5\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432651430,\"expire_in\":10000000,\"prev\":\"a9e948e5353741bd48065c251c7b8224ff52d8de16f4f824b7548e074dd99d67\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
-            "ctime": 1432651430
-        }
-    ],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWSGQxMFK4EEACIDAwTUgD4K0SSmhOHwgdWN2M8LT0NVQWSwgIYd0jeH1fM5\nJsE/Dsuem9GQwHLGwUILIINMzOPHbPscjOC7Rf3+8uAHiTDj00ejRgDoJpCKIXjH\nEM9MMxofqG0eDvEldTWKZibNBW1heDMywpIEExMKABoFAlVkhkMCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRB0waG+wsm+NVgWAYC5Q86W0VFs6IGqOgD2HIBAhShCo0Bp\nOivlkcK4iO7xFfYfbXusj74byp13ct8Qzk8Bf2VY8vJF6eha8dfcngiCZsEOAGVE\n3abIgE/YOERD/xm1sfzYs50QHNSj+LBU7pBqLs5WBFVkhkMSCCqGSM49AwEHAgME\naomMzHfI91CQZmMq3mYYh1szK9lBxoK8jYMHa0iVxCKd3mcTtvRxMBEak6XSo2U2\ni8i6iv25vyTO1yfJPcmBOwMBCgnChwQYEwoADwUCVWSGQwUJDwmcAAIbDAAKCRB0\nwaG+wsm+NXxRAYDlZo+z7gpcXFyILtxBbhBKz0qqueRVBfkCP8y4ANJJSjH6MnC2\nEcLwj6BNX8yq3TEBewf4GinIZHMXWj8hOH8KKtyidPLhR5WPCgPe3SYP0lZzFYgO\nb1YYrIVicghxSB6UTM5SBFVkhkMTCCqGSM49AwEHAgMEZ5qBf/Nw3XSK0OSz23Kz\nslf6ixA7xs+TNE72MwuzoVDGypTHTF5tz9Oz1/oDH8eCzZHLDHtF3gtgyyTv+864\nvMLAJwQYEwoADwUCVWSGQwUJDwmcAAIbIgBqCRB0waG+wsm+NV8gBBkTCgAGBQJV\nZIZDAAoJEAi0l3UiUd0H8R4BALO/bP6Ir0dBdzHMjsRitZ5cf1gNlTOsALhfTaRm\nCigeAQD2/vmEl6C7TA1hlSuvGgp7Z7UPgUgJizoYJGu2NpAwgqEQAYCtFBHE8FmQ\nKpbovcWv783nqAiwsVRQPgefcE7tZsneUgBa5pT3tFmsPBH0229y8IoBgPcPRToY\nLELCkzhNSfsxY6UI7Qlp57lFIjnxrDIrz5kYrVRmNeLIrbZK+56xv6x3rQ==\n=vv7t\n-----END PGP PUBLIC KEY BLOCK-----\n"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32",
-    "label_kids": {
-        "e": "0113b0eeaca0a9deaf0ac6be7e50777d89e789603088b120d651b18b3d18d54cd4cd0a",
-        "sib1": "0113265ee75be3d883397842f135ded67b7424d8ff35e7f42bba0eb67f51568bbdaa0a"
-    },
-    "label_sigs": {
-        "e": "3d80007ad5e64c9367fe566b03c1918bff04d522537787d7385fdc4bed274a740f",
-        "sib1": "03a631ece380553b7a422c0d53ff9492a0a036594580304fbbea14af928761c10f"
-    }
-}
-`,
-	"missing_reverse_kid_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMDuAnicZZE9b9RAEIYdEpA4gUBKl3LLw0T7Ya/XJ9EGpUIKBAoUjvXO2GxyZzu2\nL+RDJ2jCD6BAAgoafgM1IEJzQkhItEgUdHRIIAoU1o6omGbn3XnmnV3Nu/PzXm/x\n0+cLo9/9w/m52eujibcOj1YOSFLAHhkckC3sjtTmGVZlZfOGDEgSc4PSgBJcSaV4\nClzHFGRCNY3RQKQlTQE48cm9om47nE2ia1y2hbtzYmih9fmf3+oKlDHBqJIQIYRR\niCmgjFDEjINOGRcyUCHFgIuAGa4ppG44UJkI7R4VBzyEQFHt7CadXRQYoUwaGUzi\nIEpDKTgNQlBGtyCLW7DGKtdjdPRY7wpOpj5p9spW4wjQfcInO1jVtsjJgLmiaWxL\ns0BwGTIhhE9wt7QVDm1L0JPwSVnhDhnkk9HIJzVuD09MWSfyossanbkxtc1y3Uwq\nJNO3dxa8xZ535vSpdhle7+zFfys63JjzPq78Wt3cKM9dW7t16eXS7M+Hy9P9pQfk\nuP/02c2r+vmad3x7/cqXH1k1vv7maHN2/9X7hezFk/705/ev/Yc3Ht9d/vYXEwyi\nWA==\n=H6Xl\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1",
-            "sig_id": "ea8a3358e12cdaa444d211fa71ffc4b421040244fd5b72ea2b387d722c11d8170f",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"b92ce6cd83286882fd2a90d6b0a09ecd7a60fdd2\",\"host\":\"keybase.io\",\"key_id\":\"b0a09ecd7a60fdd2\",\"kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432651333,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
-            "ctime": 1432651333
-        },
-        {
-            "seqno": 2,
-            "prev": "00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nyMQyAnicrZU7jONEGMf3OEDiJB7SFVBQrIKugOxtPDN+Bh1S4jhONnFeTjaJL2Jl\nz8NxnDiJ7ThOTidEARIlFRUFFSUdBSUCIUGBhEQHNRJPUVBwDTi7h665kilszfj/\nff7Np/l/88Wz149u3Pzu++fnf7/2zvVr33z5+uZoQN6t3ss5S7LLFe/lfHr5onNC\no/jC90iumOMAQICTRSJRIkgCZYSKEkUKgMRmACKRlwWO8hDxAEObI4wjIuFEB9mY\nyAoPBcLLnJ07yTEvcGm4Cr0gztI6CsRUzCQIyqIsQ0agrWShDmdzCsVEskWOEQKz\nwOkyOkRkcI4d0VNvma1lk4tLvMfo/2fuzWU6icdIxkzC1FF4iQkighwvEBnbByFQ\nDsKIhoG9oJl6YacI5u6f5CLPeVjUR1RUoUBCPHUY4QUAOYlIDCkytHmKAWYCoNQW\nOIHjFYlS3gGiQ3kO2BBKLCuRJFxShTShYUQvIs/N0t4+jLKm11vHHb1zbGimWdK1\ny9VJcJ4JvWVQPG5cVfC4vaLBQZbAU+4UcJNAXS4WNIiLx9M4XkXFQuFRrQs43K3i\n5SSYBDujSkqBh0OrLtmgV64aJGGGtskbqjvWtf1svHaMdl4gaTTtDdRKXXNtVaBW\ne8iGptCQJoEoQcmflvv5tTsoq4grAXfj+jUtneFyh9fc5Xo4H6penY/TVmqMdwM5\n3VqJVMBI2LcbBTQJJH9n+xAbTHKSPpvLfAybsdzya2upE06bIzcdmSNv0GxXhK3m\nlGxStnZ1Hah6r22spktjErizeqMklmCj0tS3XUefWvZq6XmCb6R7c1ftcpoKNMWq\nLPzFpttwBv50fEZJrRrNC4vUVBeTgPQCtG60NLlqBo1uoeT07Hg2X9vLLpm1ulyp\nU14mih3aGtVxOCqJkjyU9Fpfp51Cz9l3sl3gs33bVBWzxqe1Oef352Ubm+5wFUvD\nruUMt9uwsTXT2bmJLAs3m8P6fLSJV6E42y73lmbVM4aS7o9XW9vQqn7DwWaHtcrG\nwAzXjfrO4GemQUF3sBgLrZ0Odw03PR/PR1Fjtx3kzwnnifok8PhNCnV1PkoZW8e+\nF5vNpGr3W/zaYEJlYPv8WVgdsV49nOE9l0RCc6g6a34oYma0zOl8ErQXhicrYqmk\nipbMqedeydWZrpZdZhnlulBe4W3VdALfiLpJz4or42ZVnlpYWnDTqFbuKpOA29g9\nLnBqfgupleV47ofDURXhuS8Df5/nidLvLvbYLid7Q6Ro7FGn3xtWZFnOj0Yz1upM\nggQBmO026ESgVWNKKiciwfsWSgpWrSI02UoU8x0Ew1Z/pMhkCPJWgpypjGddQdnU\nKlF2Js/arJIWEiRMnUKBr81WzbXVvXNnEtw5H/HZwb90kdaqPMZZB4fHu9XB8Q+N\nfpJLrtyWK4LsI469Qz8APIKikD3RSY6mKy+kF95BwV2Nk9wqs/OhO3BAVABSMJYI\nIpAHDiacgDLfSwQzwAARMUAMUibIwGE8B3nIs6yPZGEOJSD7fUTXF1dI4HISLHNF\nmFHa7iWkG9jxJqS5+5+/+eTRzRtHTz/1xOEKOLrxzAv/XQz3xkf/0LsPHrxU/eRH\n9+PbP9984/db5T86qvnq6U+/fPbrtPJX8aNrRx/231t89Vz8weju2688/dYPL37a\nvf0+2nx98tufL4vfPtje+heUNA3B\n=okGo\n-----END PGP MESSAGE-----\n",
-            "payload_hash": "525de3a305ed703e4419add54649cedd083464f3b76f296c0bd9c7ca2bff3bb9",
-            "sig_id": "eca9bd4e3be4d3be48501d5be8bc01efdbad86b51c9887a11279c44a9eb7de4b0f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"fingerprint\":\"b92ce6cd83286882fd2a90d6b0a09ecd7a60fdd2\",\"host\":\"keybase.io\",\"key_id\":\"b0a09ecd7a60fdd2\",\"kid\":\"01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0113e9e1734ebfd451207d7f3982a4ec1cf51eea5050497ee4b16be401a227fa90750a\",\"reverse_sig\":\"-----BEGIN PGP MESSAGE-----\\nVersion: Keybase OpenPGP v2.0.10\\nComment: https://keybase.io/crypto\\n\\nyMFdAnicrZI7a1RBFMdvfMEu+MCgYGEzjYqbMO+5dxshRUCDIEgaC5eZOWfWS5K7\\n6727khBT+qgUBC30A1gugkHExjcBP4EgoqWlWCiI4txNxMYyU8xwZv7/c35zOK/3\\n7kyak2cMf7bvTfl84t2Lt8NkHq7PrhLXgxXSXiULOD5wEbAadBZyIG1CGROMphoM\\ngjIKA6A2KDLGwQbGhZapoii5kMxzSyFQ0EC1E9ZDmkmuQKbUkhYJedHFsl/mxSCm\\ndRn3qKNE8FSnKQ/AbRatjlqaoQdjNQ0APBov9araEeGcrXA678W7GHTGeP/RbzP3\\ncJzOSC9SH4xHl0kTlBacSgWpt7WQZbWwwrKwSxjVS3ZZcLLWIlXutpr6jwozZEZI\\ndAGkYpwaMEFkKbcSPfNBMUSrqKIyM4jSMe1QUmY5NyG2yKgxVYlXsKywU+Vd0i6G\\ni4ux2GClXxffqtkitSLvFaTN4qMf5DUak4JrFXfRIrjcz0vs5LWCbq4W6cfMNShl\\nOmMi896AAC6Z80CViAgGfGCBgfZMBI5BpcwFSbnkMsQvRZtDYLF8hZc7m0hsHBQ9\\n0uaR0nbHkN3CDoYlkrWXF3clk81kz+4d9TQmzcaBvzM6e3YiebTRWD888+XXjfNP\\nv312jSMnPs1NHf9x8v6dczN3v/ZHD5Lfp66+P32rNTX98dW1+Zv3bh8cjQ59uHDs\\n6JOfDx/v35hb//4HjpLqZQ==\\n=VX4o\\n-----END PGP MESSAGE-----\\n\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432651433,\"expire_in\":10000000,\"prev\":\"00169139cc7d3d241bcd0537fa7dcf1f1d6c13f2ef581bf402424fbfd169bed1\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
-            "ctime": 1432651433
-        }
-    ],
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.10\nComment: https://keybase.io/crypto\n\nxm8EVWSGRRMFK4EEACIDAwTGPp5WCEi30jKYsqP+DUV1NWMxi53YT9axzEbrEyU/\n7UdKsWZPZJnOsYpjCr8+VXqIHY56kO1oiR0HqpnoJhsRZ1imNqHq4L4d/QMhyNGs\nICqaFQJsSShlwQwvUffq0urNBW1heDMywpIEExMKABoFAlVkhkUCGwEDCwkHAxUK\nCAIeAQIXgAIZAQAKCRCwoJ7NemD90gI7AX9zOItdXE2tVZuNus0+HvqcVI4cvlXD\nqt/0HTIly/mDP8tgNcPSpgOuzPVCQy+dnYMBfiGFbDQnwge9Cea0tHHIbY8qAOax\niX6yRDuMPaqhbleIKaKU1hJBrtDMLz6pnHLtn85WBFVkhkUSCCqGSM49AwEHAgME\nHZOEO11yQS3sZtB43vEHD9YbSHpvhOtgArJl4/dQB5Jr4DFrmBAA5WPlUbF8EBgc\nJ7oD6qVGETtJDX1R78qo0QMBCgnChwQYEwoADwUCVWSGRQUJDwmcAAIbDAAKCRCw\noJ7NemD90tS0AX9gy15Vv10RalrRSHhjcT/BW6r6MGHy/Z+w33tUAND7EUDBwXvc\n4u4i/+bTOJY6TcYBf2fN+q2Zcajt91IJiqd/4su/SwcpJb9mcHJpc4M1wXen6rFn\nmHVVB47WTJpk+ORFcc5SBFVkhkUTCCqGSM49AwEHAgMEBHRJTnd1BZp6x9KrE1p1\nPJ4McaYM8lu1JysuL+BJdV/yw98XnKBIv8nhnBikJgntcj1jAcWyixuQJvbreZn+\nD8LAJwQYEwoADwUCVWSGRQUJDwmcAAIbIgBqCRCwoJ7NemD90l8gBBkTCgAGBQJV\nZIZFAAoJENLVD2z5KoUDfcsBAKpn+wqezR1uPhU2aG1YRgwTlSr2Qkf/n1Ob8gss\nkCilAP4+zmdLJgv017cEYrMAxozL/zTFhCRns+BBMLnJCaRNDov4AX93/JS4CYca\naw7nB4SNhxHaMgyV6jhsXmO1psuC8uAVqtkQPuo3hf6ttcftfxbnv9gBgNJwoYyk\nkEStMA8gnT4841eHX2JMzuZ9kfqYcKuf+rqkSgX+wyMnuU4rKtKWHc+mZg==\n=pMMp\n-----END PGP PUBLIC KEY BLOCK-----\n"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32",
-    "label_kids": {
-        "e": "01131086d7ed575efde67e3912daf12364850e42341c2a0df0d6d06b3acd89425d480a",
-        "sib1": "0113e9e1734ebfd451207d7f3982a4ec1cf51eea5050497ee4b16be401a227fa90750a"
-    },
-    "label_sigs": {
-        "e": "ea8a3358e12cdaa444d211fa71ffc4b421040244fd5b72ea2b387d722c11d8170f",
-        "sib1": "eca9bd4e3be4d3be48501d5be8bc01efdbad86b51c9887a11279c44a9eb7de4b0f"
-    }
-}
-`,
 	"nonexistent_subkey_chain.json": `{
     "chain": [
         {
@@ -3523,6 +3571,369 @@ var ChainTestInputs = map[string]string{
     "label_sigs": {
         "e": "29cba60382bc5c81244acf8cc40cbe2ff14cf35f7b471fb16a5ccf42d15694ef0f",
         "s": "fc147293e3f476c1e37038bf90dc49233d3b51ff31479abbab3c286fdea954900f"
+    }
+}
+`,
+	"ralph_chain.json": `{
+  "username": "ralph",
+  "uid": "bf65266d0d8df3ad5d1b367f578e6819",
+  "chain": [
+    {
+      "seqno": 1,
+      "payload_hash": "f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e",
+      "sig_id": "55b70fe0e7d5d8605e6607de1daf77c3e862050ad6ae491b5b7829e05130bf580f",
+      "sig_id_short": "VbcP4OfV2GBeZgfeHa93w-hiBQrWrkkbW3gp",
+      "kid": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMHhAnicbVFbSFRBGF4rIzdbLOuhoqAxuu22ncuey6xmWFFBIVb0YCnLnJ0568H1\n7Hb2oqIrWwkSUkGZ+GAG3ZAeukiCpLkiIYEJ2kXzRSg0SGQDRci0yxzJIGgeZpjv\n/77vn2/+l2uWW6wpaVOt+Rva68dS+nvmI5Yzx97UVwElgCuBuwqUksVD1XQfMYKG\npoeBG6iizLugC0kcIwsQ0p1DhPci6PIiHmJJIRBipBDgACWBkKmgNgoKEacWoBi9\neDRM0f/wSxcLDMuwWMGSyiOkQlHAKquKjMxDBUqMCjlFUHlRZlwiFiGPBYJchGMQ\nEkRqqIgSJ3OMl0HULrJop6iiwIkiZrCMqSUWMKvwoqQKkkxEmYUmMUQMHZURyjaQ\nP1gCYg5AoajmJWb+pRLBWAv/Sw+TUJgYf0XhyqCJlhPF80fvUTQd0/+jsigxQlpA\nB26WMr1hzTRgXTxNJsgC6wCkIqgZxKOZDEGiCelygKBBosCtR/x+803n9QCt0kbI\nR/uENJ+OwhGDgFhvT9EKS4rVsjJ1mTlDizUtY2myte2rLDeSZ5ubh/Zdi7UTpu/j\ns11FTi7JJ9TMo7aiK0O+TeLzvtGqd6fzMivu5naNOpn01WV3Be5O/ER8z60PLV6Y\n+YJEh34Wz/ZeLs0erBl7W9y48wBM+BYOFcRc3U79/ffD+V9q5wau385Jn9/deaHh\n0qyjI9u1/oGRtOcWfDp5b+NU9XjQOpLX5YjO5D+9HxtOTrRlPII2jRnP+Tzds3m7\nezCrcWDHj7zH9tYyUBiPObNuavpkUwTMCfHpjrriznOJq/vnXk96LiaD/pkt5b+E\n/t7uU3sbvz15tXX0SLa9sMmaVtNQXWdLtKxdaMtY17Hta+7BhyMTzQt2/bhtOPU3\nnTkY3w==\n=DD0n\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f683494a72085992082ae3ca94ca39d7be99dabe\",\"host\":\"keybase.io\",\"key_id\":\"94ca39d7be99dabe\",\"kid\":\"0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"reddit\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430835851,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}",
+      "sig_type": 2,
+      "ctime": 1430835851,
+      "etime": 1588515851,
+      "rtime": null,
+      "sig_status": 1,
+      "prev": null,
+      "proof_id": "af85baace455686a5e809a10",
+      "proof_type": 4,
+      "proof_text_check": "\n\nyMHhAnicbVFbSFRBGF4rIzdbLOuhoqAxuu22ncuey6xmWFFBIVb0YCnLnJ0568H1\n7Hb2oqIrWwkSUkGZ+GAG3ZAeukiCpLkiIYEJ2kXzRSg0SGQDRci0yxzJIGgeZpjv\n/77vn2/+l2uWW6wpaVOt+Rva68dS+nvmI5Yzx97UVwElgCuBuwqUksVD1XQfMYKG\npoeBG6iizLugC0kcIwsQ0p1DhPci6PIiHmJJIRBipBDgACWBkKmgNgoKEacWoBi9\neDRM0f/wSxcLDMuwWMGSyiOkQlHAKquKjMxDBUqMCjlFUHlRZlwiFiGPBYJchGMQ\nEkRqqIgSJ3OMl0HULrJop6iiwIkiZrCMqSUWMKvwoqQKkkxEmYUmMUQMHZURyjaQ\nP1gCYg5AoajmJWb+pRLBWAv/Sw+TUJgYf0XhyqCJlhPF80fvUTQd0/+jsigxQlpA\nB26WMr1hzTRgXTxNJsgC6wCkIqgZxKOZDEGiCelygKBBosCtR/x+803n9QCt0kbI\nR/uENJ+OwhGDgFhvT9EKS4rVsjJ1mTlDizUtY2myte2rLDeSZ5ubh/Zdi7UTpu/j\ns11FTi7JJ9TMo7aiK0O+TeLzvtGqd6fzMivu5naNOpn01WV3Be5O/ER8z60PLV6Y\n+YJEh34Wz/ZeLs0erBl7W9y48wBM+BYOFcRc3U79/ffD+V9q5wau385Jn9/deaHh\n0qyjI9u1/oGRtOcWfDp5b+NU9XjQOpLX5YjO5D+9HxtOTrRlPII2jRnP+Tzds3m7\nezCrcWDHj7zH9tYyUBiPObNuavpkUwTMCfHpjrriznOJq/vnXk96LiaD/pkt5b+E\n/t7uU3sbvz15tXX0SLa9sMmaVtNQXWdLtKxdaMtY17Hta+7BhyMTzQt2/bhtOPU3\nnTkY3w==\n",
+      "check_data_json": "{\"name\":\"reddit\",\"username\":\"testerralph\"}",
+      "remote_id": "",
+      "api_url": null,
+      "human_url": null,
+      "proof_state": 7,
+      "proof_status": 0,
+      "retry_count": 0,
+      "hard_fail_count": 0,
+      "last_check": 1430835852,
+      "last_success": null,
+      "version": 0,
+      "fingerprint": "f683494a72085992082ae3ca94ca39d7be99dabe"
+    },
+    {
+      "seqno": 2,
+      "payload_hash": "bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7",
+      "sig_id": "32c195e0fca5c310237f6180b29315afd2cfc4ddce9cb307b50cc4a9172bdbd30f",
+      "sig_id_short": "MsGV4PylwxAjf2GAspMVr9LPxN3OnLMHtQzE",
+      "kid": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMIQAnicbZJbSFRBGMd33a21JbsQFV0wPBVFSJ37nNnSpKDbQ0UlQhe2mTMzuwfb\nS2eP642NSIrKh3wQMgojMs0IMcyH7KZZLy09dH3oYg+RdqMLEZFGNEcsCJqHGeb/\n/b8f8/2Z23k+T9A74cP5jdO76we82b5Qhad03YOWWgEnSLUQqhXK6ejBrHiE2knb\nijtCSGC6oahQRUAWDQ1CvsuIKiaCqokUSACmEBKEqVAoRBMpt4NjMErRpVaCa/wS\ntghX/+MvHy2IkigRTABTEGJQ1wiTmC4aCsQQiAzKWGOKboiqTnSoEI0ilcoiQprO\ngVgHsiGLpog4rmIUh5muybpORGIQjiQakbCiA6YBg+qGBF1jitpxFKPcbaM9yaiQ\nKRS4lLZM6s4/VnIqLceh9r9+h6a49rfLqU66aiXF4TFAGFtxwgPkbWlqp6xEXAhJ\n3Gk6lguQVIWPphlALxRoVdKyadhyHRrgI/JVKCRtmnZjV5kBAFQ1gE1F1BRKVcYz\nUABUVGRSCXBNVRGl1EAqVgxiMoYxgyaUdYOobrwpujeeEEIyfyaKcGTKisSRU2FT\nIXOrd6ff4w16xo/Lcb+AJzhhyp+PMSTmejrfFQy1X27+OLO/Z/LZWHBFpvMKe2K/\nbiw7PjUdrjy6c97Kc9saJW/s1Podfq1uX+3TlsH6o5ULh0/kPPu1o6Z4c6ZkV11u\nnOYfPpM9MuIPRtnzNqXg0TIjFvha9rmv5cdsWvzK77m4YNqnu48/VfW31g7EFiXq\nNkxquD/Um9d+GkVnPPB9+/kQvOwpuT67FXdFam4u7TqQCfjWZPOzDYOXqjsXG59b\nr395I83qPpg350ejtGTgwsSO0q2HcvZfqw88n78q2QS2tNH84ZIb7xt9y1d9752S\n2zH57srm7vKiL0xc33Rv99zlq9du6D148e1gUeDF9o6T8Nkd/9Vj6ZFIzaaPvwGx\nDCYq\n=4hWA\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f683494a72085992082ae3ca94ca39d7be99dabe\",\"host\":\"keybase.io\",\"key_id\":\"94ca39d7be99dabe\",\"kid\":\"0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"twitter\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430835876,\"expire_in\":157680000,\"prev\":\"f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e\",\"seqno\":2,\"tag\":\"signature\"}",
+      "sig_type": 2,
+      "ctime": 1430835876,
+      "etime": 1588515876,
+      "rtime": null,
+      "sig_status": 1,
+      "prev": "f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e",
+      "proof_id": "9d8b0ec56bbda063e5241b10",
+      "proof_type": 2,
+      "proof_text_check": "Verifying myself: I am ralph on Keybase.io. MsGV4PylwxAjf2GAspMVr9LPxN3OnLMHtQzE /",
+      "check_data_json": "{\"name\":\"twitter\",\"username\":\"testerralph\"}",
+      "remote_id": "595594965541064704",
+      "api_url": "https://twitter.com/testerralph/status/595594965541064704",
+      "human_url": "https://twitter.com/testerralph/status/595594965541064704",
+      "proof_state": 5,
+      "proof_status": 1,
+      "retry_count": 1,
+      "hard_fail_count": 0,
+      "last_check": 1430835881,
+      "last_success": 1430835881,
+      "version": 1,
+      "fingerprint": "f683494a72085992082ae3ca94ca39d7be99dabe"
+    },
+    {
+      "seqno": 3,
+      "payload_hash": "4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6",
+      "sig_id": "4200f01dc416139995cd534d577ef5c14b39fde69a6e57ccd3f1b6d9212b53fc0f",
+      "sig_id_short": "QgDwHcQWE5mVzVNNV371wUs5_eaablfM0_G2",
+      "kid": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMIRAnicbZJ/aI1RGMfvHZdcxpLtD7RysoQ73ve+73ve817dpikzkpKVP65u57zn\nnO1t3Hu973vvzELajJjLsCxDITVKSZuhxQwh/7BsiSn/XG1+FVqK/DjvQinn/HF6\nvs/3+fQ8p+du/gRf0H/ie0/94iWnyvyPbkfSvqpVT4saAEnSehBpALVs/OFWoprZ\nKdtKuCACiBmGHCschxkRV9UUGVFEDQ0TLCPOsQplrjAKQqAm6XgVAkOww5ZYSaGJ\nIG5Rof7HXzuekGRJNhVJZchE0ERcJVDXFVVHjFGVShozOKeUmkg2dQkiU5MokYlG\nMDWwIalc48iQsMClx3GEQy0MIZVEk1zBVKMyUaDONQGESDY8o8PsBN7ChNvGm1M1\nYEcICCljmcyb/3fKrbNcl9n/+l3mCO1vlVuf8tQ6RuK/AXFiJaj4QFGWYbZjJRMg\nIgun6VoeQFYVCSkwrMIQYNtSls3ilufQdIgkcUIgZbOMNwY1DeFlGuQ61QxGDAZ1\nyTCJLhtExUjVDUyVsB42JRUyxTRkDcuywiRkhDnCOvBG2ppIgogi2sTVAulY1Qns\npm0GdvT3xSb6/EHfpECetwK+4JSCP4vRu2fyj7LCn5vO95VP2+jMel46ve/b3OyG\njoHDu0pocVOnYa0YGrx29VhbO/h8q7JluHGdFRut7CjomXO2u2NLNIQr5795dZpc\n+XBr2tjxHBs7dGaA3wvsHGwcKh/JP5DX+6T8kO7ezsaO7PeN5Hbff7fww9Zs07Kl\nu5yW3M2VRWvCB8HjpRezjdGmVrrv3Eh38mT/TlrjwPbQpzs/jGAq+WxW4dvKsRkL\nLn166RbldS1fFr8Drs/uHdo+83Xz9tU3Wi42ZFpjP9FoSdtDe2rL0ZNzvrad3hu4\nolVcfvF476J5pSNv1w32fEk3+7r82su1Dypao8NnAlWnhqO59Rfq8z/a74s7X/wC\nT2QsJA==\n=eyGB\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed\",\"host\":\"keybase.io\",\"key_id\":\"5aba18ffa461f3ed\",\"kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"twitter\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430836246,\"expire_in\":157680000,\"prev\":\"bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7\",\"seqno\":3,\"tag\":\"signature\"}",
+      "sig_type": 2,
+      "ctime": 1430836246,
+      "etime": 1588516246,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": "bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7",
+      "proof_id": "35dc42fe28fdab9085277e10",
+      "proof_type": 2,
+      "proof_text_check": "Verifying myself: I am ralph on Keybase.io. QgDwHcQWE5mVzVNNV371wUs5_eaablfM0_G2 /",
+      "check_data_json": "{\"name\":\"twitter\",\"username\":\"testerralph\"}",
+      "remote_id": "595596523460796418",
+      "api_url": "https://twitter.com/testerralph/status/595596523460796418",
+      "human_url": "https://twitter.com/testerralph/status/595596523460796418",
+      "proof_state": 1,
+      "proof_status": 1,
+      "retry_count": 5,
+      "hard_fail_count": 0,
+      "last_check": 1431006765,
+      "last_success": 1431006765,
+      "version": 1,
+      "fingerprint": "bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed"
+    },
+    {
+      "seqno": 4,
+      "payload_hash": "6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640",
+      "sig_id": "5c4da82af7e168cc4c6708be87d28c8558c7e8801b826d7af8b7049d246c32600f",
+      "sig_id_short": "XE2oKvfhaMxMZwi-h9KMhVjH6IAbgm16-LcE",
+      "kid": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
+      "sig": "-----BEGIN PGP MESSAGE-----\nComment: https://keybase.io/download\nVersion: Keybase Go 0.1.12 (linux)\n\nxA0DAAoBmv23eSsunT8By+F0AOIAAAAA63siYm9keSI6eyJkZXZpY2UiOnsiaWQi\nOiJmOWY1MmEyMzUwYmYwODA0ODA0MzQ3ZGJhODNjYTkxOCIsInR5cGUiOiJkZXNr\ndG9wIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkw\nNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsImRlc2NyaXB0aW9u\nIjoic3R1ZmYiLCJzdGF0dXMiOjF9LCJrZXkiOnsiZWxkZXN0X2tpZCI6IjAxMDFj\nMzA0ZThjODZjOGY0YjY3NzM0NzhlZWQ0ZDA1ZTlmZmRkZGM4MWM3MDY4YzUwZGIx\nYjViYWQ5YTkwNGY1Zjg5MGEiLCJmaW5nZXJwcmludCI6ImJjMjZmYTNmYTJlYmVi\nZTQ1MzE4ZDhkOTVhYmExOGZmYTQ2MWYzZWQiLCJob3N0Ijoia2V5YmFzZS5pbyIs\nImtleV9pZCI6IjVBQkExOEZGQTQ2MUYzRUQiLCJraWQiOiIwMTAxYzMwNGU4Yzg2\nYzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5\nMDRmNWY4OTBhIiwidWlkIjoiYmY2NTI2NmQwZDhkZjNhZDVkMWIzNjdmNTc4ZTY4\nMTkiLCJ1c2VybmFtZSI6InJhbHBoIn0sInNpYmtleSI6eyJraWQiOiIwMTIwYWZh\nYzkzODMxMzJiMzE3MzM2ODY2YjRjZTQ4ODM2OTA2Y2FkODhkZTE4YTkyYmRkZjI5\nZmZiOTQ5ZGI4YmM0MjBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJo\nWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdyNnlUZ3hNck1YTTJobXRN\nNUlnMmtHeXRpTjRZcVN2ZDhwLzdsSjI0dkVJS3AzQmhlV3h2WVdURkJCeDdJbUp2\nWkhraU9uc2laR1YyYVdObElqcDdJbWxrSWpvaVpqbG1OVEpoTWpNMU1HSm1NRGd3\nTkRnd05ETTBOMlJpWVRnelkyRTVNVGdpTENKMGVYQmxJam9pWkdWemEzUnZjQ0lz\nSW10cFpDSTZJakF4TWpCaFptRmpPVE00TXpFek1tSXpNVGN6TXpZNE5qWmlOR05s\nTkRnNE16WTVNRFpqWVdRNE9HUmxNVGhoT1RKaVpHUm1NamxtWm1JNU5EbGtZamhp\nWXpReU1HRWlMQ0prWlhOamNtbHdkR2x2YmlJNkluTjBkV1ptSWl3aWMzUmhkSFZ6\nSWpveGZTd2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRBeFl6TXdOR1U0\nWXpnMll6aG1OR0kyTnpjek5EYzRaV1ZrTkdRd05XVTVabVprWkdSak9ERmpOekEy\nT0dNMU1HUmlNV0kxWW1Ga09XRTVNRFJtTldZNE9UQmhJaXdpWm1sdVoyVnljSEpw\nYm5RaU9pSmlZekkyWm1FelptRXlaV0psWW1VME5UTXhPR1E0WkRrMVlXSmhNVGht\nWm1FME5qRm1NMlZrSWl3aWFHOXpkQ0k2SW10bGVXSmhjMlV1YVc4aUxDSnJaWGxm\nYVdRaU9pSTFRVUpCTVRoR1JrRTBOakZHTTBWRUlpd2lhMmxrSWpvaU1ERXdNV016\nTURSbE9HTTRObU00WmpSaU5qYzNNelEzT0dWbFpEUmtNRFZsT1dabVpHUmtZemd4\nWXpjd05qaGpOVEJrWWpGaU5XSmhaRGxoT1RBMFpqVm1PRGt3WVNJc0luVnBaQ0k2\nSW1KbU5qVXlOalprTUdRNFpHWXpZV1ExWkRGaU16WTNaalUzT0dVMk9ERTVJaXdp\nZFhObGNtNWhiV1VpT2lKeVlXeHdhQ0o5TENKemFXSnJaWGtpT25zaWEybGtJam9p\nTURFeU1HRm1ZV001TXpnek1UTXlZak14TnpNek5qZzJObUkwWTJVME9EZ3pOamt3\nTm1OaFpEZzRaR1V4T0dFNU1tSmtaR1l5T1dabVlqazBPV1JpT0dKak5ESXdZU0lz\nSW5KbGRtVnljMlZmYzJsbklqcHVkV3hzZlN3aWRIbHdaU0k2SW5OcFltdGxlU0lz\nSW5abGNuTnBiMjRpT2pGOUxDSmpiR2xsYm5RaU9uc2libUZ0WlNJNkltdGxlV0po\nYzJVdWFXOGdaMjhnWTJ4cFpXNTBJaXdpZG1WeWMybHZiaUk2SWpBdU1TNHhNaUo5\nTENKamRHbHRaU0k2TVRRek1EZ3pOak0zT1N3aVpYaHdhWEpsWDJsdUlqbzVORFl3\nT0RBd01Dd2liV1Z5YTJ4bFgzSnZiM1FpT25zaVkzUnBiV1VpT2pFME16QTRNell5\nTkRjc0ltaGhjMmdpT2lJNFkyRXpPV1UyTlRjME4yTTJNMlZtTkRjd05UazVZVGMx\nT0dVNE5qYzBNelV6T0ROaE5EaGlZemswWldVd09EY3pZamhpTnpVMFpUSXhPREk1\nTXpaaVptSmtZVE5tWkRVNFpUQmlaVEJoT0dNeU5ETXhZalV5WWpRMk5XRmxabVEz\nWkdZM1lXVm1ZakJtWW1NMU9UWTFOV1F6WVdWaU9UVTROamMwWVdVNFlTSXNJbk5s\nY1c1dklqbzNNRFI5TENKd2NtVjJJam9pTkdOak9XRmpOekl5Wm1aalpEVXpZalZr\nWlRreFlUTTNZ6WpOaE4yVmtaVGxsT0RCall6TTRPVE5sWWpZMFltUmpOVGs0T0dJ\neE9HVmlNalpoT1Rka05pSXNJbk5sY1c1dklqbzBMQ0owWVdjaU9pSnphV2R1WVhS\nMWNtVWlmYU56YVdmRVFQQ1pXa0dBMkM3WFIxMS9PQk84SXU1dHdxdVdzWHczL3ZY\nbnh5Sk50NWwyRmh0dGVueWxlOVo3Tis5S09WZXkvMVNvVk5Sb0sxU2RVT3U3S3lM\nYnJRQ29jMmxuWDNSNWNHVWdvM1JoWjgwQ0FxZDJaWEp6YVc5dUFRPT0ifSwidHlw\nZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJh\nc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQz\nMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3Rp\nbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1\nOGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4\nZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQz52FlYjk1\nODY3NGFlOGEiLCJzZXFubyI6NzA0fSwicHJldiI6IjRjYzlhYzcyMmZmY2Q1M2I1\nZGU5MWEzN2IzYTdlZGU5ZTgwY2MzODkzZWI2NGJkYzU5ODhiMThlYjI2YTk3ZDYi\nLCJzZXFubyI6NCwidGFnIjoic2lnbmF0dXJl4SJ9AMLAXAQAAQoAEAUCVUjUmwkQ\nmv23eSsunT8AAIv8CACQz2HZror6UIxV1ypJu1qluRnNq8oWz1rDdsZDeFk+JeUi\nVeACVwTbyvgofmTn0Yt/qXha4fbwU6+dCJIA31dSOvY4/JTVnZ2T39OrmCxYU8gr\nCyJlXqQGkErKlGKx300P+Ep6yZg8ZJgK3/1yLB5PhRmKSQRb9bEStF9xVCLVUefc\n84lUe9BnSD9XZpkfKmMwJkgIF2O2HQ919jPCqUIW8GkjWuILTcteyVAGv8fn3tn7\nESVwt5Cg6mwsjfC8zfDGLz81yw9xOHxhb+fgc1L01coqCxSVo4MYlV6KwOztsnbp\nbGdcbgZ/DD5krt8lsCABbPZeuiuGQlHHvhd6pQeG\n=E0qo\n-----END PGP MESSAGE-----",
+      "payload_json": "{\"body\":{\"device\":{\"id\":\"f9f52a2350bf0804804347dba83ca918\",\"type\":\"desktop\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"description\":\"stuff\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"fingerprint\":\"bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed\",\"host\":\"keybase.io\",\"key_id\":\"5ABA18FFA461F3ED\",\"kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"sibkey\":{\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFBBx7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZjlmNTJhMjM1MGJmMDgwNDgwNDM0N2RiYTgzY2E5MTgiLCJ0eXBlIjoiZGVza3RvcCIsImtpZCI6IjAxMjBhZmFjOTM4MzEzMmIzMTczMzY4NjZiNGNlNDg4MzY5MDZjYWQ4OGRlMThhOTJiZGRmMjlmZmI5NDlkYjhiYzQyMGEiLCJkZXNjcmlwdGlvbiI6InN0dWZmIiwic3RhdHVzIjoxfSwia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYzMwNGU4Yzg2YzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5MDRmNWY4OTBhIiwiZmluZ2VycHJpbnQiOiJiYzI2ZmEzZmEyZWJlYmU0NTMxOGQ4ZDk1YWJhMThmZmE0NjFmM2VkIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJrZXlfaWQiOiI1QUJBMThGRkE0NjFGM0VEIiwia2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInJldmVyc2Vfc2lnIjpudWxsfSwidHlwZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiNGNjOWFjNzIyZmZjZDUzYjVkZTkxYTM3YjNhN2VkZTllODBjYzM4OTNlYjY0YmRjNTk4OGIxOGViMjZhOTdkNiIsInNlcW5vIjo0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQPCZWkGA2C7XR11/OBO8Iu5twquWsXw3/vXnxyJNt5l2Fhttenyle9Z7N+9KOVey/1SoVNRoK1SdUOu7KyLbrQCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==\"},\"type\":\"sibkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6\",\"seqno\":4,\"tag\":\"signature\"}",
+      "sig_type": 1,
+      "ctime": 1430836379,
+      "etime": 1525444379,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": "4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6",
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": "bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed"
+    },
+    {
+      "seqno": 5,
+      "payload_hash": "ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017",
+      "sig_id": "b29a6b21766b48215e3ce7b75d6a9bd61b36e6212bf5b050b8b318cd972f742f0f",
+      "sig_id_short": "spprIXZrSCFePOe3XWqb1hs25iEr9bBQuLMY",
+      "kid": "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
+      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFBAp7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZjlmNTJhMjM1MGJmMDgwNDgwNDM0N2RiYTgzY2E5MTgiLCJ0eXBlIjoiZGVza3RvcCIsImtpZCI6IjAxMjE2N2YxYjAyOTFhMDdmZGIxNGI3Mjk0NzUxNDdhYmYzN2QzMWM5NDc3ZDhkNjlkY2JmYTg3NDhjYjc2MDEwZDYxMGEiLCJkZXNjcmlwdGlvbiI6InN0dWZmIiwic3RhdHVzIjoxfSwia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYzMwNGU4Yzg2YzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5MDRmNWY4OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWZhYzkzODMxMzJiMzE3MzM2ODY2YjRjZTQ4ODM2OTA2Y2FkODhkZTE4YTkyYmRkZjI5ZmZiOTQ5ZGI4YmM0MjBhIiwidWlkIjoiYmY2NTI2NmQwZDhkZjNhZDVkMWIzNjdmNTc4ZTY4MTkiLCJ1c2VybmFtZSI6InJhbHBoIn0sInN1YmtleSI6eyJraWQiOiIwMTIxNjdmMWIwMjkxYTA3ZmRiMTRiNzI5NDc1MTQ3YWJmMzdkMzFjOTQ3N2Q4ZDY5ZGNiZmE4NzQ4Y2I3NjAxMGQ2MTBhIiwicGFyZW50X2tpZCI6IjAxMjBhZmFjOTM4MzEzMmIzMTczMzY4NjZiNGNlNDg4MzY5MDZjYWQ4OGRlMThhOTJiZGRmMjlmZmI5NDlkYjhiYzQyMGEifSwidHlwZSI6InN1YmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiNjA2OWVmYTcxMDQyNjkwN2UxNWE3MzRmNWYxNWUzMjczMGFhMDJiMTMzZmViOGNmNzE4YjIyY2Y0NGZhYTY0MCIsInNlcW5vIjo1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQBeo141bOEMnr0m/IHl72SGtJ/8wf9sVkw8uZRU0O3nZFpF0jrydXbQOMpZOv8c7eAEa7QdecLbdsmlZUtlaUAWoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+      "payload_json": "{\"body\":{\"device\":{\"id\":\"f9f52a2350bf0804804347dba83ca918\",\"type\":\"desktop\",\"kid\":\"012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a\",\"description\":\"stuff\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"subkey\":{\"kid\":\"012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a\",\"parent_kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\"},\"type\":\"subkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640\",\"seqno\":5,\"tag\":\"signature\"}",
+      "sig_type": 1,
+      "ctime": 1430836379,
+      "etime": 1525444379,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": "6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640",
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": ""
+    },
+    {
+      "seqno": 6,
+      "payload_hash": "cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba",
+      "sig_id": "bce8a4dd488f24d42ce89ee667d549ab723d80e8b0258915af3fa8f3495dde620f",
+      "sig_id_short": "vOik3UiPJNQs6J7mZ9VJq3I9gOiwJYkVrz-o",
+      "kid": "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
+      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFCX97ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInJldmVyc2Vfc2lnIjoiZzZSaWIyUjVocWhrWlhSaFkyaGxaTU9wYUdGemFGOTBlWEJsQ3FOclpYbkVJd0VnL2ErQmtuakxhUUY0MDQrSi94NUVaTWFqa3lEM1ZqS3h0WE5JSUwwUU44Y0twM0JoZVd4dllXVEZBNjE3SW1KdlpIa2lPbnNpWkdWMmFXTmxJanA3SW1sa0lqb2labUl4TldRNVpEZzFPRE14T1RobE5qSTBPRFpoTmpJellXWXhZalJrTVRnaUxDSjBlWEJsSWpvaWQyVmlJaXdpYTJsa0lqb2lNREV5TUdaa1lXWTRNVGt5TnpoallqWTVNREUzT0dRek9HWTRPV1ptTVdVME5EWTBZelpoTXprek1qQm1OelUyTXpKaU1XSTFOek0wT0RJd1ltUXhNRE0zWXpjd1lTSXNJbk4wWVhSMWN5STZNWDBzSW10bGVTSTZleUpsYkdSbGMzUmZhMmxrSWpvaU1ERXdNV016TURSbE9HTTRObU00WmpSaU5qYzNNelEzT0dWbFpEUmtNRFZsT1dabVpHUmtZemd4WXpjd05qaGpOVEJrWWpGaU5XSmhaRGxoT1RBMFpqVm1PRGt3WVNJc0ltaHZjM1FpT2lKclpYbGlZWE5sTG1sdklpd2lhMmxrSWpvaU1ERXlNR0ZtWVdNNU16Z3pNVE15WWpNeE56TXpOamcyTm1JMFkyVTBPRGd6Tmprd05tTmhaRGc0WkdVeE9HRTVNbUprWkdZeU9XWm1ZamswT1dSaU9HSmpOREl3WVNJc0luVnBaQ0k2SW1KbU5qVXlOalprTUdRNFpHWXpZV1ExWkRGaU16WTNaalUzT0dVMk9ERTVJaXdpZFhObGNtNWhiV1VpT2lKeVlXeHdhQ0o5TENKemFXSnJaWGtpT25zaWEybGtJam9pTURFeU1HWmtZV1k0TVRreU56aGpZalk1TURFM09HUXpPR1k0T1dabU1XVTBORFkwWXpaaE16a3pNakJtTnpVMk16SmlNV0kxTnpNME9ESXdZbVF4TURNM1l6Y3dZU0lzSW5KbGRtVnljMlZmYzJsbklqcHVkV3hzZlN3aWRIbHdaU0k2SW5OcFltdGxlU0lzSW5abGNuTnBiMjRpT2pGOUxDSmpiR2xsYm5RaU9uc2libUZ0WlNJNkltdGxlV0poYzJVdWFXOGdaMjhnWTJ4cFpXNTBJaXdpZG1WeWMybHZiaUk2SWpBdU1TNHhNaUo5TENKamRHbHRaU0k2TVRRek1EZ3pOak0zT1N3aVpYaHdhWEpsWDJsdUlqbzVORFl3T0RBd01Dd2liV1Z5YTJ4bFgzSnZiM1FpT25zaVkzUnBiV1VpT2pFME16QTRNell5TkRjc0ltaGhjMmdpT2lJNFkyRXpPV1UyTlRjME4yTTJNMlZtTkRjd05UazVZVGMxT0dVNE5qYzBNelV6T0ROaE5EaGlZemswWldVd09EY3pZamhpTnpVMFpUSXhPREk1TXpaaVptSmtZVE5tWkRVNFpUQmlaVEJoT0dNeU5ETXhZalV5WWpRMk5XRmxabVEzWkdZM1lXVm1ZakJtWW1NMU9UWTFOV1F6WVdWaU9UVTROamMwWVdVNFlTSXNJbk5sY1c1dklqbzNNRFI5TENKd2NtVjJJam9pWW1FeU9XUmxOakJtWkRReU1HVTFOemxqWm1JeU5ERmpNelF4T1dKa056Z3hOell6WVRJNFpqQmxaVGxpWlRFNFl6Vm1OVGhoTVdGbE1XVXhZVEF4TnlJc0luTmxjVzV2SWpvMkxDSjBZV2NpT2lKemFXZHVZWFIxY21VaWZhTnphV2ZFUUN6UGxXT216WE0yeXFsZjl4dnpJL3N0OU5vWmwwTjFDNWR3YUl6UGdFK1MzN3hQbGI1L1ExNFUvU0dnbjRxSXZ1VHNERjBucS8xeE90QUJpYUo0eVFxb2MybG5YM1I1Y0dVZ28zUmhaODBDQXFkMlpYSnphVzl1QVE9PSJ9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMC4xLjEyIn0sImN0aW1lIjoxNDMwODM2Mzc5LCJleHBpcmVfaW4iOjk0NjA4MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQzMDgzNjI0NywiaGFzaCI6IjhjYTM5ZTY1NzQ3YzYzZWY0NzA1OTlhNzU4ZTg2NzQzNTM4M2E0OGJjOTRlZTA4NzNiOGI3NTRlMjE4MjkzNmJmYmRhM2ZkNThlMGJlMGE4YzI0MzFiNTJiNDY1YWVmZDdkZjdhZWZiMGZiYzU5NjU1ZDNhZWI5NTg2NzRhZThhIiwic2Vxbm8iOjcwNH0sInByZXYiOiJiYTI5ZGU2MGZkNDIwZTU3OWNmYjI0MWMzNDE5YmQ3ODE3NjNhMjhmMGVlOWJlMThjNWY1OGExYWUxZTFhMDE3Iiwic2Vxbm8iOjYsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAVPFae3R7YfGC+zzBXi6Kffak6g6aHRWy+zyPRMEqce12ElhFTwr5ahmG3hu+5ZmT9ZZ0nj76hnKzUpPKEXr4DKhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
+      "payload_json": "{\"body\":{\"device\":{\"id\":\"fb15d9d8583198e62486a623af1b4d18\",\"type\":\"web\",\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"sibkey\":{\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/a+BknjLaQF404+J/x5EZMajkyD3VjKxtXNIIL0QN8cKp3BheWxvYWTFA617ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInJldmVyc2Vfc2lnIjpudWxsfSwidHlwZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiYmEyOWRlNjBmZDQyMGU1NzljZmIyNDFjMzQxOWJkNzgxNzYzYTI4ZjBlZTliZTE4YzVmNThhMWFlMWUxYTAxNyIsInNlcW5vIjo2LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCzPlWOmzXM2yqlf9xvzI/st9NoZl0N1C5dwaIzPgE+S37xPlb5/Q14U/SGgn4qIvuTsDF0nq/1xOtABiaJ4yQqoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==\"},\"type\":\"sibkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017\",\"seqno\":6,\"tag\":\"signature\"}",
+      "sig_type": 1,
+      "ctime": 1430836379,
+      "etime": 1525444379,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": "ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017",
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": ""
+    },
+    {
+      "seqno": 7,
+      "payload_hash": "ab5399ff8a1bc85c80e621d19462ced75095544c84a854f9b9f1dbde90fd1a0e",
+      "sig_id": "c55da1d425a0f9ee917b5cd3b35b31135ccb0241e51ff93cb926dbb3bba1f98b0f",
+      "sig_id_short": "xV2h1CWg-e6Re1zTs1sxE1zLAkHlH_k8uSbb",
+      "kid": "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a",
+      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/a+BknjLaQF404+J/x5EZMajkyD3VjKxtXNIIL0QN8cKp3BheWxvYWTFA/B7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMWI4NWIyNWFkZmRjNDgzYWUwMDQzNTU3NGJkODI3MmM1Y2M5MzZjNDYzZDE3OWQ4ODkwMGM0Yjk2YTM3NGNkNmMwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzdWJrZXkiOnsia2lkIjoiMDEyMWI4NWIyNWFkZmRjNDgzYWUwMDQzNTU3NGJkODI3MmM1Y2M5MzZjNDYzZDE3OWQ4ODkwMGM0Yjk2YTM3NGNkNmMwYSIsInBhcmVudF9raWQiOiIwMTIwZmRhZjgxOTI3OGNiNjkwMTc4ZDM4Zjg5ZmYxZTQ0NjRjNmEzOTMyMGY3NTYzMmIxYjU3MzQ4MjBiZDEwMzdjNzBhIn0sInR5cGUiOiJzdWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIwLjEuMTIifSwiY3RpbWUiOjE0MzA4MzYzNzksImV4cGlyZV9pbiI6OTQ2MDgwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDMwODM2MjQ3LCJoYXNoIjoiOGNhMzllNjU3NDdjNjNlZjQ3MDU5OWE3NThlODY3NDM1MzgzYTQ4YmM5NGVlMDg3M2I4Yjc1NGUyMTgyOTM2YmZiZGEzZmQ1OGUwYmUwYThjMjQzMWI1MmI0NjVhZWZkN2RmN2FlZmIwZmJjNTk2NTVkM2FlYjk1ODY3NGFlOGEiLCJzZXFubyI6NzA0fSwicHJldiI6ImNkZDVhZTAxM2E2YTg3OWM2MDViYTk2MTFjM2VmZmY4ZGJmYzQ3M2I5YjE0YjJiOTllOGE2YzAwZjYyYmJiYmEiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBHqe4TZEOiNGSd8Vanr53/W1aMX1wD7PSk8ag8lnvN2jmzrfzIz6PqRyiFFVRFnDuk3buCEDvQZ2EsA/aZfLUEqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
+      "payload_json": "{\"body\":{\"device\":{\"id\":\"fb15d9d8583198e62486a623af1b4d18\",\"type\":\"web\",\"kid\":\"0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"subkey\":{\"kid\":\"0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a\",\"parent_kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\"},\"type\":\"subkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba\",\"seqno\":7,\"tag\":\"signature\"}",
+      "sig_type": 1,
+      "ctime": 1430836379,
+      "etime": 1525444379,
+      "rtime": null,
+      "sig_status": 0,
+      "prev": "cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba",
+      "proof_id": null,
+      "proof_type": null,
+      "proof_text_check": null,
+      "check_data_json": null,
+      "remote_id": null,
+      "api_url": null,
+      "human_url": null,
+      "proof_state": null,
+      "proof_status": null,
+      "retry_count": null,
+      "hard_fail_count": null,
+      "last_check": null,
+      "last_success": null,
+      "version": null,
+      "fingerprint": ""
+    }
+  ],
+  "keys": [
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\n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\n=BVOL\n-----END PGP PUBLIC KEY BLOCK-----",
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\n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\n=sF0S\n-----END PGP PUBLIC KEY BLOCK-----",
+    "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
+    "012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a",
+    "0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a",
+    "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a",
+    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYGTSQEEAOHnED1wHyg3+Jm2x6K1jG1t48v6/xUt/mui7C63VKqvwHTDk3TM\nUzV7oN7Qvek2YoXClQIUMPBvJs+nie5mohCTpHEZJr7tCwTlvPIf+4qJqQAtMr5z\n8ubnxHNsIPKg8w0R5HanM2qy2Tz+kxR4lmP/nBFNJTwRvIPDglHAh6a3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVgZNJAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQ1XTwnazAlYOQQQP/aWmXflNWXMqiTwHW\nQj5J3YC3zFr312yt6sgR3IrYBLdp1aSHmk0DbfI/U2JaRzrr5Epv3efSCkK9R7vQ\nRvXxE9InsRK28PZvx+bmjuZAGD0abfPj/Ex9MiVq52veNqYzMN20o2EACdoTE9/5\ndkTKiRUGbPIolbpqjCGW6LPBJ6i4jQRVgZNJAQQAvaCnEIQ9LfPt0qECCU+9Nrz8\nNLC1XreQQ7Mm31vcSOkbypEhil1eK5+TkP84UTBkdMzQvX77r+BqRrqT4k2oXZD2\nw+KjDV48Lzb2qmRd+kezTK7jLKNwqcEvMyJMhi8wyU8HD95KM9is1TdFr045JlIY\nzThgskx1jXHfnteWq7sAEQEAAYifBBgBCAAJBQJVgZNJAhsMAAoJENV08J2swJWD\nf0oEAML7lg1p/m6auEY/WH13hRUndb2JLvnqMxpd4dwh5xQzyFLSMBKG2xnUO4P8\n9zliTnelXHQVzJVzv0k0JHzc1027aJO+YAPjT5RTd+QwuoA90DBhDzNC9GQBn3kl\n0q45q+rHj3/1XWXKjJNUKasAlKK7F+fJoLVHBTmQUoNt9ZT+\n=jMe5\n-----END PGP PUBLIC KEY BLOCK-----"
+  ],
+  "label_kids": {
+    "first_eldest": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
+    "second_eldest": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
+    "new_eldest": "01014d569e80644c482092be218bc9faee07f068219c317233d2f8823f742a519dca0a"
+  }
+}
+`,
+	"t_helen_chain.json": `{
+    "username": "t_helen",
+    "uid": "9cbca30c38afba6ab02d76b206515919",
+    "chain": [
+        {
+            "seqno": 1,
+            "payload_hash": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
+            "sig_id": "d020f47d51011e8fe3ca042ca6639ca56acb6b53f53c8f8db25da308fd10c2b50f",
+            "sig_id_short": "0CD0fVEBHo_jygQspmOcpWrLa1P1PI-Nsl2j",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkT2IE0EUxzc5FbzzMIhgo80UV63H7OfsBGxECwtFg9HOOLPzNjck2Y27+TCG\nq0QuKnjiB4Kx8QMFEcNdYyNyeuKhuVII2AhqdYXXWHiF4GzAzmmG+b/f//8e825O\nT2jZzPvFXVu/HotmZrjykWvFp1fPdhGPRAflu6gC4yuQYRnieizDBsojUwjBPSEC\nE7DtkcAOuAU+8WyPWS4w3xOWzYASpKO5KEkdKoazBGZlpDT1KEmh1P/wlXEBG9hw\nXYqBYyF8x7F9bivMJDYl3KIe4wF1hSEsoUYJgoAyw/AYdjjBghocHIopZiquOY6j\nPveZhX3LYwFnLuPYFMTlJnYdw6EGTcEE4pDVQNGN0hxUIUTzOmp06qnSBl5S9Zb0\nocRlKNRnKEsL4kRGIcobivQbMjUbtuVSQmzP1hFcrMsYSjIlHOJ6WB0d1WNooXzY\nrFZ1lMCFMFJV1YiVVZ9ElkPWaMaA5id7D7Zpmay2Y3s2XYg2uTP3b023fk/8yV0b\nnDq+fyEKlk7cr15fSFZXDyc1rXDo9sbe9ubDIvl2uX/n3KV3vBPM3rtxxfzxoV7p\ntzePjAp3148uvdz4ZMaj0Zl9W93M1HftTX9wfuX5yQNrvc8ztWPF4W59Gs+sL69N\nLdK3X15TeLJn8OInOZhbPv2sV7S+PnpVGKK/\n=ZlOG\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1436977484,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
+            "sig_type": 1,
+            "ctime": 1436977484,
+            "etime": 1594657484,
+            "rtime": null,
+            "sig_status": 0,
+            "prev": null,
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
+        },
+        {
+            "seqno": 2,
+            "payload_hash": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
+            "sig_id": "4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f",
+            "sig_id_short": "TmJRxUGl13kSoCNwxwfTmtOBkzMOQ_RQfUXD",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkt9LFUEUx/derUgNCsuiHqQJiuhmMzu7OzM36AcR9MOMlLgkwWVmZ1Yndfc6\nu4oXE3pLMikIIsEgAnsvK3roJfAtkpCIyP4Box5LjIjmXuolmsdzvucz3+/h3N7U\n4ORzLcXeK89udh/OvV4RzsVHN/aPA5HIKiiOg9BUK1kSjhij4rBe4VIalaagCPAZ\nRjNUqpzsJfhE19CFUa1CE1d1ycTD3f2lrs4qKICsWlFWK3QWJjoGEwUwoOqcSMd9\nylSMjjPbd6WUgkoZuQp6lEReJLAKCfUox4HiIZXY44oRS+xP0tqExQieqg6dgDqz\nrKWt/kc/UG9ABFEQMKgElDL0fS8UnpW5xGNEYEa5iFggkcTSWomiiHGEKIe+IFAy\nJJTPIIPc4kbqOBaKkGMYYsojwQMuoCtJIFwY+MhniNWEqTIxH6qlz8r9alDV0//Z\nxz97LYBRZVKdxKCIrCjMdG0OeThghAQ+LgA1VtFGlXVN4ZOAQvsKoGLUqKUpa9pD\nKHIDn3qKWvPcZrPJCLIFGBECUYSgjBDyBGSE2/ycioBT6ULlYvt/qobjBBS3udYi\n77PMVPfFPBsxCkw0Tc42Orm8s35dvnYdTtPGzX9P5uithl8d2cvy8heWbd3Z2dL2\nEOtPTcuLL2aPrB64PDg1eX9foXktm5nDrbsnro59e9Las+fc246FpeufS/zS1OLP\n+Wmz8vHrMdAMnjf+SN7fyz9d2/F4w+ntpx58bzt78G7Se779+Exudm/JaVm4tvpq\nbiicbzz0IY7fLL27syvnbGlun/4N\n=CoBU\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977653,\"expire_in\":157680000,\"prev\":\"ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23\",\"seqno\":2,\"tag\":\"signature\"}\n",
+            "sig_type": 6,
+            "ctime": 1436977653,
+            "etime": 1594657653,
+            "rtime": 1436977851,
+            "sig_status": 1,
+            "prev": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
+        },
+        {
+            "seqno": 3,
+            "payload_hash": "123134c84cd9e592cb7f9ead0b24a29252ce22789a718007ea865612eba88e9e",
+            "sig_id": "bef80a641d1c020b2cb4dab82074fbd4ef7f7c9c0182163aac807ada77cb3a3b0f",
+            "sig_id_short": "vvgKZB0cAgsstNq4IHT71O9_fJwBghY6rIB6",
+            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkk1IVUEYhq+ahmI/0M+uoCkI6pIzZ86cOXMJRAOjqxglIRUh86uHW+fee87x\n0kUMWgSlJRn0RxG2MEQQzEUU1sIWUWRRm2gTgRDkKoqgjVRzL9QimtXwzfs9vN87\n3+U1danamifzN+93mK/NNS+XRerIvZH5ISDyqgwyQ0BG5UKSl4NRpENZrXClIh3H\nIAMQzZaP7iuFmLZbdZc4pjoPRb24t1v00qyMS21ZkAZJuaCtVgSJzAchGE6DnK5y\nTBD266gQBWFi3x2llPCVMo6Grk+NawTWkvquz7GnufQVdrlm1BIH8nGlw2IEj/We\nIA+qzL5A2ep/9LnqA0QQeR6DWkClJCGuFK6VOdRlVGDmc2GYp5DCyloxxjCOkM8h\nERQqhoQmDDLILW6wimNSSI6hxD43gntcQEdRTzjQI4gwxCrCWEchP1WZPukb0Cd1\ndfpIl/I5XQkgDvqtZxvkceBqzyFIEhdxoihlyOHQwRRKCqnCjCvsI4YxhtrFxiW2\n6BKJNWLI3pBPoAEnhv9m/c+fpUFJR3GQD0EGWZFMgoon5GKPURswSgN9uhBEus9+\nT6aICPV8aE8aFKxXizOQEukZJhhUEFOfYkglsZ2O5zuEupwx5XhU+FAjn7kOFNBI\nwmglcAOxtAZiXQzzIIOtRd5vkXb0kCeDkQbDTedvr0rV1KYa6msrm5dqalz/Zx0n\nZutWmlu354p7z4z5yYFLP+bPjuCDGzeh6WT36xfr3jY8y35eurBCJ161j7asbpk7\nfG3pzY0di+ON7+62BV2Ppkd7aA/ZumXzzJeR7xuK29Y23gqXL6786p5pvfL4Kl+o\n79j1YfbBzinvTvBz/+K3yYXU0tOHn+auf2xfHi++P9c5OfV8zPwG\n=bVAb\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"17JyYCvn37BodyLbZdKQrW3WNbW7JcsvAJ\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"revoke\":{\"sig_ids\":[\"4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f\"]},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977841,\"expire_in\":157680000,\"prev\":\"f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c\",\"seqno\":3,\"tag\":\"signature\"}\n",
+            "sig_type": 6,
+            "ctime": 1436977841,
+            "etime": 1594657841,
+            "rtime": null,
+            "sig_status": 0,
+            "prev": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
+        }
+    ],
+    "_comment": "NOTE: I've reordered these keys so that the last one here is the middle one used to sign. This is intentionally to trip up the Go client, which likes to only verify the last signature (and therefore by default used the last key and spuriously passed this test).",
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiaUBBAC4rsIlUx2wFOpLUX2RA4M57NFtRs5IadU0k3JdMq2sUqcVqBoY\nM3Fb+aI+kidTc2ViwO3EJ/dHJ04GH99gL0JdPLq4gIHZ6cbLDJn6IcJWjHXp3M5O\nIlkJ4bUwJ+GQPEqwqSzbMU2B5bNmZIJed+L1Lcg4RCyyRT9QKDPNNRR2MwARAQAB\niQE9BBgBAgAJBQJVpomlAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiaUACgkQ\nDDpaarWMUjvhCAP+KrnFTQqnSJOcyMY2GvNjeJxWIKfQLuBOUP9JNTxQW92gOgZy\nUbf4pPZShYduMW3vNQKOsuYI27UbwF9+SWPadhU1/1KDOcAc2I6gcJKKNUKjXIBs\ny2FViVgjfTQeAdWhXv+giSrGOB+spiLZKMFK/e8Ws5trUSmk9sruR94l6rl7WQP/\ndcDx57sJPXaMDV9WcL2lkZ8qGnNv0sn2Hkn3LBlOLcNldLZ46xtQhPWC/2J+ZLrd\nqOxdH77rboQRkCRIGU74xtFcIrFWE71lFNh2rGp3LTOUO8Dxl4lOna3DICjyQZtF\n/7wtrrTFtHqvJKFoUrBeZ3VYPok9J4Nkwie44o3ySic=\n=Z+fb\n-----END PGP PUBLIC KEY BLOCK-----",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmioMBBAC4ll4aBxfFepR/vfXs1TVaeDBi5wWKJNYrmfHAwXOZIFgrIPNx\n9ikGXZaiUBsekRDqcxmlsIMtZJWdpmIk180Tvm0evTQ7jCi8glltcS8OSCpFv9uW\nx8phrv6eY+U0AkTTpzPZqeO/IIywpbu3JTPsZxODETbo0l9/TpwV2+w6OwARAQAB\niQE9BBgBAgAJBQJVpoqDAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmioMACgkQ\nvbuZsUZm8QwQCwP/ehPkqLCLJtMMLXEzIk0vFyEA8HJqaHmTTpmoWH2Z71x7usgN\n5/11FBqAcSL8lbk+5rwtTGs9mogkt6Gdm5TG+kypkOgTxq1cTqWn0MoM4rr2czv7\nfuyYFkCP6tiqhIPBBp8g4/jWfhbPFzY4q9IqhZENVM3Ljq0GLtqcZGTH8YFe1QP7\nBEz3aMPXH+TnGYKSDJ+PinhunEN5WEa2/sPqPmuBEjsB4NC3fQXt7UC5JOMSNMAz\nN53BOmdExycT2CjEDj+pyhNViBEWTHuCf/MkKcmItDdcUDSvAQ9H2wlFEbUJwmbU\nDJqF9Foqo3P7k7YVxGf6g2vVNAjyqs3xsdh7ch88GNo=\n=JxSo\n-----END PGP PUBLIC KEY BLOCK-----",
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiQ0BBADGbDlbbQsqG0rR9CiOYTXnQH7gXbPW8JQGc+n27N05NO7k8b8U\nMhYXg7aDR89AvVHyL8UIL/+1c7aAU3xcsu/yBfwsAuDOjlZnB5K+IWEGxuFAS1I2\nPxhehRkct9aLh7lz26MPcaPV8Jn1GgsC9ZVc4IoUE5S+Rx28IxbSWb9XrQARAQAB\niQE9BBgBAgAJBQJVpokNAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiQ0ACgkQ\nxI8M+fSjZHW2SwQAk35hPHEoeJdoTEWN0fiJjcGocASsOtcuYl7SRIvqQ8xiFxUv\nlIFAiAua3Tu85Bf7vvUkfjbMQHUru1jfrGdVHWRS445hDpGo2JIOOG53MPbNMVTW\nhk6T/GdYH7tyEoSU3EpUPn3I6+9ThI9RF2UHNWk245PE5IbP2QOSRqI4OGey5gP/\nVBkq/7vweVO05MwaCeWGUJtutSi/BEarWjXJGvRHsF5ynxPw8I74NMN3eNWF3GJ9\nREKidCZaJiMUFuhnM0q0hs0JQLutyPJdPdk0Q+Lwp74GH8XAd3+9cHGjQsoKKv9I\nIgxzqpptFCn9YShewNGexOtRJBuiiNQNmGUFapkHPpM=\n=YNYZ\n-----END PGP PUBLIC KEY BLOCK-----"
+    ]
+}
+`,
+	"bad_full_hash.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.44\nComment: https://keybase.io/crypto\n\nyMHlAnicbZFdSBRRGIbXskxjo4Qs88L2hES0yPzPzupNISQRCJJppa5nZs6ugzo7\nOzMriq1EWUFSaWq5ZBn4lyWSEf0QiWteuRj+hBYUohC2ZYFYUFHS2Y3uOjfnfO/7\nfs8H5xuzrrckxeVdsw7w7JGmuPDIkt9SEFnLqgOiV64FzjpQgWKXW1E9SNd0RTWB\nE7CQp0URsYQgEpJAiTIlQRHSLMeLDp6kHZCnIEtzDLADt7+y0lUOjXLc5vZ6Rahj\nsdxrRDGYLUIDZSperOHCpchY/Q+kImYQJEHyNJQhhY9EQcSSPMFJjOAWSZJ384KI\nCJpHLJQExs2LlOTgBMbBUxSDOAIKIhZJAmKcP4ZzCDJDy6KbFSBHS4JIQ5JzUCyL\nEOTdLClEgwbSVViFcFrzaC6/JkMTuUxkmEgHATswa7WohyplLOF8NdINxasCJ4lN\nyVSinSTDkLTgoGnSDlCNpujIpeAEjXWBIwjCDjQdVQOnij/KDgzkc/2lkrFC9cZe\nJvTgOYbiUaHp1xEIjI4Ux1vikiwbN6yL7suSlLj13xZThhN+J+96/HxL5O6lve/1\nuUehkX5PxteHt2pmX84Fe3yR8e3XCbCzs2BifPBHSfHPhtbQvsBkbtnhC6GB1QOd\nyeXhHO3K4HzHu9fWuvb46ZnktuVIWyl579WNm5k9yyVpQdvVvqppX0bg7AqVveR7\nuvdzo407OvRsreVB6OSMlLrkD9frXXRaWkJTd2//wcSpFwuLjR+maj/2NXe0n4N7\nPpWhyRZC7aU6LxLbSrNP5x/P/1VovT25eKer7HtIuG/aihoKx77szlvLH229XJHj\nSjnTdWxT0LZgbi4+cehtpv4muDp8Kj1smaW7pcT6UO4Embpj/8qQFkhvLvp2fng+\n60nKH6ETE6k=\n=8ZaC\n-----END PGP MESSAGE-----\n",
+            "payload_hash": "9d6cea32a5cc0a0d9cfb9a58d60f0c1a9720e748dcd83901afb32e9de9c8b03c",
+            "sig_id": "3530b961e15781b6e833f8e9bae1e857a9b52b3aeb1a3c34e83a0e4e91b5d29f0f",
+            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"5a73bbe509b0c92bd2caba3567b87138a72a5364\",\"full_hash\":\"foobar\",\"host\":\"keybase.io\",\"key_id\":\"67b87138a72a5364\",\"kid\":\"010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a\",\"uid\":\"89d43dbf59a63c9b3a168255eea7f519\",\"username\":\"pgp_update_tester\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1441398331,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a",
+            "ctime": 1441398331
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1\n\n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\nnQ==\n=olf1\n-----END PGP PUBLIC KEY BLOCK-----"
+    ],
+    "uid": "89d43dbf59a63c9b3a168255eea7f519",
+    "username": "pgp_update_tester",
+    "label_kids": {
+        "start": "010173ada2222c2ae51706c49fb117f79be037e5ac94f7b2c869487224e60a9b4f710a"
+    },
+    "label_sigs": {
+        "undefined": "3530b961e15781b6e833f8e9bae1e857a9b52b3aeb1a3c34e83a0e4e91b5d29f0f"
     }
 }
 `,
@@ -4241,414 +4652,5 @@ var ChainTestInputs = map[string]string{
    }
 }
 
-`,
-	"ralph_chain.json": `{
-  "username": "ralph",
-  "uid": "bf65266d0d8df3ad5d1b367f578e6819",
-  "chain": [
-    {
-      "seqno": 1,
-      "payload_hash": "f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e",
-      "sig_id": "55b70fe0e7d5d8605e6607de1daf77c3e862050ad6ae491b5b7829e05130bf580f",
-      "sig_id_short": "VbcP4OfV2GBeZgfeHa93w-hiBQrWrkkbW3gp",
-      "kid": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
-      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMHhAnicbVFbSFRBGF4rIzdbLOuhoqAxuu22ncuey6xmWFFBIVb0YCnLnJ0568H1\n7Hb2oqIrWwkSUkGZ+GAG3ZAeukiCpLkiIYEJ2kXzRSg0SGQDRci0yxzJIGgeZpjv\n/77vn2/+l2uWW6wpaVOt+Rva68dS+nvmI5Yzx97UVwElgCuBuwqUksVD1XQfMYKG\npoeBG6iizLugC0kcIwsQ0p1DhPci6PIiHmJJIRBipBDgACWBkKmgNgoKEacWoBi9\neDRM0f/wSxcLDMuwWMGSyiOkQlHAKquKjMxDBUqMCjlFUHlRZlwiFiGPBYJchGMQ\nEkRqqIgSJ3OMl0HULrJop6iiwIkiZrCMqSUWMKvwoqQKkkxEmYUmMUQMHZURyjaQ\nP1gCYg5AoajmJWb+pRLBWAv/Sw+TUJgYf0XhyqCJlhPF80fvUTQd0/+jsigxQlpA\nB26WMr1hzTRgXTxNJsgC6wCkIqgZxKOZDEGiCelygKBBosCtR/x+803n9QCt0kbI\nR/uENJ+OwhGDgFhvT9EKS4rVsjJ1mTlDizUtY2myte2rLDeSZ5ubh/Zdi7UTpu/j\ns11FTi7JJ9TMo7aiK0O+TeLzvtGqd6fzMivu5naNOpn01WV3Be5O/ER8z60PLV6Y\n+YJEh34Wz/ZeLs0erBl7W9y48wBM+BYOFcRc3U79/ffD+V9q5wau385Jn9/deaHh\n0qyjI9u1/oGRtOcWfDp5b+NU9XjQOpLX5YjO5D+9HxtOTrRlPII2jRnP+Tzds3m7\nezCrcWDHj7zH9tYyUBiPObNuavpkUwTMCfHpjrriznOJq/vnXk96LiaD/pkt5b+E\n/t7uU3sbvz15tXX0SLa9sMmaVtNQXWdLtKxdaMtY17Hta+7BhyMTzQt2/bhtOPU3\nnTkY3w==\n=DD0n\n-----END PGP MESSAGE-----",
-      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f683494a72085992082ae3ca94ca39d7be99dabe\",\"host\":\"keybase.io\",\"key_id\":\"94ca39d7be99dabe\",\"kid\":\"0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"reddit\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430835851,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}",
-      "sig_type": 2,
-      "ctime": 1430835851,
-      "etime": 1588515851,
-      "rtime": null,
-      "sig_status": 1,
-      "prev": null,
-      "proof_id": "af85baace455686a5e809a10",
-      "proof_type": 4,
-      "proof_text_check": "\n\nyMHhAnicbVFbSFRBGF4rIzdbLOuhoqAxuu22ncuey6xmWFFBIVb0YCnLnJ0568H1\n7Hb2oqIrWwkSUkGZ+GAG3ZAeukiCpLkiIYEJ2kXzRSg0SGQDRci0yxzJIGgeZpjv\n/77vn2/+l2uWW6wpaVOt+Rva68dS+nvmI5Yzx97UVwElgCuBuwqUksVD1XQfMYKG\npoeBG6iizLugC0kcIwsQ0p1DhPci6PIiHmJJIRBipBDgACWBkKmgNgoKEacWoBi9\neDRM0f/wSxcLDMuwWMGSyiOkQlHAKquKjMxDBUqMCjlFUHlRZlwiFiGPBYJchGMQ\nEkRqqIgSJ3OMl0HULrJop6iiwIkiZrCMqSUWMKvwoqQKkkxEmYUmMUQMHZURyjaQ\nP1gCYg5AoajmJWb+pRLBWAv/Sw+TUJgYf0XhyqCJlhPF80fvUTQd0/+jsigxQlpA\nB26WMr1hzTRgXTxNJsgC6wCkIqgZxKOZDEGiCelygKBBosCtR/x+803n9QCt0kbI\nR/uENJ+OwhGDgFhvT9EKS4rVsjJ1mTlDizUtY2myte2rLDeSZ5ubh/Zdi7UTpu/j\ns11FTi7JJ9TMo7aiK0O+TeLzvtGqd6fzMivu5naNOpn01WV3Be5O/ER8z60PLV6Y\n+YJEh34Wz/ZeLs0erBl7W9y48wBM+BYOFcRc3U79/ffD+V9q5wau385Jn9/deaHh\n0qyjI9u1/oGRtOcWfDp5b+NU9XjQOpLX5YjO5D+9HxtOTrRlPII2jRnP+Tzds3m7\nezCrcWDHj7zH9tYyUBiPObNuavpkUwTMCfHpjrriznOJq/vnXk96LiaD/pkt5b+E\n/t7uU3sbvz15tXX0SLa9sMmaVtNQXWdLtKxdaMtY17Hta+7BhyMTzQt2/bhtOPU3\nnTkY3w==\n",
-      "check_data_json": "{\"name\":\"reddit\",\"username\":\"testerralph\"}",
-      "remote_id": "",
-      "api_url": null,
-      "human_url": null,
-      "proof_state": 7,
-      "proof_status": 0,
-      "retry_count": 0,
-      "hard_fail_count": 0,
-      "last_check": 1430835852,
-      "last_success": null,
-      "version": 0,
-      "fingerprint": "f683494a72085992082ae3ca94ca39d7be99dabe"
-    },
-    {
-      "seqno": 2,
-      "payload_hash": "bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7",
-      "sig_id": "32c195e0fca5c310237f6180b29315afd2cfc4ddce9cb307b50cc4a9172bdbd30f",
-      "sig_id_short": "MsGV4PylwxAjf2GAspMVr9LPxN3OnLMHtQzE",
-      "kid": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
-      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMIQAnicbZJbSFRBGMd33a21JbsQFV0wPBVFSJ37nNnSpKDbQ0UlQhe2mTMzuwfb\nS2eP642NSIrKh3wQMgojMs0IMcyH7KZZLy09dH3oYg+RdqMLEZFGNEcsCJqHGeb/\n/b8f8/2Z23k+T9A74cP5jdO76we82b5Qhad03YOWWgEnSLUQqhXK6ejBrHiE2knb\nijtCSGC6oahQRUAWDQ1CvsuIKiaCqokUSACmEBKEqVAoRBMpt4NjMErRpVaCa/wS\ntghX/+MvHy2IkigRTABTEGJQ1wiTmC4aCsQQiAzKWGOKboiqTnSoEI0ilcoiQprO\ngVgHsiGLpog4rmIUh5muybpORGIQjiQakbCiA6YBg+qGBF1jitpxFKPcbaM9yaiQ\nKRS4lLZM6s4/VnIqLceh9r9+h6a49rfLqU66aiXF4TFAGFtxwgPkbWlqp6xEXAhJ\n3Gk6lguQVIWPphlALxRoVdKyadhyHRrgI/JVKCRtmnZjV5kBAFQ1gE1F1BRKVcYz\nUABUVGRSCXBNVRGl1EAqVgxiMoYxgyaUdYOobrwpujeeEEIyfyaKcGTKisSRU2FT\nIXOrd6ff4w16xo/Lcb+AJzhhyp+PMSTmejrfFQy1X27+OLO/Z/LZWHBFpvMKe2K/\nbiw7PjUdrjy6c97Kc9saJW/s1Podfq1uX+3TlsH6o5ULh0/kPPu1o6Z4c6ZkV11u\nnOYfPpM9MuIPRtnzNqXg0TIjFvha9rmv5cdsWvzK77m4YNqnu48/VfW31g7EFiXq\nNkxquD/Um9d+GkVnPPB9+/kQvOwpuT67FXdFam4u7TqQCfjWZPOzDYOXqjsXG59b\nr395I83qPpg350ejtGTgwsSO0q2HcvZfqw88n78q2QS2tNH84ZIb7xt9y1d9752S\n2zH57srm7vKiL0xc33Rv99zlq9du6D148e1gUeDF9o6T8Nkd/9Vj6ZFIzaaPvwGx\nDCYq\n=4hWA\n-----END PGP MESSAGE-----",
-      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"f683494a72085992082ae3ca94ca39d7be99dabe\",\"host\":\"keybase.io\",\"key_id\":\"94ca39d7be99dabe\",\"kid\":\"0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"twitter\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430835876,\"expire_in\":157680000,\"prev\":\"f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e\",\"seqno\":2,\"tag\":\"signature\"}",
-      "sig_type": 2,
-      "ctime": 1430835876,
-      "etime": 1588515876,
-      "rtime": null,
-      "sig_status": 1,
-      "prev": "f4f8779457bc3053ee4f04637934ace1705344aeee8a4b38dcffbbf9c9268d4e",
-      "proof_id": "9d8b0ec56bbda063e5241b10",
-      "proof_type": 2,
-      "proof_text_check": "Verifying myself: I am ralph on Keybase.io. MsGV4PylwxAjf2GAspMVr9LPxN3OnLMHtQzE /",
-      "check_data_json": "{\"name\":\"twitter\",\"username\":\"testerralph\"}",
-      "remote_id": "595594965541064704",
-      "api_url": "https://twitter.com/testerralph/status/595594965541064704",
-      "human_url": "https://twitter.com/testerralph/status/595594965541064704",
-      "proof_state": 5,
-      "proof_status": 1,
-      "retry_count": 1,
-      "hard_fail_count": 0,
-      "last_check": 1430835881,
-      "last_success": 1430835881,
-      "version": 1,
-      "fingerprint": "f683494a72085992082ae3ca94ca39d7be99dabe"
-    },
-    {
-      "seqno": 3,
-      "payload_hash": "4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6",
-      "sig_id": "4200f01dc416139995cd534d577ef5c14b39fde69a6e57ccd3f1b6d9212b53fc0f",
-      "sig_id_short": "QgDwHcQWE5mVzVNNV371wUs5_eaablfM0_G2",
-      "kid": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
-      "sig": "-----BEGIN PGP MESSAGE-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\nyMIRAnicbZJ/aI1RGMfvHZdcxpLtD7RysoQ73ve+73ve817dpikzkpKVP65u57zn\nnO1t3Hu973vvzELajJjLsCxDITVKSZuhxQwh/7BsiSn/XG1+FVqK/DjvQinn/HF6\nvs/3+fQ8p+du/gRf0H/ie0/94iWnyvyPbkfSvqpVT4saAEnSehBpALVs/OFWoprZ\nKdtKuCACiBmGHCschxkRV9UUGVFEDQ0TLCPOsQplrjAKQqAm6XgVAkOww5ZYSaGJ\nIG5Rof7HXzuekGRJNhVJZchE0ERcJVDXFVVHjFGVShozOKeUmkg2dQkiU5MokYlG\nMDWwIalc48iQsMClx3GEQy0MIZVEk1zBVKMyUaDONQGESDY8o8PsBN7ChNvGm1M1\nYEcICCljmcyb/3fKrbNcl9n/+l3mCO1vlVuf8tQ6RuK/AXFiJaj4QFGWYbZjJRMg\nIgun6VoeQFYVCSkwrMIQYNtSls3ilufQdIgkcUIgZbOMNwY1DeFlGuQ61QxGDAZ1\nyTCJLhtExUjVDUyVsB42JRUyxTRkDcuywiRkhDnCOvBG2ppIgogi2sTVAulY1Qns\npm0GdvT3xSb6/EHfpECetwK+4JSCP4vRu2fyj7LCn5vO95VP2+jMel46ve/b3OyG\njoHDu0pocVOnYa0YGrx29VhbO/h8q7JluHGdFRut7CjomXO2u2NLNIQr5795dZpc\n+XBr2tjxHBs7dGaA3wvsHGwcKh/JP5DX+6T8kO7ezsaO7PeN5Hbff7fww9Zs07Kl\nu5yW3M2VRWvCB8HjpRezjdGmVrrv3Eh38mT/TlrjwPbQpzs/jGAq+WxW4dvKsRkL\nLn166RbldS1fFr8Drs/uHdo+83Xz9tU3Wi42ZFpjP9FoSdtDe2rL0ZNzvrad3hu4\nolVcfvF476J5pSNv1w32fEk3+7r82su1Dypao8NnAlWnhqO59Rfq8z/a74s7X/wC\nT2QsJA==\n=eyGB\n-----END PGP MESSAGE-----",
-      "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed\",\"host\":\"keybase.io\",\"key_id\":\"5aba18ffa461f3ed\",\"kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"service\":{\"name\":\"twitter\",\"username\":\"testerralph\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1430836246,\"expire_in\":157680000,\"prev\":\"bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7\",\"seqno\":3,\"tag\":\"signature\"}",
-      "sig_type": 2,
-      "ctime": 1430836246,
-      "etime": 1588516246,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": "bdc9430e56f7d59eb9e6709cb719b4a8479ad3272c046e3c915a113e0892f8a7",
-      "proof_id": "35dc42fe28fdab9085277e10",
-      "proof_type": 2,
-      "proof_text_check": "Verifying myself: I am ralph on Keybase.io. QgDwHcQWE5mVzVNNV371wUs5_eaablfM0_G2 /",
-      "check_data_json": "{\"name\":\"twitter\",\"username\":\"testerralph\"}",
-      "remote_id": "595596523460796418",
-      "api_url": "https://twitter.com/testerralph/status/595596523460796418",
-      "human_url": "https://twitter.com/testerralph/status/595596523460796418",
-      "proof_state": 1,
-      "proof_status": 1,
-      "retry_count": 5,
-      "hard_fail_count": 0,
-      "last_check": 1431006765,
-      "last_success": 1431006765,
-      "version": 1,
-      "fingerprint": "bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed"
-    },
-    {
-      "seqno": 4,
-      "payload_hash": "6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640",
-      "sig_id": "5c4da82af7e168cc4c6708be87d28c8558c7e8801b826d7af8b7049d246c32600f",
-      "sig_id_short": "XE2oKvfhaMxMZwi-h9KMhVjH6IAbgm16-LcE",
-      "kid": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
-      "sig": "-----BEGIN PGP MESSAGE-----\nComment: https://keybase.io/download\nVersion: Keybase Go 0.1.12 (linux)\n\nxA0DAAoBmv23eSsunT8By+F0AOIAAAAA63siYm9keSI6eyJkZXZpY2UiOnsiaWQi\nOiJmOWY1MmEyMzUwYmYwODA0ODA0MzQ3ZGJhODNjYTkxOCIsInR5cGUiOiJkZXNr\ndG9wIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkw\nNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsImRlc2NyaXB0aW9u\nIjoic3R1ZmYiLCJzdGF0dXMiOjF9LCJrZXkiOnsiZWxkZXN0X2tpZCI6IjAxMDFj\nMzA0ZThjODZjOGY0YjY3NzM0NzhlZWQ0ZDA1ZTlmZmRkZGM4MWM3MDY4YzUwZGIx\nYjViYWQ5YTkwNGY1Zjg5MGEiLCJmaW5nZXJwcmludCI6ImJjMjZmYTNmYTJlYmVi\nZTQ1MzE4ZDhkOTVhYmExOGZmYTQ2MWYzZWQiLCJob3N0Ijoia2V5YmFzZS5pbyIs\nImtleV9pZCI6IjVBQkExOEZGQTQ2MUYzRUQiLCJraWQiOiIwMTAxYzMwNGU4Yzg2\nYzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5\nMDRmNWY4OTBhIiwidWlkIjoiYmY2NTI2NmQwZDhkZjNhZDVkMWIzNjdmNTc4ZTY4\nMTkiLCJ1c2VybmFtZSI6InJhbHBoIn0sInNpYmtleSI6eyJraWQiOiIwMTIwYWZh\nYzkzODMxMzJiMzE3MzM2ODY2YjRjZTQ4ODM2OTA2Y2FkODhkZTE4YTkyYmRkZjI5\nZmZiOTQ5ZGI4YmM0MjBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJo\nWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdyNnlUZ3hNck1YTTJobXRN\nNUlnMmtHeXRpTjRZcVN2ZDhwLzdsSjI0dkVJS3AzQmhlV3h2WVdURkJCeDdJbUp2\nWkhraU9uc2laR1YyYVdObElqcDdJbWxrSWpvaVpqbG1OVEpoTWpNMU1HSm1NRGd3\nTkRnd05ETTBOMlJpWVRnelkyRTVNVGdpTENKMGVYQmxJam9pWkdWemEzUnZjQ0lz\nSW10cFpDSTZJakF4TWpCaFptRmpPVE00TXpFek1tSXpNVGN6TXpZNE5qWmlOR05s\nTkRnNE16WTVNRFpqWVdRNE9HUmxNVGhoT1RKaVpHUm1NamxtWm1JNU5EbGtZamhp\nWXpReU1HRWlMQ0prWlhOamNtbHdkR2x2YmlJNkluTjBkV1ptSWl3aWMzUmhkSFZ6\nSWpveGZTd2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRBeFl6TXdOR1U0\nWXpnMll6aG1OR0kyTnpjek5EYzRaV1ZrTkdRd05XVTVabVprWkdSak9ERmpOekEy\nT0dNMU1HUmlNV0kxWW1Ga09XRTVNRFJtTldZNE9UQmhJaXdpWm1sdVoyVnljSEpw\nYm5RaU9pSmlZekkyWm1FelptRXlaV0psWW1VME5UTXhPR1E0WkRrMVlXSmhNVGht\nWm1FME5qRm1NMlZrSWl3aWFHOXpkQ0k2SW10bGVXSmhjMlV1YVc4aUxDSnJaWGxm\nYVdRaU9pSTFRVUpCTVRoR1JrRTBOakZHTTBWRUlpd2lhMmxrSWpvaU1ERXdNV016\nTURSbE9HTTRObU00WmpSaU5qYzNNelEzT0dWbFpEUmtNRFZsT1dabVpHUmtZemd4\nWXpjd05qaGpOVEJrWWpGaU5XSmhaRGxoT1RBMFpqVm1PRGt3WVNJc0luVnBaQ0k2\nSW1KbU5qVXlOalprTUdRNFpHWXpZV1ExWkRGaU16WTNaalUzT0dVMk9ERTVJaXdp\nZFhObGNtNWhiV1VpT2lKeVlXeHdhQ0o5TENKemFXSnJaWGtpT25zaWEybGtJam9p\nTURFeU1HRm1ZV001TXpnek1UTXlZak14TnpNek5qZzJObUkwWTJVME9EZ3pOamt3\nTm1OaFpEZzRaR1V4T0dFNU1tSmtaR1l5T1dabVlqazBPV1JpT0dKak5ESXdZU0lz\nSW5KbGRtVnljMlZmYzJsbklqcHVkV3hzZlN3aWRIbHdaU0k2SW5OcFltdGxlU0lz\nSW5abGNuTnBiMjRpT2pGOUxDSmpiR2xsYm5RaU9uc2libUZ0WlNJNkltdGxlV0po\nYzJVdWFXOGdaMjhnWTJ4cFpXNTBJaXdpZG1WeWMybHZiaUk2SWpBdU1TNHhNaUo5\nTENKamRHbHRaU0k2TVRRek1EZ3pOak0zT1N3aVpYaHdhWEpsWDJsdUlqbzVORFl3\nT0RBd01Dd2liV1Z5YTJ4bFgzSnZiM1FpT25zaVkzUnBiV1VpT2pFME16QTRNell5\nTkRjc0ltaGhjMmdpT2lJNFkyRXpPV1UyTlRjME4yTTJNMlZtTkRjd05UazVZVGMx\nT0dVNE5qYzBNelV6T0ROaE5EaGlZemswWldVd09EY3pZamhpTnpVMFpUSXhPREk1\nTXpaaVptSmtZVE5tWkRVNFpUQmlaVEJoT0dNeU5ETXhZalV5WWpRMk5XRmxabVEz\nWkdZM1lXVm1ZakJtWW1NMU9UWTFOV1F6WVdWaU9UVTROamMwWVdVNFlTSXNJbk5s\nY1c1dklqbzNNRFI5TENKd2NtVjJJam9pTkdOak9XRmpOekl5Wm1aalpEVXpZalZr\nWlRreFlUTTNZ6WpOaE4yVmtaVGxsT0RCall6TTRPVE5sWWpZMFltUmpOVGs0T0dJ\neE9HVmlNalpoT1Rka05pSXNJbk5sY1c1dklqbzBMQ0owWVdjaU9pSnphV2R1WVhS\nMWNtVWlmYU56YVdmRVFQQ1pXa0dBMkM3WFIxMS9PQk84SXU1dHdxdVdzWHczL3ZY\nbnh5Sk50NWwyRmh0dGVueWxlOVo3Tis5S09WZXkvMVNvVk5Sb0sxU2RVT3U3S3lM\nYnJRQ29jMmxuWDNSNWNHVWdvM1JoWjgwQ0FxZDJaWEp6YVc5dUFRPT0ifSwidHlw\nZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJh\nc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQz\nMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3Rp\nbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1\nOGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4\nZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQz52FlYjk1\nODY3NGFlOGEiLCJzZXFubyI6NzA0fSwicHJldiI6IjRjYzlhYzcyMmZmY2Q1M2I1\nZGU5MWEzN2IzYTdlZGU5ZTgwY2MzODkzZWI2NGJkYzU5ODhiMThlYjI2YTk3ZDYi\nLCJzZXFubyI6NCwidGFnIjoic2lnbmF0dXJl4SJ9AMLAXAQAAQoAEAUCVUjUmwkQ\nmv23eSsunT8AAIv8CACQz2HZror6UIxV1ypJu1qluRnNq8oWz1rDdsZDeFk+JeUi\nVeACVwTbyvgofmTn0Yt/qXha4fbwU6+dCJIA31dSOvY4/JTVnZ2T39OrmCxYU8gr\nCyJlXqQGkErKlGKx300P+Ep6yZg8ZJgK3/1yLB5PhRmKSQRb9bEStF9xVCLVUefc\n84lUe9BnSD9XZpkfKmMwJkgIF2O2HQ919jPCqUIW8GkjWuILTcteyVAGv8fn3tn7\nESVwt5Cg6mwsjfC8zfDGLz81yw9xOHxhb+fgc1L01coqCxSVo4MYlV6KwOztsnbp\nbGdcbgZ/DD5krt8lsCABbPZeuiuGQlHHvhd6pQeG\n=E0qo\n-----END PGP MESSAGE-----",
-      "payload_json": "{\"body\":{\"device\":{\"id\":\"f9f52a2350bf0804804347dba83ca918\",\"type\":\"desktop\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"description\":\"stuff\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"fingerprint\":\"bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed\",\"host\":\"keybase.io\",\"key_id\":\"5ABA18FFA461F3ED\",\"kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"sibkey\":{\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFBBx7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZjlmNTJhMjM1MGJmMDgwNDgwNDM0N2RiYTgzY2E5MTgiLCJ0eXBlIjoiZGVza3RvcCIsImtpZCI6IjAxMjBhZmFjOTM4MzEzMmIzMTczMzY4NjZiNGNlNDg4MzY5MDZjYWQ4OGRlMThhOTJiZGRmMjlmZmI5NDlkYjhiYzQyMGEiLCJkZXNjcmlwdGlvbiI6InN0dWZmIiwic3RhdHVzIjoxfSwia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYzMwNGU4Yzg2YzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5MDRmNWY4OTBhIiwiZmluZ2VycHJpbnQiOiJiYzI2ZmEzZmEyZWJlYmU0NTMxOGQ4ZDk1YWJhMThmZmE0NjFmM2VkIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJrZXlfaWQiOiI1QUJBMThGRkE0NjFGM0VEIiwia2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInJldmVyc2Vfc2lnIjpudWxsfSwidHlwZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiNGNjOWFjNzIyZmZjZDUzYjVkZTkxYTM3YjNhN2VkZTllODBjYzM4OTNlYjY0YmRjNTk4OGIxOGViMjZhOTdkNiIsInNlcW5vIjo0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQPCZWkGA2C7XR11/OBO8Iu5twquWsXw3/vXnxyJNt5l2Fhttenyle9Z7N+9KOVey/1SoVNRoK1SdUOu7KyLbrQCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==\"},\"type\":\"sibkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6\",\"seqno\":4,\"tag\":\"signature\"}",
-      "sig_type": 1,
-      "ctime": 1430836379,
-      "etime": 1525444379,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": "4cc9ac722ffcd53b5de91a37b3a7ede9e80cc3893eb64bdc5988b18eb26a97d6",
-      "proof_id": null,
-      "proof_type": null,
-      "proof_text_check": null,
-      "check_data_json": null,
-      "remote_id": null,
-      "api_url": null,
-      "human_url": null,
-      "proof_state": null,
-      "proof_status": null,
-      "retry_count": null,
-      "hard_fail_count": null,
-      "last_check": null,
-      "last_success": null,
-      "version": null,
-      "fingerprint": "bc26fa3fa2ebebe45318d8d95aba18ffa461f3ed"
-    },
-    {
-      "seqno": 5,
-      "payload_hash": "ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017",
-      "sig_id": "b29a6b21766b48215e3ce7b75d6a9bd61b36e6212bf5b050b8b318cd972f742f0f",
-      "sig_id_short": "spprIXZrSCFePOe3XWqb1hs25iEr9bBQuLMY",
-      "kid": "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
-      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFBAp7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZjlmNTJhMjM1MGJmMDgwNDgwNDM0N2RiYTgzY2E5MTgiLCJ0eXBlIjoiZGVza3RvcCIsImtpZCI6IjAxMjE2N2YxYjAyOTFhMDdmZGIxNGI3Mjk0NzUxNDdhYmYzN2QzMWM5NDc3ZDhkNjlkY2JmYTg3NDhjYjc2MDEwZDYxMGEiLCJkZXNjcmlwdGlvbiI6InN0dWZmIiwic3RhdHVzIjoxfSwia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYzMwNGU4Yzg2YzhmNGI2NzczNDc4ZWVkNGQwNWU5ZmZkZGRjODFjNzA2OGM1MGRiMWI1YmFkOWE5MDRmNWY4OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWZhYzkzODMxMzJiMzE3MzM2ODY2YjRjZTQ4ODM2OTA2Y2FkODhkZTE4YTkyYmRkZjI5ZmZiOTQ5ZGI4YmM0MjBhIiwidWlkIjoiYmY2NTI2NmQwZDhkZjNhZDVkMWIzNjdmNTc4ZTY4MTkiLCJ1c2VybmFtZSI6InJhbHBoIn0sInN1YmtleSI6eyJraWQiOiIwMTIxNjdmMWIwMjkxYTA3ZmRiMTRiNzI5NDc1MTQ3YWJmMzdkMzFjOTQ3N2Q4ZDY5ZGNiZmE4NzQ4Y2I3NjAxMGQ2MTBhIiwicGFyZW50X2tpZCI6IjAxMjBhZmFjOTM4MzEzMmIzMTczMzY4NjZiNGNlNDg4MzY5MDZjYWQ4OGRlMThhOTJiZGRmMjlmZmI5NDlkYjhiYzQyMGEifSwidHlwZSI6InN1YmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiNjA2OWVmYTcxMDQyNjkwN2UxNWE3MzRmNWYxNWUzMjczMGFhMDJiMTMzZmViOGNmNzE4YjIyY2Y0NGZhYTY0MCIsInNlcW5vIjo1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQBeo141bOEMnr0m/IHl72SGtJ/8wf9sVkw8uZRU0O3nZFpF0jrydXbQOMpZOv8c7eAEa7QdecLbdsmlZUtlaUAWoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-      "payload_json": "{\"body\":{\"device\":{\"id\":\"f9f52a2350bf0804804347dba83ca918\",\"type\":\"desktop\",\"kid\":\"012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a\",\"description\":\"stuff\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"subkey\":{\"kid\":\"012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a\",\"parent_kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\"},\"type\":\"subkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640\",\"seqno\":5,\"tag\":\"signature\"}",
-      "sig_type": 1,
-      "ctime": 1430836379,
-      "etime": 1525444379,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": "6069efa710426907e15a734f5f15e32730aa02b133feb8cf718b22cf44faa640",
-      "proof_id": null,
-      "proof_type": null,
-      "proof_text_check": null,
-      "check_data_json": null,
-      "remote_id": null,
-      "api_url": null,
-      "human_url": null,
-      "proof_state": null,
-      "proof_status": null,
-      "retry_count": null,
-      "hard_fail_count": null,
-      "last_check": null,
-      "last_success": null,
-      "version": null,
-      "fingerprint": ""
-    },
-    {
-      "seqno": 6,
-      "payload_hash": "cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba",
-      "sig_id": "bce8a4dd488f24d42ce89ee667d549ab723d80e8b0258915af3fa8f3495dde620f",
-      "sig_id_short": "vOik3UiPJNQs6J7mZ9VJq3I9gOiwJYkVrz-o",
-      "kid": "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
-      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgr6yTgxMrMXM2hmtM5Ig2kGytiN4YqSvd8p/7lJ24vEIKp3BheWxvYWTFCX97ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInJldmVyc2Vfc2lnIjoiZzZSaWIyUjVocWhrWlhSaFkyaGxaTU9wYUdGemFGOTBlWEJsQ3FOclpYbkVJd0VnL2ErQmtuakxhUUY0MDQrSi94NUVaTWFqa3lEM1ZqS3h0WE5JSUwwUU44Y0twM0JoZVd4dllXVEZBNjE3SW1KdlpIa2lPbnNpWkdWMmFXTmxJanA3SW1sa0lqb2labUl4TldRNVpEZzFPRE14T1RobE5qSTBPRFpoTmpJellXWXhZalJrTVRnaUxDSjBlWEJsSWpvaWQyVmlJaXdpYTJsa0lqb2lNREV5TUdaa1lXWTRNVGt5TnpoallqWTVNREUzT0dRek9HWTRPV1ptTVdVME5EWTBZelpoTXprek1qQm1OelUyTXpKaU1XSTFOek0wT0RJd1ltUXhNRE0zWXpjd1lTSXNJbk4wWVhSMWN5STZNWDBzSW10bGVTSTZleUpsYkdSbGMzUmZhMmxrSWpvaU1ERXdNV016TURSbE9HTTRObU00WmpSaU5qYzNNelEzT0dWbFpEUmtNRFZsT1dabVpHUmtZemd4WXpjd05qaGpOVEJrWWpGaU5XSmhaRGxoT1RBMFpqVm1PRGt3WVNJc0ltaHZjM1FpT2lKclpYbGlZWE5sTG1sdklpd2lhMmxrSWpvaU1ERXlNR0ZtWVdNNU16Z3pNVE15WWpNeE56TXpOamcyTm1JMFkyVTBPRGd6Tmprd05tTmhaRGc0WkdVeE9HRTVNbUprWkdZeU9XWm1ZamswT1dSaU9HSmpOREl3WVNJc0luVnBaQ0k2SW1KbU5qVXlOalprTUdRNFpHWXpZV1ExWkRGaU16WTNaalUzT0dVMk9ERTVJaXdpZFhObGNtNWhiV1VpT2lKeVlXeHdhQ0o5TENKemFXSnJaWGtpT25zaWEybGtJam9pTURFeU1HWmtZV1k0TVRreU56aGpZalk1TURFM09HUXpPR1k0T1dabU1XVTBORFkwWXpaaE16a3pNakJtTnpVMk16SmlNV0kxTnpNME9ESXdZbVF4TURNM1l6Y3dZU0lzSW5KbGRtVnljMlZmYzJsbklqcHVkV3hzZlN3aWRIbHdaU0k2SW5OcFltdGxlU0lzSW5abGNuTnBiMjRpT2pGOUxDSmpiR2xsYm5RaU9uc2libUZ0WlNJNkltdGxlV0poYzJVdWFXOGdaMjhnWTJ4cFpXNTBJaXdpZG1WeWMybHZiaUk2SWpBdU1TNHhNaUo5TENKamRHbHRaU0k2TVRRek1EZ3pOak0zT1N3aVpYaHdhWEpsWDJsdUlqbzVORFl3T0RBd01Dd2liV1Z5YTJ4bFgzSnZiM1FpT25zaVkzUnBiV1VpT2pFME16QTRNell5TkRjc0ltaGhjMmdpT2lJNFkyRXpPV1UyTlRjME4yTTJNMlZtTkRjd05UazVZVGMxT0dVNE5qYzBNelV6T0ROaE5EaGlZemswWldVd09EY3pZamhpTnpVMFpUSXhPREk1TXpaaVptSmtZVE5tWkRVNFpUQmlaVEJoT0dNeU5ETXhZalV5WWpRMk5XRmxabVEzWkdZM1lXVm1ZakJtWW1NMU9UWTFOV1F6WVdWaU9UVTROamMwWVdVNFlTSXNJbk5sY1c1dklqbzNNRFI5TENKd2NtVjJJam9pWW1FeU9XUmxOakJtWkRReU1HVTFOemxqWm1JeU5ERmpNelF4T1dKa056Z3hOell6WVRJNFpqQmxaVGxpWlRFNFl6Vm1OVGhoTVdGbE1XVXhZVEF4TnlJc0luTmxjVzV2SWpvMkxDSjBZV2NpT2lKemFXZHVZWFIxY21VaWZhTnphV2ZFUUN6UGxXT216WE0yeXFsZjl4dnpJL3N0OU5vWmwwTjFDNWR3YUl6UGdFK1MzN3hQbGI1L1ExNFUvU0dnbjRxSXZ1VHNERjBucS8xeE90QUJpYUo0eVFxb2MybG5YM1I1Y0dVZ28zUmhaODBDQXFkMlpYSnphVzl1QVE9PSJ9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMC4xLjEyIn0sImN0aW1lIjoxNDMwODM2Mzc5LCJleHBpcmVfaW4iOjk0NjA4MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQzMDgzNjI0NywiaGFzaCI6IjhjYTM5ZTY1NzQ3YzYzZWY0NzA1OTlhNzU4ZTg2NzQzNTM4M2E0OGJjOTRlZTA4NzNiOGI3NTRlMjE4MjkzNmJmYmRhM2ZkNThlMGJlMGE4YzI0MzFiNTJiNDY1YWVmZDdkZjdhZWZiMGZiYzU5NjU1ZDNhZWI5NTg2NzRhZThhIiwic2Vxbm8iOjcwNH0sInByZXYiOiJiYTI5ZGU2MGZkNDIwZTU3OWNmYjI0MWMzNDE5YmQ3ODE3NjNhMjhmMGVlOWJlMThjNWY1OGExYWUxZTFhMDE3Iiwic2Vxbm8iOjYsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAVPFae3R7YfGC+zzBXi6Kffak6g6aHRWy+zyPRMEqce12ElhFTwr5ahmG3hu+5ZmT9ZZ0nj76hnKzUpPKEXr4DKhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
-      "payload_json": "{\"body\":{\"device\":{\"id\":\"fb15d9d8583198e62486a623af1b4d18\",\"type\":\"web\",\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"sibkey\":{\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/a+BknjLaQF404+J/x5EZMajkyD3VjKxtXNIIL0QN8cKp3BheWxvYWTFA617ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGFmYWM5MzgzMTMyYjMxNzMzNjg2NmI0Y2U0ODgzNjkwNmNhZDg4ZGUxOGE5MmJkZGYyOWZmYjk0OWRiOGJjNDIwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzaWJrZXkiOnsia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInJldmVyc2Vfc2lnIjpudWxsfSwidHlwZSI6InNpYmtleSIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjAuMS4xMiJ9LCJjdGltZSI6MTQzMDgzNjM3OSwiZXhwaXJlX2luIjo5NDYwODAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0MzA4MzYyNDcsImhhc2giOiI4Y2EzOWU2NTc0N2M2M2VmNDcwNTk5YTc1OGU4Njc0MzUzODNhNDhiYzk0ZWUwODczYjhiNzU0ZTIxODI5MzZiZmJkYTNmZDU4ZTBiZTBhOGMyNDMxYjUyYjQ2NWFlZmQ3ZGY3YWVmYjBmYmM1OTY1NWQzYWViOTU4Njc0YWU4YSIsInNlcW5vIjo3MDR9LCJwcmV2IjoiYmEyOWRlNjBmZDQyMGU1NzljZmIyNDFjMzQxOWJkNzgxNzYzYTI4ZjBlZTliZTE4YzVmNThhMWFlMWUxYTAxNyIsInNlcW5vIjo2LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCzPlWOmzXM2yqlf9xvzI/st9NoZl0N1C5dwaIzPgE+S37xPlb5/Q14U/SGgn4qIvuTsDF0nq/1xOtABiaJ4yQqoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==\"},\"type\":\"sibkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017\",\"seqno\":6,\"tag\":\"signature\"}",
-      "sig_type": 1,
-      "ctime": 1430836379,
-      "etime": 1525444379,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": "ba29de60fd420e579cfb241c3419bd781763a28f0ee9be18c5f58a1ae1e1a017",
-      "proof_id": null,
-      "proof_type": null,
-      "proof_text_check": null,
-      "check_data_json": null,
-      "remote_id": null,
-      "api_url": null,
-      "human_url": null,
-      "proof_state": null,
-      "proof_status": null,
-      "retry_count": null,
-      "hard_fail_count": null,
-      "last_check": null,
-      "last_success": null,
-      "version": null,
-      "fingerprint": ""
-    },
-    {
-      "seqno": 7,
-      "payload_hash": "ab5399ff8a1bc85c80e621d19462ced75095544c84a854f9b9f1dbde90fd1a0e",
-      "sig_id": "c55da1d425a0f9ee917b5cd3b35b31135ccb0241e51ff93cb926dbb3bba1f98b0f",
-      "sig_id_short": "xV2h1CWg-e6Re1zTs1sxE1zLAkHlH_k8uSbb",
-      "kid": "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a",
-      "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/a+BknjLaQF404+J/x5EZMajkyD3VjKxtXNIIL0QN8cKp3BheWxvYWTFA/B7ImJvZHkiOnsiZGV2aWNlIjp7ImlkIjoiZmIxNWQ5ZDg1ODMxOThlNjI0ODZhNjIzYWYxYjRkMTgiLCJ0eXBlIjoid2ViIiwia2lkIjoiMDEyMWI4NWIyNWFkZmRjNDgzYWUwMDQzNTU3NGJkODI3MmM1Y2M5MzZjNDYzZDE3OWQ4ODkwMGM0Yjk2YTM3NGNkNmMwYSIsInN0YXR1cyI6MX0sImtleSI6eyJlbGRlc3Rfa2lkIjoiMDEwMWMzMDRlOGM4NmM4ZjRiNjc3MzQ3OGVlZDRkMDVlOWZmZGRkYzgxYzcwNjhjNTBkYjFiNWJhZDlhOTA0ZjVmODkwYSIsImhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMGZkYWY4MTkyNzhjYjY5MDE3OGQzOGY4OWZmMWU0NDY0YzZhMzkzMjBmNzU2MzJiMWI1NzM0ODIwYmQxMDM3YzcwYSIsInVpZCI6ImJmNjUyNjZkMGQ4ZGYzYWQ1ZDFiMzY3ZjU3OGU2ODE5IiwidXNlcm5hbWUiOiJyYWxwaCJ9LCJzdWJrZXkiOnsia2lkIjoiMDEyMWI4NWIyNWFkZmRjNDgzYWUwMDQzNTU3NGJkODI3MmM1Y2M5MzZjNDYzZDE3OWQ4ODkwMGM0Yjk2YTM3NGNkNmMwYSIsInBhcmVudF9raWQiOiIwMTIwZmRhZjgxOTI3OGNiNjkwMTc4ZDM4Zjg5ZmYxZTQ0NjRjNmEzOTMyMGY3NTYzMmIxYjU3MzQ4MjBiZDEwMzdjNzBhIn0sInR5cGUiOiJzdWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIwLjEuMTIifSwiY3RpbWUiOjE0MzA4MzYzNzksImV4cGlyZV9pbiI6OTQ2MDgwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDMwODM2MjQ3LCJoYXNoIjoiOGNhMzllNjU3NDdjNjNlZjQ3MDU5OWE3NThlODY3NDM1MzgzYTQ4YmM5NGVlMDg3M2I4Yjc1NGUyMTgyOTM2YmZiZGEzZmQ1OGUwYmUwYThjMjQzMWI1MmI0NjVhZWZkN2RmN2FlZmIwZmJjNTk2NTVkM2FlYjk1ODY3NGFlOGEiLCJzZXFubyI6NzA0fSwicHJldiI6ImNkZDVhZTAxM2E2YTg3OWM2MDViYTk2MTFjM2VmZmY4ZGJmYzQ3M2I5YjE0YjJiOTllOGE2YzAwZjYyYmJiYmEiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBHqe4TZEOiNGSd8Vanr53/W1aMX1wD7PSk8ag8lnvN2jmzrfzIz6PqRyiFFVRFnDuk3buCEDvQZ2EsA/aZfLUEqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
-      "payload_json": "{\"body\":{\"device\":{\"id\":\"fb15d9d8583198e62486a623af1b4d18\",\"type\":\"web\",\"kid\":\"0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a\",\"status\":1},\"key\":{\"eldest_kid\":\"0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a\",\"host\":\"keybase.io\",\"kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\",\"uid\":\"bf65266d0d8df3ad5d1b367f578e6819\",\"username\":\"ralph\"},\"subkey\":{\"kid\":\"0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a\",\"parent_kid\":\"0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a\"},\"type\":\"subkey\",\"version\":1},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"0.1.12\"},\"ctime\":1430836379,\"expire_in\":94608000,\"merkle_root\":{\"ctime\":1430836247,\"hash\":\"8ca39e65747c63ef470599a758e867435383a48bc94ee0873b8b754e2182936bfbda3fd58e0be0a8c2431b52b465aefd7df7aefb0fbc59655d3aeb958674ae8a\",\"seqno\":704},\"prev\":\"cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba\",\"seqno\":7,\"tag\":\"signature\"}",
-      "sig_type": 1,
-      "ctime": 1430836379,
-      "etime": 1525444379,
-      "rtime": null,
-      "sig_status": 0,
-      "prev": "cdd5ae013a6a879c605ba9611c3efff8dbfc473b9b14b2b99e8a6c00f62bbbba",
-      "proof_id": null,
-      "proof_type": null,
-      "proof_text_check": null,
-      "check_data_json": null,
-      "remote_id": null,
-      "api_url": null,
-      "human_url": null,
-      "proof_state": null,
-      "proof_status": null,
-      "retry_count": null,
-      "hard_fail_count": null,
-      "last_check": null,
-      "last_success": null,
-      "version": null,
-      "fingerprint": ""
-    }
-  ],
-  "keys": [
-    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\n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\n=BVOL\n-----END PGP PUBLIC KEY BLOCK-----",
-    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v2.0.8\nComment: https://keybase.io/crypto\n\n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\n=sF0S\n-----END PGP PUBLIC KEY BLOCK-----",
-    "0120afac9383132b317336866b4ce48836906cad88de18a92bddf29ffb949db8bc420a",
-    "012167f1b0291a07fdb14b729475147abf37d31c9477d8d69dcbfa8748cb76010d610a",
-    "0121b85b25adfdc483ae00435574bd8272c5cc936c463d179d88900c4b96a374cd6c0a",
-    "0120fdaf819278cb690178d38f89ff1e4464c6a39320f75632b1b5734820bd1037c70a",
-    "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVYGTSQEEAOHnED1wHyg3+Jm2x6K1jG1t48v6/xUt/mui7C63VKqvwHTDk3TM\nUzV7oN7Qvek2YoXClQIUMPBvJs+nie5mohCTpHEZJr7tCwTlvPIf+4qJqQAtMr5z\n8ubnxHNsIPKg8w0R5HanM2qy2Tz+kxR4lmP/nBFNJTwRvIPDglHAh6a3ABEBAAG0\nGHJhbHBoIDxyYWxwaEBrZXliYXNlLmlvPoi5BBMBCAAjBQJVgZNJAhsDBwsJCAcD\nAgEGFQgCCQoLBBYCAwECHgECF4AACgkQ1XTwnazAlYOQQQP/aWmXflNWXMqiTwHW\nQj5J3YC3zFr312yt6sgR3IrYBLdp1aSHmk0DbfI/U2JaRzrr5Epv3efSCkK9R7vQ\nRvXxE9InsRK28PZvx+bmjuZAGD0abfPj/Ex9MiVq52veNqYzMN20o2EACdoTE9/5\ndkTKiRUGbPIolbpqjCGW6LPBJ6i4jQRVgZNJAQQAvaCnEIQ9LfPt0qECCU+9Nrz8\nNLC1XreQQ7Mm31vcSOkbypEhil1eK5+TkP84UTBkdMzQvX77r+BqRrqT4k2oXZD2\nw+KjDV48Lzb2qmRd+kezTK7jLKNwqcEvMyJMhi8wyU8HD95KM9is1TdFr045JlIY\nzThgskx1jXHfnteWq7sAEQEAAYifBBgBCAAJBQJVgZNJAhsMAAoJENV08J2swJWD\nf0oEAML7lg1p/m6auEY/WH13hRUndb2JLvnqMxpd4dwh5xQzyFLSMBKG2xnUO4P8\n9zliTnelXHQVzJVzv0k0JHzc1027aJO+YAPjT5RTd+QwuoA90DBhDzNC9GQBn3kl\n0q45q+rHj3/1XWXKjJNUKasAlKK7F+fJoLVHBTmQUoNt9ZT+\n=jMe5\n-----END PGP PUBLIC KEY BLOCK-----"
-  ],
-  "label_kids": {
-    "first_eldest": "0101dbd7f3aaf965df1f60839b970f92b5f368046d693d5ea4e20aa564cab672820c0a",
-    "second_eldest": "0101c304e8c86c8f4b6773478eed4d05e9ffdddc81c7068c50db1b5bad9a904f5f890a",
-    "new_eldest": "01014d569e80644c482092be218bc9faee07f068219c317233d2f8823f742a519dca0a"
-  }
-}
-`,
-	"signed_with_revoked_key_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFASp7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMDM2NDEzNWRjMDI0ZjYyNTVkNzQ4ZGM4ZWUwMzRlNTQ1NTMwYjBjZDk2N2UwNjhlMmZmMDNjZGMxNTgyZmM3MDYwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ1NzYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjpudWxsLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAaH1Gcdn5h66O/2llNDAaZKGzZAEQBuXgTN9JuxAa8hV2up2yn144/aRucaRx3lE/fYVDJsgy6lg/fJI4c+i6CahzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
-            "payload_hash": "9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088",
-            "sig_id": "53e8e98d74d1bb3ab2710a2ce955e6dfc111c400478d7f4dd18a359cdd79350f0f",
-            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1432145763,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
-            "ctime": 1432145763
-        },
-        {
-            "seqno": 2,
-            "prev": "9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088",
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFBfl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJoWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdlSGtJaFIxWGtUdEE1TGVlSWMvT1BLY3g0eEFGSlFudjduVzRscDZuWDAwS3AzQmhlV3h2WVdURkFpdDdJbUp2WkhraU9uc2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpYUc5emRDSTZJbXRsZVdKaGMyVXVhVzhpTENKcmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpZFdsa0lqb2lOelJqTXpoalpqZGpaV0k1TkRkbU5UWXpNakEwTldRNFkyRTFaRFE0TVRraUxDSjFjMlZ5Ym1GdFpTSTZJbTFoZURNeUluMHNJbk5wWW10bGVTSTZleUpyYVdRaU9pSXdNVEl3TnpnM09UQTRPRFV4WkRVM09URXpZalF3WlRSaU56bGxNakZqWm1ObE0yTmhOek14WlRNeE1EQTFNalV3T1dWbVpXVTNOV0k0T1RZNVpXRTNOV1kwWkRCaElpd2ljbVYyWlhKelpWOXphV2NpT201MWJHeDlMQ0owZVhCbElqb2ljMmxpYTJWNUlpd2lkbVZ5YzJsdmJpSTZNWDBzSW1OMGFXMWxJam94TkRNeU1UUTFPRFl6TENKbGVIQnBjbVZmYVc0aU9qRXdNREF3TURBd0xDSndjbVYySWpvaU9XRmhNemsxWmprd1l6ZGpOR05qTkRKaE9XVXpPVE0wWkRkaU9EaGtPRFV6TVRoak4yRTRaalJpWlRjeVpHVm1NekZpTTJWa09XVXhaakZsT0RBNE9DSXNJbk5sY1Y5MGVYQmxJam94TENKelpYRnVieUk2TWl3aWRHRm5Jam9pYzJsbmJtRjBkWEpsSW4yamMybG54RURpc2tKVmNVc042bkM4YzdCbmdLR05aYU1XL0duMWlhZTBhMFdMSFJ2bnlQYkxKcUoxYUEzSnF6ZDVLY3NqVGFFSzMvSktqQkZ3NDUzOHRDK3QwT0VQcUhOcFoxOTBlWEJsSUtOMFlXZk5BZ0tuZG1WeWMybHZiZ0U9In0sInR5cGUiOiJzaWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDU4NjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiI5YWEzOTVmOTBjN2M0Y2M0MmE5ZTM5MzRkN2I4OGQ4NTMxOGM3YThmNGJlNzJkZWYzMWIzZWQ5ZTFmMWU4MDg4Iiwic2VxX3R5cGUiOjEsInNlcW5vIjoyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCGlvk5VtnWDNGcSe2rq1u00pf9m8w/yLdiq/0A/d6MYhtgWrtny6hiGamcrPT1bS6e9P7XDreP7m3Vtd82Kuguoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-            "payload_hash": "d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc",
-            "sig_id": "ecdbdc174a75a79fb175b9c4729765eaf0d03d1b9d910f244f90293b6f96e8b40f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgeHkIhR1XkTtA5LeeIc/OPKcx4xAFJQnv7nW4lp6nX00Kp3BheWxvYWTFAit7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ1ODYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjoiOWFhMzk1ZjkwYzdjNGNjNDJhOWUzOTM0ZDdiODhkODUzMThjN2E4ZjRiZTcyZGVmMzFiM2VkOWUxZjFlODA4OCIsInNlcV90eXBlIjoxLCJzZXFubyI6MiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDiskJVcUsN6nC8c7BngKGNZaMW/Gn1iae0a0WLHRvnyPbLJqJ1aA3Jqzd5KcsjTaEK3/JKjBFw4538tC+t0OEPqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432145863,\"expire_in\":10000000,\"prev\":\"9aa395f90c7c4cc42a9e3934d7b88d85318c7a8f4be72def31b3ed9e1f1e8088\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
-            "ctime": 1432145863
-        },
-        {
-            "seqno": 3,
-            "prev": "d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc",
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNkE13AJPYlXXSNyO4DTlRVMLDNln4Gji/wPNwVgvxwYKp3BheWxvYWTFAhh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInJldm9rZSI6eyJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIn0sInR5cGUiOiJyZXZva2UiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDU5NjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiJkODQ1MjExYjJiYTIxZTg3MTQxZDUxNTUzYzQzZWNjMzcwMWZiZjM3MjAzZDYzZTViODJlZGU0YzBmYTAyM2JjIiwic2VxX3R5cGUiOjEsInNlcW5vIjozLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQIN1Yd5VY6JwixVs2xEJhQ0cz7PqHm00OCbuNFamehp6RfMzDkFK9L8YfUwkKoRQ89czbCeDw4my5vT/n4eutgyoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-            "payload_hash": "3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741",
-            "sig_id": "384d5b0d6ce5497364589b4fc3c907c0dc26b264aeb523b2212367cb96b170920f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\"},\"type\":\"revoke\",\"version\":1},\"ctime\":1432145963,\"expire_in\":10000000,\"prev\":\"d845211b2ba21e87141d51553c43ecc3701fbf37203d63e5b82ede4c0fa023bc\",\"seq_type\":1,\"seqno\":3,\"tag\":\"signature\"}",
-            "kid": "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
-            "ctime": 1432145963
-        },
-        {
-            "seqno": 4,
-            "prev": "3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741",
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgeHkIhR1XkTtA5LeeIc/OPKcx4xAFJQnv7nW4lp6nX00Kp3BheWxvYWTFBfl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwN2E5M2FiMzUwMDNmNDgyNjJkZDU1OTNiZDAxYmU1M2QzYWNkYTBjMDlkYjVkYWM2MTg3YzZjNmUxZDYwYjllMDBhIiwicmV2ZXJzZV9zaWciOiJnNlJpYjJSNWhxaGtaWFJoWTJobFpNT3BhR0Z6YUY5MGVYQmxDcU5yWlhuRUl3RWdlcE9yTlFBL1NDWXQxVms3MEJ2bFBUck5vTUNkdGRyR0dIeHNiaDFndWVBS3AzQmhlV3h2WVdURkFpdDdJbUp2WkhraU9uc2lhMlY1SWpwN0ltVnNaR1Z6ZEY5cmFXUWlPaUl3TVRJd016WTBNVE0xWkdNd01qUm1OakkxTldRM05EaGtZemhsWlRBek5HVTFORFUxTXpCaU1HTmtPVFkzWlRBMk9HVXlabVl3TTJOa1l6RTFPREptWXpjd05qQmhJaXdpYUc5emRDSTZJbXRsZVdKaGMyVXVhVzhpTENKcmFXUWlPaUl3TVRJd056ZzNPVEE0T0RVeFpEVTNPVEV6WWpRd1pUUmlOemxsTWpGalptTmxNMk5oTnpNeFpUTXhNREExTWpVd09XVm1aV1UzTldJNE9UWTVaV0UzTldZMFpEQmhJaXdpZFdsa0lqb2lOelJqTXpoalpqZGpaV0k1TkRkbU5UWXpNakEwTldRNFkyRTFaRFE0TVRraUxDSjFjMlZ5Ym1GdFpTSTZJbTFoZURNeUluMHNJbk5wWW10bGVTSTZleUpyYVdRaU9pSXdNVEl3TjJFNU0yRmlNelV3TURObU5EZ3lOakprWkRVMU9UTmlaREF4WW1VMU0yUXpZV05rWVRCak1EbGtZalZrWVdNMk1UZzNZelpqTm1VeFpEWXdZamxsTURCaElpd2ljbVYyWlhKelpWOXphV2NpT201MWJHeDlMQ0owZVhCbElqb2ljMmxpYTJWNUlpd2lkbVZ5YzJsdmJpSTZNWDBzSW1OMGFXMWxJam94TkRNeU1UUTJNRFl6TENKbGVIQnBjbVZmYVc0aU9qRXdNREF3TURBd0xDSndjbVYySWpvaU0yWmtOakJpTkdJeU16RTNNall4WWpZM09HSTVNbUl5TTJSbVl6UTJaVE5rTXpZNVlqaGtPVFJoTnpsaU5XSXpaR0ptWXpJMU9ERmtaVFpoTmpjME1TSXNJbk5sY1Y5MGVYQmxJam94TENKelpYRnVieUk2TkN3aWRHRm5Jam9pYzJsbmJtRjBkWEpsSW4yamMybG54RURKTU42a1lCQTlvd1ZJS1dSZSs5czJPdGkwTkt0VHpqcnNkSWVmdmZiM3Q5MlBHRnptMEE1RDR0OTczTXNHVHFjZ3VJem9hak52eXNPVXc1b0FPVFFQcUhOcFoxOTBlWEJsSUtOMFlXZk5BZ0tuZG1WeWMybHZiZ0U9In0sInR5cGUiOiJzaWJrZXkiLCJ2ZXJzaW9uIjoxfSwiY3RpbWUiOjE0MzIxNDYwNjMsImV4cGlyZV9pbiI6MTAwMDAwMDAsInByZXYiOiIzZmQ2MGI0YjIzMTcyNjFiNjc4YjkyYjIzZGZjNDZlM2QzNjliOGQ5NGE3OWI1YjNkYmZjMjU4MWRlNmE2NzQxIiwic2VxX3R5cGUiOjEsInNlcW5vIjo0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQDKHVTNDoxJs1UIrMI4CNhFzFdXtmbWe9F09gk2Rq5TbpMzSWGCCY1VKbHyzuSxEtX9rhBOcGkD8+O5Ktf809Ayoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-            "payload_hash": "ff34e6ffa732ada20e3e2413f82fddb835f4c981c9acf43033da7ff8275333f5",
-            "sig_id": "7eb99ec28f5cea7163e1e3dc05fae2690c7d040fd6b99a70ebe2266786e637500f",
-            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a\",\"host\":\"keybase.io\",\"kid\":\"0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"01207a93ab35003f48262dd5593bd01be53d3acda0c09db5dac6187c6c6e1d60b9e00a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgepOrNQA/SCYt1Vk70BvlPTrNoMCdtdrGGHxsbh1gueAKp3BheWxvYWTFAit7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzY0MTM1ZGMwMjRmNjI1NWQ3NDhkYzhlZTAzNGU1NDU1MzBiMGNkOTY3ZTA2OGUyZmYwM2NkYzE1ODJmYzcwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzg3OTA4ODUxZDU3OTEzYjQwZTRiNzllMjFjZmNlM2NhNzMxZTMxMDA1MjUwOWVmZWU3NWI4OTY5ZWE3NWY0ZDBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwN2E5M2FiMzUwMDNmNDgyNjJkZDU1OTNiZDAxYmU1M2QzYWNkYTBjMDlkYjVkYWM2MTg3YzZjNmUxZDYwYjllMDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMyMTQ2MDYzLCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjoiM2ZkNjBiNGIyMzE3MjYxYjY3OGI5MmIyM2RmYzQ2ZTNkMzY5YjhkOTRhNzliNWIzZGJmYzI1ODFkZTZhNjc0MSIsInNlcV90eXBlIjoxLCJzZXFubyI6NCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDJMN6kYBA9owVIKWRe+9s2Oti0NKtTzjrsdIefvfb3t92PGFzm0A5D4t973MsGTqcguIzoajNvysOUw5oAOTQPqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1432146063,\"expire_in\":10000000,\"prev\":\"3fd60b4b2317261b678b92b23dfc46e3d369b8d94a79b5b3dbfc2581de6a6741\",\"seq_type\":1,\"seqno\":4,\"tag\":\"signature\"}",
-            "kid": "0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a",
-            "ctime": 1432146063
-        }
-    ],
-    "keys": [
-        "0120364135dc024f6255d748dc8ee034e545530b0cd967e068e2ff03cdc1582fc7060a",
-        "0120787908851d57913b40e4b79e21cfce3ca731e310052509efee75b8969ea75f4d0a",
-        "01207a93ab35003f48262dd5593bd01be53d3acda0c09db5dac6187c6c6e1d60b9e00a"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32"
-}
-`,
-	"simple_chain.json": `{
-    "chain": [
-        {
-            "seqno": 1,
-            "prev": null,
-            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggg05gbQjjIO9nT6AnnoCfDEbP8W+/Qc9K/tIlLm+hrgKp3BheWxvYWTFASp7ImJvZHkiOnsia2V5Ijp7Imhvc3QiOiJrZXliYXNlLmlvIiwia2lkIjoiMDEyMDgyMGQzOTgxYjQyMzhjODNiZDlkM2U4MDllN2EwMjdjMzExYjNmYzViZWZkMDczZDJiZmI0ODk0YjliZTg2YjgwYSIsInVpZCI6Ijc0YzM4Y2Y3Y2ViOTQ3ZjU2MzIwNDVkOGNhNWQ0ODE5IiwidXNlcm5hbWUiOiJtYXgzMiJ9LCJ0eXBlIjoiZWxkZXN0IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDMxOTc5MjE0LCJleHBpcmVfaW4iOjEwMDAwMDAwLCJwcmV2IjpudWxsLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RABjZFgXiUCNQR16g+RRL4xUtp+O2DI72+1gbMwoUJVlMxHGcXItlBFSFjfWGtOxU7//fYS0aVEH02q17IUCOXBqhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B",
-            "payload_hash": "223e25fd456ea18cc39b608bac8b5f35302d240d5f95e6e42e5a85b1136ac5e7",
-            "sig_id": "f0a633afc45db7d611a0e484e2db45800e87033f7c4bc1f62577bc1eba156f060f",
-            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1431979214,\"expire_in\":10000000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-            "kid": "0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a",
-            "ctime": 1431979214
-        }
-    ],
-    "keys": [
-        "0120820d3981b4238c83bd9d3e809e7a027c311b3fc5befd073d2bfb4894b9be86b80a"
-    ],
-    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
-    "username": "max32"
-}
-`,
-	"t_helen_chain.json": `{
-    "username": "t_helen",
-    "uid": "9cbca30c38afba6ab02d76b206515919",
-    "chain": [
-        {
-            "seqno": 1,
-            "payload_hash": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
-            "sig_id": "d020f47d51011e8fe3ca042ca6639ca56acb6b53f53c8f8db25da308fd10c2b50f",
-            "sig_id_short": "0CD0fVEBHo_jygQspmOcpWrLa1P1PI-Nsl2j",
-            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkT2IE0EUxzc5FbzzMIhgo80UV63H7OfsBGxECwtFg9HOOLPzNjck2Y27+TCG\nq0QuKnjiB4Kx8QMFEcNdYyNyeuKhuVII2AhqdYXXWHiF4GzAzmmG+b/f//8e825O\nT2jZzPvFXVu/HotmZrjykWvFp1fPdhGPRAflu6gC4yuQYRnieizDBsojUwjBPSEC\nE7DtkcAOuAU+8WyPWS4w3xOWzYASpKO5KEkdKoazBGZlpDT1KEmh1P/wlXEBG9hw\nXYqBYyF8x7F9bivMJDYl3KIe4wF1hSEsoUYJgoAyw/AYdjjBghocHIopZiquOY6j\nPveZhX3LYwFnLuPYFMTlJnYdw6EGTcEE4pDVQNGN0hxUIUTzOmp06qnSBl5S9Zb0\nocRlKNRnKEsL4kRGIcobivQbMjUbtuVSQmzP1hFcrMsYSjIlHOJ6WB0d1WNooXzY\nrFZ1lMCFMFJV1YiVVZ9ElkPWaMaA5id7D7Zpmay2Y3s2XYg2uTP3b023fk/8yV0b\nnDq+fyEKlk7cr15fSFZXDyc1rXDo9sbe9ubDIvl2uX/n3KV3vBPM3rtxxfzxoV7p\ntzePjAp3148uvdz4ZMaj0Zl9W93M1HftTX9wfuX5yQNrvc8ztWPF4W59Gs+sL69N\nLdK3X15TeLJn8OInOZhbPv2sV7S+PnpVGKK/\n=ZlOG\n-----END PGP MESSAGE-----",
-            "payload_json": "{\"body\":{\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"web_service_binding\",\"version\":1},\"ctime\":1436977484,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
-            "sig_type": 1,
-            "ctime": 1436977484,
-            "etime": 1594657484,
-            "rtime": null,
-            "sig_status": 0,
-            "prev": null,
-            "proof_id": null,
-            "proof_type": null,
-            "proof_text_check": null,
-            "proof_text_full": null,
-            "check_data_json": null,
-            "remote_id": null,
-            "api_url": null,
-            "human_url": null,
-            "proof_state": null,
-            "proof_status": null,
-            "retry_count": null,
-            "hard_fail_count": null,
-            "last_check": null,
-            "last_success": null,
-            "version": null,
-            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
-        },
-        {
-            "seqno": 2,
-            "payload_hash": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
-            "sig_id": "4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f",
-            "sig_id_short": "TmJRxUGl13kSoCNwxwfTmtOBkzMOQ_RQfUXD",
-            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkt9LFUEUx/derUgNCsuiHqQJiuhmMzu7OzM36AcR9MOMlLgkwWVmZ1Yndfc6\nu4oXE3pLMikIIsEgAnsvK3roJfAtkpCIyP4Box5LjIjmXuolmsdzvucz3+/h3N7U\n4ORzLcXeK89udh/OvV4RzsVHN/aPA5HIKiiOg9BUK1kSjhij4rBe4VIalaagCPAZ\nRjNUqpzsJfhE19CFUa1CE1d1ycTD3f2lrs4qKICsWlFWK3QWJjoGEwUwoOqcSMd9\nylSMjjPbd6WUgkoZuQp6lEReJLAKCfUox4HiIZXY44oRS+xP0tqExQieqg6dgDqz\nrKWt/kc/UG9ABFEQMKgElDL0fS8UnpW5xGNEYEa5iFggkcTSWomiiHGEKIe+IFAy\nJJTPIIPc4kbqOBaKkGMYYsojwQMuoCtJIFwY+MhniNWEqTIxH6qlz8r9alDV0//Z\nxz97LYBRZVKdxKCIrCjMdG0OeThghAQ+LgA1VtFGlXVN4ZOAQvsKoGLUqKUpa9pD\nKHIDn3qKWvPcZrPJCLIFGBECUYSgjBDyBGSE2/ycioBT6ULlYvt/qobjBBS3udYi\n77PMVPfFPBsxCkw0Tc42Orm8s35dvnYdTtPGzX9P5uithl8d2cvy8heWbd3Z2dL2\nEOtPTcuLL2aPrB64PDg1eX9foXktm5nDrbsnro59e9Las+fc246FpeufS/zS1OLP\n+Wmz8vHrMdAMnjf+SN7fyz9d2/F4w+ntpx58bzt78G7Se779+Exudm/JaVm4tvpq\nbiicbzz0IY7fLL27syvnbGlun/4N\n=CoBU\n-----END PGP MESSAGE-----",
-            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977653,\"expire_in\":157680000,\"prev\":\"ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23\",\"seqno\":2,\"tag\":\"signature\"}\n",
-            "sig_type": 6,
-            "ctime": 1436977653,
-            "etime": 1594657653,
-            "rtime": 1436977851,
-            "sig_status": 1,
-            "prev": "ed2d411f26584e8f9aaac8497715840f7701f10df114b097a554a8b6a8d20e23",
-            "proof_id": null,
-            "proof_type": null,
-            "proof_text_check": null,
-            "proof_text_full": null,
-            "check_data_json": null,
-            "remote_id": null,
-            "api_url": null,
-            "human_url": null,
-            "proof_state": null,
-            "proof_status": null,
-            "retry_count": null,
-            "hard_fail_count": null,
-            "last_check": null,
-            "last_success": null,
-            "version": null,
-            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
-        },
-        {
-            "seqno": 3,
-            "payload_hash": "123134c84cd9e592cb7f9ead0b24a29252ce22789a718007ea865612eba88e9e",
-            "sig_id": "bef80a641d1c020b2cb4dab82074fbd4ef7f7c9c0182163aac807ada77cb3a3b0f",
-            "sig_id_short": "vvgKZB0cAgsstNq4IHT71O9_fJwBghY6rIB6",
-            "kid": "01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a",
-            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowFtkk1IVUEYhq+ahmI/0M+uoCkI6pIzZ86cOXMJRAOjqxglIRUh86uHW+fee87x\n0kUMWgSlJRn0RxG2MEQQzEUU1sIWUWRRm2gTgRDkKoqgjVRzL9QimtXwzfs9vN87\n3+U1danamifzN+93mK/NNS+XRerIvZH5ISDyqgwyQ0BG5UKSl4NRpENZrXClIh3H\nIAMQzZaP7iuFmLZbdZc4pjoPRb24t1v00qyMS21ZkAZJuaCtVgSJzAchGE6DnK5y\nTBD266gQBWFi3x2llPCVMo6Grk+NawTWkvquz7GnufQVdrlm1BIH8nGlw2IEj/We\nIA+qzL5A2ep/9LnqA0QQeR6DWkClJCGuFK6VOdRlVGDmc2GYp5DCyloxxjCOkM8h\nERQqhoQmDDLILW6wimNSSI6hxD43gntcQEdRTzjQI4gwxCrCWEchP1WZPukb0Cd1\ndfpIl/I5XQkgDvqtZxvkceBqzyFIEhdxoihlyOHQwRRKCqnCjCvsI4YxhtrFxiW2\n6BKJNWLI3pBPoAEnhv9m/c+fpUFJR3GQD0EGWZFMgoon5GKPURswSgN9uhBEus9+\nT6aICPV8aE8aFKxXizOQEukZJhhUEFOfYkglsZ2O5zuEupwx5XhU+FAjn7kOFNBI\nwmglcAOxtAZiXQzzIIOtRd5vkXb0kCeDkQbDTedvr0rV1KYa6msrm5dqalz/Zx0n\nZutWmlu354p7z4z5yYFLP+bPjuCDGzeh6WT36xfr3jY8y35eurBCJ161j7asbpk7\nfG3pzY0di+ON7+62BV2Ppkd7aA/ZumXzzJeR7xuK29Y23gqXL6786p5pvfL4Kl+o\n79j1YfbBzinvTvBz/+K3yYXU0tOHn+auf2xfHi++P9c5OfV8zPwG\n=bVAb\n-----END PGP MESSAGE-----",
-            "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"17JyYCvn37BodyLbZdKQrW3WNbW7JcsvAJ\",\"type\":\"bitcoin\"},\"key\":{\"fingerprint\":\"2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97\",\"host\":\"keybase.io\",\"key_id\":\"48a36eac8d34ae97\",\"kid\":\"01016690eb0ddc554cb4ac827497b398abf96d1d3d2ddfff9a118a05b70d91be59090a\",\"uid\":\"9cbca30c38afba6ab02d76b206515919\",\"username\":\"t_helen\"},\"revoke\":{\"sig_ids\":[\"4e6251c541a5d77912a02370c707d39ad38193330e43f4507d45c3e1917d41850f\"]},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1436977841,\"expire_in\":157680000,\"prev\":\"f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c\",\"seqno\":3,\"tag\":\"signature\"}\n",
-            "sig_type": 6,
-            "ctime": 1436977841,
-            "etime": 1594657841,
-            "rtime": null,
-            "sig_status": 0,
-            "prev": "f075c6f9b90d03787307c57842682574a99d267b80e189420b0fc5971016f03c",
-            "proof_id": null,
-            "proof_type": null,
-            "proof_text_check": null,
-            "proof_text_full": null,
-            "check_data_json": null,
-            "remote_id": null,
-            "api_url": null,
-            "human_url": null,
-            "proof_state": null,
-            "proof_status": null,
-            "retry_count": null,
-            "hard_fail_count": null,
-            "last_check": null,
-            "last_success": null,
-            "version": null,
-            "fingerprint": "2dddb8ddf2e0487f4fb3ec7848a36eac8d34ae97"
-        }
-    ],
-    "_comment": "NOTE: I've reordered these keys so that the last one here is the middle one used to sign. This is intentionally to trip up the Go client, which likes to only verify the last signature (and therefore by default used the last key and spuriously passed this test).",
-    "keys": [
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiaUBBAC4rsIlUx2wFOpLUX2RA4M57NFtRs5IadU0k3JdMq2sUqcVqBoY\nM3Fb+aI+kidTc2ViwO3EJ/dHJ04GH99gL0JdPLq4gIHZ6cbLDJn6IcJWjHXp3M5O\nIlkJ4bUwJ+GQPEqwqSzbMU2B5bNmZIJed+L1Lcg4RCyyRT9QKDPNNRR2MwARAQAB\niQE9BBgBAgAJBQJVpomlAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiaUACgkQ\nDDpaarWMUjvhCAP+KrnFTQqnSJOcyMY2GvNjeJxWIKfQLuBOUP9JNTxQW92gOgZy\nUbf4pPZShYduMW3vNQKOsuYI27UbwF9+SWPadhU1/1KDOcAc2I6gcJKKNUKjXIBs\ny2FViVgjfTQeAdWhXv+giSrGOB+spiLZKMFK/e8Ws5trUSmk9sruR94l6rl7WQP/\ndcDx57sJPXaMDV9WcL2lkZ8qGnNv0sn2Hkn3LBlOLcNldLZ46xtQhPWC/2J+ZLrd\nqOxdH77rboQRkCRIGU74xtFcIrFWE71lFNh2rGp3LTOUO8Dxl4lOna3DICjyQZtF\n/7wtrrTFtHqvJKFoUrBeZ3VYPok9J4Nkwie44o3ySic=\n=Z+fb\n-----END PGP PUBLIC KEY BLOCK-----",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmioMBBAC4ll4aBxfFepR/vfXs1TVaeDBi5wWKJNYrmfHAwXOZIFgrIPNx\n9ikGXZaiUBsekRDqcxmlsIMtZJWdpmIk180Tvm0evTQ7jCi8glltcS8OSCpFv9uW\nx8phrv6eY+U0AkTTpzPZqeO/IIywpbu3JTPsZxODETbo0l9/TpwV2+w6OwARAQAB\niQE9BBgBAgAJBQJVpoqDAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmioMACgkQ\nvbuZsUZm8QwQCwP/ehPkqLCLJtMMLXEzIk0vFyEA8HJqaHmTTpmoWH2Z71x7usgN\n5/11FBqAcSL8lbk+5rwtTGs9mogkt6Gdm5TG+kypkOgTxq1cTqWn0MoM4rr2czv7\nfuyYFkCP6tiqhIPBBp8g4/jWfhbPFzY4q9IqhZENVM3Ljq0GLtqcZGTH8YFe1QP7\nBEz3aMPXH+TnGYKSDJ+PinhunEN5WEa2/sPqPmuBEjsB4NC3fQXt7UC5JOMSNMAz\nN53BOmdExycT2CjEDj+pyhNViBEWTHuCf/MkKcmItDdcUDSvAQ9H2wlFEbUJwmbU\nDJqF9Foqo3P7k7YVxGf6g2vVNAjyqs3xsdh7ch88GNo=\n=JxSo\n-----END PGP PUBLIC KEY BLOCK-----",
-        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmI0EVaaJBQEEAK4gOAQlgExzLwhMqqvLXE1Lld5K6K1aKn/G9o8CWWph8G17gOx3\nwnPfWEZ7Sm553GclYK3OiCzrbrxlatsStv7bQjIofRVIo2xjbEboh1/6HM7udCFO\nB7tdRvqrw+Gw/57s1jApKbKvfL/tAeIRdEN0GE5XyJd107OPNcS8M9vrABEBAAG0\nVUhlbGVuICh0ZXN0aW5nIGtleXMgd2l0aCBzaWduaW5nIHN1YmtleXMgdGhhdCBj\naGFuZ2Ugb3ZlciB0aW1lKSA8dF9oZWxlbkBleGFtcGxlLmNvbT6IuQQTAQIAIwUC\nVaaJBQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEijbqyNNK6X1uwD\n/jOjk4NrQmdUiYbTHfKOWaltZu2vVFm5rBRSxwUIItK5iguGxJ1w+nfSIRpb9XcG\nLqXrin8AyPkuw4wgox7oHahWvF4R4qF9bfVf5W/n14xJiqQ1EFaIvO0eoQdmpI68\nx7FNl7sTOLwK23V+NgeJuyK2KuB88uhrmRqD6M29qg2AuI0EVaaJBQEEAMIX2acX\nimcfGRgQfXV88vThixQNj3RDxna+i2/ji4it2C77xI2fOrD7G9V/1fyI/xV5VkDc\nvebKpg13vcV2tBts5XeDiAzu1UJ7MXVPiKxZ7h7KzsBQexQVYlG/Eo9uJAuvkUKD\nCjM1TF1gc24gzdWSn95+aU+KpSXYJcnV21inABEBAAGInwQYAQIACQUCVaaJBQIb\nDAAKCRBIo26sjTSulxWFBACgAsPYYrqIS1z+bAbGcUGdrCZ6Qcj2gnTrNz2R+OCg\nWWjwOVCOGwH//CmXldetuQuTxWv+uE4jwL1rvNMZGFXDqSfP5QPYTDjUOzDlHmiK\na0v7BePO4TWV9Rymg8F4SdWxQDzhZgudsXl/TCDYGkVbByyOET8t1a3DYUlcqZwA\nBriNBFWmiQ0BBADGbDlbbQsqG0rR9CiOYTXnQH7gXbPW8JQGc+n27N05NO7k8b8U\nMhYXg7aDR89AvVHyL8UIL/+1c7aAU3xcsu/yBfwsAuDOjlZnB5K+IWEGxuFAS1I2\nPxhehRkct9aLh7lz26MPcaPV8Jn1GgsC9ZVc4IoUE5S+Rx28IxbSWb9XrQARAQAB\niQE9BBgBAgAJBQJVpokNAhsCAKgJEEijbqyNNK6XnSAEGQECAAYFAlWmiQ0ACgkQ\nxI8M+fSjZHW2SwQAk35hPHEoeJdoTEWN0fiJjcGocASsOtcuYl7SRIvqQ8xiFxUv\nlIFAiAua3Tu85Bf7vvUkfjbMQHUru1jfrGdVHWRS445hDpGo2JIOOG53MPbNMVTW\nhk6T/GdYH7tyEoSU3EpUPn3I6+9ThI9RF2UHNWk245PE5IbP2QOSRqI4OGey5gP/\nVBkq/7vweVO05MwaCeWGUJtutSi/BEarWjXJGvRHsF5ynxPw8I74NMN3eNWF3GJ9\nREKidCZaJiMUFuhnM0q0hs0JQLutyPJdPdk0Q+Lwp74GH8XAd3+9cHGjQsoKKv9I\nIgxzqpptFCn9YShewNGexOtRJBuiiNQNmGUFapkHPpM=\n=YNYZ\n-----END PGP PUBLIC KEY BLOCK-----"
-    ]
-}
 `,
 }
