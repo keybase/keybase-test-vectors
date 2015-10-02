@@ -25,3 +25,4 @@ exports.chain_test_inputs['t_helen_chain.json'] = require('../chains/t_helen_cha
 exports.chain_test_inputs['bad_full_hash.json'] = require('../chains/bad_full_hash.json');
 exports.chain_test_inputs['old_pgp_key.json'] = require('../chains/old_pgp_key.json');
 exports.chain_test_inputs['pnelsen_chain.json'] = require('../chains/pnelsen_chain.json');
+exports.chain_test_inputs['akalin_chain.json'] = require('../chains/akalin_chain.json');

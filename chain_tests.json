@@ -194,6 +194,13 @@
       "len": 21,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_akalin_sigchain": {
+      "_comment": "Fred has some unverifiable links in his chain from old bugs of ours. These need to be special cased.",
+      "input": "akalin_chain.json",
+      "len": 31,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
