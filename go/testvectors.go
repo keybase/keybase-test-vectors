@@ -204,6 +204,13 @@ const ChainTests = `
       "len": 31,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_repeat_eldest": {
+      "_comment": "We now define 'eldest' links to imply a sigchain reset. This is a basic test case with two links, both of type eldest, delegating the same eldest key. Old clients would've parsed this as a 2-link chain (where the second link was a no-op), but conforming clients should respect the reset adn return a 1-link chain.",
+      "input": "repeat_eldest.json",
+      "len": 1,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
@@ -5758,6 +5765,78 @@ var ChainTestInputs = map[string]string{
         "0120aa39aa0458019ae603412421f7136806ce8f1efc13ba1d0ccec5121df647df490a",
         "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG/MacGPG2 v2.0.22 (Darwin)\nComment: GPGTools - https://gpgtools.org\n\nmQENBFQC4E4BCADQgPeE4CNqg5b+eQ4rEcx8afoLw9hGKM3FvWvsuvruIyuzbuza\nlF+fawDahaFhS8CnarmNiHe525rv3xiTHcyAQ2Gmz+6UDvOP8NJOXIxtYXWdsXZr\nL4+b/dXg/OG1MKWKbcgFgemegSTID4Zgxsc8lGG9IuMx5Vbt2ewArj3QK6BS7AVo\nelE5N+KAznyJRuhohEEFqQt5DDO67pB2ySHs6YbwOeJ9h2VX+s9oCXUQZ3ItNrgX\n2fJR/qYAGAfImt+rDriZdPqLLcf4WQLdG14T+aeIXbCs52hbTeYTZMWzPDyrcDBx\nX4R8RLIC0DY6cZD5BRkmG3OH4hSMBnEOQgPhABEBAAG0I0ZyZWRlcmljayBBa2Fs\naW4gPGFrYWxpbkBnbWFpbC5jb20+iQE9BBMBCgAnBQJUAuBOAhsDBQkHhh+ABQsJ\nCAcDBRUKCQgLBRYCAwEAAh4BAheAAAoJEL+AW2BRZVNxrTgIAJWmdsU4g4McTzhC\nsJMHtlhc+DmjPsPozrQdt+qfVPVB4FAkVtadUch4jZ1O+U395g3vHCSBlxcqM5sj\nT4Ix0T94gD1XYktuOy0Qgsit5Wsq66KPEwvSZxexQlW5YB52H6mPfowJJr5WUZB+\nAjPpWJesuX13JzUcUJ6zqxi/Vq9f1rU8cSztmD+KGruYTIeu9vUeIIEs1RAV5uDl\nbmf8r7WSXkqgH9CitKz2sYJPFO/cbKJ0ixfYCF5pp+lDauMZ24vOojhbNSER28//\nQm7FUQGmlGsfkyY4e6hiyl/UL5lItaIejDAwo5qCvCvaVprdsQVxvPsbx9e/KxVX\nzn356N+5AQ0EVALgTgEIAL1ZrRiW7DFSFDRPkuiCuP5KzUAArqG6jdfL3mMBzMsR\npsjKv/3+h4D6fuiswc2RZlGXwZ0RawGsYwAH0XDcSjZ7Bc5YcK+twjJdaVx6N8P1\nF1bHATxQYh2a2/VUkY0amYzsI5x275htQPkta3lZyzbGSnTOwEA+kRRaKlunu1O0\n2gm69VEOHthRV8plwvmhdcFYwIR8tRwKX/tP8QCc6zAiRKPZ7SouekPNwJZBkyNZ\nzHOilvWLdbH6ZTjQoYgG+fD9WbQo7ofArWYft6zZIoKqgWNtCrgA+Uk5ZwpmcL6e\nM6Rra6gwdhh9Zu94LLllTCe95P8GtY618C1nS0UBdqkAEQEAAYkBJQQYAQoADwUC\nVALgTgIbDAUJB4YfgAAKCRC/gFtgUWVTcbv9B/9VNmDQ9FpUx8hnWBj7JA+VyKS3\natPlWhBsJk4G433mJuxWExLN2FKEc6Dowax0d5KDM3OO0j/cCCwI+I4WUFZCh247\nuXmF7sofcZJdFD1o3MNsxMa04ojmFeaJriWngUnJ1TjLSpkkBYI4j9TwGG1z5wZO\n5xTUoU0jFBYAb1dBQGB8YaAfmhqaWNivxNmHhfemTjQ4siMpnq3+7rOJQM+Qotg+\nD8UGKZpm6rTnK80m0jlYI/BzaB6Nm2svjY196p7dI5ZmnZWy1E2D98G5mAbZPBp6\nXb8VEE6fCSrGuJMZ4dwHE+Hi+DRzpjpJ9w6djEUmudeDjmRFUmGQg527JqIw\n=2oDo\n-----END PGP PUBLIC KEY BLOCK-----"
     ]
+}
+`,
+	"repeat_eldest.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "payload_hash": "775899f4c9c082463f29e5cf2e8474df3e04c096c34990411d8c4689e95c43f4",
+            "sig_id": "d0e751716e1cc76cc31135be108666a2df6e2f5be3e3b15f9746d6b15868fc4f0f",
+            "sig_id_short": "0OdRcW4cx2zDETW-EIZmot9uL1vj47Ffl0bW",
+            "kid": "01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowGtkltIVEEYx9d7LmpmhmWCeiIs22zmnDk3ydAeUsslpctDZuucc+a4J7dd27Nr\nitidSki7UJFBDxYIiUQY4UuRYGYmppUk5q0iwix6kC502WrW6K3HZh6Gb77v+33/\nb+Y7HRtmCQ352rVQaO5oKgzpf6tYtqfnx9cxikerZbLrmEoydxCXRkyfo9LQmGwG\nQLoRL6gswRyvA0UQWMxzMitBjoWKzBJZkHVZF1SZqCIRRABVFSOZaAqEiAW6pLEA\nMzZGN9wVxFvlNdw+isVYUXgd8zxUBF6QkYowL0GeklQAOU6QZYWVCJKDiX6Xy+HE\nppOmCRzgJKhCTWU5RMGspFEpClEx0SGnAU2RRMAjDSsSoIp0RDWJmswjBbECr6oU\n5/SYQQG0VwWbJMvw0DtqOOa6/Uf5//wM/jmciKgYWRdVUYCYACACWdNEIFKQKOgw\nWNdvEq8b7yFBrdjnrGXqbYyvtipo//kgGlNNvKbhcTPZkDpVnxGMhgjxgIWI52wM\nqakyvMRhBCN4UZAAXTamykuqmWy335XqsjEm2ev2UDeF4wrKNo0KN/b5vYSptzaE\npIRbQkItkRGhwUGxWKPj/07Psbh5lrN5gdxlXbnrIstyroUlTOXEVptPktPWXN6Q\nnlQef2qgayZ/5RRaUtZ3cdXIxumop60vMu1C+8mIwM8Tzazcz/hzsxxDBa/shwuX\nLirq+9VyJH194HPrgcSD068nj87EvlNjFhSTVGlwsS//aoZzbYG97VbHc/DoXBv5\nvjOlIalEnziOrKVg/43Ox71DRtrufX2ZHwdjii4M8HErbk417fhmG028El6cFd/d\nE9Y6uW32Q3LPMPh0z+EpHzkzGv1y1/nGQ40lNTEP9fe9Y8uH47oDY6x9+u7tnLqo\njFLreN5qo2Xzm4hLm+QJsvVZ54+p+VvSB9oeuO/Htd8Jn01I+3J9/Dc=\n=NV58\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a\",\"fingerprint\":\"aabb5fa551b65694c4a58159f9c0133699b28e49\",\"full_hash\":\"630381c1dc234d2028d392becaef13d0db87054dab806c9f4ec77d954b4265cc\",\"host\":\"keybase.io\",\"key_id\":\"f9c0133699b28e49\",\"kid\":\"01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a\",\"uid\":\"745cc9f7c761ae00709dd707b9276f19\",\"username\":\"kathy\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1445021453,\"expire_in\":157680000,\"prev\":null,\"seqno\":1,\"tag\":\"signature\"}\n",
+            "sig_type": 1,
+            "ctime": 1445021453,
+            "etime": 1602701453,
+            "rtime": null,
+            "sig_status": 2,
+            "prev": null,
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "aabb5fa551b65694c4a58159f9c0133699b28e49"
+        },
+        {
+            "seqno": 2,
+            "payload_hash": "82c46901d89995e2d44a36b3c4c901c89ffb344a5d7857b5307a13b3352d8f05",
+            "sig_id": "576ffbf4ad4abf4ad74ec480699c7abfc152b0a99334dc1365d049b21e3a7acd0f",
+            "sig_id_short": "V2_79K1Kv0rXTsSAaZx6v8FSsKmTNNwTZdBJ",
+            "kid": "01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a",
+            "sig": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\nowGtklloVDEUhmdarVQsbtWHoqgXrFIHTXKT3JtBRSy44lIrLlCtuUnuzMU6M86d\nqoP4IIqoxeVJrRR9Ebe2IgoqKExdKKIVF1BcWvtgFRdccMGtLrkV33w0eQgnOec/\n3zk5u4vyQ3nhry2Daf2pnTPD1184oUWjpk9ZbzhJmTWi642VqudQNVL5meqVnjSi\nBoB6Y0IFUtwkLnAoRZyYDNnQRNBhSDHKXOZSwZSwFLUAFIJjpqQDIUbAtSUC3IgY\nrpeIqXQq7SUyWpZzxyEuJwQ6lFCGBebEhkQrCQBNkzLmIFthFgTW1tRUx7kf12HU\nBKYNBZQCmVgLI1tqFEcJrlxoSiAd2wIES+7YQBO5WDNZkhHsYESJEFounvQDAF2r\nw3013kvqO21U91T7j/T/uQ21PXIW1jDMtYRFIVcAWIBJaQFLC1nUhUHeWl+lE3yV\nClh5Jp41NkSMTDYV2H8+SPusUWnfSyaMKNSPIuMF3hBjAhDEzI4Yal3KS6tqL/Ag\nFrWBXhEjlVZrAgZrGbGZ7pHQRdsIU9NFTBHhImVjC0vXVAALwKgwMWMAQyhtganN\nFCMCmy7WAL5anUgaUaTReExr+l4swTO1aWVs6LstPKxXKJwXKuidF4xZqG/hgL+z\n9+Rwn5/j+lXIRnplbOxxmZEN325ve1fRfPrjgyr5Y2HdifY6c9Yb+ubZo9LSjtNH\nR2zf99zMnD8U+3a2e8LSVScexBpmp+pK8jeV5ya1n6lccGTv+wPLLjQNvXR8fmPV\n5KLWA63zii+Uvu2+3nRjzvDbbeWFxRUnq1p+hSIft3YVRKuWnkts795y8+20Ta1t\n4JVcUTCwPt7w/atV/7JkdeHTmfkPE3eHtOy/09CcLcg9613pHPZXlC4Z9OhkWeee\nq/3PLe6k7Z8vfhpE75+d3Xzw/rdjucr42Alq7ZGRl5ZvHg5LtqI5HW7Hjvxdl3Oj\nF9xS13bEPnwpvzd1bm7bxBkbt1SMfNdVNGbt68/FvwE=\n=U/hA\n-----END PGP MESSAGE-----",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a\",\"fingerprint\":\"aabb5fa551b65694c4a58159f9c0133699b28e49\",\"full_hash\":\"630381c1dc234d2028d392becaef13d0db87054dab806c9f4ec77d954b4265cc\",\"host\":\"keybase.io\",\"key_id\":\"f9c0133699b28e49\",\"kid\":\"01010456c2ea35f0b662a539281321b92e969f9f6c9ec7e6701cca49edb11420f8d20a\",\"uid\":\"745cc9f7c761ae00709dd707b9276f19\",\"username\":\"kathy\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1445021498,\"expire_in\":157680000,\"prev\":\"775899f4c9c082463f29e5cf2e8474df3e04c096c34990411d8c4689e95c43f4\",\"seqno\":2,\"tag\":\"signature\"}\n",
+            "sig_type": 1,
+            "ctime": 1445021498,
+            "etime": 1602701498,
+            "rtime": null,
+            "sig_status": 0,
+            "prev": "775899f4c9c082463f29e5cf2e8474df3e04c096c34990411d8c4689e95c43f4",
+            "proof_id": null,
+            "proof_type": null,
+            "proof_text_check": null,
+            "proof_text_full": null,
+            "check_data_json": null,
+            "remote_id": null,
+            "api_url": null,
+            "human_url": null,
+            "proof_state": null,
+            "proof_status": null,
+            "retry_count": null,
+            "hard_fail_count": null,
+            "last_check": null,
+            "last_success": null,
+            "version": null,
+            "fingerprint": "aabb5fa551b65694c4a58159f9c0133699b28e49"
+        }
+    ],
+    "keys": [
+        "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v2\n\nmQENBFYhRusBCADN7sXS3A5QYPWSmfj3Ll9/nyVxa3o2q9InIkt7Sk36BcRUHXT5\nzS+Z8AiHeUPgHQIMOklKqIy3fbaFpSv1LpCx3+UM/BcNdI9HBDrvZJjwJqzcv+cK\n5MlCy6RsKHQZaqP4dkSte9V6q+SC6KVZzFTYoMYufjNj2k6WREGeEb0rxnS+h2aG\nUL9doSl7X11vMN3MG47J116jwXtZID+3foy1YGj/lGJW7lj8us4CJ/KjNoSx3E9j\nfzKMldOiepNfsL13kMi0rXT7xjpzg/i52/m6rlCswLNS1G9S2UDn0s1s9hFk563T\nlOmMkJnySgkxnh086jgwdRl6+aSYqT5EahZLABEBAAG0BWthdGh5iQE5BBMBAgAj\nBQJWIUbrAhsDBwsJCAcDAgEGFQgCCQoLBBYCAwECHgECF4AACgkQ+cATNpmyjkn5\nowgAu2cC/hcv7eTNbf5oTbIYOXUS7YwN3xXSlwOkMlxr/EpMFX2PYCxSIUSWwexl\n1KvDa1Qdhesc7FA3h2GpF9oaC5KWewga81FHsK3ZqYoAKkM1eCOqpvYoTLRkI2rt\nbH4qFQdQtUb8Es9LmYAcPuvG5EoqUvQVNzWYiKqxb4/MtgsJAfUf9ccDn9EHx0wP\nZ4nnHDQAH6F1xJRppcKqyRrbvlrxiPyYpRd0LbB/H+EpJ7mcDJTEhwAkhNzrohMy\nmDoaqAvXgaxePrOBgjs/4hYW1tYr1yYB0bARFYTPCoUj1O1WUZSOgyW0y2Vazq8C\n9COVgZaHiycMAcmeKNrqKBypT7kBDQRWIUbrAQgArKndgNrGGW7SW3weS/LCihyz\nAI4ZHWuXWHMrciN7B38DgbPWb2YgOr7IDvbuKBii93R/ON3kB9AKagokrJHLSEH1\nI1An8xBBYnT3z8tmbKqmUtZ7ds4too0IBcBCZMFpEmQG6p4L9KY32ecmut60sJXx\nI08tLz1IET736Hcdd/s4wtBhECC/ncPPuRT8uwqO7tnN3k3seuZnW5WjZl0iZxSE\nq7aKFiQ4RyTzcn25JDnr0mzi+ndfR0lUoftN3RsaGC8exWYbYEJgyodV0vr+SYK6\nL9ogRTdmC0RfkBmnt4CeL/ioS9se7pqxCLD/r4QTYUIE7x/0DDUSlFQGz5FSYQAR\nAQABiQEfBBgBAgAJBQJWIUbrAhsMAAoJEPnAEzaZso5JMKoH/ixeJzXmak18g/Gu\nVJSdwxs9IcAcDE0PBGjVFN5cr+odnYlSYA5WUEbP9t5E2aQKOK2UYpZsSmSoZ7hg\nbdvcyxLTKYgguyZdZtqC1A4wCE/+FqL2UlWzu/PFltzejYxZsEbIAaWuoHKgoLx0\n+WV4Y5XBBuQBuzkBU/bjQRfiX7nlLYKMWJGo5jGMzezpkRHsONXIuAzscAf+R5QN\n9J8HnslOHf9NsByQ5osN8UMRKIMW2PDyqzYP/8ADYAeDBXpUq0hsOMY7Cs1nIPno\nzMjcQB1hZPleXm8YZPTxK+Z5Y/lbBlKXyZt/6ERR9INM4UGBsPylxIVS67DMJi+w\nMPFJC3k=\n=An2v\n-----END PGP PUBLIC KEY BLOCK-----"
+    ],
+    "uid": "745cc9f7c761ae00709dd707b9276f19",
+    "username": "kathy"
 }
 `,
 }

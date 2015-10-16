@@ -201,6 +201,13 @@
       "len": 31,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_repeat_eldest": {
+      "_comment": "We now define 'eldest' links to imply a sigchain reset. This is a basic test case with two links, both of type eldest, delegating the same eldest key. Old clients would've parsed this as a 2-link chain (where the second link was a no-op), but conforming clients should respect the reset adn return a 1-link chain.",
+      "input": "repeat_eldest.json",
+      "len": 1,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
