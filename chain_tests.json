@@ -143,11 +143,13 @@
       "err_type": "WRONG_PREV"
     },
 
-    "test_error_later_subchain": {
-      "_comment": "The current eldest key should always correspond to the latest subchain.",
+    "test_ralph_with_earlier_eldest_key": {
+      "_comment": "Eldest keys can be reused, which means there can be subchains other than the latest one that correspond to the current eldest key. Those must be ignored. Previously, before we supported repeating eldest keys at all, we used to require that this was an error. Note that if the latest links don't correspond to the current eldest key, as we're testing here, that's an implicit reset, and we return no links.",
       "input": "ralph_chain.json",
       "eldest": "first_eldest",
-      "err_type": "NOT_LATEST_SUBCHAIN"
+      "len": 0,
+      "sibkeys": 1,
+      "subkeys": 0
     },
 
     "test_ralph_with_new_eldest_key": {
