@@ -210,6 +210,13 @@
       "len": 1,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_hardcoded_reset": {
+      "_comment": "Several users (6) managed to do a sigchain reset and reuse their eldest key without an 'eldest' link, before we prohibited that on the server. This test uses the chain of one of those users, as a canary to make sure they're covered.",
+      "input": "hardcoded_reset.json",
+      "len": 1,
+      "sibkeys": 1,
+      "subkeys": 0
     }
   }
 }
