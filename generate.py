@@ -6,7 +6,7 @@ from pathlib import Path
 root = Path(__file__).parent
 chains_dir = root / "chains"
 chain_tests_file = root / "chain_tests.json"
-chain_files = list(chains_dir.glob("*.json"))
+chain_files = sorted(list(chains_dir.glob("*.json")))
 
 # Generate JS
 
