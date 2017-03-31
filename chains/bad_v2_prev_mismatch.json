@@ -1,0 +1,40 @@
+{
+   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "keys" : [
+      "012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a",
+      "01201355196a8850b01630ae0712d36c7d49be7839bb8c7a32e44c466c0cc0da90a90a"
+   ],
+   "label_sigs" : {
+      "e" : "5503ad6ad39df72a465d3ad8205d2d72b9eaae97045bcb4137d1afe3cf9b19890f",
+      "sib1" : "70537cc9e89d921e271adef49ff54dee09998a012e79fc06eaf6c722961d90470f"
+   },
+   "label_kids" : {
+      "e" : "012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a",
+      "sib1" : "01201355196a8850b01630ae0712d36c7d49be7839bb8c7a32e44c466c0cc0da90a90a"
+   },
+   "username" : "max32",
+   "chain" : [
+      {
+         "ctime" : 1491233666,
+         "seqno" : 1,
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgmP7dSE5UbJ/+JeNbyBsxLXUrOBPkv/i+euL6+9G0ro8Kp3BheWxvYWTEJ5UCAcDEIG4tRNgjpCdd7rTPd13dZMWia4dghmNPEbr3ldFXDJSYAaNzaWfEQF6brhxpoJp+3mp4vDMnJVokPZ5MTKBSZIu4gGc4KUFw5nsjGEbiNtBIXKWc3+GPU/pclWMXI1+8/XFxlLfqIwyoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "sig_version" : 2,
+         "payload_hash" : "6e2d44d823a4275deeb4cf775ddd64c5a26b876086634f11baf795d1570c9498",
+         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1491233666,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+         "sig_id" : "5503ad6ad39df72a465d3ad8205d2d72b9eaae97045bcb4137d1afe3cf9b19890f",
+         "kid" : "012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a",
+         "prev" : null
+      },
+      {
+         "seqno" : 2,
+         "sig_version" : 2,
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgmP7dSE5UbJ/+JeNbyBsxLXUrOBPkv/i+euL6+9G0ro8Kp3BheWxvYWTESJUCAsQgby1E2COkJ13utM93Xd1kxaJrh2CGY08RuveV0VcMlJjEIJidJh9m+i+RZQjAEM75l03KNZ/DCaLzXjK7mw57eEIHC6NzaWfEQDbtF95A2D5ZIAcPU90DL2xNvdQJWwVWqF4gBhGgI1zBd00CjIjnWPqOZFNE3IrS/G/tGzr4BRvg+N7nbXWPrgKoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "ctime" : 1491233766,
+         "sig_id" : "70537cc9e89d921e271adef49ff54dee09998a012e79fc06eaf6c722961d90470f",
+         "payload_hash" : "989d261f66fa2f916508c010cef9974dca359fc309a2f35e32bb9b0e7b784207",
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a\",\"host\":\"keybase.io\",\"kid\":\"012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"01201355196a8850b01630ae0712d36c7d49be7839bb8c7a32e44c466c0cc0da90a90a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgE1UZaohQsBYwrgcS02x9Sb54ObuMejLkTEZsDMDakKkKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOThmZWRkNDg0ZTU0NmM5ZmZlMjVlMzViYzgxYjMxMmQ3NTJiMzgxM2U0YmZmOGJlN2FlMmZhZmJkMWI0YWU4ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOThmZWRkNDg0ZTU0NmM5ZmZlMjVlMzViYzgxYjMxMmQ3NTJiMzgxM2U0YmZmOGJlN2FlMmZhZmJkMWI0YWU4ZjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwMTM1NTE5NmE4ODUwYjAxNjMwYWUwNzEyZDM2YzdkNDliZTc4MzliYjhjN2EzMmU0NGM0NjZjMGNjMGRhOTBhOTBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDkxMjMzNzY2LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjZlMmQ0NGQ4MjNhNDI3NWRlZWI0Y2Y3NzVkZGQ2NGM1YTI2Yjg3NjA4NjYzNGYxMWJhZjc5NWQxNTcwYzk0OTgiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAOcBafX1vzNdBQGgq/T7njbQT7YXFDH+wNYB0IK9HCQEnpnGHi9pElSGrHl+gDhX02LfpbevEHOZ8naZUG7KrBqhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1491233766,\"expire_in\":314496000,\"prev\":\"6e2d44d823a4275deeb4cf775ddd64c5a26b876086634f11baf795d1570c9498\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+         "kid" : "012098fedd484e546c9ffe25e35bc81b312d752b3813e4bff8be7ae2fafbd1b4ae8f0a",
+         "prev" : "6e2d44d823a4275deeb4cf775ddd64c5a26b876086634f11baf795d1570c9498"
+      }
+   ]
+}

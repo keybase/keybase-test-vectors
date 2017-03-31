@@ -1,0 +1,40 @@
+{
+   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "keys" : [
+      "0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a",
+      "0120acf4cbf5e44e70568a249e486a937ba0907708d4c044636275a35ba3fc1c6c8b0a"
+   ],
+   "username" : "max32",
+   "label_sigs" : {
+      "sib1" : "6e6b7c3f02ac744a943b3ca12be2097290d3a304a66bf9b9451bdc5f8925a6b80f",
+      "e" : "7506fef98964669961533684eb9765803ec4f9d7593568ea847c9104def80ea10f"
+   },
+   "label_kids" : {
+      "e" : "0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a",
+      "sib1" : "0120acf4cbf5e44e70568a249e486a937ba0907708d4c044636275a35ba3fc1c6c8b0a"
+   },
+   "chain" : [
+      {
+         "sig_version" : 2,
+         "sig_id" : "7506fef98964669961533684eb9765803ec4f9d7593568ea847c9104def80ea10f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrn9IwZ9YpMjafPh3hUlJby6M6HgW7+Hk+vV7hDSt2VMKp3BheWxvYWTEJ5UCAcDEIFOAAAXfZ/UZtiGXtgqBpuoL7MTR1+aC3IDTBrP11zpxAaNzaWfEQHf0UJJ8E4C8ah7NJxpcCi67nlOVDbPL+NAyW1KlLlYVWyTbqaIDsTqOC7vyPm7nQtD6q+M43rlQP4I9K3pMtQOoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "ctime" : 1491233669,
+         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1491233669,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+         "seqno" : 1,
+         "payload_hash" : "53800005df67f519b62197b60a81a6ea0becc4d1d7e682dc80d306b3f5d73a71",
+         "prev" : null,
+         "kid" : "0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a"
+      },
+      {
+         "sig_version" : 2,
+         "sig_id" : "6e6b7c3f02ac744a943b3ca12be2097290d3a304a66bf9b9451bdc5f8925a6b80f",
+         "ctime" : 1491233769,
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrn9IwZ9YpMjafPh3hUlJby6M6HgW7+Hk+vV7hDSt2VMKp3BheWxvYWTESJUCAsQgU4AABd9n9Rm2IZe2CoGm6gvsxNHX5oLcgNMGs/XXOnHEIB5B7BECtlXIygL1Z08iR7PHFSNozM2mMCLPspAywR6KDKNzaWfEQMgTqyZ6XF3SVxMHVaY7+Mg99t2IJFVGS2KvEWsf/v+ZfCHdGJStmw+Wn8dY9vshJQp7bppAzwbafaCHhg3iSw6oc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "seqno" : 2,
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a\",\"host\":\"keybase.io\",\"kid\":\"0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"0120acf4cbf5e44e70568a249e486a937ba0907708d4c044636275a35ba3fc1c6c8b0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrPTL9eROcFaKJJ5IapN7oJB3CNTARGNidaNbo/wcbIsKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYWU3ZjQ4YzE5ZjU4YTRjOGRhN2NmODc3ODU0OTQ5NmYyZThjZTg3ODE2ZWZlMWU0ZmFmNTdiODQzNGFkZDk1MzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWU3ZjQ4YzE5ZjU4YTRjOGRhN2NmODc3ODU0OTQ5NmYyZThjZTg3ODE2ZWZlMWU0ZmFmNTdiODQzNGFkZDk1MzBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwYWNmNGNiZjVlNDRlNzA1NjhhMjQ5ZTQ4NmE5MzdiYTA5MDc3MDhkNGMwNDQ2MzYyNzVhMzViYTNmYzFjNmM4YjBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDkxMjMzNzY5LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjUzODAwMDA1ZGY2N2Y1MTliNjIxOTdiNjBhODFhNmVhMGJlY2M0ZDFkN2U2ODJkYzgwZDMwNmIzZjVkNzNhNzEiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA9py1v2e3ak4ujseiWG/N16pwjiGTm6vxVj6o9d+VMjarieLjEy+NhH58aXvreqzt4o/0/L7493r/9cRGIx+MAahzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1491233769,\"expire_in\":314496000,\"prev\":\"53800005df67f519b62197b60a81a6ea0becc4d1d7e682dc80d306b3f5d73a71\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+         "kid" : "0120ae7f48c19f58a4c8da7cf8778549496f2e8ce87816efe1e4faf57b8434add9530a",
+         "prev" : "53800005df67f519b62197b60a81a6ea0becc4d1d7e682dc80d306b3f5d73a71",
+         "payload_hash" : "1e41ec1102b655c8ca02f5674f2247b3c7152368cccda63022cfb29032c11e8a"
+      }
+   ]
+}

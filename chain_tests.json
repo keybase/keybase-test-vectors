@@ -217,6 +217,78 @@
       "len": 1,
       "sibkeys": 1,
       "subkeys": 0
+    },
+    "test_v1_v2_stubbed_mix" : {
+      "_comment" : "A chain some V1, some V2 links, and some are stubbed",
+      "input" : "v1_v2_stubbed_mix.json",
+      "len" : 4,
+      "sibkeys" : 2,
+      "subkeys" : 2
+    },
+    "test_v2_stubbed" : {
+      "_comment" : "A chain with all V2 links, and some are stubbed",
+      "input" : "v2_stubbed.json",
+      "len" : 4,
+      "sibkeys" : 2,
+      "subkeys" : 2
+    },
+    "test_v2_simple" : {
+      "_comment" : "A chain with all V2 links, but none are stubbed",
+      "input" : "v2_simple.json",
+      "len" : 4,
+      "sibkeys" : 2,
+      "subkeys" : 2
+    },
+    "test_bad_v2_delegate_stubbed" : {
+      "_comment" : "A chain that has a key delegate stubbed (a no-no)",
+      "input" : "bad_v2_delegate_stubbed.json",
+      "err_type" : "SIGCHAIN_V2_STUBBED_SIGNATURE_NEEDED"
+    },
+    "test_bad_v2_first_stubbed" : {
+      "_comment" : "A chain that has an eldest link stubbed (a no-no)",
+      "input" : "bad_v2_first_stubbed.json",
+      "err_type" : "SIGCHAIN_V2_STUBBED_FIRST_LINK"
+    },
+    "test_bad_v2_hash_mismatch" : {
+      "_comment" : "A chain that has a link=2 wrong hash to body",
+      "input" : "bad_v2_hash_mismatch.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_HASH"
+    },
+    "test_bad_v2_prev_mismatch" : {
+      "_comment" : "A chain that has a link=2 wrong prev",
+      "input" : "bad_v2_prev_mismatch.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
+    },
+    "test_bad_v2_seqno_mismatch" : {
+      "_comment" : "A chain that has a link=2 wrong seqno",
+      "input" : "bad_v2_seqno_mismatch.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
+    },
+    "test_bad_v2_type_mismatch" : {
+      "_comment" : "A chain that has a link=2 type subkey v sibkey mismatch",
+      "input" : "bad_v2_type_mismatch.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
+    },
+    "test_v2_with_revokes" : {
+      "_comment" : "A chain with all V2 links, and some revokes, 1 stubbed link",
+      "input" : "v2_with_revokes.json",
+      "len" : 4,
+      "sibkeys" : 2
+    },
+    "test_bad_v2_stubbed_revoke_sig" : {
+      "_comment" : "A chain with all V2 links, with an errant stubbed revoke sig",
+      "input" : "bad_v2_stubbed_revoke_sig.json",
+      "err_type" : "SIGCHAIN_V2_STUBBED_SIGNATURE_NEEDED"
+    },
+    "test_bad_v2_stubbed_revoke_sigs" : {
+      "_comment" : "A chain with all V2 links, with an errant stubbed revoke sig",
+      "input" : "bad_v2_stubbed_revoke_sigs.json",
+      "err_type" : "SIGCHAIN_V2_STUBBED_SIGNATURE_NEEDED"
+    },
+    "test_bad_v2_revoke_type_mismatch" : {
+      "_comment" : "A chain with all V2 links, with an errant stubbed revoke sig",
+      "input" : "bad_v2_revoke_type_mismatch.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
     }
   }
 }

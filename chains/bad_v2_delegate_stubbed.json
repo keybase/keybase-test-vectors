@@ -1,0 +1,60 @@
+{
+   "username" : "max32",
+   "label_kids" : {
+      "s" : "0121107b1e1c51f3c7314054aebfc531cec39700b1ba99d3af533d98989e739481030a",
+      "sub1" : "012145e6457c0eeb2b5df06b969f22851b2147417d4d0a25f0fad968cf20f38f18710a",
+      "e" : "012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a",
+      "sib1" : "0120d9e110eaa44456b5ffd9e44bcb8544ab2acd3ee3f02516d45ef6ae1f48a5af480a"
+   },
+   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "label_sigs" : {
+      "s" : "f5e4522b697257fd123ef2668bbff0cbd3ca2ec54c074f3fa13b0e75702c52740f",
+      "sib1" : "27c32cfb475df7b4c53a8abc03567f95db53f222d9342c1285402e07d967063b0f",
+      "e" : "2ca2ae0a30779d0f4676c83cc4aa12ff18f1b1bcf1b016a2bee666e0d6b2d9250f",
+      "sub1" : "f0ef2fdae176837a485321c33f13b2ee82e1234e09c1e7a187991e6eb674bbb50f"
+   },
+   "chain" : [
+      {
+         "kid" : "012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a",
+         "prev" : null,
+         "seqno" : 1,
+         "ctime" : 1491165517,
+         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1491165517,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+         "payload_hash" : "9c8e4a9b42d3f78097176edd201c6093f01e3cd06d22acc58c484b24cee7e6f8",
+         "sig_version" : 2,
+         "sig_id" : "2ca2ae0a30779d0f4676c83cc4aa12ff18f1b1bcf1b016a2bee666e0d6b2d9250f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghYZK13G1h+v3na+d7hQqu9/QSVIVlvNnKpIWQd86amUKp3BheWxvYWTEJ5UCAcDEIJyOSptC0/eAlxdu3SAcYJPwHjzQbSKsxYxISyTO5+b4AaNzaWfEQIYXCNNP/Trf4X7VvR/NI1mF6vkrh/q+GX72XXmcRovDeGUjkJxDkgG7BVcSlD9ouR8Lg0SR7uFZkswmChTF/gKoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ=="
+      },
+      {
+         "kid" : "012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a",
+         "seqno" : 2,
+         "prev" : "9c8e4a9b42d3f78097176edd201c6093f01e3cd06d22acc58c484b24cee7e6f8",
+         "payload_hash" : "6a69bb0ec44652f6905f5a63741bf797b464b9a5258bb04ea88af960c2391e33",
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a\",\"host\":\"keybase.io\",\"kid\":\"012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"subkey\":{\"kid\":\"0121107b1e1c51f3c7314054aebfc531cec39700b1ba99d3af533d98989e739481030a\",\"parent_kid\":\"012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a\",\"reverse_sig\":null},\"type\":\"subkey\",\"version\":1},\"ctime\":1491165517,\"expire_in\":314496000,\"prev\":\"9c8e4a9b42d3f78097176edd201c6093f01e3cd06d22acc58c484b24cee7e6f8\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+         "ctime" : 1491165517,
+         "sig_version" : 2,
+         "sig_id" : "f5e4522b697257fd123ef2668bbff0cbd3ca2ec54c074f3fa13b0e75702c52740f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghYZK13G1h+v3na+d7hQqu9/QSVIVlvNnKpIWQd86amUKp3BheWxvYWTESJUCAsQgnI5Km0LT94CXF27dIBxgk/AePNBtIqzFjEhLJM7n5vjEIGppuw7ERlL2kF9aY3Qb95e0ZLmlJYuwTqiK+WDCOR4zDKNzaWfEQJdZfh8581B0/JxVOS++DyOciXFbKleNdoC46DDBMo/X+d4C2Z9gXN69LJcw8GIYuj+lqitECDkycFDMhyY3gwqoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ=="
+      },
+      {
+         "s2" : "lQIDxCBqabsOxEZS9pBfWmN0G/eXtGS5pSWLsE6oivlgwjkeM8QgvapHvQa2ALsAY7dt6DZS2UKic0vygpArbZzySRNxytkL"
+      },
+      {
+         "kid" : "0120d9e110eaa44456b5ffd9e44bcb8544ab2acd3ee3f02516d45ef6ae1f48a5af480a",
+         "seqno" : 4,
+         "prev" : "bdaa47bd06b600bb0063b76de83652d942a2734bf282902b6d9cf2491371cad9",
+         "sig_version" : 2,
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg2eEQ6qREVrX/2eRLy4VEqyrNPuPwJRbUXvauH0ilr0gKp3BheWxvYWTESJUCBMQgvapHvQa2ALsAY7dt6DZS2UKic0vygpArbZzySRNxytnEIBwwVr+N4jwGYuenA3pTegWQ3VGTJOkjtZje941iO0O6DKNzaWfEQIX6P6MJjikuJJSry2oK77t4aQGv9Ubdu+mpfZkMrhk2fYDNTpwwTYkcmdF2S3yyyb/kARm8TQAuuXAQLjQNEwyoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "sig_id" : "f0ef2fdae176837a485321c33f13b2ee82e1234e09c1e7a187991e6eb674bbb50f",
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a\",\"host\":\"keybase.io\",\"kid\":\"0120d9e110eaa44456b5ffd9e44bcb8544ab2acd3ee3f02516d45ef6ae1f48a5af480a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"subkey\":{\"kid\":\"012145e6457c0eeb2b5df06b969f22851b2147417d4d0a25f0fad968cf20f38f18710a\",\"parent_kid\":\"0120d9e110eaa44456b5ffd9e44bcb8544ab2acd3ee3f02516d45ef6ae1f48a5af480a\",\"reverse_sig\":null},\"type\":\"subkey\",\"version\":1},\"ctime\":1491165617,\"expire_in\":314496000,\"prev\":\"bdaa47bd06b600bb0063b76de83652d942a2734bf282902b6d9cf2491371cad9\",\"seq_type\":1,\"seqno\":4,\"tag\":\"signature\"}",
+         "ctime" : 1491165617,
+         "payload_hash" : "1c3056bf8de23c0662e7a7037a537a0590dd519324e923b598def78d623b43ba"
+      }
+   ],
+   "keys" : [
+      "012085864ad771b587ebf79daf9dee142abbdfd049521596f3672a921641df3a6a650a",
+      "0121107b1e1c51f3c7314054aebfc531cec39700b1ba99d3af533d98989e739481030a",
+      "0120d9e110eaa44456b5ffd9e44bcb8544ab2acd3ee3f02516d45ef6ae1f48a5af480a",
+      "012145e6457c0eeb2b5df06b969f22851b2147417d4d0a25f0fad968cf20f38f18710a"
+   ]
+}
