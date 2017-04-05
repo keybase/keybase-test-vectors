@@ -47,7 +47,6 @@ chain :
       ctime : "+100"
       signer : "sib1"
       version : 2
-      stubbed : true
     },
     {
       label : "btc5"

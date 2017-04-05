@@ -272,7 +272,7 @@
     "test_v2_with_revokes" : {
       "_comment" : "A chain with all V2 links, and some revokes, 1 stubbed link",
       "input" : "v2_with_revokes.json",
-      "len" : 4,
+      "len" : 5,
       "sibkeys" : 2
     },
     "test_bad_v2_stubbed_revoke_sig" : {
