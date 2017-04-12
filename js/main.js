@@ -1,5 +1,6 @@
 exports.chain_tests = require('../chain_tests.json');
 exports.chain_test_inputs = {};
+exports.chain_test_inputs['00dani.json'] = require('../chains/00dani.json');
 exports.chain_test_inputs['akalin_chain.json'] = require('../chains/akalin_chain.json');
 exports.chain_test_inputs['bad_full_hash.json'] = require('../chains/bad_full_hash.json');
 exports.chain_test_inputs['bad_prev_chain.json'] = require('../chains/bad_prev_chain.json');
@@ -20,6 +21,7 @@ exports.chain_test_inputs['bad_v2_type_mismatch.json'] = require('../chains/bad_
 exports.chain_test_inputs['empty_chain.json'] = require('../chains/empty_chain.json');
 exports.chain_test_inputs['example_revokes_chain.json'] = require('../chains/example_revokes_chain.json');
 exports.chain_test_inputs['expired_key_chain.json'] = require('../chains/expired_key_chain.json');
+exports.chain_test_inputs['goozbach.json'] = require('../chains/goozbach.json');
 exports.chain_test_inputs['hardcoded_reset.json'] = require('../chains/hardcoded_reset.json');
 exports.chain_test_inputs['jack_chain.json'] = require('../chains/jack_chain.json');
 exports.chain_test_inputs['jack_chain_missing_first_link.json'] = require('../chains/jack_chain_missing_first_link.json');

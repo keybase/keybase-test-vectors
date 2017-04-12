@@ -289,6 +289,20 @@
       "_comment" : "A chain with all V2 links, with an errant stubbed revoke sig",
       "input" : "bad_v2_revoke_type_mismatch.json",
       "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
+    },
+    "00dani": {
+      "_comment": "00dani's chain got broken after pgp key update with invalid usage flags.",
+      "input": "00dani.json",
+      "len": 55,
+      "sibkeys": 4,
+      "subkeys": 3
+    },
+    "goozbach": {
+      "_comment": "goozbach's chain got broken after revoking and adding pgp key, wrong bundle was used to verify reverse_sig.",
+      "input": "goozbach.json",
+      "len": 14,
+      "sibkeys": 3,
+      "subkeys": 2
     }
   }
 }
