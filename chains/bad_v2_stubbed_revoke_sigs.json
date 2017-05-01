@@ -1,84 +1,84 @@
 {
    "username" : "max32",
-   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
-   "label_sigs" : {
-      "btc5" : "91280149572bf4f98f278a1849c514502925ed5660eeb43706c8ea9123d826170f",
-      "e" : "49b26f5f783345e0e540272e739b3f91f2a72b8941a46ae820cd1364bb87aeea0f",
-      "btc1" : "249bc18103493619d95b083cb100464c4df4ea73b8dbb084d75db52cf3d81a4c0f",
-      "btc4" : "0449da87a19a046b292503c0571a5bae672f9b0df057bcbea5350b37253796600f",
-      "btc3" : "0a921ca6315766a930ecd19f23da937f7158526c611a97e9262a551d200a53be0f",
-      "sib1" : "2b69b4158e85dde14aa81e1413cf4fca018aa41df2ce0fc35fd88e6c1bb6b06c0f",
-      "btc2" : "9bb84c11369a6f5ecff10a8b179baa98cdd6b2e24f534a1f427e2a912a4e74a80f"
-   },
    "chain" : [
       {
-         "payload_hash" : "6ed6e697717a32219bc5cd6e2e2f021bf6ceaf45acce7406b2bf6aae135d74c1",
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghwS+JDGQWUypQnuLIWAhyMo2LKr+JiMsqu5q9QvMQdoKp3BheWxvYWTEJ5UCAcDEIG7W5pdxejIhm8XNbi4vAhv2zq9FrM50BrK/aq4TXXTBAaNzaWfEQFUABXLUS2nxot2+izq4BvHl64nlEISTnJlcYpQqtxvQnbIwXdnLCAkY5P7gmLlJqmF1eOkJVVrkauod8GEwLAaoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1491248219,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-         "ctime" : 1491248219,
-         "sig_version" : 2,
-         "sig_id" : "49b26f5f783345e0e540272e739b3f91f2a72b8941a46ae820cd1364bb87aeea0f",
-         "kid" : "01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a",
+         "kid" : "012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a",
          "seqno" : 1,
-         "prev" : null
+         "sig_version" : 2,
+         "ctime" : 1493675183,
+         "payload_hash" : "bb3441bd8b08c96e80b1ef17ea452afd63a84672df3b8afd6452ebc25c30f7f3",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIufGfR2eLXtlP3dqRPCDmYcGKhmQK9CmP9OVt2917ZQKp3BheWxvYWTEJ5UCAcDEIP6iACmz1LVgRH4ZfiSe1xiCOSpB4qFhPdletb+xukR6AaNzaWfEQEiilCEnwI3jycFUzb4e0/+Iab0x5JAVHeLBkj1iaK7J9TdHa3Bl4g9UrgAXVT6szT8AONUyplGZ9wEr1Ycc/wKoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "sig_id" : "7d1e012725f42e9643ca4208fc7626d3cf28daf62163c5ce5214296280d4f76f0f",
+         "prev" : null,
+         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":2},\"ctime\":1493675183,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}"
       },
       {
-         "kid" : "01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a",
-         "sig_id" : "2b69b4158e85dde14aa81e1413cf4fca018aa41df2ce0fc35fd88e6c1bb6b06c0f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIufGfR2eLXtlP3dqRPCDmYcGKhmQK9CmP9OVt2917ZQKp3BheWxvYWTESJUCAsQguzRBvYsIyW6Ase8X6kUq/WOoRnLfO4r9ZFLrwlww9/PEIHcvzzdK7KJb3xyXMrCxfkAqiLHn5nb7dSVZe5OonFm6C6NzaWfEQFB1hQOtSc2fbkAHdC2vCVPv/GIj2fcre9zYcP3ZNDAKCvCdAK1kPEnoQT2Tjbwwjppn+aTvKafX690Lc94brwWoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "payload_hash" : "21111e4a17e5ede6694bd49a27bc79662b727c9706c89ed066b6eaa2d99d15fc",
+         "ctime" : 1493675283,
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"host\":\"keybase.io\",\"kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcOoKCmfae5L0ckDQS0dqaqdpap09Q8clU8LcE38yxLwKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMjJlN2M2N2QxZDllMmQ3YjY1M2Y3NzZhNDRmMDgzOTk4NzA2MmExOTkwMmJkMGE2M2ZkMzk1Yjc2Zjc1ZWQ5NDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjJlN2M2N2QxZDllMmQ3YjY1M2Y3NzZhNDRmMDgzOTk4NzA2MmExOTkwMmJkMGE2M2ZkMzk1Yjc2Zjc1ZWQ5NDBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNzBlYTBhMGE2N2RhN2I5MmY0NzI0MGQwNGI0NzZhNmFhNzY5NmE5ZDNkNDNjNzI1NTNjMmRjMTM3ZjMyYzRiYzBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6Mn0sImN0aW1lIjoxNDkzNjc1MjgzLCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6ImJiMzQ0MWJkOGIwOGM5NmU4MGIxZWYxN2VhNDUyYWZkNjNhODQ2NzJkZjNiOGFmZDY0NTJlYmMyNWMzMGY3ZjMiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAVfZfcDqN/D74W7f+G2xFeaEtkhxcQoN7QYJzb8PQhteUkZ4H2snC6hlscPPot0+m8lZP71oyzIEJVV83fyODDKhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":2},\"ctime\":1493675283,\"expire_in\":314496000,\"prev\":\"bb3441bd8b08c96e80b1ef17ea452afd63a84672df3b8afd6452ebc25c30f7f3\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+         "prev" : "bb3441bd8b08c96e80b1ef17ea452afd63a84672df3b8afd6452ebc25c30f7f3",
+         "sig_id" : "6c3d68cacab47cab4154e2bb0fc4b6db2f65f2965ad19e6eff6f409bdb6820b00f",
+         "sig_version" : 2,
          "seqno" : 2,
-         "prev" : "6ed6e697717a32219bc5cd6e2e2f021bf6ceaf45acce7406b2bf6aae135d74c1",
-         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"host\":\"keybase.io\",\"kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYO6KLleahr6FuMcxirJ21izJcpTeOoHjqPRkutNLxuUKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwODcwNGJlMjQzMTkwNTk0Y2E5NDI3YjhiMjE2MDIxYzhjYTM2MmNhYWZlMjYyMzJjYWFlZTZhZjUwYmNjNDFkYTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwODcwNGJlMjQzMTkwNTk0Y2E5NDI3YjhiMjE2MDIxYzhjYTM2MmNhYWZlMjYyMzJjYWFlZTZhZjUwYmNjNDFkYTBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNjBlZThhMmU1NzlhODZiZTg1YjhjNzMxOGFiMjc2ZDYyY2M5NzI5NGRlM2E4MWUzYThmNDY0YmFkMzRiYzZlNTBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDkxMjQ4MzE5LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjZlZDZlNjk3NzE3YTMyMjE5YmM1Y2Q2ZTJlMmYwMjFiZjZjZWFmNDVhY2NlNzQwNmIyYmY2YWFlMTM1ZDc0YzEiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAEkN4ZkM/Edet81Gio5UAsOVEqDxlthlYzb4nZgh94ZwyZc2moPyL7U8Evmbbl1I/b6rax4HVyklW8qP2yMfmAahzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1491248319,\"expire_in\":314496000,\"prev\":\"6ed6e697717a32219bc5cd6e2e2f021bf6ceaf45acce7406b2bf6aae135d74c1\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-         "sig_version" : 2,
-         "ctime" : 1491248319,
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghwS+JDGQWUypQnuLIWAhyMo2LKr+JiMsqu5q9QvMQdoKp3BheWxvYWTESJUCAsQgbtbml3F6MiGbxc1uLi8CG/bOr0WsznQGsr9qrhNddMHEIBRKaMgDsvB3LpCm/nkUK/IuqRg6fnCd5ue2QSctkZyQC6NzaWfEQHqtxaK15rungScTXKeBjqPy374CVjELC4qTs04mVgCjxjxH5cXn5pnHNSu5hW74ZKwlLF/AkkasPYi00Bvd2wOoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-         "payload_hash" : "144a68c803b2f0772e90a6fe79142bf22ea9183a7e709de6e7b641272d919c90"
+         "kid" : "012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a"
       },
       {
-         "payload_hash" : "b0b262748739c69c28d818904207897acb7dd8d3038c3daa1f1dff3f075a9701",
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYO6KLleahr6FuMcxirJ21izJcpTeOoHjqPRkutNLxuUKp3BheWxvYWTESJUCA8QgFEpoyAOy8HcukKb+eRQr8i6pGDp+cJ3m57ZBJy2RnJDEILCyYnSHOcacKNgYkEIHiXrLfdjTA4w9qh8d/z8HWpcBBqNzaWfEQG/WoUsQhpai3TXwKTsdBnbyOcwxNm06fc0ge+Gfwk6FnL3U5aXwATH+NQzu/q6CZPzy/aX0SPmv0Te5ZymZfgSoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"17628aKoYcwvPh19ww6UqqAK71yWrkgW2x\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"host\":\"keybase.io\",\"kid\":\"012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1491248419,\"expire_in\":314496000,\"prev\":\"144a68c803b2f0772e90a6fe79142bf22ea9183a7e709de6e7b641272d919c90\",\"seq_type\":1,\"seqno\":3,\"tag\":\"signature\"}",
          "sig_version" : 2,
-         "ctime" : 1491248419,
-         "kid" : "012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a",
          "seqno" : 3,
-         "sig_id" : "249bc18103493619d95b083cb100464c4df4ea73b8dbb084d75db52cf3d81a4c0f",
-         "prev" : "144a68c803b2f0772e90a6fe79142bf22ea9183a7e709de6e7b641272d919c90"
+         "kid" : "012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a",
+         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"126vxLmZQaVYhgiHsK8GpiDGa9PRERwG9s\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"host\":\"keybase.io\",\"kid\":\"012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":2},\"ctime\":1493675383,\"expire_in\":314496000,\"prev\":\"21111e4a17e5ede6694bd49a27bc79662b727c9706c89ed066b6eaa2d99d15fc\",\"seq_type\":1,\"seqno\":3,\"tag\":\"signature\"}",
+         "prev" : "21111e4a17e5ede6694bd49a27bc79662b727c9706c89ed066b6eaa2d99d15fc",
+         "sig_id" : "801190f327fa34b167e927d60452bd4ebc9a27589f185cb31e72ab89ee4aea260f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcOoKCmfae5L0ckDQS0dqaqdpap09Q8clU8LcE38yxLwKp3BheWxvYWTESJUCA8QgIREeShfl7eZpS9SaJ7x5ZityfJcGyJ7QZrbqotmdFfzEIFi18RwEXH7PME6n5WdxPyfdtIGAsTSA9gs7NZq4F8hrBqNzaWfEQP03Dcrudb33dXMDGg38yb9R2obeNALxjlqb9YW0snTNi4fLJD3+w/0IArTdFvDoM3IB/jtWnqn1/5b6Eb1rNQmoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "payload_hash" : "bd3a985a5d0e11ff714488b80cd9d34124b43116a505d3b0bd95ee721f466f0e",
+         "ctime" : 1493675383
       },
       {
-         "s2" : "lQIExCCwsmJ0hznGnCjYGJBCB4l6y33Y0wOMPaofHf8/B1qXAcQgmCfAE9/v8Eo7PRYj3bcbGYSF51w4RX8K7bIUjHYhTc0K"
+         "s2" : "lQIExCC9OphaXQ4R/3FEiLgM2dNBJLQxFqUF07C9le5yH0ZvDsQg6+RKL+GXEyR/P9SPAYwnzDwFEHGD8HUGhaYgkiWB3H4K"
       },
       {
          "sig_version" : 2,
-         "ctime" : 1491248619,
-         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"18pSJTwT3oorUTeEDqM7b5sKMwmJxUgz9m\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"host\":\"keybase.io\",\"kid\":\"012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"sig_id\":\"9bb84c11369a6f5ecff10a8b179baa98cdd6b2e24f534a1f427e2a912a4e74a80f\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1491248619,\"expire_in\":314496000,\"prev\":\"9827c013dfeff04a3b3d1623ddb71b198485e75c38457f0aedb2148c76214dcd\",\"seq_type\":1,\"seqno\":5,\"tag\":\"signature\"}",
-         "prev" : "9827c013dfeff04a3b3d1623ddb71b198485e75c38457f0aedb2148c76214dcd",
-         "kid" : "012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a",
-         "sig_id" : "0a921ca6315766a930ecd19f23da937f7158526c611a97e9262a551d200a53be0f",
+         "kid" : "012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a",
          "seqno" : 5,
-         "payload_hash" : "d17d972ba2ad7b01e49a5d824ba589f44ac9dff9dac2a222f11ddcad354d2f40",
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYO6KLleahr6FuMcxirJ21izJcpTeOoHjqPRkutNLxuUKp3BheWxvYWTESJUCBcQgmCfAE9/v8Eo7PRYj3bcbGYSF51w4RX8K7bIUjHYhTc3EINF9lyuirXsB5JpdgkulifRKyd/52sKiIvEd3K01TS9ACqNzaWfEQBEwnhisrAm/rHhtfGzW0U3fzS6sKNXjTr60MgaKQS20kuYW+t0314mtycCQMviO4gBrEtdJ0LujBfdF9K29Pgqoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ=="
+         "ctime" : 1493675583,
+         "payload_hash" : "4818c31aeb5c8816576903c26d6ddd0d500bc4321eb52fdaf9b9cb29a88422e5",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcOoKCmfae5L0ckDQS0dqaqdpap09Q8clU8LcE38yxLwKp3BheWxvYWTESJUCBcQgJ+z/UW9AGo9303TYjdU6Fo6rAyGEoAxj0idsR7Da3CPEIFlaqT/Mm6EakOOu+A8H5ffNIVd7/89PE1PLXnTCNdojCqNzaWfEQJ8irRbyWZSkBfWKoTnMz4c4HoUmjcOXeEg7AQVdMOSADa150SgtCTRTpIAtQonqcXfC0dpL4dvxRBJVwTlKJQ6oc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"1AVfvjjuCCeZ3ASz2UMGQU8vHXVJ8TKZnw\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"host\":\"keybase.io\",\"kid\":\"012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"sig_id\":\"d9a47ca4777143989c0a1f698c2cda90ee596563aed0587b966eabfdc8afd4040f\"},\"type\":\"cryptocurrency\",\"version\":2},\"ctime\":1493675583,\"expire_in\":314496000,\"prev\":\"27ecff516f401a8f77d374d88dd53a168eab032184a00c63d2276c47b0dadc23\",\"seq_type\":1,\"seqno\":5,\"tag\":\"signature\"}",
+         "sig_id" : "f174626e8061380c81f25ebabda3337ef6ed5df1379a340ad7a15ab8b726713b0f",
+         "prev" : "27ecff516f401a8f77d374d88dd53a168eab032184a00c63d2276c47b0dadc23"
       },
       {
-         "s2" : "lQIGxCDRfZcroq17AeSaXYJLpYn0Ssnf+drCoiLxHdytNU0vQMQgpoNSavTNLjTIG9DVmwBNu2HeZuf9gK6774YStVZTkkAG"
+         "s2" : "lQIGxCBIGMMa61yIFldpA8Jtbd0NUAvEMh61L9r5ucspqIQi5cQgLvFTZZLk5ifEf1njJQFy4mL0WsXuWjasLnai2hddhKkG"
       },
       {
-         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"1AitBwuqACb4aQ8tLMCSfw3hHspW9zpe9n\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a\",\"host\":\"keybase.io\",\"kid\":\"012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":1},\"ctime\":1491248819,\"expire_in\":314496000,\"prev\":\"a683526af4cd2e34c81bd0d59b004dbb61de66e7fd80aebbef8612b556539240\",\"seq_type\":1,\"seqno\":7,\"tag\":\"signature\"}",
-         "sig_version" : 2,
-         "ctime" : 1491248819,
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcOoKCmfae5L0ckDQS0dqaqdpap09Q8clU8LcE38yxLwKp3BheWxvYWTESJUCB8QgpsNtSHXU8fH1Ca2sWuXGWJVQzwiMe1wxdv3do38KSLnEINin3FHiPMqsV7ix+nELWAYmVKQwB33xQ96BXm5aV4w3BqNzaWfEQCzqQhYvzab/cHDYgP+RereZunQxEtdjDubC66EfCPzHn16g9ZNEH3zhkm7gpAzUSk6164krt/GwKb69GhwD/Aioc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "payload_hash" : "f83f38a24d83ff8698a79d5b72ce4b50f55620b37a4c4f9ca2b9194b8e20dbf8",
+         "ctime" : 1493675783,
+         "prev" : "a6c36d4875d4f1f1f509adac5ae5c6589550cf088c7b5c3176fddda37f0a48b9",
+         "sig_id" : "110722a532eccc525cb472059066738b4c11bcbd355f0f9d44e31e0d6d479f730f",
+         "payload_json" : "{\"body\":{\"cryptocurrency\":{\"address\":\"1Nc7PMZmbGXJYL6mNiLRuBXhzb9xeR4fp7\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a\",\"host\":\"keybase.io\",\"kid\":\"012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":2},\"ctime\":1493675783,\"expire_in\":314496000,\"prev\":\"a6c36d4875d4f1f1f509adac5ae5c6589550cf088c7b5c3176fddda37f0a48b9\",\"seq_type\":1,\"seqno\":7,\"tag\":\"signature\"}",
          "seqno" : 7,
-         "kid" : "012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a",
-         "sig_id" : "91280149572bf4f98f278a1849c514502925ed5660eeb43706c8ea9123d826170f",
-         "prev" : "a683526af4cd2e34c81bd0d59b004dbb61de66e7fd80aebbef8612b556539240",
-         "payload_hash" : "146d8812ff7d3f317e62a7d33f54e0c7aff5d8b141a0ba4b88e21be3b3794cc9",
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYO6KLleahr6FuMcxirJ21izJcpTeOoHjqPRkutNLxuUKp3BheWxvYWTESJUCB8QgpoNSavTNLjTIG9DVmwBNu2HeZuf9gK6774YStVZTkkDEIBRtiBL/fT8xfmKn0z9U4Mev9dixQaC6S4jiG+OzeUzJBqNzaWfEQKvubJ0PdiSgjQ727u5/65Kq+EPFat1KEW4qRaT5Zn7UyneW1u44R+qEMuOrcnPJPbv0ruBaKTCs1d4VSiCPVAGoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ=="
+         "kid" : "012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a",
+         "sig_version" : 2
       }
    ],
-   "label_kids" : {
-      "e" : "01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a",
-      "sib1" : "012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a"
-   },
    "keys" : [
-      "01208704be243190594ca9427b8b216021c8ca362caafe26232caaee6af50bcc41da0a",
-      "012060ee8a2e579a86be85b8c7318ab276d62cc97294de3a81e3a8f464bad34bc6e50a"
-   ]
+      "012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a",
+      "012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a"
+   ],
+   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "label_sigs" : {
+      "btc5" : "110722a532eccc525cb472059066738b4c11bcbd355f0f9d44e31e0d6d479f730f",
+      "sib1" : "6c3d68cacab47cab4154e2bb0fc4b6db2f65f2965ad19e6eff6f409bdb6820b00f",
+      "btc1" : "801190f327fa34b167e927d60452bd4ebc9a27589f185cb31e72ab89ee4aea260f",
+      "btc4" : "0b5dc1869c5d82622056f6ac1d6809ac68e4982417e0245a6e83cc3e24fc1d100f",
+      "btc2" : "d9a47ca4777143989c0a1f698c2cda90ee596563aed0587b966eabfdc8afd4040f",
+      "e" : "7d1e012725f42e9643ca4208fc7626d3cf28daf62163c5ce5214296280d4f76f0f",
+      "btc3" : "f174626e8061380c81f25ebabda3337ef6ed5df1379a340ad7a15ab8b726713b0f"
+   },
+   "label_kids" : {
+      "sib1" : "012070ea0a0a67da7b92f47240d04b476a6aa7696a9d3d43c72553c2dc137f32c4bc0a",
+      "e" : "012022e7c67d1d9e2d7b653f776a44f0839987062a19902bd0a63fd395b76f75ed940a"
+   }
 }
