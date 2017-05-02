@@ -252,7 +252,7 @@
     "test_bad_v2_hash_mismatch" : {
       "_comment" : "A chain that has a link=2 wrong hash to body",
       "input" : "bad_v2_hash_mismatch.json",
-      "err_type" : "SIGCHAIN_V2_MISMATCHED_HASH"
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
     },
     "test_bad_v2_prev_mismatch" : {
       "_comment" : "A chain that has a link=2 wrong prev",
@@ -289,6 +289,11 @@
       "_comment" : "A chain with all V2 links, with an errant stubbed revoke sig",
       "input" : "bad_v2_revoke_type_mismatch.json",
       "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
+    },
+    "test_bad_v2_wrong_payload_hash" : {
+      "_comment" : "A chain with a payload_hash that doesn't match the has of the outer",
+      "input" : "bad_v2_wrong_payload_hash.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_HASH"
     },
     "00dani": {
       "_comment": "00dani's chain got broken after pgp key update with invalid usage flags.",

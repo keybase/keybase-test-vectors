@@ -1,40 +1,40 @@
 {
-   "label_sigs" : {
-      "e" : "d6fb539e4f3174a74ff2cadb752bf26a889da4bc158955f75e75af48f8b517080f",
-      "sib1" : "ba6f10892007b10a2e761c7c0d8804e762de3b1e511653009963d4b65e81a4060f"
-   },
-   "label_kids" : {
-      "sib1" : "01200ec603ef7e2324d51545b9f321f6b5c85cf03e7c5d5af8f086930464d2a332ed0a",
-      "e" : "0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a"
-   },
-   "username" : "max32",
-   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "keys" : [
+      "0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a",
+      "012003e0021116f9aaacd913d806506dc33fd558c5122abe6719761fc5b3238218db0a"
+   ],
    "chain" : [
       {
-         "ctime" : 1491234768,
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg2c6kgMYP4awDVe6g/W8rsHPUejLUSyig7jJ30xgX6xkKp3BheWxvYWTEJ5UCAcDEID0FHdntRX7sGwGuEf06Ly62oNQMuXBGkyJMdLtw2uE0AaNzaWfEQEE+XoN5JgMwmqbpMgFZATIezDklMaxNfq4/UPz6WBR9bd28orINOtMZUNcSY1g9Kj9uNoRl26YQu9tCWetPWwWoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "sig_id" : "865ee40499f7021c413cda0e1b59bd5bf1addb40a250a3b778271e5afafd66990f",
+         "seqno" : 1,
+         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":2},\"ctime\":1493674326,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+         "ctime" : 1493674326,
          "prev" : null,
-         "payload_hash" : "3d051dd9ed457eec1b01ae11fd3a2f2eb6a0d40cb9704693224c74bb70dae134",
          "sig_version" : 2,
-         "payload_json" : "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":1},\"ctime\":1491234768,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
-         "sig_id" : "d6fb539e4f3174a74ff2cadb752bf26a889da4bc158955f75e75af48f8b517080f",
-         "kid" : "0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a",
-         "seqno" : 1
+         "kid" : "0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a",
+         "payload_hash" : "831e96475dbbbaf017290340815c8c2ceb5e2ec0d6210048d6fe06a13e2a253b",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8eZegAaVfFNWelsPITZAWljrO8KfPKJpNJN3mkworF8Kp3BheWxvYWTEJ5UCAcDEIDOIBBS93jv9V7cur2cZnNAOkD8qMkCuHBVEbxZOdh6vAaNzaWfEQCLzgJcN7nhpXVHAzd/AXYQQdipWNktSh0RQ/45iC0/XYU/+FKKQFZYhRW9bCqM2IdPh5pfvhPVzJUng+0RO8gKoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ=="
       },
       {
-         "sig_version" : 2,
+         "prev" : "831e96475dbbbaf017290340815c8c2ceb5e2ec0d6210048d6fe06a13e2a253b",
+         "ctime" : 1493674426,
          "seqno" : 2,
-         "kid" : "0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a",
-         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a\",\"host\":\"keybase.io\",\"kid\":\"0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"01200ec603ef7e2324d51545b9f321f6b5c85cf03e7c5d5af8f086930464d2a332ed0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDsYD734jJNUVRbnzIfa1yFzwPnxdWvjwhpMEZNKjMu0Kp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZDljZWE0ODBjNjBmZTFhYzAzNTVlZWEwZmQ2ZjJiYjA3M2Q0N2EzMmQ0NGIyOGEwZWUzMjc3ZDMxODE3ZWIxOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDljZWE0ODBjNjBmZTFhYzAzNTVlZWEwZmQ2ZjJiYjA3M2Q0N2EzMmQ0NGIyOGEwZWUzMjc3ZDMxODE3ZWIxOTBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwMGVjNjAzZWY3ZTIzMjRkNTE1NDViOWYzMjFmNmI1Yzg1Y2YwM2U3YzVkNWFmOGYwODY5MzA0NjRkMmEzMzJlZDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDkxMjM0ODY4LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjNkMDUxZGQ5ZWQ0NTdlZWMxYjAxYWUxMWZkM2EyZjJlYjZhMGQ0MGNiOTcwNDY5MzIyNGM3NGJiNzBkYWUxMzQiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAK8CB+oaU65jhau0jqG3EKkhasf8ryBTn8CIptfR+MYFLR+LvvYQFwvmaq2uHEdwYf1+862X8ZqBawBU1tGbRDqhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":1},\"ctime\":1491234868,\"expire_in\":314496000,\"prev\":\"3d051dd9ed457eec1b01ae11fd3a2f2eb6a0d40cb9704693224c74bb70dae134\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
-         "sig_id" : "ba6f10892007b10a2e761c7c0d8804e762de3b1e511653009963d4b65e81a4060f",
-         "ctime" : 1491234868,
-         "payload_hash" : "8104065bdadfe662e1f3228143583e359dc37ab711f3e3861183f1c4b3288692",
-         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg2c6kgMYP4awDVe6g/W8rsHPUejLUSyig7jJ30xgX6xkKp3BheWxvYWTESJUCAsQgPQUd2e1FfuwbAa4R/TovLrag1Ay5cEaTIkx0u3Da4TTEIOJa7LQMDDxuEgr0EdIM1+bTSLmkCKK21Q8JZ9Ldsx9LC6NzaWfEQMhia4BPK5G15YwgPUFj+JiQTHFhYGkO6JYE4scmrzuu/J/UvpbaiUnun95/YOvBzzlEMEJL+8lTD44YC3YvBwSoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
-         "prev" : "3d051dd9ed457eec1b01ae11fd3a2f2eb6a0d40cb9704693224c74bb70dae134"
+         "payload_json" : "{\"body\":{\"key\":{\"eldest_kid\":\"0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a\",\"host\":\"keybase.io\",\"kid\":\"0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"012003e0021116f9aaacd913d806506dc33fd558c5122abe6719761fc5b3238218db0a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgA+ACERb5qqzZE9gGUG3DP9VYxRIqvmcZdh/FsyOCGNsKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZjFlNjVlODAwNjk1N2M1MzU2N2E1YjBmMjEzNjQwNWE1OGViM2JjMjlmM2NhMjY5MzQ5Mzc3OWE0YzI4YWM1ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZjFlNjVlODAwNjk1N2M1MzU2N2E1YjBmMjEzNjQwNWE1OGViM2JjMjlmM2NhMjY5MzQ5Mzc3OWE0YzI4YWM1ZjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwMDNlMDAyMTExNmY5YWFhY2Q5MTNkODA2NTA2ZGMzM2ZkNTU4YzUxMjJhYmU2NzE5NzYxZmM1YjMyMzgyMThkYjBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6MX0sImN0aW1lIjoxNDkzNjc0NDI2LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjgzMWU5NjQ3NWRiYmJhZjAxNzI5MDM0MDgxNWM4YzJjZWI1ZTJlYzBkNjIxMDA0OGQ2ZmUwNmExM2UyYTI1M2IiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAq+JJOmoCDPSpj6Rb4uRQEZIJEfNSQp80PTNyXKgoOa/5fN6AQIcTWxHEsFqyrKJo2tPTMPO1bzef9hItEXeoA6hzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":2},\"ctime\":1493674426,\"expire_in\":314496000,\"prev\":\"831e96475dbbbaf017290340815c8c2ceb5e2ec0d6210048d6fe06a13e2a253b\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+         "sig_id" : "184dd796f2fc0ccca4db64a41e72c822e50c20a6c13032a22baa84a065513ff00f",
+         "sig" : "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8eZegAaVfFNWelsPITZAWljrO8KfPKJpNJN3mkworF8Kp3BheWxvYWTESJUCAsQggx6WR127uvAXKQNAgVyMLOteLsDWIQBI1v4GoT4qJTvEIMJZNJl6FbjovMlv9gKkhy5rZjxuFvqoV4A98J28UP8IC6NzaWfEQCbJg+0j961sIxxoZ0XhmeXsqE8xMpnqQNur/EuDXFO4TBuTvkbA+OAcJ+TRH8X8xFmoAOh56lYv3TGQAgWW3Aeoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+         "payload_hash" : "08ff798749c0c0a7cd7018b644ac38d1fa5f95ff1901f5131d2cffab074fa08b",
+         "kid" : "0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a",
+         "sig_version" : 2
       }
    ],
-   "keys" : [
-      "0120d9cea480c60fe1ac0355eea0fd6f2bb073d47a32d44b28a0ee3277d31817eb190a",
-      "01200ec603ef7e2324d51545b9f321f6b5c85cf03e7c5d5af8f086930464d2a332ed0a"
-   ]
+   "label_kids" : {
+      "e" : "0120f1e65e8006957c53567a5b0f2136405a58eb3bc29f3ca2693493779a4c28ac5f0a",
+      "sib1" : "012003e0021116f9aaacd913d806506dc33fd558c5122abe6719761fc5b3238218db0a"
+   },
+   "uid" : "74c38cf7ceb947f5632045d8ca5d4819",
+   "label_sigs" : {
+      "e" : "865ee40499f7021c413cda0e1b59bd5bf1addb40a250a3b778271e5afafd66990f",
+      "sib1" : "184dd796f2fc0ccca4db64a41e72c822e50c20a6c13032a22baa84a065513ff00f"
+   },
+   "username" : "max32"
 }
