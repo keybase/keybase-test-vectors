@@ -18,6 +18,7 @@ exports.chain_test_inputs['bad_v2_seqno_mismatch.json'] = require('../chains/bad
 exports.chain_test_inputs['bad_v2_stubbed_revoke_sig.json'] = require('../chains/bad_v2_stubbed_revoke_sig.json');
 exports.chain_test_inputs['bad_v2_stubbed_revoke_sigs.json'] = require('../chains/bad_v2_stubbed_revoke_sigs.json');
 exports.chain_test_inputs['bad_v2_type_mismatch.json'] = require('../chains/bad_v2_type_mismatch.json');
+exports.chain_test_inputs['bad_v2_wrong_payload_hash.json'] = require('../chains/bad_v2_wrong_payload_hash.json');
 exports.chain_test_inputs['empty_chain.json'] = require('../chains/empty_chain.json');
 exports.chain_test_inputs['example_revokes_chain.json'] = require('../chains/example_revokes_chain.json');
 exports.chain_test_inputs['expired_key_chain.json'] = require('../chains/expired_key_chain.json');

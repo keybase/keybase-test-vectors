@@ -293,6 +293,11 @@ const ChainTests = `
       "input" : "bad_v2_revoke_type_mismatch.json",
       "err_type" : "SIGCHAIN_V2_MISMATCHED_FIELD"
     },
+    "test_bad_v2_wrong_payload_hash" : {
+      "_comment" : "A chain with a payload_hash that doesn't match the has of the outer",
+      "input" : "bad_v2_wrong_payload_hash.json",
+      "err_type" : "SIGCHAIN_V2_MISMATCHED_HASH"
+    },
     "00dani": {
       "_comment": "00dani's chain got broken after pgp key update with invalid usage flags.",
       "input": "00dani.json",
@@ -3979,6 +3984,46 @@ var ChainTestInputs = map[string]string{
    "uid" : "74c38cf7ceb947f5632045d8ca5d4819"
 }
 `,
+	"bad_v2_wrong_payload_hash.json": `{
+    "chain": [
+        {
+            "seqno": 1,
+            "prev": null,
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGZ4p8tHU0MFjgGYEjX4znHOTYzBCO1aibwgBnMRilnMKp3BheWxvYWTEJ5UCAcDEIP6LWvyC7XA2H2L960wn7/XBK5SMLoH3grNDL2iJ3Xx/AaNzaWfEQJ1DeYXbvoyduJcmZ+SFI+hvqiXOxDXwyCLEIuUt48TA1Al22XldtKAOiWkf7D1Eswm6JJCd0+rkIt19BfHXGQGoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "362b32b821134b306f8df67526573cfd3388e55e2cd1285fcd79f06b770801f3",
+            "sig_id": "f91210ba18f32f22805c14ee08f1893179638430af61cd668122730670df00a40f",
+            "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":2},\"ctime\":1493691200,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+            "kid": "0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a",
+            "ctime": 1493691200,
+            "sig_version": 2
+        },
+        {
+            "seqno": 2,
+            "prev": "362b32b821134b306f8df67526573cfd3388e55e2cd1285fcd79f06b770801f3",
+            "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGZ4p8tHU0MFjgGYEjX4znHOTYzBCO1aibwgBnMRilnMKp3BheWxvYWTESJUCAsQgNisyuCETSzBvjfZ1Jlc8/TOI5V4s0ShfzXnwa3cIAfPEIAHL0boTUSDsdDEjYo9DACTqt/U++cKFYBjj3ILYs24EC6NzaWfEQOtHktRINiLP02t3vLtC4mmjny89Zt1zT+BcM6g+uErDMmdS+ioLvBIkSbH7XTqVwIoyaGKH6VS1naYvIlfhgQuoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+            "payload_hash": "8492c482f16a5fec83c9379fbe67247eaf0be30fa99fe091945381bc658896af",
+            "sig_id": "37715e053fd362577ec3a5baf2b067fc43911f73de7be41bc0550205cf1c967e0f",
+            "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a\",\"host\":\"keybase.io\",\"kid\":\"0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"012065e9413101be385fb27e5a6a74d4168fe0b54f90ba5ba3811be734279dad45920a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZelBMQG+OF+yflpqdNQWj+C1T5C6W6OBG+c0J52tRZIKp3BheWxvYWTFAix7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMTk5ZTI5ZjJkMWQ0ZDBjMTYzODA2NjA0OGQ3ZTMzOWM3MzkzNjMzMDQyM2I1NmEyNmYwODAxOWNjNDYyOTY3MzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMTk5ZTI5ZjJkMWQ0ZDBjMTYzODA2NjA0OGQ3ZTMzOWM3MzkzNjMzMDQyM2I1NmEyNmYwODAxOWNjNDYyOTY3MzBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwNjVlOTQxMzEwMWJlMzg1ZmIyN2U1YTZhNzRkNDE2OGZlMGI1NGY5MGJhNWJhMzgxMWJlNzM0Mjc5ZGFkNDU5MjBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6Mn0sImN0aW1lIjoxNDkzNjkxMzAwLCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6IjM2MmIzMmI4MjExMzRiMzA2ZjhkZjY3NTI2NTczY2ZkMzM4OGU1NWUyY2QxMjg1ZmNkNzlmMDZiNzcwODAxZjMiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAE/I1fyQ14A9p+BE1iH8/l5pGkn+GqJaipWjIvhDvATOvSIKIbH1vLaFxF0exf98M59DzRlqTvQgxk/mh7Kp8AKhzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":2},\"ctime\":1493691300,\"expire_in\":314496000,\"prev\":\"362b32b821134b306f8df67526573cfd3388e55e2cd1285fcd79f06b770801f3\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+            "kid": "0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a",
+            "ctime": 1493691300,
+            "sig_version": 2
+        }
+    ],
+    "keys": [
+        "0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a",
+        "012065e9413101be385fb27e5a6a74d4168fe0b54f90ba5ba3811be734279dad45920a"
+    ],
+    "uid": "74c38cf7ceb947f5632045d8ca5d4819",
+    "username": "max32",
+    "label_kids": {
+        "e": "0120199e29f2d1d4d0c1638066048d7e339c73936330423b56a26f08019cc46296730a",
+        "sib1": "012065e9413101be385fb27e5a6a74d4168fe0b54f90ba5ba3811be734279dad45920a"
+    },
+    "label_sigs": {
+        "e": "f91210ba18f32f22805c14ee08f1893179638430af61cd668122730670df00a40f",
+        "sib1": "37715e053fd362577ec3a5baf2b067fc43911f73de7be41bc0550205cf1c967e0f"
+    }
+}`,
 	"empty_chain.json": `{
     "_comment": "The 'ralph' key has ralph@keybase.io signed into it. The 'steve' key does not. This is for testing key ownership when the sigchain in empty.",
     "username": "ralph",
