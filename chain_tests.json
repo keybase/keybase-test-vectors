@@ -311,10 +311,24 @@
     },
     "reset_2x" : {
       "_comment": "a sigchain that was reset 2x and has 3 eldest links therefore",
-      "input": "reset_3x.json",
+      "input": "reset_2x.json",
       "len": 4,
       "sibkeys": 2,
-      "subkeys": 2
+      "subkeys": 2,
+      "eldest" : "g",
+      "eldest_seqno" : 11,
+      "previous_subchains" : [
+        {
+          "eldest_seqno" : 1,
+          "sibkeys" : 1,
+          "subkeys" : 1
+        },
+        {
+          "eldest_seqno" : 5,
+          "sibkeys" : 3,
+          "subkeys" : 3
+        }
+      ]
     }
   }
 }

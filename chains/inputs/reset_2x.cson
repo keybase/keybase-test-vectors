@@ -19,26 +19,18 @@ chain :
       version : 2
     },
     {
-      label : "t1"
+      label : "t1a"
       signer : "e"
       type : "track"
       version : 2
       stubbed : true
-    }
-    {
-      ctime : "+100"
-      label : "sib1"
-      type : "sibkey"
-      key : gen : "eddsa"
-      signer : "e"
-      version : 2
     },
     {
-      label : "sub1"
-      type : "subkey"
-      key : gen : "dh"
-      parent : "sib1"
-      version : 1
+      label : "t1b"
+      signer : "e"
+      type : "track"
+      version : 2
+      stubbed : false
     },
     {
       type : "eldest"
@@ -54,13 +46,6 @@ chain :
       version : 2
     },
     {
-      label : "t2"
-      signer : "f"
-      type : "track"
-      version : 2
-      stubbed : true
-    }
-    {
       ctime : "+100"
       label : "sib2"
       type : "sibkey"
@@ -73,6 +58,21 @@ chain :
       type : "subkey"
       key : gen : "dh"
       parent : "sib2"
+      version : 1
+    },
+    {
+      ctime : "+100"
+      label : "sib2b"
+      type : "sibkey"
+      key : gen : "eddsa"
+      signer : "f"
+      version : 2
+    },
+    {
+      label : "sub2b"
+      type : "subkey"
+      key : gen : "dh"
+      parent : "sib2b"
       version : 1
     },
     {
