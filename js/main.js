@@ -37,6 +37,7 @@ exports.chain_test_inputs['old_pgp_key.json'] = require('../chains/old_pgp_key.j
 exports.chain_test_inputs['pnelsen_chain.json'] = require('../chains/pnelsen_chain.json');
 exports.chain_test_inputs['ralph_chain.json'] = require('../chains/ralph_chain.json');
 exports.chain_test_inputs['repeat_eldest.json'] = require('../chains/repeat_eldest.json');
+exports.chain_test_inputs['reset_2x.json'] = require('../chains/reset_2x.json');
 exports.chain_test_inputs['signed_with_revoked_key_chain.json'] = require('../chains/signed_with_revoked_key_chain.json');
 exports.chain_test_inputs['simple_chain.json'] = require('../chains/simple_chain.json');
 exports.chain_test_inputs['t_helen_chain.json'] = require('../chains/t_helen_chain.json');

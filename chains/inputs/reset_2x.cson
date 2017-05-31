@@ -1,0 +1,113 @@
+
+chain :
+  user : "max32"
+  ctime : "now"
+  expire : 10000000
+  links : [
+
+    {
+      type : "eldest"
+      label : "e"
+      key : gen : "eddsa"
+      version : 1
+    },
+    {
+      type : "subkey"
+      label : "s"
+      key : gen : "dh"
+      parent : "e"
+      version : 2
+    },
+    {
+      label : "t1"
+      signer : "e"
+      type : "track"
+      version : 2
+      stubbed : true
+    }
+    {
+      ctime : "+100"
+      label : "sib1"
+      type : "sibkey"
+      key : gen : "eddsa"
+      signer : "e"
+      version : 2
+    },
+    {
+      label : "sub1"
+      type : "subkey"
+      key : gen : "dh"
+      parent : "sib1"
+      version : 1
+    },
+    {
+      type : "eldest"
+      label : "f"
+      key : gen : "eddsa"
+      version : 1
+    },
+    {
+      type : "subkey"
+      label : "s2"
+      key : gen : "dh"
+      parent : "f"
+      version : 2
+    },
+    {
+      label : "t2"
+      signer : "f"
+      type : "track"
+      version : 2
+      stubbed : true
+    }
+    {
+      ctime : "+100"
+      label : "sib2"
+      type : "sibkey"
+      key : gen : "eddsa"
+      signer : "f"
+      version : 2
+    },
+    {
+      label : "sub2"
+      type : "subkey"
+      key : gen : "dh"
+      parent : "sib2"
+      version : 1
+    },
+    {
+      type : "eldest"
+      label : "g"
+      key : gen : "eddsa"
+      version : 1
+    },
+    {
+      type : "subkey"
+      label : "s3"
+      key : gen : "dh"
+      parent : "g"
+      version : 2
+    },
+    {
+      label : "t3"
+      signer : "g"
+      type : "track"
+      version : 2
+      stubbed : true
+    }
+    {
+      ctime : "+100"
+      label : "sib3"
+      type : "sibkey"
+      key : gen : "eddsa"
+      signer : "g"
+      version : 2
+    },
+    {
+      label : "sub3"
+      type : "subkey"
+      key : gen : "dh"
+      parent : "sib3"
+      version : 1
+    }
+  ]

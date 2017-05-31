@@ -308,6 +308,13 @@
       "len": 14,
       "sibkeys": 3,
       "subkeys": 2
+    },
+    "reset_2x" : {
+      "_comment": "a sigchain that was reset 2x and has 3 eldest links therefore",
+      "input": "reset_3x.json",
+      "len": 4,
+      "sibkeys": 2,
+      "subkeys": 2
     }
   }
 }
