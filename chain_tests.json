@@ -329,6 +329,18 @@
           "subkeys" : 3
         }
       ]
+    },
+    "test_per_user_key": {
+      "_comment": "Test a simple per user key link.",
+      "input": "per_user_key.json",
+      "len": 2,
+      "sibkeys": 1,
+      "subkeys": 0
+    },
+    "test_bad_per_user_key_reverse_sig" : {
+      "_comment": "a sigchain per user key addition with an corrupted reverse sig",
+      "input": "bad_per_user_key_reverse_sig.json",
+      "err_type": "WRONG_PER_USER_KEY_REVERSE_SIG"
     }
   }
 }
