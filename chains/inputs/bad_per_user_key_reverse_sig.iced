@@ -14,8 +14,8 @@ chain :
       type : "per_user_key"
       signer : "e"
       corrupt_v1_proof_hooks :
-        corrupt : ({obj}) ->
-          obj.body.per_user_key.reverse_sig = 'a' + obj.body.per_user_key.reverse_sig[1..]
-          #return obj
+        corrupt_for_reverse_signature: ({obj}) ->
+          obj.hello = 'world'
+        corrupt_key_section : 'per_user_key'
     }
   ]
