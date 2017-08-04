@@ -1,0 +1,82 @@
+{
+    "log": [
+        "link team:cabal type:root"
+    ],
+    "teams": {
+        "cabal": {
+            "links": [
+                {
+                    "seqno": 1,
+                    "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgh6TtpTt1sBD+qczBpavr3C2RI03yD3IHQ+I7RNAF3pQKp3BheWxvYWTEJ5UCAcDEIJdP9eiVykM0QNR3dftwfBnojJGBfX0LIunB0SgCg7THIaNzaWfEQDqKjju/LSIePhGHP4owDPmT1QxehypUwsc+XoG1H9rYDXnRCXEqQAEx6xFFZ4MmggyarjdjftT6sMiyZ57cJwioc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==",
+                    "payload_json": "{\"body\":{\"key\":{\"kid\":\"012087a4eda53b75b010fea9ccc1a5abebdc2d91234df20f720743e23b44d005de940a\",\"uid\":\"25852c87d6e47fb8d7d55400be9c7a19\",\"username\":\"herb\"},\"merkle_root\":{\"ctime\":1500570001,\"hash\":\"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\",\"hash_meta\":\"cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd1000\",\"seqno\":8001},\"team\":{\"id\":\"2123209b98b16083c69c91152b861724\",\"members\":{\"owner\":[\"25852c87d6e47fb8d7d55400be9c7a19\"]},\"name\":\"cabal\",\"per_team_key\":{\"encryption_kid\":\"0121f0ac81c024ce9110c677aa0972e91d6014468d3e69c2cfeb57e376a5c9b7ca3f0a\",\"generation\":1,\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyZdvqhd/PS3i4zMqxmRHrIIGjiIQac4KSwyPSamOG3EKp3BheWxvYWTFA2Z7ImJvZHkiOnsia2V5Ijp7ImtpZCI6IjAxMjA4N2E0ZWRhNTNiNzViMDEwZmVhOWNjYzFhNWFiZWJkYzJkOTEyMzRkZjIwZjcyMDc0M2UyM2I0NGQwMDVkZTk0MGEiLCJ1aWQiOiIyNTg1MmM4N2Q2ZTQ3ZmI4ZDdkNTU0MDBiZTljN2ExOSIsInVzZXJuYW1lIjoiaGVyYiJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwMDU3MDAwMSwiaGFzaCI6ImZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmIiwiaGFzaF9tZXRhIjoiY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkY2RjZGNkMTAwMCIsInNlcW5vIjo4MDAxfSwidGVhbSI6eyJpZCI6IjIxMjMyMDliOThiMTYwODNjNjljOTExNTJiODYxNzI0IiwibWVtYmVycyI6eyJvd25lciI6WyIyNTg1MmM4N2Q2ZTQ3ZmI4ZDdkNTU0MDBiZTljN2ExOSJdfSwibmFtZSI6ImNhYmFsIiwicGVyX3RlYW1fa2V5Ijp7ImVuY3J5cHRpb25fa2lkIjoiMDEyMWYwYWM4MWMwMjRjZTkxMTBjNjc3YWEwOTcyZTkxZDYwMTQ0NjhkM2U2OWMyY2ZlYjU3ZTM3NmE1YzliN2NhM2YwYSIsImdlbmVyYXRpb24iOjEsInJldmVyc2Vfc2lnIjpudWxsLCJzaWduaW5nX2tpZCI6IjAxMjBjOTk3NmZhYTE3N2YzZDJkZTJlMzMzMmFjNjY0NDdhYzgyMDY4ZTIyMTA2OWNlMGE0YjBjOGY0OWE5OGUxYjcxMGEifX0sInR5cGUiOiJ0ZWFtLnJvb3QiLCJ2ZXJzaW9uIjoyfSwiY3RpbWUiOjE1MDE3ODgwNjAsImV4cGlyZV9pbiI6MTU3NjgwMDAwLCJzZXFubyI6MSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECOwCMGrLg/WZ78qHBlYa5tbnSj0HTItBarJkf2xwxLnogempOcqbUzFrRvPsQB4yxtL3gEOChZ9VubEH750k0MqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=\",\"signing_kid\":\"0120c9976faa177f3d2de2e3332ac66447ac82068e221069ce0a4b0c8f49a98e1b710a\"}},\"type\":\"team.root\",\"version\":2},\"ctime\":1501788060,\"expire_in\":157680000,\"seqno\":1,\"tag\":\"signature\"}",
+                    "uid": "25852c87d6e47fb8d7d55400be9c7a19",
+                    "version": 2
+                }
+            ],
+            "team_key_box": {
+                "nonce": "6mGfS9qv1axlDWOtXoILyIz43z8AAAAB",
+                "sender_kid": "012149b701359aa5193fbf40bb3fdb82e1decdc7b88ca72b8666ad3680b5f704680e0a",
+                "generation": 1,
+                "ctext": "SiJRwou1iTL8NS7Xu8nTSqD5j79YywwZ8YV5iqLNbmFBoMkmqUgUu0ercYh5GScC",
+                "per_user_key_seqno": 1
+            },
+            "tmp_tk_sec": "a91230e26b8e05453893ab97cd37166449538941bf42933f93feb6ccc1691151",
+            "tmp_tk_sig_kid": "0120c9976faa177f3d2de2e3332ac66447ac82068e221069ce0a4b0c8f49a98e1b710a"
+        }
+    },
+    "users": {
+        "herb": {
+            "uid": "25852c87d6e47fb8d7d55400be9c7a19",
+            "eldest_seqno": 1,
+            "puk_secrets": {
+                "1": "bc307fac66772078922703380e5762864bbec1ab6914f4982aec0a9f80879839"
+            },
+            "link_map": {
+                "1": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefe0"
+            },
+            "tmp_puk_enc_kid": "012149b701359aa5193fbf40bb3fdb82e1decdc7b88ca72b8666ad3680b5f704680e0a"
+        }
+    },
+    "key_owners": {
+        "012087a4eda53b75b010fea9ccc1a5abebdc2d91234df20f720743e23b44d005de940a": "herb"
+    },
+    "key_pubkeyv2nacls": {
+        "012087a4eda53b75b010fea9ccc1a5abebdc2d91234df20f720743e23b44d005de940a": {
+            "deviceType": "desktop",
+            "deviceDescription": "home thing",
+            "deviceID": "fbd762facdfad44709aef63a9a8cdf18",
+            "base": {
+                "provisioning": {
+                    "sigChainLocation": {
+                        "seqType": 1,
+                        "seqno": 1
+                    },
+                    "time": 0,
+                    "firstAppearedUnverified": 0,
+                    "prevMerkleRootSigned": {
+                        "hashMeta": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdc500",
+                        "seqno": 0
+                    },
+                    "signingKID": ""
+                },
+                "eTime": 2005146762000,
+                "cTime": 1500570762000,
+                "isEldest": true,
+                "isSibkey": true,
+                "kid": "012087a4eda53b75b010fea9ccc1a5abebdc2d91234df20f720743e23b44d005de940a"
+            }
+        }
+    },
+    "team_merkle": {
+        "2123209b98b16083c69c91152b861724": {
+            "seqno": 1,
+            "link_id": "395b7c73c8cf893dd4d30d9d440d0e1f65dedecfb77929d1c40f8e67655fb14b"
+        }
+    },
+    "merkle_triples": {
+        "25852c87d6e47fb8d7d55400be9c7a19-cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd1000": {
+            "seqno": 1,
+            "id": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefe0"
+        }
+    }
+}
