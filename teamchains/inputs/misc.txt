@@ -1,33 +1,5 @@
-users: {
-  "herb": {}
-  "basil": {}
-}
-
-teams: {
-  "cabal": {
-    links: [
-      type: "root"
-      signer: "basil"
-      members:
-        owner: ["basil", "herb"]
-    ,
-      type: "change_membership"
-      signer: "basil"
-      members:
-        none: ["basil"]
-    ,
-      type: "change_membership"
-      members:
-        admin: ["basil"]
-        none: ["basil"]
-    ]
-  }
-}
-
-expect: {
-  error: true,
-  error_substr: "duplicate UID in members"
-}
+Example of what the DSL might look like when more advanced.
+Feel free to delete this file.
 
 # users : {
 #   "herb" :
