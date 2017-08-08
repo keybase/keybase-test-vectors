@@ -22,7 +22,9 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "invalid per-team-key encryption KID"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "invalid per-team-key encryption KID"
+  ]
+]

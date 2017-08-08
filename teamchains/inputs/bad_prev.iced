@@ -25,7 +25,16 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_type: "PrevError"
-}
+sessions: [
+  loads: [
+    error: true
+    error_type: "PrevError"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true
+    error_type: "PrevError"
+  ]
+]

@@ -27,14 +27,25 @@ teams: {
   }
 }
 
-load: {
-  need_admin: true
-  # Stub these chain links (by seqno)
-  stub: [2]
-}
+sessions: [
+  loads: [
+    stub: [2]
+    need_admin: true
 
-expect: {
-  error: true
-  error_type: "StubbedError"
-  error_substr: "seqno 2"
-}
+    error: true
+    error_type: "StubbedError"
+    error_substr: "seqno 2"
+  ]
+,
+  loads: [
+    upto: 1
+    need_admin: true
+  ,
+    need_admin: true
+    stub: [2]
+
+    error: true
+    error_type: "StubbedError"
+    error_substr: "seqno 2"
+  ]
+]

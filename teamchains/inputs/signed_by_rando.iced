@@ -21,7 +21,9 @@ teams: {
   }
 }
 
-expect: {
-  error: true,
-  error_type: "AdminPermissionError"
-}
+sessions: [
+  loads: [
+    error: true,
+    error_type: "AdminPermissionError"
+  ]
+]

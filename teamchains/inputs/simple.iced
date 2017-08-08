@@ -13,3 +13,9 @@ teams: {
     ]
   }
 }
+
+sessions: [
+  loads: [
+    error: false
+  ]
+]

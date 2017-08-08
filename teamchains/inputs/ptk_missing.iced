@@ -22,7 +22,9 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "missing per-team-key"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "missing per-team-key"
+  ]
+]

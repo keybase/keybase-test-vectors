@@ -26,7 +26,25 @@ teams: {
   }
 }
 
-expect: {
-  error: true,
-  error_substr: "duplicate UID in members"
-}
+sessions: [
+  loads: [
+    error: true,
+    error_substr: "duplicate UID in members"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    upto: 2
+  ,
+    error: true,
+    error_substr: "duplicate UID in members"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true,
+    error_substr: "duplicate UID in members"
+  ]
+]
