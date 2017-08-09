@@ -27,7 +27,32 @@ teams: {
   }
 }
 
-expect: {
-  error: true,
-  error_substr: "expected seqno"
-}
+sessions: [
+  loads: [
+    error: true,
+    error_substr: "expected seqno"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    upto: 2
+  ,
+    error: true,
+    error_substr: "expected seqno"
+  ]
+,
+  loads: [
+    upto: 2
+  ,
+    error: true,
+    error_substr: "expected seqno"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true,
+    error_substr: "expected seqno"
+  ]
+]

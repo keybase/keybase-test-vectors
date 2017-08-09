@@ -25,12 +25,18 @@ teams: {
   }
 }
 
-load: {
-  # Stub these chain links
-  omit: [2]
-}
-
-expect: {
-  error: true,
-  error_type: "PrevError"
-}
+sessions: [
+  loads: [
+    omit: [2] # omit these seqnos
+    error: true
+    error_type: "PrevError"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    omit: [2] # omit these seqnos
+    error: true
+    error_type: "PrevError"
+  ]
+]

@@ -27,7 +27,16 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "no team section"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "no team section"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true
+    error_substr: "no team section"
+  ]
+]

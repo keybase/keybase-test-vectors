@@ -24,7 +24,16 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "non-owner cannot add owners"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "non-owner cannot add owners"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true
+    error_substr: "non-owner cannot add owners"
+  ]
+]

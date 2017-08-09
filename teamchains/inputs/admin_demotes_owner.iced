@@ -14,8 +14,7 @@ teams: {
         owner: ["herb"]
         admin: ["basil"]
     ,
-      # invalid link
-      # basil tries to demote an owner
+      # invalid link - basil tries to demote an owner
       type: "change_membership"
       signer: "basil"
       members:
@@ -24,7 +23,16 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "non-owner cannot demote owners"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "non-owner cannot demote owners"
+  ]
+,
+  loads: [
+    upto: 1
+  ,
+    error: true
+    error_substr: "non-owner cannot demote owners"
+  ]
+]

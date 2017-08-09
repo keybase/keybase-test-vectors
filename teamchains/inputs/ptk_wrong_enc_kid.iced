@@ -22,7 +22,9 @@ teams: {
   }
 }
 
-expect: {
-  error: true
-  error_substr: "wrong encKID"
-}
+sessions: [
+  loads: [
+    error: true
+    error_substr: "wrong encKID"
+  ]
+]
