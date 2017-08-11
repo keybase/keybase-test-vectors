@@ -28,6 +28,7 @@ exports.chain_test_inputs['hardcoded_reset.json'] = require('../chains/hardcoded
 exports.chain_test_inputs['jack_chain.json'] = require('../chains/jack_chain.json');
 exports.chain_test_inputs['jack_chain_missing_first_link.json'] = require('../chains/jack_chain_missing_first_link.json');
 exports.chain_test_inputs['jack_chain_substitute_first_link.json'] = require('../chains/jack_chain_substitute_first_link.json');
+exports.chain_test_inputs['max_chain.json'] = require('../chains/max_chain.json');
 exports.chain_test_inputs['melvin_chain.json'] = require('../chains/melvin_chain.json');
 exports.chain_test_inputs['mismatched_fingerprint_chain.json'] = require('../chains/mismatched_fingerprint_chain.json');
 exports.chain_test_inputs['mismatched_kid_chain.json'] = require('../chains/mismatched_kid_chain.json');

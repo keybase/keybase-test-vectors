@@ -9,6 +9,14 @@
       "eldest": "second_eldest"
     },
 
+    "test_max_sig_chain": {
+      "_comment": "This is Max Krohn's real live sigchain, as of 10 Aug 2017. The immediate reason for including it is the following interesting case: Max has revoked his very first link, which is both 1) a Twitter proof but also 2) implicitly delegates his eldest key. We should not treat this revocation as revoking the eldest key, and if we do, validating his chain will break.",
+      "input": "max_chain.json",
+      "len": 313,
+      "sibkeys": 12,
+      "subkeys": 10
+    },
+
     "test_simple_chain": {
       "_comment": "Test a simple chain, just one link.",
       "input": "simple_chain.json",
@@ -56,7 +64,7 @@
     },
 
     "test_revokes": {
-      "_comment": "The chain is length 10, but after 2 sig revokes it should be length 8. Likewise, 6 keys are delegated, but after 2 sig revokes and 2 key revokes it should be down to 2 keys.",
+      "_comment": "The chain is unrevoked-length 17, but 4 sigs are revoked, so the apparent length should be 13. 5 sibkeys get delegated (plus the eldest), but 4 get revoked, for a final total of 2. Likewise 3 subkeys get delegated, but 2 get revoked, for a final total of 1.",
       "input": "example_revokes_chain.json",
       "len": 13,
       "sibkeys": 2,
