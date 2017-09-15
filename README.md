@@ -34,9 +34,12 @@ $ cd $GOPATH/src/github.com/keybase/client/go/teams
 # first collect coverage for all the tests, so that coverage will be complete but we don't have to run them all.
 $ go test --coverprofile=/tmp/teams-coverage-online.out
 # then run the go tests and make a coverage report
-$ $GOPATH/src/github.com/keybase/keybase-test-vectors/teamchains/*.json ./*.go | entr -r sh -c "echo starting && go test -v --coverprofile=/tmp/teams-coverage.out -run "^TestUnits$" 2>&1 | tee /tmp/test.log ; tail -n +2 /tmp/teams-coverage-online.out >> /tmp/teams-coverage.out && go tool cover -html=/tmp/teams-coverage.out -o /tmp/teams-coverage.html"
+$ ls $GOPATH/src/github.com/keybase/keybase-test-vectors/teamchains/*.json ./*.go | entr -r sh -c "echo starting && go test -v --coverprofile=/tmp/teams-coverage.out -run "^TestUnits$" 2>&1 | tee /tmp/test.log ; tail -n +2 /tmp/teams-coverage-online.out >> /tmp/teams-coverage.out && go tool cover -html=/tmp/teams-coverage.out -o /tmp/teams-coverage.html"
 
 # Run one client go test
 # do the same as above with this env var set
-export KEYBASE_TEAM_TEST_SELECT="member_duplicate.json"
+$ export KEYBASE_TEAM_TEST_SELECT="member_duplicate.json"
+
+# Run all the client tests with no coverage
+$ ls $GOPATH/src/github.com/keybase/keybase-test-vectors/teamchains/*.json ./*.go | entr -r sh -c "go test -v -run "^TestUnits$" 2>&1 | tee /tmp/test.log" | mark
 ```
