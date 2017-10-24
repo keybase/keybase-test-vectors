@@ -6,7 +6,7 @@ This repository contains test vectors used as test inputs for sigchain parsers.
 
 User sigchains are converted from a DSL in
 `chains/inputs/*.{iced,cson}` into `chains/*.json` by the
-(forge)[https://github.com/keybase/node-forge-sigchain]. Some vectors
+[forge](https://github.com/keybase/node-forge-sigchain). Some vectors
 are specified in json directly and begin their life in
 `chains/*.json`.
 
@@ -16,7 +16,7 @@ Then they go through a couple more generator scripts and end up as go tests.
 
 Team sigchains are converted from a DSL in `teamchains/inputs/*.iced`
 into `teamchains/*.json` by the
-(forge)[https://github.com/keybase/node-forge-sigchain]. Then those
+[forge](https://github.com/keybase/node-forge-sigchain). Then those
 JSON files are loaded directly by go tests.
 
 ```
