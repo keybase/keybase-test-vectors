@@ -11,7 +11,7 @@ teams: {
       members:
         owner: ["herb"]
     ,
-      type: "unsupported_critical"
+      type: "unsupported"
     ]
   }
 }

@@ -11,7 +11,8 @@ teams: {
       members:
         owner: ["herb"]
     ,
-      type: "unsupported_ignore"
+      type: "unsupported"
+      ignore_if_unsupported: true
     ]
   }
 }
