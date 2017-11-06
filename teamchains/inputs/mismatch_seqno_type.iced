@@ -24,13 +24,13 @@ teams: {
 sessions: [
   loads: [
     error: true
-    error_substr: "todo"
+    error_type: "SigchainV2MismatchedFieldError"
   ]
 ,
   loads: [
     upto: 1
   ,
     error: true,
-    error_substr: "todo"
+    error_type: "SigchainV2MismatchedFieldError"
   ]
 ]
