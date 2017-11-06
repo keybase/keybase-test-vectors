@@ -3,7 +3,7 @@
         "user:herb key:default",
         "link team:cabal type:root",
         "link team:cabal type:unsupported",
-        "ignore_if_unsupported:true link_type:unsupported"
+        "ignore_if_unsupported:false link_type:unsupported"
     ],
     "teams": {
         "cabal": {
@@ -56,8 +56,8 @@
                 },
                 {
                     "seqno": 2,
-                    "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgEmDPFbgK6vLCw2Lw3oi7xAJy1TTReblMBFel5YT80YYKp3BheWxvYWTETJcCAsQg1D/aEB802YFC/q0R8RyMQbXCETUXEZZZTOSg0B0zOXbEIJw0FGCvm/3nm8tVe8qrzyhcRf37nKsjCIZC8znM2sEYzQU5AcOjc2lnxEDxSi8JXWsX/2vRwqHHV2SyqAvrolj69e3I5xbk0i42wy0Mq0kCc2kTceD9Qbj2JCKXprF86wXkMiVLyR/SH1cIqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
-                    "payload_json": "{\"body\":{\"key\":{\"kid\":\"01201260cf15b80aeaf2c2c362f0de88bbc40272d534d179b94c0457a5e584fcd1860a\",\"uid\":\"25852c87d6e47fb8d7d55400be9c7a19\",\"username\":\"herb\"},\"merkle_root\":{\"ctime\":1500570001,\"hash\":\"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\",\"hash_meta\":\"cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd2000\",\"seqno\":8001},\"team\":{\"id\":\"2123209b98b16083c69c91152b861724\"},\"type\":\"team.unsupported_from_the_future\",\"version\":2},\"ctime\":1509390787,\"expire_in\":157680000,\"ignore_if_unsupported\":true,\"prev\":\"d43fda101f34d98142fead11f11c8c41b5c21135171196594ce4a0d01d333976\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
+                    "sig": "g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgEmDPFbgK6vLCw2Lw3oi7xAJy1TTReblMBFel5YT80YYKp3BheWxvYWTETJcCAsQg1D/aEB802YFC/q0R8RyMQbXCETUXEZZZTOSg0B0zOXbEIPOPJLv25Go9k0AEO1SKLR8IVsW7/GG99hFfbfz8ueYAzQU5AcOjc2lnxECTSCcA3CjYBH3wEAD9KiMfo8ncYOy1DNYmRxbWf4Op6MraIMSBMHSk7Yvl3oy1qJ197d3asyGpB7/bC7qRgMsOqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=",
+                    "payload_json": "{\"body\":{\"key\":{\"kid\":\"01201260cf15b80aeaf2c2c362f0de88bbc40272d534d179b94c0457a5e584fcd1860a\",\"uid\":\"25852c87d6e47fb8d7d55400be9c7a19\",\"username\":\"herb\"},\"merkle_root\":{\"ctime\":1500570001,\"hash\":\"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\",\"hash_meta\":\"cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd2000\",\"seqno\":8001},\"team\":{\"id\":\"2123209b98b16083c69c91152b861724\"},\"type\":\"team.unsupported_from_the_future\",\"version\":2},\"ctime\":1509390787,\"expire_in\":157680000,\"ignore_if_unsupported\":false,\"ignore_if_unsupported_for_testing\":true,\"prev\":\"d43fda101f34d98142fead11f11c8c41b5c21135171196594ce4a0d01d333976\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}",
                     "uid": "25852c87d6e47fb8d7d55400be9c7a19",
                     "version": 2,
                     "debug_payload": {
@@ -85,9 +85,10 @@
                             }
                         },
                         "seq_type": 1,
-                        "ignore_if_unsupported": true
+                        "ignore_if_unsupported": false,
+                        "ignore_if_unsupported_for_testing": true
                     },
-                    "debug_link_id": "3757af30363495590fb89e94defa58238b575db1d2db8cef17a0c0b89bb258f9"
+                    "debug_link_id": "2a51cd9c5381289d2ed6033922304578aa0380cf196b9080530968ffb3c50d49"
                 }
             ],
             "team_key_boxes": [
@@ -161,7 +162,7 @@
     "team_merkle": {
         "2123209b98b16083c69c91152b861724": {
             "seqno": 2,
-            "link_id": "3757af30363495590fb89e94defa58238b575db1d2db8cef17a0c0b89bb258f9"
+            "link_id": "2a51cd9c5381289d2ed6033922304578aa0380cf196b9080530968ffb3c50d49"
         },
         "2123209b98b16083c69c91152b861724-seqno:1": {
             "seqno": 1,
@@ -169,7 +170,7 @@
         },
         "2123209b98b16083c69c91152b861724-seqno:2": {
             "seqno": 2,
-            "link_id": "3757af30363495590fb89e94defa58238b575db1d2db8cef17a0c0b89bb258f9"
+            "link_id": "2a51cd9c5381289d2ed6033922304578aa0380cf196b9080530968ffb3c50d49"
         }
     },
     "merkle_triples": {
@@ -186,47 +187,8 @@
         {
             "loads": [
                 {
-                    "error": false
-                }
-            ]
-        },
-        {
-            "loads": [
-                {
-                    "need_admin": true,
-                    "error": false
-                }
-            ]
-        },
-        {
-            "loads": [
-                {
-                    "upto": 1
-                },
-                {
-                    "error": false
-                }
-            ]
-        },
-        {
-            "loads": [
-                {
-                    "stub": [
-                        2
-                    ],
-                    "error": false
-                }
-            ]
-        },
-        {
-            "loads": [
-                {
-                    "need_admin": true,
-                    "stub": [
-                        2
-                    ],
                     "error": true,
-                    "error_type": "StubbedError"
+                    "error_substr": "ignore_if_unsupported"
                 }
             ]
         }
