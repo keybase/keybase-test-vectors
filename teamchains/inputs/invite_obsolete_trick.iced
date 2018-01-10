@@ -2,7 +2,7 @@ description: """Admin got tricked into using an old invite. Note that
 this cannot happen anymore, because when replaying team chains,
 invites for users that were added afterwards are automatically cleared
 from ActiveInvites. If SBS message arrived for such invite, admin
-would ignore it becuase the inviteId would be invalid for them.
+would ignore it because the inviteId would be invalid for them.
 
 But: We want this chain to still be valid, because there may be teams
 in the wild that had similar sigchains, and they shouldn't break. """
@@ -43,7 +43,7 @@ teams: {
       type: "change_membership"
       signer: "herb"
       completed_invites:
-        # Even on new clients, where this invite would have been implicitely
+        # Even on new clients, where this invite would have been implicitly
         # completed, team player shouldn't fail on this link.
         "54eafff3400b5bcd8b40bff3d225ab27": "basil"
       members:
