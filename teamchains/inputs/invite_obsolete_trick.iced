@@ -24,6 +24,7 @@ teams: {
       invites:
         writer: [ {
           id: "54eafff3400b5bcd8b40bff3d225ab27",
+          # basil%1
           name: "579651b0d574971040b531b66efbc519%1",
           type: "keybase"
         } ]

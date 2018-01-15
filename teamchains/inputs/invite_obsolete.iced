@@ -1,4 +1,11 @@
-description: "Obsoleting invites"
+description: """Obsoleting invites - This chain has 3 invites added in
+two links, first one with one invite ("basil%1") and second with two
+invites ("rose%1", "lily%1"). Then, basil user is added as a member
+using change_membership link, but it does not explicitly complete
+invite. Team player should mark "basil%1" invite as obsolete. Last
+link cancels "rose%1" invite. After replaying the chain, team should
+have two members (herb and basil), and one active invite
+("lily%1")."""
 
 users: {
   "herb": {}
@@ -19,6 +26,7 @@ teams: {
       invites:
         writer: [ {
           id: "54eafff3400b5bcd8b40bff3d225ab27",
+          # basil%1
           name: "579651b0d574971040b531b66efbc519%1",
           type: "keybase"
         } ]
