@@ -78,9 +78,11 @@
     },
 
     "test_error_expired_key": {
-      "_comment": "Try signing a link with a key that has expired.",
+      "_comment": "Try signing a link with a key that has expired. It should work since we're ignoring expirations.",
       "input": "expired_key_chain.json",
-      "err_type": "EXPIRED_SIBKEY"
+      "len": 2,
+      "sibkeys": 2,
+      "subkeys": 0
     },
 
     "test_error_bad_uid": {
