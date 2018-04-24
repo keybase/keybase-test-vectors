@@ -351,6 +351,30 @@
       "_comment": "a sigchain per user key addition with an corrupted reverse sig",
       "input": "bad_per_user_key_reverse_sig.json",
       "err_type": "WRONG_PER_USER_KEY_REVERSE_SIG"
+    },
+    "test_v2_unsupported_with_ignore" : {
+      "_comment" : "a V2 signature with an unsupported link that it's OK to ignore",
+      "input" : "v2_unsupported_ignore.json",
+      "len" : 3,
+      "sibkeys" : 2,
+      "subkeys" : 0
+    },
+    "test_v2_unsupported_with_ignore_stubbed" : {
+      "_comment" : "a V2 signature with an unsupported, stubbed link that it's OK to ignore",
+      "input" : "v2_unsupported_ignore_stubbed.json",
+      "len" : 2,
+      "sibkeys" : 2,
+      "subkeys" : 0
+    },
+    "test_v2_unsupported_no_ignore" : {
+      "_comment" : "a V2 signature with an unsupported link that it's not OK to ignore",
+      "input" : "v2_unsupported_no_ignore.json",
+      "err_type": "BAD_CHAIN_LINK"
+    },
+    "test_v2_unsupported_no_ignore_stubbed" : {
+      "_comment" : "a V2 signature with an unsupported, stubbed link that it's not OK to ignore",
+      "input" : "v2_unsupported_no_ignore_stubbed.json",
+      "err_type": "CHAIN_LINK_STUBBED_UNSUPPORTED"
     }
   }
 }
