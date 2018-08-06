@@ -22,7 +22,8 @@ teams: {
 
 sessions: [
   loads: [
-    error: true
-    error_substr: "wrong sigKID"
+    error_after_get_key: true
+    error_substr: "wrong team key found at generation 2"
+    then_get_key: 2 # Team loader does not check keys until they are fetched
   ]
 ]
