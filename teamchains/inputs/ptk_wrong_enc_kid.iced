@@ -24,7 +24,8 @@ teams: {
 
 sessions: [
   loads: [
-    error: true
-    error_substr: "wrong encKID"
+    error_after_get_key: true
+    error_substr: "wrong team key (enc) found at generation 1"
+    then_get_key: 1 # Team loader does not check keys until they are fetched
   ]
 ]
