@@ -2,6 +2,7 @@ description: "Bot user test"
 
 users: {
   "herb": {}
+  "basil": {}
 }
 
 teams: {
@@ -9,7 +10,8 @@ teams: {
     links: [
       type: "root"
       members:
-        bot: ["herb"]
+        owner: ["herb"]
+        bot: ["basil"]
     ]
   }
 }
