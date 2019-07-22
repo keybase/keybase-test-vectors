@@ -1,4 +1,4 @@
-description: "Bot user test"
+description: "Restricted bot user test"
 
 users: {
   "herb": {}
@@ -11,7 +11,7 @@ teams: {
       type: "root"
       members:
         owner: ["herb"]
-        bot: ["basil"]
+        restricted_bot: ["basil"]
     ]
   }
 }
