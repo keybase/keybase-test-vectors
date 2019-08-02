@@ -166,7 +166,7 @@
                     "prev": "kwHEGI6lSeNShZBqGFt56ZauNLzCDBwZAAAAAMQwoFn2M8kthVv7ZQTma8v6S0eP7TAqK6gVJpKyI5db0kqxHoZeWRFyPDdWLKyh51I0"
                 },
                 {
-                    "seqno": 3,
+                    "seqno": 1,
                     "chain_type": 17,
                     "box": {
                         "nonce": "1d0FPXKVnhKRRb0Z0Gm+8yLOZzkAAAAB",
@@ -190,7 +190,7 @@
                     "prev": "kwHEGD2RM9b3zsGV9Y3824TSi1DQth5uAAAAAMQwr21MHXKP88Kh0+HKL9d1ak6XF5ZyMJmietCh0QXO3fUfv6Ag+riADpNKIVEz1L39"
                 },
                 {
-                    "seqno": 4,
+                    "seqno": 2,
                     "chain_type": 17,
                     "box": {
                         "nonce": "z8U8vLVD7eXMSNgvPzpcs9mGRG4AAAAB",
