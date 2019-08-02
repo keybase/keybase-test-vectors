@@ -227,9 +227,9 @@
                     "s": "xEDkJRkNXX/V2jDNFyUo5NZMBiCFZpzPsTU6bdIP7qel+1tcoP48Celm4d6aAj1p7ry6Fg3reFQPaWClPTlY6acF"
                 },
                 {
-                    "i": "h6FigaFrkYehYQGhY4KhaMQgT2TqYFY5OHXjYgGoc3R0C94coL+GSpsjwFU6j6a8BwGhdgGhZcQjASExkKJhR8DWr+bLaaGwLT1BqfNWKX76qszNsKhpkx7/XgqhZwWhcsRAswVtta37RUYlAP8ISG5fqip3gIEB5fk8xrAHnkguehzZ3q/cW0pGzTb34paGE4kkM+YY6UucqfOi2Irpcx2RDqFzxCMBIGxtT0/u8hpMFJaSksroFpgRJwavhj870epF61X/9pYeCqF0AKFjzllw4ZGhZcQQAAAAAAAAAAAAAAAAAAAAAKFtg6Fjzllw4ZGhaMQgzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NGYKhc80fQaFwg6FoxCB9x9EdWOEa4FsCQ7jWjfpPkiYB2kAPgJxYrNPCJy9gdKFzA6F0A6Fzg6FlAaFrxCMBIBJgzxW4CurywsNi8N6Iu8QCctU00Xm5TARXpeWE/NGGCqF1xBAlhSyH1uR/uNfVVAC+nHoZoXSDoWnEECEjIJuYsWCDxpyRFSuGFyShbcKhcMI=",
-                    "o": "mAMCxCDcpQxGlZ2Q0gAAYftMLwDhSQiXOG72VzkWTbc6M6WMAMQgKLlF0XQJIysh+rkXuv/XKFihGfXENOsT62GESFnFOyRREcLA",
-                    "s": "xEC+NRHHFE99Im9lMhPEctcUY7ZrIILdIe7UP31aHRd6goFjjYzGZy+ZOinGuEymxrcXh886232QDuhkDoeyafQN"
+                    "i": "h6FigaFrkYehYQGhY4KhaMQgT2TqYFY5OHXjYgGoc3R0C94coL+GSpsjwFU6j6a8BwGhdgGhZcQjASExkKJhR8DWr+bLaaGwLT1BqfNWKX76qszNsKhpkx7/XgqhZwWhcsRAR+1xeI03u1t9yXN0ITm98K8FvClnpXslaIZOcCjN+M5pTJtm8gGM9mxclO211jzzV+Q2zFghwbzucJK/V98YBKFzxCMBIGxtT0/u8hpMFJaSksroFpgRJwavhj870epF61X/9pYeCqF0AKFjzllw4ZGhZcQQAAAAAAAAAAAAAAAAAAAAAKFtg6Fjzllw4ZGhaMQgzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NGYKhc80fQaFwg6FoxCB9x9EdWOEa4FsCQ7jWjfpPkiYB2kAPgJxYrNPCJy9gdKFzA6F0A6Fzg6FlAaFrxCMBIBJgzxW4CurywsNi8N6Iu8QCctU00Xm5TARXpeWE/NGGCqF1xBAlhSyH1uR/uNfVVAC+nHoZoXSDoWnEECEjIJuYsWCDxpyRFSuGFyShbcKhcMI=",
+                    "o": "mAMCwMQgx3PGUYJdhCBgBROcY5VlF80JytQ7HxSm9oW51Uf21R9REcLA",
+                    "s": "xEB/PvLigAtjq+jhwRH7/wEGab/SICy2/Oupx2YRNREPnT1TIk/JKJuX9enZQZh8MNDFLkrf4ZvzJP4mRTZxusEK"
                 }
             ],
             "ratchet_blinding_keys": "kYOhYoOhaNlAZGNhNTBjNDY5NTlkOTBkMjAwMDA2MWZiNGMyZjAwZTE0OTA4OTczODZlZjY1NzM5MTY0ZGI3M2EzM2E1OGMwMKFzAaF0EaFygqFrxCBBy1HHd31cGLXLQaybWV8I/yj6bEQMAlMbZ9SskNp4EKFyxCAAP17U6GDK08525aWOoxJOp0SJs6c7212rQKI+ydW+BaF2AQ=="
@@ -314,16 +314,9 @@
         {
             "loads": [
                 {
-                    "error": false,
-                    "then_get_key": 5
-                }
-            ]
-        },
-        {
-            "loads": [
-                {
-                    "error": false,
-                    "need_keygen": 5
+                    "error": true,
+                    "error_type": "SequenceError",
+                    "error_substr": "sig3 sequencing error: bad nil prev at 2"
                 }
             ]
         }

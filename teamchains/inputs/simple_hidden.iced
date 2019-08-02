@@ -17,6 +17,6 @@ teams: {
 }
 
 sessions: [
-  { loads : [{ error : false }] }
+  { loads : [{ error : false, then_get_key : 5 }] }
   { loads : [{ error : false, need_keygen : 5 }] }
 ]
