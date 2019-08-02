@@ -31,8 +31,7 @@ sessions: [
         error_substr : "sig3 sequencing error: prev hash mismatch at 2"
       }
     ]
-  },
-  {
+  },{
     loads : [
       {
         error : false
