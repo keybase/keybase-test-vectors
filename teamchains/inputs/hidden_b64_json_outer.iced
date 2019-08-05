@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "send a B64-encoded JSON blob, rather than a B64-encoded msgpack blob, as the outer sigchain link"
 
 users: {
   "herb": {}
