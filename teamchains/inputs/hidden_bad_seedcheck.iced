@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "bad seed check"
 
 users: {
   "herb": {}

@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "bad link type advertised in outer chainlink"
 
 users: {
   "herb": {}
@@ -25,6 +25,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "ParseError"
+    error_type_full : "sig3.ParseError"
     error_substr : "unknown link type 1000"
   }]}
 ]

@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "sig3 bad outer formatting"
 
 users: {
   "herb": {}

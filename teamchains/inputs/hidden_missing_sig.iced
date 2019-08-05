@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "sig3 missing sig"
 
 users: {
   "herb": {}
@@ -24,6 +24,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "ParseError"
+    error_type_full : "sig3.ParseError"
     error_substr : "need a sig and an inner, or neither, but not one without the other (sig: false, inner: true)"
   }]}
 ]

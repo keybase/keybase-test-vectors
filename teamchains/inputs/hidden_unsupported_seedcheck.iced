@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "bad seedcheck version"
 
 users: {
   "herb": {}

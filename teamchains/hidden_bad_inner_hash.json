@@ -296,6 +296,7 @@
                 {
                     "error": true,
                     "error_type": "Sig3Error",
+                    "error_type_full": "sig3.Sig3Error",
                     "error_substr": "sig3 error: inner link hash doesn't match inner"
                 }
             ]

@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "bad chain type"
 
 users: {
   "herb": {}
@@ -25,6 +25,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "Sig3Error"
+    error_type_full : "sig3.Sig3Error"
     error_substr : "sig3 error: can only handle type 17 (team private hidden)"
   }]}
 ]

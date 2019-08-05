@@ -296,6 +296,7 @@
                 {
                     "error": true,
                     "error_type": "ParseError",
+                    "error_type_full": "sig3.ParseError",
                     "error_substr": "unknown link type 1000"
                 }
             ]

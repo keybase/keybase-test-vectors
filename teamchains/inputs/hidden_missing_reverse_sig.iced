@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "sig3: missing reverse sig"
 
 users: {
   "herb": {}
@@ -22,6 +22,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "Sig3Error"
+    error_type_full : "sig3.Sig3Error"
     error_substr : "sig3 error: rotate key link is missing a reverse sig"
   }]}
 ]

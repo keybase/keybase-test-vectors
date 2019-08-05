@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "bad prev in hidden chain"
 
 users: {
   "herb": {}
@@ -28,6 +28,7 @@ sessions: [
       {
         error : true
         error_type : "SequenceError"
+        error_type_full : "sig3.SequenceError"
         error_substr : "sig3 sequencing error: prev hash mismatch at 2"
       }
     ]

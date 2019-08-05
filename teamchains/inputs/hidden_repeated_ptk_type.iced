@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "repeating a PTK type twice in the same link; they are supposed to be destinct (and should only be READER_PTK)"
 
 users: {
   "herb": {}
@@ -26,6 +26,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "ParseError"
+    error_type_full : "sig3.ParseError"
     error_substr : "duplicated PTK type: READER"
   }]}
 ]

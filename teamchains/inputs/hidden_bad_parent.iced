@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "Link from hidden to parent is bad; won't fail for now until we fix checking code in the team loader"
 
 users: {
   "herb": {}
@@ -24,8 +24,6 @@ teams: {
 sessions: [
   { loads : [{
     error : true
-    error_type : "ParseError"
-    error_substr : "unknown link type 1000"
   }]}
 ]
 

@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "ratchet from visible to hidden has bad hash"
 
 users: {
   "herb": {}

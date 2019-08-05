@@ -1,4 +1,4 @@
-description: "Simplest test"
+description: "sig3: bad reverse signature"
 
 users: {
   "herb": {}
@@ -24,6 +24,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "Sig3Error"
+    error_type_full : "sig3.Sig3Error"
     error_substr : "sig3 error: bad reverse signature: sig3 error: signature verification failed"
   }]}
 ]

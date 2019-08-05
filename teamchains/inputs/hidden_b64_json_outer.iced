@@ -24,6 +24,7 @@ sessions: [
   { loads : [{
     error : true
     error_type : "ParseError"
+    error_type_full : "sig3.ParseError"
     error_substr : "need an encoded msgpack array"
   }]}
 ]

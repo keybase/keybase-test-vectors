@@ -294,9 +294,7 @@
         {
             "loads": [
                 {
-                    "error": true,
-                    "error_type": "ParseError",
-                    "error_substr": "unknown link type 1000"
+                    "error": true
                 }
             ]
         }
