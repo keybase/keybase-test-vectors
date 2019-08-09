@@ -12,5 +12,8 @@
   "devDependencies": {
     "pgp-utils": "0.0.34",
     "purepack": "^1.0.4"
+  },
+  "dependencies": {
+    "forge-sigchain": "^1.0.7"
   }
 }
