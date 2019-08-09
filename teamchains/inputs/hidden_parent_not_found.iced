@@ -1,4 +1,4 @@
-description: "Link from hidden to parent is bad; hash mismatch"
+description: "Link from hidden to parent for link not found"
 
 users: {
   "herb": {}
@@ -13,7 +13,7 @@ teams: {
         type : "rotate_key_hidden"
         corruptors :
           sig_arg : (arg) ->
-            arg.parent_chain_tail.hash[0] ^= 0x01
+            arg.parent_chain_tail.seqno = 1000
             arg
       },
       { type : "rotate_key" },
@@ -25,6 +25,6 @@ sessions: [
   { loads : [{
     error : true
     error_type_full : "hidden.ParentPointerError"
-    error_substr : "hidden team parent pointer error (to visible 2): link ID mismatch"
+    error_substr : "hidden team parent pointer error (to visible 1000): link wasn't found in parent chain"
   }]}
 ]
