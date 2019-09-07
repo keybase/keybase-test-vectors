@@ -240,12 +240,13 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-forge-sigchain@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/forge-sigchain/-/forge-sigchain-1.0.7.tgz#f3bb1a99709636f4497f3ef1e60590bcb4318f51"
-  integrity sha512-CC5ljxds+z4+aVNda3Cvxmv7AldPYiDZUXoSiAliwcvLpPdaygb+nzHoC9jU3gxIZ7XVZ1yv2iXA003OShVjhA==
+forge-sigchain@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/forge-sigchain/-/forge-sigchain-1.0.8.tgz#10d4f6a83b8451906c3f9a2abe29b0fd8f2912ce"
+  integrity sha512-JrvgFuuDllegRBa8WXyiUcU+onNzQgAy3z3OwN8kQO97nsXGlgLUkcTfK3K3rU6chJmN6zrI+I+o6av6XinF0w==
   dependencies:
     cson "^3.0.1"
+    iced-coffee-script "^108.0.13"
     iced-error "0.0.9"
     iced-lock "^1.0.1"
     iced-logger "0.0.6"
@@ -298,6 +299,14 @@ hash-base@^3.0.0:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+iced-coffee-script@^108.0.13:
+  version "108.0.13"
+  resolved "https://registry.yarnpkg.com/iced-coffee-script/-/iced-coffee-script-108.0.13.tgz#574085c8c0e2e3f21583db46df3d8d541e511e0a"
+  integrity sha512-0qG9vtelrtfY1NCh+120EINbytkt2rkCVXJ81EOItbP7B8vildMCfLfuQdYRSy7r2T6Z+2zok/NuPRuokqSNNA==
+  dependencies:
+    iced-runtime ">=0.0.1"
+    uglify-js "^3.5.9"
 
 iced-error@0.0.9, iced-error@^0.0.9:
   version "0.0.9"
@@ -696,7 +705,7 @@ typechecker@^4.3.0:
   dependencies:
     editions "^2.1.0"
 
-uglify-js@^3.1.4, uglify-js@^3.1.9:
+uglify-js@^3.1.4, uglify-js@^3.1.9, uglify-js@^3.5.9:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.6.0.tgz#704681345c53a8b2079fb6cec294b05ead242ff5"
   integrity sha512-W+jrUHJr3DXKhrsS7NUVxn3zqMOFn0hL/Ei6v0anCIMoKC93TjcflTagwIHLW7SfMFfiQuktQyFVCFHGUE0+yg==
