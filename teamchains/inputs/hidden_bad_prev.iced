@@ -32,13 +32,15 @@ sessions: [
         error_substr : "sig3 sequencing error: prev hash mismatch at 2"
       }
     ]
-  },{
+  },
+  {
     loads : [
       {
         error : false
         hidden_upto : 1
         upto : 2
-      },{
+      },
+      {
         error : true
         error_type : "LoaderError"
         error_type_full : "hidden.LoaderError"
