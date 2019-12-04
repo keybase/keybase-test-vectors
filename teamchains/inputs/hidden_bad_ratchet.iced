@@ -30,7 +30,7 @@ sessions: [
         error : true
         error_type : "LoaderError"
         error_type_full : "hidden.LoaderError"
-        error_substr : "hidden team loader error: link ID at 1 fails to check against ratchet: dda50c46959d90d2000061fb4c2f00e1490897386ef65739164db73a33a58c00 != dca50c46959d90d2000061fb4c2f00e1490897386ef65739164db73a33a58c00"
+        error_substr : "hidden team loader error: link ID at 1 fails to check against ratchet: fe5a460bcb58dac9b4918aa886ec532a9f1e43c879c14137bee1f48e2c21cf37 != ff5a460bcb58dac9b4918aa886ec532a9f1e43c879c14137bee1f48e2c21cf37"
       }
     ]
   },{
@@ -42,7 +42,7 @@ sessions: [
         error : true
         error_type : "RatchetError"
         error_type_full : "hidden.RatchetError"
-        error_substr : "hidden team ratchet error: Ratchet failed to match a currently accepted chainlink: {Triple:{Seqno:1 SeqType:TEAM_PRIVATE_HIDDEN LinkID:dda50c46959d90d2000061fb4c2f00e1490897386ef65739164db73a33a58c00} Time:1500570001000}"
+        error_substr : "hidden team ratchet error: Ratchet failed to match a currently accepted chainlink: {Triple:{Seqno:1 SeqType:TEAM_PRIVATE_HIDDEN LinkID:fe5a460bcb58dac9b4918aa886ec532a9f1e43c879c14137bee1f48e2c21cf37} Time:1500570001000}"
       }
     ]
   }

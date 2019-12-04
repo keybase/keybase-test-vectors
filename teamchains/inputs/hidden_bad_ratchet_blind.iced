@@ -22,5 +22,5 @@ teams: {
 
 load_failure :
   error : true
-  error_substr : "hidden team ratchet error: blinding check failed cbaf3f1776b85d162906f74515de1f79f7a17a3341162decff3607e721350db2 v cbae3f1776b85d162906f74515de1f79f7a17a3341162decff3607e721350db2"
+  error_substr : "hidden team ratchet error: blinding check failed 01ea732f329d2fd83bbe0c6bd86f3f8562dde30c0e6c66be45393c510fd5104c v 01eb732f329d2fd83bbe0c6bd86f3f8562dde30c0e6c66be45393c510fd5104c"
   error_type_full : "hidden.RatchetError"
