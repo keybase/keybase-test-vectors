@@ -24,9 +24,9 @@ sessions: [
     loads : [
       {
         error : true
-        error_type : "LoaderError"
-        error_type_full : "hidden.LoaderError"
-        error_substr : "hidden team loader error: Server promised a hidden chain up to 2, but never received; is it withholding?"
+        error_type : "HiddenMerkleError"
+        error_type_full : "libkb.HiddenMerkleError"
+        error_substr : "hidden merkle client error (type 9): Server promised a hidden chain up to 2, but never received; is it withholding?"
       }
     ]
   }
