@@ -23,32 +23,4 @@ with js_file.open("w") as f:
                 "require('../chains/{0}');\n"
                 .format(chain_file.name))
 
-# Generate Go
-
-go_dir = root / "go"
-if not go_dir.is_dir():
-    go_dir.mkdir()
-go_file = go_dir / "testvectors.go"
-
-
-def make_go_string_literal(string_contents):
-    # Go does not allow escaping backticks in a backtick-delimited string. So
-    # we need to terminate the string, insert a backtick in double quotes, and
-    # then reopen the string.
-    escaped = string_contents.replace('`', '`+"`"+`')
-    return '`' + escaped + '`'
-
-with go_file.open("w") as f:
-    f.write("package testvectors\n")
-    f.write("\n")
-    f.write("const ChainTests = `\n")
-    with chain_tests_file.open() as tests_f:
-        f.write(tests_f.read())
-    f.write("`\n")
-    f.write("\n")
-    f.write("var ChainTestInputs = map[string]string{\n")
-    for chain_file in chain_files:
-        with chain_file.open() as chain_f:
-            f.write('\t"{}": {},\n'.format(
-                chain_file.name, make_go_string_literal(chain_f.read())))
-    f.write("}\n")
+# Generate Go -- now done via bin/generate (in TS)
