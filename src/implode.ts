@@ -39,6 +39,10 @@ type NaclSigInfo = {
     payload: Buffer
     sig: Buffer
   }
+  hash?: {
+    type: number
+    value: Buffer
+  }
 }
 
 type OuterLinkV2 = [
@@ -51,12 +55,13 @@ type OuterLinkV2 = [
   boolean // Ignore if unsupported
 ]
 
-const unpackSig = (s: string): {payload: Buffer; sig: Buffer} => {
+const unpackSig = (s: string): {payload: Buffer; hash: boolean; sig: Buffer} => {
   const buf = Buffer.from(s, 'base64')
   const sigInfo = unpack(buf) as NaclSigInfo
   const payload = sigInfo.body.payload
   const sig = sigInfo.body.sig
-  return {payload, sig}
+  const hash = !!sigInfo.hash
+  return {payload, hash, sig}
 }
 
 const encode = (o: any): string => pack(o).toString('base64')
@@ -66,18 +71,19 @@ const encode = (o: any): string => pack(o).toString('base64')
 // striclty needs to verify. We'll be pruning: kid and hash from the siginfo, and
 // prev, curr and seqno from the outer link v2.
 const implodeSig2 = (s: string): string => {
-  const {payload, sig} = unpackSig(s)
+  const {payload, hash, sig} = unpackSig(s)
   const outerLink = unpack(payload) as OuterLinkV2
   outerLink[1] = 0 // numbers > 128 take 3 bytes to encode, so save some bytes here, too
   outerLink[2] = null
   outerLink[3] = null
-  const retObj = [sig, outerLink]
+  const retObj = [sig, hash, outerLink]
   return encode(retObj)
 }
 
 const implodeSig1 = (s: string): string => {
-  const {sig} = unpackSig(s)
-  return sig.toString('base64')
+  const {sig, hash} = unpackSig(s)
+  const retObj = [sig, hash]
+  return encode(retObj)
 }
 
 const isPGPSig = (s: string): boolean => {

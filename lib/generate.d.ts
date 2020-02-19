@@ -1,1 +1,1 @@
-export declare const main: () => Promise<never>;
+export declare const main: () => Promise<void>;

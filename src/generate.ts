@@ -62,7 +62,6 @@ const run = async (): Promise<void> => {
   const b = new Buf()
   b.str('package testvectors\n\nconst ChainTests = `\n')
   b.buf(tests)
-  console.log(tests)
   b.str('`\n')
   b.str('\n')
   b.str('var ChainTestInputs = map[string]string{\n')
@@ -74,7 +73,6 @@ const run = async (): Promise<void> => {
     b.str(`\t"${basename(file)}" : ${toGoStringLiteral(imploded)},\n`)
   }
   b.str('}\n')
-  console.log(b.b)
   await fsPromises.writeFile(goDir + '/testvectors.go', b.finish())
   return
 }
