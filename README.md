@@ -12,6 +12,9 @@ are specified in json directly and begin their life in
 
 Then they go through a couple more generator scripts and end up as go tests.
 
+- ./bin/generate - Generates go/testvectors.go for Go in TS
+- ./generate.py - is the python-based generator for JS test vectors (no longer in use)
+
 ## Team Sigchains
 
 Team sigchains are converted from a DSL in `teamchains/inputs/*.iced`
