@@ -41,7 +41,7 @@ teams: {
       type: "change_membership"
       signer: "herb"
       members:
-        writer: ["rose"]
+        reader: ["rose"]
       used_invites: [
         {
           id: "54eafff3400b5bcd8b40bff3d225ab27"
@@ -52,7 +52,7 @@ teams: {
       type: "change_membership"
       signer: "herb"
       members:
-        writer: ["lily", "jasmine"]
+        reader: ["lily", "jasmine"]
       used_invites: [
         {
           id: "cc3aa06f02d3409e06f0cb6494ed3027"
@@ -67,7 +67,7 @@ teams: {
       type: "change_membership"
       signer: "basil"
       members:
-        writer: ["rosemary"]
+        reader: ["rosemary"]
       used_invites: [
         {
           id: "54eafff3400b5bcd8b40bff3d225ab27"
