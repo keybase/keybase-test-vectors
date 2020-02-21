@@ -52,7 +52,7 @@ class Buf {
   }
 }
 
-const toGoStringLiteral = (f: ChainFile): string => '`' + JSON.stringify(f).replace('`', '`+"`"+`') + '`'
+const toGoStringLiteral = (f: ChainFile): string => '`' + JSON.stringify(f, null, 4).replace('`', '`+"`"+`') + '`'
 
 const run = async (): Promise<void> => {
   const root = dirname(__dirname)

@@ -34,7 +34,7 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "forge-sigchain": "^1.0.8"
+    "forge-sigchain": "^1.0.10"
   },
   "bin": {
     "imploder": "./bin/imploder"
@@ -63,6 +63,8 @@
     "dev": "tsc --watch",
     "build": "rm -rf lib/ && tsc",
     "clean": "rm -rf lib/",
-    "go": "./bin/generate"
+    "go": "./bin/generate",
+    "cp": "cp go/testvectors.go ../client/go/vendor/github.com/keybase/keybase-test-vectors/go",
+    "gocp": "yarn go && yarn cp"
   }
 }
