@@ -4,7 +4,7 @@ Use the invite too many times, should fail in sigchain player.
 
 Loading the links up to 5th link (3rd change_membership) should work - adding
 "lotus" brings the invite use count to 5, which is the max_uses. Then loading
-next link - adding "rosemary" - triggers an error, becuase 6th add for this
+next link - adding "rosemary" - triggers an error, because 6th add for this
 invite id is illegal.
 
 """
