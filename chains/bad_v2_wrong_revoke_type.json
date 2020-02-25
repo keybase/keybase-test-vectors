@@ -1,0 +1,92 @@
+{
+  "username": "max32",
+  "keys": [
+    "012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a",
+    "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a"
+  ],
+  "label_sigs": {
+    "btc3": "fd509eef0517956a237c3c119dc5db93040a9871e29056386fc6af874218f15b0f",
+    "btc2": "d8e51fb3813cd5a7fd6ad04091261b0e1b924f4b4e583010f9876508949d99340f",
+    "e": "9402e438b9985761efbc790761ddaac5f7af3210b949562be917df478b9b04320f",
+    "sib1": "314fdaa704044a73ce247558d2998007e46a76854fe063dee56ec6345b98204a0f",
+    "btc1": "2a44512ac89fa195e2716269d4c8edfd45cebe444de6e9c1add2cf74ffaf448c0f",
+    "btc5": "58ceef0948b24dc96f169b5a3ad33cc782ef893a1c3e9d063ea05c66e1a886c70f",
+    "btc4": "126ef5f5e801ed96486708b4bfd3db8d105a39dcb26b0d1c5596f251054270110f"
+  },
+  "chain": [
+    {
+      "ctime": 1582324247,
+      "payload_json": "{\"body\":{\"key\":{\"host\":\"keybase.io\",\"kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"eldest\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324247,\"expire_in\":314496000,\"prev\":null,\"seq_type\":1,\"seqno\":1,\"tag\":\"signature\"}",
+      "kid": "012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a",
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglrNlPg9eLwauuZOHOocME7xXV58cNBJjLqx2j3HdEB8Kp3BheWxvYWTEKZcCAcDEIPlgfxMAdy80oJCUx6DycZpAWx+DvYuaxvS/Skb4bn/KAQHCo3NpZ8RAwgES2l+nccWoFtnrArqPCi0e60WNEOMHSzZuV6KRC0WQQeLu6yOytweAQ0ytSgrChc3h7kxMGWpRSrMKi9/mDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMXQozHvtD9k5EDp1virBO8S97Da83n0PwuiTS4+Hn3Co3RhZ80CAqd2ZXJzaW9uAQ==",
+      "sig_version": 2,
+      "seqno": 1,
+      "payload_hash": "d244fd0980353bd10bb6cb9a04f7231ae0dd4915b37fe599b7ac4430a7a3d6da",
+      "sig_id": "9402e438b9985761efbc790761ddaac5f7af3210b949562be917df478b9b04320f",
+      "prev": null
+    },
+    {
+      "payload_hash": "29afa3da35db6bca0266770e0fd28009acb348425c3669f86685d31f9ad8a115",
+      "sig_id": "314fdaa704044a73ce247558d2998007e46a76854fe063dee56ec6345b98204a0f",
+      "prev": "d244fd0980353bd10bb6cb9a04f7231ae0dd4915b37fe599b7ac4430a7a3d6da",
+      "sig_version": 2,
+      "seqno": 2,
+      "ctime": 1582324347,
+      "kid": "012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a",
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglrNlPg9eLwauuZOHOocME7xXV58cNBJjLqx2j3HdEB8Kp3BheWxvYWTESpcCAsQg0kT9CYA1O9ELtsuaBPcjGuDdSRWzf+WZt6xEMKej1trEIAhYii0ktM3x8RlR2hfQ2XPv/fx7bAKjdQR8dZH5KUwMCwHCo3NpZ8RAqi8ScK7O+En1X57rsrvCJgfZ38E2ChqWB3P9ExHMlMjqKhiG8gMf/N3oxD0nvpdPpS/gOnhUyLrjsajdRWVbDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGTOii5JgutyRrXeP0cDkQ8oH1Nc7MPaI+PpG8rn+BBmo3RhZ80CAqd2ZXJzaW9uAQ==",
+      "payload_json": "{\"body\":{\"key\":{\"eldest_kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"host\":\"keybase.io\",\"kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"sibkey\":{\"kid\":\"012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a\",\"reverse_sig\":\"g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFbYuH1yHGrn0r0mkzTHzhgLpNKpjTWMQ4AFngvkoC0AKp3BheWxvYWTFAmh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOTZiMzY1M2UwZjVlMmYwNmFlYjk5Mzg3M2E4NzBjMTNiYzU3NTc5ZjFjMzQxMjYzMmVhYzc2OGY3MWRkMTAxZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTZiMzY1M2UwZjVlMmYwNmFlYjk5Mzg3M2E4NzBjMTNiYzU3NTc5ZjFjMzQxMjYzMmVhYzc2OGY3MWRkMTAxZjBhIiwidWlkIjoiNzRjMzhjZjdjZWI5NDdmNTYzMjA0NWQ4Y2E1ZDQ4MTkiLCJ1c2VybmFtZSI6Im1heDMyIn0sInNpYmtleSI6eyJraWQiOiIwMTIwMTViNjJlMWY1Yzg3MWFiOWY0YWY0OWE0Y2QzMWYzODYwMmU5MzRhYTYzNGQ2MzEwZTAwMTY3ODJmOTI4MGI0MDBhIiwicmV2ZXJzZV9zaWciOm51bGx9LCJ0eXBlIjoic2lia2V5IiwidmVyc2lvbiI6Mn0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiNS4yLjMwIn0sImN0aW1lIjoxNTgyMzI0MzQ3LCJleHBpcmVfaW4iOjMxNDQ5NjAwMCwicHJldiI6ImQyNDRmZDA5ODAzNTNiZDEwYmI2Y2I5YTA0ZjcyMzFhZTBkZDQ5MTViMzdmZTU5OWI3YWM0NDMwYTdhM2Q2ZGEiLCJzZXFfdHlwZSI6MSwic2Vxbm8iOjIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RALfeTlr8BwSjwvqwOnax3xzbnGEh70myXN17A1k7J/h0oTiLo270cKPuftrhdVD7G0Homt9qsLxOPRxNPxIJUCahzaWdfdHlwZSCjdGFnzQICp3ZlcnNpb24B\"},\"type\":\"sibkey\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324347,\"expire_in\":314496000,\"prev\":\"d244fd0980353bd10bb6cb9a04f7231ae0dd4915b37fe599b7ac4430a7a3d6da\",\"seq_type\":1,\"seqno\":2,\"tag\":\"signature\"}"
+    },
+    {
+      "seqno": 3,
+      "sig_version": 2,
+      "sig_id": "2a44512ac89fa195e2716269d4c8edfd45cebe444de6e9c1add2cf74ffaf448c0f",
+      "prev": "29afa3da35db6bca0266770e0fd28009acb348425c3669f86685d31f9ad8a115",
+      "payload_hash": "57cde71570c2eaf87b1a80a36de290edd12cb88e8fcdbb2deda0d610dceaa5d4",
+      "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"1JorbDFBvB8axoE63wSULFAVvYu2gDWswz\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"host\":\"keybase.io\",\"kid\":\"012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324447,\"expire_in\":314496000,\"prev\":\"29afa3da35db6bca0266770e0fd28009acb348425c3669f86685d31f9ad8a115\",\"seq_type\":1,\"seqno\":3,\"tag\":\"signature\"}",
+      "kid": "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a",
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFbYuH1yHGrn0r0mkzTHzhgLpNKpjTWMQ4AFngvkoC0AKp3BheWxvYWTESpcCA8QgKa+j2jXba8oCZncOD9KACayzSEJcNmn4ZoXTH5rYoRXEIPg1B6ALdBTJz0BWxVqV6YFb80BKZaijQsLrFakGaC1dBgHCo3NpZ8RANxTaO06kxWJdl26V50JyK5JbtQC5+sxG11Y76Oo/I0eXftHy/zm8la2XYXBzxGmxvy3/cy2WedSGbhIrmopcBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIH04NqpWCi5407luM8Ku7DUe11K6WTauzC7F2VpB4K1go3RhZ80CAqd2ZXJzaW9uAQ==",
+      "ctime": 1582324447
+    },
+    {
+      "sig_version": 2,
+      "seqno": 4,
+      "payload_hash": "2630f024b632f1ce0d68c05387666510c84564d097c7a654205310d21e153cbb",
+      "sig_id": "d8e51fb3813cd5a7fd6ad04091261b0e1b924f4b4e583010f9876508949d99340f",
+      "prev": "57cde71570c2eaf87b1a80a36de290edd12cb88e8fcdbb2deda0d610dceaa5d4",
+      "ctime": 1582324547,
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFbYuH1yHGrn0r0mkzTHzhgLpNKpjTWMQ4AFngvkoC0AKp3BheWxvYWTESpcCBMQgV83nFXDC6vh7GoCjbeKQ7dEsuI6Pzbst7aDWENzqpdTEIE8InQkLj9+daY/lEZudA+HApnk4aq6gAH6BMs/D40ajCgHCo3NpZ8RAfHo1AQHSK28CscKUfaK2dheldD+UGUGSGyGhh+zUrYZGDpCmofpOUkb296fB5jnMu2TiiWhgp0/ho6V3B/xbAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINSeSfCfffHw6noFCyIwi8iIvY6L/YcHYSs93ato3jyXo3RhZ80CAqd2ZXJzaW9uAQ==",
+      "kid": "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a",
+      "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"1EX3ZXBm537rHh1XUi4nNEVTJ92pviCiwS\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"host\":\"keybase.io\",\"kid\":\"012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"sig_ids\":[\"2a44512ac89fa195e2716269d4c8edfd45cebe444de6e9c1add2cf74ffaf448c0f\"]},\"type\":\"cryptocurrency\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324547,\"expire_in\":314496000,\"prev\":\"57cde71570c2eaf87b1a80a36de290edd12cb88e8fcdbb2deda0d610dceaa5d4\",\"seq_type\":1,\"seqno\":4,\"tag\":\"signature\"}"
+    },
+    {
+      "ctime": 1582324647,
+      "kid": "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a",
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFbYuH1yHGrn0r0mkzTHzhgLpNKpjTWMQ4AFngvkoC0AKp3BheWxvYWTESpcCBcQgJjDwJLYy8c4NaMBTh2ZlEMhFZNCXx6ZUIFMQ0h4VPLvEIPYiQOjXQTWelFF98/3gB35wRo5AA9iYzuJ/R47YXWrkCgHCo3NpZ8RAO2czgckamdZSVt0e5Gc17wQMTwCht60CFy6VDOFkTDxEpzqdHDQwJ0WWYUerGrZA3iyu0id8/hJL8n4tAzqUC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIC6hQHcXTZCA9mBY4jNY0OYwKwQkI+f+6nXpDdmyV3u9o3RhZ80CAqd2ZXJzaW9uAQ==",
+      "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"1DsoFSj3UqCpE2YvS2fxYey5cxUqUmKdfP\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"host\":\"keybase.io\",\"kid\":\"012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"revoke\":{\"sig_id\":\"d8e51fb3813cd5a7fd6ad04091261b0e1b924f4b4e583010f9876508949d99340f\"},\"type\":\"cryptocurrency\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324647,\"expire_in\":314496000,\"prev\":\"2630f024b632f1ce0d68c05387666510c84564d097c7a654205310d21e153cbb\",\"seq_type\":1,\"seqno\":5,\"tag\":\"signature\"}",
+      "payload_hash": "fc6116e57d23a28894564e3a268782a0c4d58c2506ed1a674e6cab8031d5af38",
+      "sig_id": "fd509eef0517956a237c3c119dc5db93040a9871e29056386fc6af874218f15b0f",
+      "prev": "2630f024b632f1ce0d68c05387666510c84564d097c7a654205310d21e153cbb",
+      "sig_version": 2,
+      "seqno": 5
+    },
+    {
+      "s2": "lwIGxCD8YRblfSOiiJRWTjomh4KgxNWMJQbtGmdObKuAMdWvOMQg6fWCC09QVRq+FuXFC58SKOmCp0KD5OPBAiCKJD/1FowGAcI="
+    },
+    {
+      "ctime": 1582324847,
+      "payload_json": "{\"body\":{\"cryptocurrency\":{\"address\":\"1HLjePRvzgtmM1tjVfPpKhqFcgQogb32Bv\",\"type\":\"bitcoin\"},\"key\":{\"eldest_kid\":\"012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a\",\"host\":\"keybase.io\",\"kid\":\"012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a\",\"uid\":\"74c38cf7ceb947f5632045d8ca5d4819\",\"username\":\"max32\"},\"type\":\"cryptocurrency\",\"version\":2},\"client\":{\"name\":\"keybase.io go client\",\"version\":\"5.2.30\"},\"ctime\":1582324847,\"expire_in\":314496000,\"prev\":\"7cf64ad47ed7c47e75c4141ac2cc02620eaea8990f34379efe675b10cc4d5889\",\"seq_type\":1,\"seqno\":7,\"tag\":\"signature\"}",
+      "kid": "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a",
+      "sig": "hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFbYuH1yHGrn0r0mkzTHzhgLpNKpjTWMQ4AFngvkoC0AKp3BheWxvYWTESpcCB8QgfPZK1H7XxH51xBQawswCYg6uqJkPNDee/mdbEMxNWInEINoWtpPKs62cEcyKz6WdPG3IMHk3sWWJwW2hysNPB899BgHCo3NpZ8RAr+R/eSEX/BPs2egVeZo3G+5YOdr2GIHdr9W7QDF9ClvOCSfJkBMxULAYg9XsU2xDIwy0puh1mrCZOQJV3eYDBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMjZ+AsaYcvXzIgJsHBZb4P004HQ8t63YEvDXhh5QcFfo3RhZ80CAqd2ZXJzaW9uAQ==",
+      "payload_hash": "244f0c8701664f0e4d36da3e69295dfe98a26bcac42fc01f1a80417850b95d63",
+      "sig_id": "58ceef0948b24dc96f169b5a3ad33cc782ef893a1c3e9d063ea05c66e1a886c70f",
+      "prev": "7cf64ad47ed7c47e75c4141ac2cc02620eaea8990f34379efe675b10cc4d5889",
+      "sig_version": 2,
+      "seqno": 7
+    }
+  ],
+  "label_kids": {
+    "sib1": "012015b62e1f5c871ab9f4af49a4cd31f38602e934aa634d6310e0016782f9280b400a",
+    "e": "012096b3653e0f5e2f06aeb993873a870c13bc57579f1c3412632eac768f71dd101f0a"
+  },
+  "uid": "74c38cf7ceb947f5632045d8ca5d4819"
+}
